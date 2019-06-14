@@ -1,0 +1,37 @@
+@import url("fonts/montserrat/otf/Montserrat.css");
+
+html, body, div, span,
+h1, h2, h3, h4, h5, h6,
+p, em, img, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+form, label, input, textarea,
+table, tbody, tfoot, thead, tr, th, td,
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, a {padding:0; margin:0; border:0px; text-decoration:none;}
+body{font-family: 'Montserrat', sans-serif; font-weight: 400; width:100%;}
+
+header.b_header{z-index:666; display:block; position:absolute; top:60px; top:4rem; width:100%; height:40px; height:3rem;}
+body{z-index:0; display:block; width:100%; min-width:100%; max-width:100%; height:auto; min-height:100%; min-height:100vh; position:relative; top:0px;}
+.b_content{z-index:1; display:block; width:90%; min-width:90%; max-width:90%; margin-left:5%; margin-right:5%; min-height:100%; min-height:calc(100% - 150px); min-height:calc(100vh - 10rem); padding-top:160px; padding-top:11rem;}
+.vertical_aligner{display:table-cell; width:100%; height:100%; vertical-align:middle;}
+
+.b_header{text-align:center; align-content:center; white-space:nowrap; overflow:hidden;}
+.b_header .head_nav{display:inline-block; height:30px; height:2rem; width:70%; max-width:70%; padding-top:5px; padding-top:0.5rem;  padding-bottom:5px; padding-bottom:0.5rem;} 
+.b_header .head_nav .logo{display:inline-block; vertical-align:top; height:30px; height:2rem; width:150px; width:10rem; background-image:url(img/logo.svg); background-repeat:no-repeat; background-position:center center; background-size:100% auto; background-size:contain;}
+.b_header .head_nav ul.nav_m{display:inline-block; vertical-align:top;  height:30px; height:2rem;  margin-right:45px; margin-right:2rem;  margin-left:45px; margin-left:2rem; white-space:nowrap; overflow:hidden; text-transform:uppercase; width:auto; width:fit-content; width:-moz-fit-content; width:calc(100% - 450px); width:calc(100% - 28rem); max-width:calc(100% - 450px); max-width:calc(100% - 28rem); text-align: left; align-content:left;}
+.b_header .head_nav ul.nav_m li{display:inline-block; vertical-align:top; height:inherit; line-height:30px; line-height:2rem; margin-left:5px; margin-right:5px;  font-size: 12px; font-size: 0.8rem; font-weight: 600; font-stretch: condensed; color:#9297a1;}
+.b_header .head_nav ul.nav_m li:hover{transition:0.2s linear; cursor:pointer; color:#377eea;}
+.b_header .head_nav ul.nav_m li a{color:inherit;}
+.b_header .head_nav .ls_button{display:inline-block; vertical-align:top; height:30px; height:2rem; width:210px; width:14rem; text-transform:uppercase; }
+.b_header .head_nav .ls_button .log_in{display:inline-block; vertical-align:top; cursor:pointer; height:30px; height:2rem;  width:90px; width:6rem;  text-align:center;  line-height:30px; line-height:2rem; font-size: 12px; font-size: 0.8rem; font-weight: 700; font-stretch: condensed; color:#9297a1;}
+.b_header .head_nav .ls_button .log_in:hover{transition:0.2s linear; color:#377eea;}
+.b_header .head_nav .ls_button .sign_up{display:inline-block; vertical-align:top; cursor:pointer; height:30px; height:2rem; width:120px; width:8rem;  text-align:center; line-height:30px; line-height:2rem; font-size: 12px; font-size: 0.8rem; font-weight: 700; font-stretch: condensed;  color:#377eea; background-color:#ffffff; border-radius:30px; border-radius:2rem;  filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.15));}
+.b_header .head_nav .ls_button .sign_up:hover{transition:0.2s linear; color:#ffffff; background-color:#377eea; border-radius:30px; border-radius:2rem;  filter: drop-shadow(0px 0px 5px #377eea);}
+
+.home-template{min-height:100%; min-height:100vh; padding:0px; margin:0px; min-width:100%; width:100%; max-width:100%; }
+.home-template .structure_image{display:block; width:100%; min-height:68vw; height:100%; height:900px; height:130vh; background-image:url(img/hero_graphics.svg); background-repeat:no-repeat; background-position:top center; background-size:cover; text-align:center; align-content:center;}
+.home-template .structure_image .info_action{display: inline-table; width: 70%; padding-top: 120px; padding-top: 7rem; min-height: 24vw; height: 390px; height: 50vh; height:24vw; text-align:center; align-content:center;}
+.home-template .structure_image .info_action .text_h1{display:block; width:100%; color:#272d37; font-weight:700; font-size:40px; font-size:4rem; font-size:4vw;}
+.home-template .structure_image .info_action .text_h2{display:block; width:100%; color:#9297a1; padding-top:20px; padding-top:1.5rem; padding-bottom:20px; padding-bottom:1.5rem; padding-top:1.5vw; padding-bottom: 1.5vw; font-weight: 500; font-size: 18px; font-size: 1.2rem; font-size: 1.2vw;}
+.home-template .structure_image .info_action .button_get{display:inline-block; width:auto; width:fit-content; width:-moz-fit-content; padding-top:15px; padding-bottom:15px; padding-top:1rem; padding-bottom:1rem; padding-left:75px; padding-right:75px;  padding-left:5rem; padding-right:5rem; font-size:16px; font-size:1rem; font-weight: 700; font-stretch:condensed; text-transform:uppercase; color:#ffffff; background-color:#377eea;  border-radius:48px; border-radius:3.2rem; box-shadow: 5px 5px 15px #377eea;}
+.home-template .structure_image .info_action .button_get:hover{transition:0.2s linear; cursor:pointer; color:#377eea; background-color:#ffffff; }

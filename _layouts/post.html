@@ -1,0 +1,41 @@
+---
+layout: default
+current: post
+class: post-template
+disqus: false
+---
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full {{ page.subclass }} {% unless page.cover %}no-image{% endunless %}">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="{{ page.date | date:'%e %B %Y' }}">{{ page.date | date:'%e %B %Y' }}</time>
+                    {% if page.tags.size > 0 %}
+                        <span class="date-divider">/</span>
+                        {% for tag in page.tags %}
+                            {% if forloop.index == page.tags.size %}
+                               <a href='{{ site.baseurl }}tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | upcase }}</a>
+                            {% else %}
+                               <a href='{{ site.baseurl }}tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | upcase }}</a>,
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </section>
+                <h1 class="post-full-title">{{ page.title }}</h1>
+            </header>
+
+            {% if page.cover %}
+            <figure class="post-full-image" style="background-image: url({{ site.baseurl }}{{ page.cover }})">
+            </figure>
+            {% endif %}
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    {{ content }}
+                </div>
+            </section> 
+			
+{% include page-scripts.html %}
