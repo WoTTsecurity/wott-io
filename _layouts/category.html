@@ -8,20 +8,22 @@ navigation: True
 <div class="blog_posts">
 <span class="t_h1">WoTT IOT Blog</span>
 <span class="t_h2">WoTT is a free, automated, open-source public key infrastructure for connected hardware</span>
+{% if paginator.total_posts > 0 %}
 
 {% for post in paginator.posts %}
 
 {% include category-list-item.html %}
 
-{% if forloop.index == 1 %} 
-{% include category-navigation.html %} 
-<div class="post_mini-blocks">
-{% endif %}
+{% if forloop.index == 1 %}  {% include category-navigation.html %} <div class="post_mini-blocks"> {% endif %}
 
 {% endfor %}
 </div>
 
 {% include pagination.html %}
+{% else %}
+{% include category-navigation.html %}
+NULL POSTS
+{% endif %}
 <div class="blue_block_subscribe">
 <div class="block_inner"><div class="vertical_aligner">
 <span class="t_m1">Subscribe to our newsletter</span>
