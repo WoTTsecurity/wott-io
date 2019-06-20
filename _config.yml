@@ -10,7 +10,7 @@ baseurl: '/'
 
 # Website info
 title: WOTT IO
-description: The professional publishing platform
+description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
@@ -25,7 +25,7 @@ twitter: wott # replace by your username
 facebook: wott # replace by your username
 
 # Permalinks
-permalink: /blog/:categories/:title
+permalink: /blog/:categories/:year/:month/:day/:title
 # permalink: /author/:author
 # permalink: /tag/:tag
 
@@ -38,7 +38,7 @@ plugins: [jekyll-paginate-v2, jekyll-feed]
 pagination:
   enabled: true
   per_page: 10
-  title: ':title - страница :num'
+  title: ':title - page :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true

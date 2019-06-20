@@ -13,9 +13,23 @@ navigation: True
 
 {% include category-list-item.html %}
 
-{% if forloop.index == 1 %} {% include category-navigation.html %} {% endif %}
+{% if forloop.index == 1 %} 
+{% include category-navigation.html %} 
+<div class="post_mini-blocks">
+{% endif %}
 
 {% endfor %}
+</div>
 
 {% include pagination.html %}
+<div class="blue_block_subscribe">
+<div class="block_inner"><div class="vertical_aligner">
+<span class="t_m1">Subscribe to our newsletter</span>
+</div></div>
+<div class="block_inner"><form class="vertical_aligner" action="" method="">
+<input id="email_subscribe" value="" placeholder="Your email address"/>
+<button type="submit">submit</button>
+</form></div>
+</div>
+
 </div>
