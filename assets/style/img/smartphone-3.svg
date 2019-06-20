@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="90px" viewBox="0 0 59 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>smartphone-3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Documentation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-328.000000, -901.000000)" fill-rule="nonzero" id="Secondary-Features">
+            <g transform="translate(328.000000, 892.000000)">
+                <g id="Starting-Quick-Guide">
+                    <g id="smartphone-3" transform="translate(0.000000, 9.000000)">
+                        <polygon id="Path" fill="#316DC7" points="0.373046875 0 58.3730469 0 58.3730469 11 0.373046875 11"></polygon>
+                        <polygon id="Path" fill="#316DC7" points="0.373046875 79 58.3730469 79 58.3730469 90 0.373046875 90"></polygon>
+                        <path d="M28.8733894,28 C25.4468904,30.5351093 23.3730469,34.5926603 23.3730469,38.9226408 L23.3730469,57 L34.3730469,57 L34.3730469,38.9226408 C34.3730469,34.5926603 32.2992036,30.5351093 28.8733894,28 Z M31.5026778,43.5147317 L26.2434161,43.5147317 L26.2434161,37.7778858 L31.5026778,37.7778858 L31.5026778,43.5147317 Z" id="Shape" fill="#4CD7ED"></path>
+                        <polygon id="Path" fill="#4CD7ED" points="14.3730469 61 18.3730469 58.5524636 18.3730469 50 14.3730469 54.5506927"></polygon>
+                        <path d="M0.373046875,16 L0.373046875,74 L58.3730469,74 L58.3730469,16 L0.373046875,16 Z M36.7726154,62.0350749 L21.9748528,62.0350749 L9.44785342,69.8534346 L9.44785342,52.0935645 L18.5762677,41.5010366 L18.5762677,38.8389004 C18.5762677,32.1394988 22.2119633,25.9141854 28.0641277,22.591468 L29.3733905,21.8482285 L30.681966,22.591468 C36.5341304,25.9141854 40.1698261,32.1394988 40.1698261,38.8389004 L40.1698261,41.5003533 L49.2982403,52.0928814 L49.2982403,69.8520682 L36.7726154,62.0350749 Z" id="Shape" fill="#316DC7"></path>
+                        <polygon id="Path" fill="#4CD7ED" points="39.3730469 58.5524636 43.3730469 61 43.3730469 54.5506927 39.3730469 50"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -14,32 +14,12 @@
 
     <div class="b_content {{page.class}}">
         {{ content }}
-
-        <!-- Previous/next page links - displayed on every page -->
-        {% if paginator.total_posts > site.paginate %}
-            {% if page.class == 'home-template' %}
-                {% include post_pagination.html %}
-            {% elsif page.class == 'page-template' %}
-                {% include post_pagination.html %}
-            {% elsif page.class == 'author-template' %}
-                {% include author_pagination.html %}
-            {% elsif page.class == 'tag-template' %}
-                {% include tag_pagination.html %}
-            {% else %}
-                {% include post_pagination.html %}
-            {% endif %}
-        {% endif %}
- 
-    </div>
-
-	<footer class="b_footer"></footer>
+	</div>
+	
+	{% include footer.html %}
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     {% include analytics.html %}
-    {% if page.class == "post-template" %}
-        {% include post-scripts.html %}
-    {% elsif page.class == "page-template" %}
-        {% include page-scripts.html %}
-    {% endif %}
+
 </body>
 </html>

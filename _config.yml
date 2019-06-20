@@ -1,12 +1,12 @@
 # Jekyll configuration
 markdown: kramdown
 highlighter: rouge
-paginate: 100 # it will paginate after this number
+# paginate: 10 # amount of posts to show
+# paginate_path: /page:num/
 language: 'en-uk'
-words_per_minute: 200
 
-# edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: '/'
+
 
 # Website info
 title: WOTT IO
@@ -25,16 +25,26 @@ twitter: wott # replace by your username
 facebook: wott # replace by your username
 
 # Permalinks
-permalink: /:title
+permalink: /blog/:categories/:title
 # permalink: /author/:author
 # permalink: /tag/:tag
 
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`
 
-# gems and other configs
 plugins_dir: [_plugins]
-plugins: [jekyll-paginate, jekyll-feed]
+plugins: [jekyll-paginate-v2, jekyll-feed]
+
+pagination:
+  enabled: true
+  per_page: 10
+  title: ':title - страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
 feed:
   path: feed.xml
