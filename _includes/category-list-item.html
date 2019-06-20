@@ -1,5 +1,5 @@
   <div class="post {% if forloop.index == 1 %}  first_post {% endif %}">
-  <div class="post_img" style="background-image:url({{ site.baseurl }}{{ post.cover }});"></div>
+  <div class="post_img" style="background-image:url(/{{ post.cover }});"></div>
   <div class="post_prewinfo">
   <span class="category_name">{{ post.category }}</span>
   <a class="title" href="{{ post.url }}">{{ post.title }}</a>
