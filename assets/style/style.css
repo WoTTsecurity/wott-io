@@ -148,9 +148,9 @@ box-shadow:15px -15px 20px rgba(108, 124, 148, 0.1) ;
 .blog_posts .nav-category li.active{color:#377eea;}
 .blog_posts .nav-category li a{display:inline-block; color:inherit; margin-left: 10px; margin-left: 1rem; margin-left: 1.5vw; margin-right: 10px; margin-right: 1rem; margin-right: 1.5vw; }
 
-.post_mini-blocks{display:block;  width:86%; margin-left:7%; margin-right:7%; padding-top:40px; padding-bottom:10px; padding-top:4rem; padding-bottom:2rem; padding-top:4vw; padding-bottom:1.5vw; font-size:0px;}
+.post_mini-blocks{display:block;  width:86%; margin-left:7%; margin-right:7%; padding-top:40px; padding-bottom:10px; padding-top:4rem; padding-bottom:2rem; padding-top:4vw; padding-bottom:1.5vw; font-size:0px; text-align:left; align-content:left;}
 
-.blog_posts .post{display:inline-block; width:30%; width:calc((98% - 60px) / 3);  width:calc((98% - 4rem) / 3);  width:calc((98% - 5vw) / 3); margin-bottom: 30px; margin-bottom: 2rem; margin-bottom: 2.5vw;  border-radius:20px; border-radius:1.5rem; border-radius:1.2vw; background-color:#ffffff; box-shadow:0px 0px 15px rgba(108, 124, 148, 0.1) ;}
+.blog_posts .post{display:inline-block; width:30%; width:calc((100% - 60px) / 3);  width:calc((100% - 4rem) / 3);  width:calc((100% - 5vw) / 3); margin-bottom: 30px; margin-bottom: 2rem; margin-bottom: 2.5vw;  border-radius:20px; border-radius:1.5rem; border-radius:1.2vw; background-color:#ffffff; box-shadow:0px 0px 15px rgba(108, 124, 148, 0.1) ;}
 .blog_posts .post .post_img{display:inline-table; width:100%; background-image:url(); background-repeat:no-repeat; background-size:100% auto; background-size:cover; background-position:center center; border-radius:20px 20px 0px 0px; border-radius:1.5rem 1.5rem 0px 0px; border-radius:1.2vw 1.2vw 0px 0px;}
 .blog_posts .post .post_img::before{content:''; display:block; width:1px; padding-top:65%;}
 .blog_posts .post .post_prewinfo{display:inline-table; width:85%; padding-left:7.5%; padding-right:7.5%; height:300px; height:20rem; height:15vw; padding-top:40px; padding-bottom:40px; padding-top:3rem; padding-bottom:3rem; padding-top:3vw; padding-bottom:3vw; text-align:left;}
