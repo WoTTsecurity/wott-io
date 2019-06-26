@@ -9,7 +9,7 @@ baseurl: '/'
 
 
 # Website info
-title: WOTT IO
+title: Web of Trusted Things
 description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
@@ -48,4 +48,3 @@ pagination:
 
 feed:
   path: feed.xml
-theme: jekyll-theme-cayman
