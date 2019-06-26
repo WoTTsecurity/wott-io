@@ -5,7 +5,7 @@ highlighter: rouge
 # paginate_path: /page:num/
 language: 'en-uk'
 
-baseurl: '/wott_io/'
+baseurl: '/wott-io/'
 url: 'https://wottsecurity.github.io'
 
 # Website info
