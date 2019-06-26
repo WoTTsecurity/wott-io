@@ -1,0 +1,23 @@
+{% if paginator.page_trail %}
+<ul class="page_navigation">
+    {% if paginator.previous_page %}
+    <li  class="prew_pg" ><a href="{{ paginator.previous_page_path }}" title="Prew page">-</a></li>
+    {% else %}
+    <li class="prew_pg unactive"><a href="#"  title="Prew page"></a></li>
+    {% endif %}
+
+    {% for trail in paginator.page_trail %}
+    {% if page.url == trail.path %}
+    <li class="thispage"><span>{{ trail.num }}</span></li>
+    {% else %}
+    <li><a href="{{ trail.path | remove: 'index.html' }}" title="{{ trail.title }}">{{ trail.num }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="next_pg"><a href="{{ paginator.next_page_path }}" title="Next page"></a></li>
+    {% else %}
+    <li class="next_pg unactive"><a href="#" title="Next page">-</a></li>
+    {% endif %}
+</ul>
+{% endif %}

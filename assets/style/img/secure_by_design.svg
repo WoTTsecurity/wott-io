@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="59px" viewBox="0 0 56 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.2835 0.969 26.5635 0.969 26.5635 46.5 0.2835 46.5"></polygon>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-675.000000, -4527.000000)" id="We-raise-the-bar-in-security-for-cyber-physical-systems">
+            <g transform="translate(93.000000, 4144.000000)">
+                <g id="Secure-by-design" transform="translate(499.000000, 382.000000)">
+                    <g id="Group-8" transform="translate(83.000000, 0.000000)">
+                        <path d="M1.23825,11.90965 L10.92075,17.48965 L20.10075,12.18715 C24.82575,9.46465 30.24075,9.46465 34.96575,12.18715 L44.14575,17.48965 L53.82825,11.90965 L41.69325,4.89715 C32.68575,-0.30035 22.38075,-0.30035 13.38075,4.89715 L1.23825,11.90965 Z" id="Fill-1" fill="#4CD7ED"></path>
+                        <g id="Group-5" transform="translate(28.500000, 13.093900)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-4"></g>
+                            <path d="M26.5635,0.969 L16.896,6.5415 L16.896,17.1465 C16.896,22.614 14.1885,27.294 9.4635,30.024 L0.2835,35.3265 L0.2835,46.5015 L12.411,39.4965 C21.411,34.299 26.5635,25.374 26.5635,14.979 L26.5635,0.969 Z" id="Fill-3" fill="#316DC7" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M26.283,59.40715 L26.283,48.41965 L17.0955,43.11715 C12.378,40.38715 9.6705,35.69965 9.6705,30.23965 L9.6705,19.63465 L0.003,14.06215 L0.003,27.88465 C0.003,38.28715 5.1555,47.21215 14.1555,52.40215 L26.283,59.40715 Z" id="Fill-6" fill="#316DC7"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

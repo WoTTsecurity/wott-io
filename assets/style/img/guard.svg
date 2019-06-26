@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="77px" viewBox="0 0 73 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.371803279 1.27081967 34.837377 1.27081967 34.837377 60.9836066 0.371803279 60.9836066"></polygon>
+    </defs>
+    <g id="About-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About" transform="translate(-534.000000, -1092.000000)">
+            <g id="The-aim-for-WoTT-is-to-do-four-things" transform="translate(93.000000, 456.000000)">
+                <g id="Four-Things" transform="translate(252.000000, 396.000000)">
+                    <g id="Group-16" transform="translate(29.000000, 239.000000)">
+                        <g id="Group-8" transform="translate(160.000000, 0.000000)">
+                            <path d="M1.62393443,15.6192131 L14.3222951,22.9372459 L26.3616393,15.9831475 C32.5583607,12.4126557 39.66,12.4126557 45.8567213,15.9831475 L57.8960656,22.9372459 L70.5944262,15.6192131 L54.6796721,6.4224918 C42.8665574,-0.393901639 29.3518033,-0.393901639 17.5485246,6.4224918 L1.62393443,15.6192131 Z" id="Fill-1" fill="#4CD7ED"></path>
+                            <g id="Group-5" transform="translate(37.377049, 17.172328)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-4"></g>
+                                <path d="M34.837377,1.27081967 L22.1586885,8.57901639 L22.1586885,22.4872131 C22.1586885,29.6577049 18.6078689,35.7954098 12.4111475,39.3757377 L0.371803279,46.3298361 L0.371803279,60.9855738 L16.2767213,51.7986885 C28.08,44.9822951 34.837377,33.277377 34.837377,19.6445902 L34.837377,1.27081967 Z" id="Fill-3" fill="#316DC7" mask="url(#mask-2)"></path>
+                            </g>
+                            <path d="M34.4695082,77.9110164 L34.4695082,63.5011803 L22.4203279,56.547082 C16.2334426,52.9667541 12.682623,46.8192131 12.682623,39.6585574 L12.682623,25.7503607 L0.00393442623,18.4421639 L0.00393442623,36.5700328 C0.00393442623,50.2126557 6.76131148,61.9175738 18.5645902,68.7241311 L34.4695082,77.9110164 Z" id="Fill-6" fill="#316DC7"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

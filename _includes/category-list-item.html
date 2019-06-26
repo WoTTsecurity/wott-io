@@ -1,0 +1,12 @@
+  <div class="post {% if forloop.index == 1 %}  first_post {% endif %}">
+  <div class="post_img" style="background-image:url(/{{ post.cover }});"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">{{ post.category }}</span>
+  <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+  <span class="author_time">By <a>{{ post.author }}</a> on {{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}</span>
+  <span class="description">
+  {% if post.description %} {{ post.description | strip_html | truncatewords: 52 }} {% else %} {{ post.content | strip_html | truncatewords: 52 }} {% endif %}</span>
+  <a class="read_full" href="{{ post.url }}">Continue reading </a>
+  </div>
+  </div>
+

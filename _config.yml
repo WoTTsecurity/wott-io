@@ -1,0 +1,50 @@
+# Jekyll configuration
+markdown: kramdown
+highlighter: rouge
+# paginate: 10 # amount of posts to show
+# paginate_path: /page:num/
+language: 'en-uk'
+
+baseurl: '/'
+
+
+# Website info
+title: WOTT IO
+description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
+cover: assets/images/blog-cover.jpg
+logo: assets/images/blog-icon.png
+logo_dark: assets/images/favicon.png
+favicon: assets/images/favicon.png
+
+# Social info
+navigation: True # show the navbar links
+subscribers: True # you need to connect an external service for this to work,
+# if 'True' the submit button is disabled for now, but you can change that
+# by editing `_includes/subscribe-form.html`
+twitter: wott # replace by your username
+facebook: wott # replace by your username
+
+# Permalinks
+permalink: /blog/:categories/:year/:month/:day/:title
+# permalink: /author/:author
+# permalink: /tag/:tag
+
+# Authors' info in `_data/authors.yml`
+# Tags' info in `_data/tags_info.yml`
+
+plugins_dir: [_plugins]
+plugins: [jekyll-paginate-v2, jekyll-feed]
+
+pagination:
+  enabled: true
+  per_page: 10
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+feed:
+  path: feed.xml
