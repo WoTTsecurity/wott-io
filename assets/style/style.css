@@ -140,9 +140,10 @@ footer{display:block; width:100%; height:auto;}
 .pricing-template .plans .blocks .inner_top{display:block; width:100%; padding: 50px 0px; padding: 3rem 0px; padding: 3vw 0px;  border-bottom:1px solid #f1f3f7;}
 .pricing-template .plans .blocks .inner_top .t_hm{color: #272d37; margin-top:0px;}
 .pricing-template .plans .blocks .inner_top .t_h2{color: #272d37; padding-bottom:0px; font-weight: 600;}
-.pricing-template .plans .blocks .inner_middle{display:table; width:100%; height:300px; height:22rem; height: 22vw;}
+.pricing-template .plans .blocks .inner_middle{display:table; width:100%; height:300px; height:22rem; height: 22vw; padding-top:50px; padding-top: 3rem; padding-top:3vw; }
+.pricing-template .plans .blocks .inner_middle .vertical_aligner{vertical-align: top; }
 .pricing-template .plans .blocks .inner_middle .descs{display:block; width:80%; margin-left:10%; margin-right:10%; margin-bottom:25px; margin-bottom:1.25rem; margin-bottom:1.25vw; border-bottom:1px solid #f1f3f7;}
-.pricing-template .plans .blocks .inner_middle .descs .t_h2{color: #272d37; font-weight: 500;}
+.pricing-template .plans .blocks .inner_middle .descs .t_h2{color: #272d37; font-weight: 500; padding-bottom: 25px; padding-bottom: 1.25rem; padding-bottom: 1.25vw;}
 .pricing-template .plans .blocks .inner_middle ul{display:block; width:80%; margin-left:10%; margin-right:10%; }
 .pricing-template .plans .blocks .inner_middle ul li{width:100%; display:block; margin-bottom:25px; margin-bottom:1.25rem; margin-bottom:1.25vw; color: #9297a1; font-weight: 500; font-size: 15px; font-size: 1rem; font-size: 1vw;}
 .pricing-template .plans .blocks .inner_middle ul li::before{content:'---------'; color:transparent; background-image:url(/assets/style/img/ic/check.svg); background-repeat:no-repeat; background-size:contain; background-position:centercenter;   filter: invert(100%) sepia(60%) hue-rotate(-220deg) saturate(900%);}
@@ -179,9 +180,9 @@ footer{display:block; width:100%; height:auto;}
 .product-template .transparent_block .blocks .info_block .t_c2{padding-bottom:0px;}
 .product-template .transparent_block .blocks .info_block .icon{width:100%; height:auto;  background-image:url(); background-repeat:no-repeat; background-position:center center; background-size:auto 100%; background-size:contain; margin-bottom:15px; margin-bottom:1rem;}
 .product-template .transparent_block .blocks .info_block .icon::before{content:''; display:block; width:100%; padding-top:23%;}
-.product-template .transparent_block .blocks .big_icon{display:block; width:70%; padding-left:15%; padding-right:15%; padding-top: 60px; padding-top: 4rem; padding-top: 5vw; padding-bottom: 30px; padding-bottom: 2rem; padding-bottom: 2.5vw;}
+.product-template .transparent_block .blocks .big_icon{display:block; width:70%; padding-left:15%; padding-right:15%; padding-top: 60px; padding-top: 4rem; padding-top: 5vw; padding-bottom: 30px; padding-bottom: 2rem; padding-bottom: 2.5vw; height:200px; height:24rem; height: 24vw;}
 .product-template .transparent_block .blocks .big_icon .info_block:hover{transition:0.2s linear;  cursor:pointer;  filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.15));}
-.product-template .transparent_block .blocks .small_icon{width:85%;font-size:0px;  padding-bottom: 30px; padding-bottom: 2rem; padding-bottom: 2.5vw;}
+.product-template .transparent_block .blocks .small_icon{width:85%;font-size:0px;  padding-bottom: 30px; padding-bottom: 2rem; padding-bottom: 2.5vw; height:300px; height:36rem; height: 36vw;}
 .product-template .transparent_block .blocks .si_left{padding-left:10%; padding-right:5%;}
 .product-template .transparent_block .blocks .si_left .sicb:hover{background: linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: webkit-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: -moz-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: -o-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015));}
 .product-template .transparent_block .blocks .si_left .sicb.default{background: linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: webkit-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: -moz-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015)); background: -o-linear-gradient(90deg,rgba(55, 126, 234, 0.05) , rgba(55, 126, 234, 0.015));}
