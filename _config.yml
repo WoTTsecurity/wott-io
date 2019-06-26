@@ -5,11 +5,11 @@ highlighter: rouge
 # paginate_path: /page:num/
 language: 'en-uk'
 
-#baseurl: '/'
-baseurl: '/wott-io/'
+baseurl: '/wott_io/'
+url: 'https://wottsecurity.github.io'
 
 # Website info
-title: Web of Trusted Things
+title: WOTT IO
 description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
@@ -28,9 +28,6 @@ facebook: wott # replace by your username
 permalink: /blog/:categories/:year/:month/:day/:title
 # permalink: /author/:author
 # permalink: /tag/:tag
-
-# Authors' info in `_data/authors.yml`
-# Tags' info in `_data/tags_info.yml`
 
 plugins_dir: [_plugins]
 plugins: [jekyll-paginate-v2, jekyll-feed]
