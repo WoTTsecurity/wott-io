@@ -6,7 +6,9 @@ highlighter: rouge
 language: 'en-uk'
 
 #baseurl: '/'
-baseurl: 'https://wottsecurity.github.io/wott-io/'
+baseurl: '/wott-io/'
+url: https://wottsecurity.github.io
+
 
 # Website info
 title: Web of Trusted Things
