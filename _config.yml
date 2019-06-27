@@ -9,7 +9,7 @@ baseurl: '/wott-io/'
 url: 'https://wottsecurity.github.io'
 
 # Website info
-title: WOTT IO
+title: Web of Trusted Things
 description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
@@ -30,7 +30,9 @@ permalink: /blog/:categories/:year/:month/:day/:title
 # permalink: /tag/:tag
 
 plugins_dir: [_plugins]
-plugins: [jekyll-paginate-v2, jekyll-feed]
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-feed
 
 pagination:
   enabled: true
