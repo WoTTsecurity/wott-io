@@ -6,7 +6,7 @@ title: Why we are doing what we do
 date: 2019-06-27 10:00:00
 category: news
 author: Al Esmail
-tags: [Getting started]
+tags: [Open Source]
 class: post-template
 ---
 
@@ -22,7 +22,7 @@ The term ‘Internet of Things’ has unfortunately become a buzzword that draws
 
 The aforementioned examples of internet connected devices are the proverbial tip of the melting iceberg. I am of the opinion that was perhaps stated a bit too early in 2014 by [Ben Evans at a16z](https://www.ben-evans.com/benedictevans/2014/5/26/the-internet-of-things), but is still very relevant, “Today, I have no idea how many devices I own with a chip, but I could tell you how many have a network connection. And I doubt my children will know that, in their turn.”  The principle here is that everything we use will find itself communicating over TCP/IP in the coming years.
 
-At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs.)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/) If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
+At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
 
 {% asset blog/neural-implant.png srcset:width="1580 2x" srcset:width="790 1x" alt="No Image" class="img-fluid" %}
 
