@@ -27,3 +27,4 @@ test/version_tmp
 tmp
 vendor
 node_modules
+.jekyll-cache

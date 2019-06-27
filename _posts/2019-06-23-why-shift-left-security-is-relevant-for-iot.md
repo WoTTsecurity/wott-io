@@ -25,7 +25,7 @@ Given this high stakes sport is played by crafty and pragmatic geniuses, the bes
 
 Let’s define [DevSecOps](https://opensource.com/article/19/1/what-devsecops) a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the [cost of fixing flaws](https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336) by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.
 
-{% asset blog/nist.png srcset:width="1580 2x" srcset:width="790 1x" alt="The NIST says so. Prove them wrong if you want" class="img-fluid" %}
+{% asset nist.png srcset:width="1580 2x" srcset:width="790 1x" alt="The NIST says so. Prove them wrong if you want" class="img-fluid" %}
 
 Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.
 

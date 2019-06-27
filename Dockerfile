@@ -6,7 +6,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 ADD Gemfile /usr/src/app
-#ADD Gemfile.lock /usr/src/app
+ADD Gemfile.lock /usr/src/app
 RUN gem install bundle && \
     bundle && \
     bundle install

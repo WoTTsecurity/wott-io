@@ -12,7 +12,7 @@ class: post-template
 
 TL;DR IoT needs one ring to rule them all and it’s not a platform.
 
-{% asset blog/iot-monster.png srcset:width="1580 2x" srcset:width="790 1x" alt="No Image" class="img-fluid" %}
+{% asset iot-monster.png srcset:width="1580 2x" srcset:width="790 1x" alt="No Image" class="img-fluid" %}
 
 In my last post, I described the relevance of [open source security](link to open source security blog post).  For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.
 
