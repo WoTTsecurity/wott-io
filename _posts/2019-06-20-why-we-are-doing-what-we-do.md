@@ -15,7 +15,6 @@ class: post-template
 {% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 Figure 1 - Best free photo I could find when searching for ‘open source’
 
-
 In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
 
 The term ‘Internet of Things’ has unfortunately become a buzzword that draws associations to home devices that are connected to the internet with limited thought given to relevance of the use case, long term sustainability of back-end infrastructure or security.  In trying to describe the integration of internet connectivity into new hardware applications, let us instead refer to [cyber-physical systems](https://ptolemy.berkeley.edu/projects/cps/).  These are the integrations of computation, networking and physical processes.  The field builds on embedded systems that are used in devices whose primary function is not computation.  
