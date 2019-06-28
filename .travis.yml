@@ -5,6 +5,7 @@ services:
 
 before_install:
   - docker pull wott/wott-io
+  - docker build -t wott/wott-io --cache-from wott/wott-io .
 
 script:
   - docker run -v $(pwd):/usr/src/app wott/wott-io /bin/sh -c "jekyll build"

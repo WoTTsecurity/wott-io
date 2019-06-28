@@ -50,45 +50,6 @@ pagination:
 feed:
   path: feed.xml
 
-assets:
-  digest: true
-  source_maps: false
-  compression: true
-  autoprefixer:
-    browsers:
-      - "> 1%"
-      - "last 3 versions"
-      - "IE > 9"
-  prefix: "/assets"
-  sources:
-    - assets/videos
-    - assets/video
-    - assets/image
-    - assets/img
-    - assets/js
-  plugins:
-    css: { autoprefixer: {}}
-    img:
-      optim:
-        jekyll:
-          pngcrush: false
-          pngquant: false
-          jhead: false
-          jpegtran: false
-          jpegoptim: false
-          jpegrecompress: false
-          gifsicle: false
-          svgo: {}
-          optipng: {}
-  defaults:  # not useful for us
-    js: { integrity: false }
-    css: { integrity: false }
-    img: { integrity: false }
-  external:
-    uglifier:
-      output:
-        comments: /^!/
-
 exclude:
   - docker-compose.yml
   - README.md
