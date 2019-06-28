@@ -13,6 +13,7 @@ class: post-template
 ## TL;DR the future has flying cars, transformers and low calorie diets.
 
 {% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
+
 Figure 1 - Best free photo I could find when searching for ‘open source’
 
 In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
