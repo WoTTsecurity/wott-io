@@ -1,0 +1,45 @@
+---
+layout: default
+current: post
+class: post-template
+disqus: false
+---
+<div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">{{ page.title }}</span>
+<span class="t_m2">By {{ page.author }} on {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} | 0 Comments</span>
+</div>
+<div class="blog_image" style="background-image:url({{ site.baseurl }}{{ page.cover }});"></div>
+<div class="blog_image_bg"></div>
+<div class="blog_tags"><span>engineering</span><span>wott</span><span>privatelink</span><span>heroky postgres</span><span>vpc</span></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+<li style="background-image:url({{ site.url }}{{ site.baseurl }}assets/style/img/sn/facebook.png);"><a href="" title=""></a></li>
+<li style="background-image:url({{ site.url }}{{ site.baseurl }}assets/style/img/sn/twitter.png);"><a href="" title=""></a></li>
+<li style="background-image:url({{ site.url }}{{ site.baseurl }}assets/style/img/sn/send.png);"><a href="" title=""></a></li>
+<li style="background-image:url({{ site.url }}{{ site.baseurl }}assets/style/img/sn/pinterest.png);"><a href="" title=""></a></li>
+<li style="background-image:url({{ site.url }}{{ site.baseurl }}assets/style/img/sn/linkedin.png);"><a href="" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content">
+{{ content }}
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+{% for post in site.posts limit:3 %}
+{% include related-list-item.html %}
+{% endfor %}
+</div>
+</div>
+</div>
+
+<div class="white_shadow_block comments_block">
+comments
+</div>
+
+</div>
