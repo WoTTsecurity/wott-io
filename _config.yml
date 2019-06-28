@@ -91,3 +91,4 @@ assets:
 exclude:
   - docker-compose.yml
   - README.md
+  - Gemfile*
