@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>WoTT secures the Internet of Things</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="https://wottsecurity.github.io/wott-io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wottsecurity.github.io/wott-io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WoTT secures the Internet of Things" />
+    <meta property="og:description" content="TL;DR It’s Let’s Encrypt for IoT - you know you want it. Figure 1 - If the web can have it, why can’t IoT? In my first blog post, I articulated why we do what we do at WoTT. Namely, that security is a necessary condition for a future involving" />
+    <meta property="og:url" content="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things" />
+    <meta property="og:image" content="https://wottsecurity.github.io/assets/images/image_0.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="2019-06-22T10:00:00+00:00" />
+    <meta property="article:modified_time" content="2019-06-22T10:00:00+00:00" />
+    <meta property="article:tag" content="Open Source" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WoTT secures the Internet of Things" />
+    <meta name="twitter:description" content="TL;DR It’s Let’s Encrypt for IoT - you know you want it. Figure 1 - If the web can have it, why can’t IoT? In my first blog post, I articulated why we do what we do at WoTT. Namely, that security is a necessary condition for a future involving" />
+    <meta name="twitter:url" content="https://wottsecurity.github.io/wott-io/" />
+    <meta name="twitter:image" content="https://wottsecurity.github.io/wott-io/assets/images/image_0.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Open Source" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wottsecurity.github.io/wott-io/assets/images/blog-icon.png"
+    },
+    "url": "https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wottsecurity.github.io/wott-io/assets/images/image_0.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things"
+    },
+    "description": "TL;DR It’s Let’s Encrypt for IoT - you know you want it. Figure 1 - If the web can have it, why can’t IoT? In my first blog post, I articulated why we do what we do at WoTT. Namely, that security is a necessary condition for a future involving"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="WoTT secures the Internet of Things" href="/wott-io/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav">
+
+<a class="logo" href="https://wottsecurity.github.io/wott-io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wottsecurity.github.io/wott-io/product" title="">product</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/about" title="">about us</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/pricing" title="">pricing</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/documentation" title="">documentation</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+</div>
+
+</div>
+</header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">WoTT secures the Internet of Things</span>
+<span class="t_m2">By Al Esmail on June 22, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style="background-image:url(/wott-io/assets/images/image_0.png);"></div>
+<div class="blog_image_bg"></div>
+<div class="blog_tags"><span>engineering</span><span>wott</span><span>privatelink</span><span>heroky postgres</span><span>vpc</span></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io/assets/style/img/sn/facebook.png);"><a href="" title=""></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io/assets/style/img/sn/twitter.png);"><a href="" title=""></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io/assets/style/img/sn/send.png);"><a href="" title=""></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io/assets/style/img/sn/pinterest.png);"><a href="" title=""></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io/assets/style/img/sn/linkedin.png);"><a href="" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content">
+<p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
+
+<p>Figure 1 - If the web can have it, why can’t IoT?</p>
+
+<p>In my first blog post, I articulated <a href="link to first blog post">why we do what we do</a> at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will <a href="link to shift left security article">play a big role in security</a>.) It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on <a href="github.com/wottsecurity">Github</a>.</p>
+
+<p>The aim for WoTT is to do three things:
+​​</p>
+<ul>
+  <li>Make it easy to use asymmetric encryption for device communication (Northbound, Southbound and m2m)</li>
+  <li>Provide a cryptographic identity for every device (such that the receiver can trust that the sender is who it claims to be)</li>
+  <li>Rate each device’s trustworthiness (based on behavior and state)</li>
+</ul>
+
+<p>In plain English, the goal is to allow other devices and services to ask the question: <em>How much can I trust this device at any given time?</em></p>
+
+<p>We do this in the shape of a dynamic Trust Score.</p>
+
+<p>Naturally, we have a lovely feature set that extends beyond this core to simplify the lives of developers.  We want developers to be able to focus on product rather than invest too many cycles into security.  Here are some additional features (We would love to know which ones you like via comment/<a href="twitter.com/wottsecurity">Twitter</a>):</p>
+
+<ul>
+  <li>Fleet management dashboard</li>
+  <li>Vulnerability warnings (CVE)</li>
+  <li>Credential management</li>
+  <li>Certification/Compliance (future)
+​
+Coming back to the <em>main</em> goal of establishing device trust. Let’s unpack the <em>main</em> functionality.
+​
+The fundamental building block that we use to encrypt communication between two peers is cryptographic identity.  We are not reinventing the wheel here.  We are leveraging existing standards and technology by using x509 certificates.  It works great for web and DevOps applications, so we are porting it to device communication.  (Spoiler: there is absolutely no blockchain needed to do this - find a different site for token investment tips. It ain’t me you’re looking for, babe.)</li>
+</ul>
+
+<p>Certificates are provisioned automatically through the WoTT agent from our own Certificate Authority (CA).  Currently, we address back-end communication to services and machine to machine (M2M) communication.  (In future, we will handle browser-device communication.)  Certificates are automatically renewed every 7 days, though the renewal period can be revised up or down depending on the requirements of each use case.  For those that are familiar, this should look and sound a lot like <a href="https://letsencrypt.org/">Let’s Encrypt</a> for IoT.</p>
+
+<p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
+
+<p>Figure 3 - Use a TPM, seriously.
+(Another plug for the Security Hat here - you’ll love it.)</p>
+
+<p>The certificate serves as both the unique device identifier and the means to distribute a public encryption key to encrypt data in motion.  With an installed certificate, the device can establish secure connections to other devices and services, and cryptographically attest to it’s identity using mutual TLS (<a href="https://en.wikipedia.org/wiki/Mutual_authentication">mTLS</a>). For the WoTT agent, we are using Elliptic Curve cryptography (<a href="https://arstechnica.com/information-technology/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/">ECC</a>) because it offers better performance while achieving the same security as RSA.</p>
+
+<p>It is worth mentioning that mTLS is different than how your browser works. In such a scenario, you as the client (i.e. the browser) verify that the remote server (e.g. https://www.google.com) is indeed being served from Google’s server and not an impersonator (spoofing attack). There is however no way for Google to cryptographically confirm you or your browser identity (which is why we login to access email). With WoTT, we add client-side authentication and eliminate the need for login credentials (username and password), since we can verify the client identity with the certificate.  This is a huge step in moving away from the problem of default login credentials in IoT. There are at least <a href="https://www.csoonline.com/article/3126924/here-are-the-61-passwords-that-powered-the-mirai-iot-botnet.html">61 default login credentials</a> used in the Mirai botnet attack.</p>
+
+<p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
+
+<p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
+
+<p>This Trust Score can then be used to answer the question: <em>should I trust this device?</em>  Access policies can then be set depending on the security sensitivity of the end-point. For instance, you may allow a device with a Trust Score of 0.4 to communicate with a weather service, but for customer payment data, a Trust Score of 0.9 or higher is needed.</p>
+
+<p>To pull this all together, we hope to raise the security bar in cyber-physical or IoT systems.  We don’t have a silver bullet, but we do have some common sense solutions to some <em>really</em> obvious problems that have already been solved in the DevOps world.  We also have a pretty neat way of enabling M2M communication and doing away with perimeter security, but I’ll ploy you with the explanation of ‘zero trust’ in another post.</p>
+
+<p>Again, I have made some claims here that I will substantiate in future posts.  Check back in, subscribe to the <a href="link to sign up page">newsletter</a> or <a href="https://twitter.com/wottsecurity">follow</a> to see more.  If you’re interested to try out what we’re building, follow us on [Github] (github.com/wottsecurity) or check out the documentation.</p>
+
+<p>Want to troll me? Comments below or <a href="twitter.com/wottsecurity">twitter</a> here.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(/assets/images/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">thoughts</span>
+  <a class="title" href="/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Why open source solutions are critical for IoT</a>
+  <span class="author_time">By <a>Al Esmail</a> on June 25, 2019</span>
+  <span class="description">
+   TL;DR IoT needs one ring to rule them all and it’s not a platform. {% asset blog/iot-monster.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" class="img-fluid" %} In my last post, I described the relevance of [open source security](link to open source security blog post). For very different reasons, I will argue here that... </span>
+  <a class="read_full" href="/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(/assets/images/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">thoughts</span>
+  <a class="title" href="/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec">Why open source is critical for InfoSec</a>
+  <span class="author_time">By <a>Al Esmail</a> on June 24, 2019</span>
+  <span class="description">
+   TL;DR Proprietary security is a fresh cow pie hiding in the tall grass. {% asset blog/cow.jpg srcset:width="1300 2x" srcset:width="650 1x" alt="Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?" class="img-fluid" %} Figure 1 - How I imagine... </span>
+  <a class="read_full" href="/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(/assets/images/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">thoughts</span>
+  <a class="title" href="/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">Why shift-left security is relevant for IoT</a>
+  <span class="author_time">By <a>Al Esmail</a> on June 23, 2019</span>
+  <span class="description">
+   TL;DR Cyber is best handled by developers with big, bulging...brains. ![Natalie Portman](https://giphy.com/gifs/film-4-natalie-portman-lQaO9Cf50zlM4) Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress. In our [first blog post](link to why we do what we do), I articulated that we are strong proponents of shift-left security. The idea that security... </span>
+  <a class="read_full" href="/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">Continue reading </a>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="white_shadow_block comments_block">
+comments
+</div>
+
+</div>
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wottsecurity.github.io/wott-io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wottsecurity.github.io/wott-io//assets/style/img/facebook.svg);"><a href="" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io//assets/style/img/github.svg);"><a href="" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io//assets/style/img/twitter.svg);"><a href="" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wottsecurity.github.io/wott-io//assets/style/img/linkedin.svg);"><a href="" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wottsecurity.github.io/wott-io/product" title="">products</a></li>
+<li><a href="" title="">Authentication</a></li>
+<li><a href="" title="">Free SSL for IoT</a></li>
+<li><a href="" title="">Credential Managment for IoT</a></li>
+<li><a href="" title="">Encryption</a></li>
+<li><a href="" title="">Monitoring</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wottsecurity.github.io/wott-io/about" title="">about us</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/pricing" title="">pricing</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/documentation" title="">documentation</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">lastest news</a></li>
+
+ <li><a href="/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" title="Why open source solutions are critical for IoT">Why open source solutions are critical for IoT</a></li>
+
+ <li><a href="/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec" title="Why open source is critical for InfoSec">Why open source is critical for InfoSec</a></li>
+
+ <li><a href="/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot" title="Why shift-left security is relevant for IoT">Why shift-left security is relevant for IoT</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; 2019 by WOTT.io All rights reserved</li>
+<li><a href="/tos" title="">Terms of service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+</body>
+</html>

@@ -1,28 +1,85 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title> - Articles</title>
+    <description>WoTT is a free, automated, open-source public key infrastructure for connected hardware</description>
     <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
+    https://wottsecurity.github.io</link>
+    
+      
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <title>Why open source solutions are critical for IoT</title>
+        
+          <description>&lt;p&gt;TL;DR IoT needs one ring to rule them all and it’s not a platform.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 25 Jun 2019 10:00:00 +0000</pubDate>
         <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        https://wottsecurity.github.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT</link>
+        <guid isPermaLink="true">https://wottsecurity.github.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT</guid>
       </item>
-      {% endunless %}
-    {% endfor %}
+      
+    
+      
+      <item>
+        <title>Why open source is critical for InfoSec</title>
+        
+          <description>&lt;p&gt;TL;DR Proprietary security is a fresh cow pie hiding in the tall grass.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 24 Jun 2019 10:00:00 +0000</pubDate>
+        <link>
+        https://wottsecurity.github.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec</link>
+        <guid isPermaLink="true">https://wottsecurity.github.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Why shift-left security is relevant for IoT</title>
+        
+          <description>&lt;p&gt;TL;DR Cyber is best handled by developers with big, bulging…brains.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 23 Jun 2019 10:00:00 +0000</pubDate>
+        <link>
+        https://wottsecurity.github.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot</link>
+        <guid isPermaLink="true">https://wottsecurity.github.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>WoTT secures the Internet of Things</title>
+        
+          <description>&lt;p&gt;TL;DR It’s Let’s Encrypt for IoT - you know you want it.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 22 Jun 2019 10:00:00 +0000</pubDate>
+        <link>
+        https://wottsecurity.github.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things</link>
+        <guid isPermaLink="true">https://wottsecurity.github.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Why we are doing what we do</title>
+        
+          <description>&lt;h2 id=&quot;tldr-the-future-has-flying-cars-transformers-and-low-calorie-diets&quot;&gt;TL;DR the future has flying cars, transformers and low calorie diets.&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 20 Jun 2019 10:00:00 +0000</pubDate>
+        <link>
+        https://wottsecurity.github.io/blog/news/2019/06/20/why-we-are-doing-what-we-do</link>
+        <guid isPermaLink="true">https://wottsecurity.github.io/blog/news/2019/06/20/why-we-are-doing-what-we-do</guid>
+      </item>
+      
+    
   </channel>
 </rss>

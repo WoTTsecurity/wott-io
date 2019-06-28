@@ -1,39 +1,112 @@
----
-layout: error
-current: error
-title: "404 - Page Not Found"
-permalink: 404.html
----
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    {% include dynamic_title.html %}
-    <title>{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>404 - Page Not Found</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% include head.html %}
+    	<link rel="stylesheet" type="text/css" href="https://wottsecurity.github.io/wott-io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wottsecurity.github.io/wott-io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wottsecurity.github.io/wott-io/404.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <meta property="og:url" content="https://wottsecurity.github.io/wott-io/404.html" />
+    <meta property="og:image" content="https://wottsecurity.github.io/assets/images/blog-cover.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 - Page Not Found" />
+    <meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <meta name="twitter:url" content="https://wottsecurity.github.io/wott-io/" />
+    <meta name="twitter:image" content="https://wottsecurity.github.io/wott-io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wottsecurity.github.io/wott-io/assets/images/blog-icon.png"
+    },
+    "url": "https://wottsecurity.github.io/wott-io/404.html",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wottsecurity.github.io/wott-io/assets/images/blog-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wottsecurity.github.io/wott-io/404.html"
+    },
+    "description": "WoTT is a free, automated, open-source public key infrastructure for connected hardware"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="404 - Page Not Found" href="/wott-io/feed.xml" />
+
 </head>
-<header class="b_header">{% include header.html %}</header>
+<header class="b_header"><div class="head_nav">
+
+<a class="logo" href="https://wottsecurity.github.io/wott-io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wottsecurity.github.io/wott-io/product" title="">product</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/about" title="">about us</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/pricing" title="">pricing</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/documentation" title="">documentation</a></li>
+<li><a href="https://wottsecurity.github.io/wott-io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+</div>
+
+</div>
+</header>
 <body>
 
     <div class="b_content">
                    <section class="error-message">
                     <h1 class="error-code">404</h1>
                     <p class="error-description">Page not found</p>
-                    <a class="error-link" href="{{ site.baseurl }}">Go to the front page →</a>
+                    <a class="error-link" href="/wott-io/">Go to the front page →</a>
                 </section>
     </div>
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    {% include analytics.html %}
-    {% if page.class == "post-template" %}
-        {% include post-scripts.html %}
-    {% elsif page.class == "page-template" %}
-        {% include page-scripts.html %}
-    {% endif %}
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+    
 </body>
 <footer class="b_footer"></footer>
 </html>

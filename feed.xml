@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://wottsecurity.github.io/wott-io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wottsecurity.github.io/wott-io/" rel="alternate" type="text/html" /><updated>2019-06-28T15:35:55+00:00</updated><id>https://wottsecurity.github.io/wott-io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>WoTT is a free, automated, open-source public key infrastructure for connected hardware</subtitle><entry><title type="html">Why open source solutions are critical for IoT</title><link href="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" rel="alternate" type="text/html" title="Why open source solutions are critical for IoT" /><published>2019-06-25T10:00:00+00:00</published><updated>2019-06-25T10:00:00+00:00</updated><id>https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT</id><content type="html" xml:base="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">&lt;p&gt;TL;DR IoT needs one ring to rule them all and it’s not a platform.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;No Image&quot; class=&quot;img-fluid&quot; src=&quot;/wott-io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png&quot; srcset=&quot;/wott-io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png 2x, /wott-io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In my last post, I described the relevance of &lt;a href=&quot;link to open source security blog post&quot;&gt;open source security&lt;/a&gt;.  For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.&lt;/p&gt;
+
+&lt;p&gt;Consider the challenge of building an IoT solution from end to end:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Custom boards are designed for economy of scale&lt;/li&gt;
+  &lt;li&gt;Choose from a multitude of non-standard operating systems&lt;/li&gt;
+  &lt;li&gt;Select a platform with high technical switching costs that is incompatible with other services&lt;/li&gt;
+  &lt;li&gt;Roll your own certificates if they are supported by your platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The result is a unique system that is tied to a particular back-end infrastructure and likely incompatible with other ecosystems of devices.  It also requires cross-functional skills that one developer cannot master without years of experience.  The process is inefficient, expensive and error-prone - not to mention insecure.&lt;/p&gt;
+
+&lt;p&gt;The opportunity to find interesting use cases beyond turning the lights on in my home while I’m out is hindered by the missing interoperability of the standard IoT development process.  If I switch from Spotify to Tidal, will it still integrate with my Bose speaker? Can I use either with Sonos? OK Google, where’s my iPhone? Did you order the Avocados from Ocado, Alexa?  I’m not endorsing any of these technologies, I am just saying that IoT makes it difficult to eat my Guacamole (not Avo/toast) and listen to the Black Album.  Though, check out the privacy conscious &lt;a href=&quot;https://blog.hackster.io/chatterbox-is-an-amazon-echo-like-device-that-protects-your-kids-privacy-dac95d4d3280&quot;&gt;Chatterbox&lt;/a&gt; for a great voice assistant alternative.&lt;/p&gt;
+
+&lt;p&gt;While it is tempting to build the one proprietary platform that will monopolize all others, what IoT needs is common technologies that are accessible to all.  What better way to achieve this goal than with open-source tools?&lt;/p&gt;
+
+&lt;p&gt;Consider an end to end solution like this:
+C* ommon mass produced, reusable, modular hardware - Raspberry Pi (Admit it, you’re already using them in real-world use cases - not just for prototyping.)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Common operating system - Linux&lt;/li&gt;
+  &lt;li&gt;Common communication protocol - MQTT&lt;/li&gt;
+  &lt;li&gt;Security - let’s be professional about it and use x509 certificates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The result would be a device that could be supported by multiple services and supported by many developers.  Documentation and support would be plentifully provided by the community.  Hardware costs could decrease from larger production runs to meet increased demand.&lt;/p&gt;
+
+&lt;p&gt;Cheaper, simpler, secure and interoperable. I like the sound of that.&lt;/p&gt;
+
+&lt;p&gt;Check back in to &lt;a href=&quot;https://wottsecurity.github.io/blog&quot;&gt;blog&lt;/a&gt;, join the &lt;a href=&quot;link to newsletter sign up&quot;&gt;newsletter&lt;/a&gt; or follow on &lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR IoT needs one ring to rule them all and it’s not a platform.</summary></entry><entry><title type="html">Why open source is critical for InfoSec</title><link href="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec" rel="alternate" type="text/html" title="Why open source is critical for InfoSec" /><published>2019-06-24T10:00:00+00:00</published><updated>2019-06-24T10:00:00+00:00</updated><id>https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec</id><content type="html" xml:base="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec">&lt;p&gt;TL;DR Proprietary security is a fresh cow pie hiding in the tall grass.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?&quot; class=&quot;img-fluid&quot; src=&quot;/wott-io/assets/blog/cow-f652b4e6b3efce3e9c5657eda922f1804eeb66c8d57902b064a21e381756868f.jpg&quot; srcset=&quot;/wott-io/assets/blog/cow-f652b4e6b3efce3e9c5657eda922f1804eeb66c8d57902b064a21e381756868f.jpg 2x, /wott-io/assets/blog/cow-f652b4e6b3efce3e9c5657eda922f1804eeb66c8d57902b064a21e381756868f.jpg 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?&lt;/p&gt;
+
+&lt;p&gt;In a previous post, I advocated for the merits of &lt;a href=&quot;link to shift left article&quot;&gt;DevSecOps&lt;/a&gt; and shift left security.  In this post, I will present our position on open source security vs. security by obfuscation (STO).  If you read the title and are familiar with the mid-western American expression &lt;a href=&quot;https://www.urbandictionary.com/define.php?term=Cow%20pie&quot;&gt;cow pie&lt;/a&gt;, you hopefully know where I am going.  If not, here’s a verbose description: fresh bovine excrement collapses under its own weight to form a flat cylindrical shape about the size of a pie and is well concealed by uncut grass.  It’ll really mess up your cowboy (or cowgirl) boots - get the picture?&lt;/p&gt;
+
+&lt;p&gt;Let’s begin in 1883 when the Dutch-born cryptographer, Auguste Kerkchoffs articulated six design principles on &lt;a href=&quot;http://www.gutenberg.us/articles/shannon%27s_maxim&quot;&gt;La Cryptographie Militaire&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The system must be practically, if not mathematically, indecipherable;&lt;/li&gt;
+  &lt;li&gt;It should not require secrecy, and it should not be a problem if it falls into enemy hands;&lt;/li&gt;
+  &lt;li&gt;It must be possible to communicate and remember the key without using written notes, and correspondents must be able to change or modify it at will;&lt;/li&gt;
+  &lt;li&gt;It must be applicable to telegraph communications;&lt;/li&gt;
+  &lt;li&gt;It must be portable, and should not require several persons to handle or operate;&lt;/li&gt;
+  &lt;li&gt;Lastly, given the circumstances in which it is to be used, the system must be easy to use and should not be stressful to use or require its users to know and comply with a long list of rules.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of these are certainly redundant given advances in computation since the 19th century but the second principle remains and is referred to as Kerchoffs’ principle.  The principle was stated slightly differently (or perhaps restated) as “the enemy knows the system”, by American mathematician, Claude Shannon.  The latter is referred to as &lt;a href=&quot;http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf&quot;&gt;Shannon’s maxim&lt;/a&gt;. (An aside, I would be tickled to be the author of either a maxim or a principle but alas, such accolades have eluded me.)&lt;/p&gt;
+
+&lt;p&gt;In searching for academic references to STO, I unfortunately was hard pressed to find even a postulate in favor of the practice.  I did not intend to run STO through the google test but the fourth organic result gives an indication of popular perception (don’t use it).  Though, Ross Patel does make a fair argument that &lt;a href=&quot;https://www.bcs.org/content/ConWebDoc/2788&quot;&gt;STO can enhance security&lt;/a&gt; in conjunction with other security methods.  He cites the example of network administrators placing sensitive services on non-standard ports to evade script kiddies and programs that exploit common vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;It is a fair point that STO can indeed increase security if the means of obfuscation is consistently unique.  A metaphor to drive the point home - open source security is the safe in which you store the jewels; STO is the act of hiding the safe. Of course your safe is useless without a &lt;a href=&quot;link to wott secures internet of things blog post&quot;&gt;strong password&lt;/a&gt;.  That being said, a security company that offered a service to hide your safe behind the family portrait (and offered the same service to all its clients) is probably not offering a valuable service and likely why popular opinion does not favor the method. However, choosing to hide your safe somewhere non-obvious and random would indeed be a valuable addition to your security system.&lt;/p&gt;
+
+&lt;p&gt;I would propose that security systems/methods/software that are used in many places or by many clients should adhere to Kerchoffs’ principle. Consider the following assumptions:&lt;/p&gt;
+
+&lt;p&gt;As the number of users of a security system increases, the value of the assets protected by that system increases.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;As  the value of assets protected by a system increases, the reward of compromising that system increases.&lt;/li&gt;
+  &lt;li&gt;As the reward of compromising a system increases, the number of adversaries attacking the system increases.&lt;/li&gt;
+  &lt;li&gt;As the number of adversaries attacking a system increases, the adversaries’ knowledge of that system increases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Therefore, the enemy knowledge of a security system increases with the number of users.  I argue that widely used security systems must be completely open-source as these systems are designed to resist attack under complete enemy knowledge of its workings. Let it henceforth be known as &lt;em&gt;‘Esmail’s Postulate’&lt;/em&gt;. ;)&lt;/p&gt;
+
+&lt;p&gt;Beyond adversary or enemy knowledge, we should consider the value added of public knowledge to a system.  Blackhats often work together by publishing their hacks on the dark web or Github (Mirai is on Github - I won’t link to it, but you can find it if you like). Others then contribute and build upon these tools furthering the capabilities.  Whitehats can mirror this collaborative behavior in releasing their tools to the commons and crowdsourcing audit, vulnerability disclosure and patches.&lt;/p&gt;
+
+&lt;p&gt;To substantiate theory with practice, there are successful companies doing a great job with open source security:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/draios&quot;&gt;Sysdig&lt;/a&gt;: Unified cloud native visibility + security platform&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/hashicorp/vault&quot;&gt;Hashicorp Vault&lt;/a&gt;: Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/snyk/snyk&quot;&gt;Snyk&lt;/a&gt;: A developer-first solution that automates finding &amp;amp; fixing vulnerabilities in your dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/WoTTsecurity/agent&quot;&gt;WoTT&lt;/a&gt;: Plug and play cyber sec tools for IoT developers ;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What these companies have in common is that they are building developer tools.  We believe this is the best place to think about security - during development (link to shift left security).&lt;/p&gt;
+
+&lt;p&gt;To conclude, security through obfuscation is a single piece to consider in building a strong system.  The &lt;em&gt;plat de resistance&lt;/em&gt; in your security system should be open source, resilient in enemy hands and supported by crowdsourced audit.&lt;/p&gt;
+
+&lt;p&gt;Join the &lt;a href=&quot;wott newsletter sign up link&quot;&gt;newsletter&lt;/a&gt; or follow on &lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Want to troll me? Comments below or &lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR Proprietary security is a fresh cow pie hiding in the tall grass.</summary></entry><entry><title type="html">Why shift-left security is relevant for IoT</title><link href="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot" rel="alternate" type="text/html" title="Why shift-left security is relevant for IoT" /><published>2019-06-23T10:00:00+00:00</published><updated>2019-06-23T10:00:00+00:00</updated><id>https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot</id><content type="html" xml:base="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">&lt;p&gt;TL;DR Cyber is best handled by developers with big, bulging…brains.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://giphy.com/gifs/film-4-natalie-portman-lQaO9Cf50zlM4&quot; alt=&quot;Natalie Portman&quot; /&gt;
+Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress.&lt;/p&gt;
+
+&lt;p&gt;In our &lt;a href=&quot;link to why we do what we do&quot;&gt;first blog post&lt;/a&gt;, I articulated that we are strong proponents of shift-left security.  The idea that security should be incorporated as early as possible during application and infrastructure development.  In this post, I will explain why we feel that developers are in a strong position to improve security posture and why it’s more efficient for them to be involved in the solution.&lt;/p&gt;
+
+&lt;p&gt;Firstly, let me say that I think cyber is sexy - well, sexy in a very particular way.  It’s easy to lose sight of it in Whatsapp headlines or unflattering Julian Assange photos.  Normally though, the protagonist hacker is presented to us as odd in social disposition but powerful in IQ, perception and virtue - think Rami Malek playing Eliot Alderson - leader of &lt;em&gt;fsociety&lt;/em&gt;. Sexy, right?&lt;/p&gt;
+
+&lt;p&gt;The cyber game is between adversaries playing offense and defense, like high stakes cat and mouse.  To get a sense of the calibre of minds playing in this battle of wits, consider the complexity of &lt;a href=&quot;https://www.youtube.com/watch?v=z1-eH3NJJX0&quot;&gt;zero knowledge science&lt;/a&gt;, the magic math that goes into it and then trying to find a way around it.  It’s a hard game and a dynamic one at that. I feel bad for anyone that thinks they are on the sidelines.  We’re all playing the cyber game whether we realize it or not.&lt;/p&gt;
+
+&lt;p&gt;Given this high stakes sport is played by crafty and pragmatic geniuses, the best way you to protect yourself is to put your best line on the court.  Who better than your own developers that know the ins and outs of their own code?  Developers strive for efficiency, utility and happen to have big, bulging - &lt;em&gt;brains&lt;/em&gt;.  Moreover, as application development and operations have merged into DevOps to bring about agile methods and higher velocity, it has become nearly impossible for security teams to keep up.  To solve the problem, merge security mindset with DevOps to spawn DevSecOps (yes, it’s a mouthful but I already mentioned that size matters in this sport).&lt;/p&gt;
+
+&lt;p&gt;Let’s define &lt;a href=&quot;https://opensource.com/article/19/1/what-devsecops&quot;&gt;DevSecOps&lt;/a&gt; a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the &lt;a href=&quot;https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336&quot;&gt;cost of fixing flaws&lt;/a&gt; by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;The NIST says so. Prove them wrong if you want&quot; class=&quot;img-fluid&quot; src=&quot;/wott-io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png&quot; srcset=&quot;/wott-io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png 2x, /wott-io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.&lt;/p&gt;
+
+&lt;p&gt;In considering end-points, DevSecOps or shift-left security introduces another important concept: &lt;em&gt;secure by design&lt;/em&gt;.  Presently, CISOs turn to perimeter security solutions (firewalls and networking monitoring) to protect devices.  Though, the latest thinking proposes making the assumption that closed networks have already been compromised and are hostile &lt;a href=&quot;https://www.oreilly.com/library/view/zero-trust-networks/9781491962183/ch01.html&quot;&gt;Zero Trust&lt;/a&gt;. I will take this concept further in a future post and consider remote and open networks.  Given the assumption that networks are hostile, we must build security into the device itself.  The only way to do that is during design and so we shift security left.&lt;/p&gt;
+
+&lt;p&gt;To hammer home the point, let’s use simile (not metaphor): network monitoring is like snipers on rooftops and secure by design is like bulletproof windows.  It’s simply not possible for snipers to see everything unless you have enough of them.  Eventually, these angry looking gunmen are bound to interfere with day to day life.  Bulletproof windows are transparent or seamless - quietly protecting you from danger.  Yes, windows can always be broken but it takes much bigger guns, which far fewer people have access to in most parts of the world.  This effectively reduces the size of the threat space or threat community.  If you’re only worried about state-sponsored cyber attacks, I’d say you’re doing pretty well.  I don’t advocate removing the snipers, but I do suggest adding additional layers of security in case one system fails (or ‘defense in depth’ if you want it in corporate speak).  In the case of open networks, secure by design is the &lt;em&gt;only&lt;/em&gt; option.&lt;/p&gt;
+
+&lt;p&gt;To conclude, cyber is sexy and the only obvious thing to do is to bring in the A-team and involve developers in security decision-making. We know you’re packing heat in those brains of yours, girls and boys. Get off the bench, get in the game, do your part, be part of the solution, be a whitehat, etcetera, etcetera, etcetera.&lt;/p&gt;
+
+&lt;p&gt;I claim that open networks are an important use case to cover. Will cover that in a future blog - Check back in to the &lt;a href=&quot;https://wottsecurity.github.io/blog&quot;&gt;blog&lt;/a&gt;, join the [newsletter] or follow on &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;. Want to troll me? Comments below or Twitter&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR Cyber is best handled by developers with big, bulging…brains.</summary></entry><entry><title type="html">WoTT secures the Internet of Things</title><link href="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things" rel="alternate" type="text/html" title="WoTT secures the Internet of Things" /><published>2019-06-22T10:00:00+00:00</published><updated>2019-06-22T10:00:00+00:00</updated><id>https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things</id><content type="html" xml:base="https://wottsecurity.github.io/wott-io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">&lt;p&gt;TL;DR It’s Let’s Encrypt for IoT - you know you want it.&lt;/p&gt;
+
+&lt;p&gt;Figure 1 - If the web can have it, why can’t IoT?&lt;/p&gt;
+
+&lt;p&gt;In my first blog post, I articulated &lt;a href=&quot;link to first blog post&quot;&gt;why we do what we do&lt;/a&gt; at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will &lt;a href=&quot;link to shift left security article&quot;&gt;play a big role in security&lt;/a&gt;.) It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on &lt;a href=&quot;github.com/wottsecurity&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The aim for WoTT is to do three things:
+​​&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make it easy to use asymmetric encryption for device communication (Northbound, Southbound and m2m)&lt;/li&gt;
+  &lt;li&gt;Provide a cryptographic identity for every device (such that the receiver can trust that the sender is who it claims to be)&lt;/li&gt;
+  &lt;li&gt;Rate each device’s trustworthiness (based on behavior and state)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In plain English, the goal is to allow other devices and services to ask the question: &lt;em&gt;How much can I trust this device at any given time?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We do this in the shape of a dynamic Trust Score.&lt;/p&gt;
+
+&lt;p&gt;Naturally, we have a lovely feature set that extends beyond this core to simplify the lives of developers.  We want developers to be able to focus on product rather than invest too many cycles into security.  Here are some additional features (We would love to know which ones you like via comment/&lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;Twitter&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fleet management dashboard&lt;/li&gt;
+  &lt;li&gt;Vulnerability warnings (CVE)&lt;/li&gt;
+  &lt;li&gt;Credential management&lt;/li&gt;
+  &lt;li&gt;Certification/Compliance (future)
+​
+Coming back to the &lt;em&gt;main&lt;/em&gt; goal of establishing device trust. Let’s unpack the &lt;em&gt;main&lt;/em&gt; functionality.
+​
+The fundamental building block that we use to encrypt communication between two peers is cryptographic identity.  We are not reinventing the wheel here.  We are leveraging existing standards and technology by using x509 certificates.  It works great for web and DevOps applications, so we are porting it to device communication.  (Spoiler: there is absolutely no blockchain needed to do this - find a different site for token investment tips. It ain’t me you’re looking for, babe.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Certificates are provisioned automatically through the WoTT agent from our own Certificate Authority (CA).  Currently, we address back-end communication to services and machine to machine (M2M) communication.  (In future, we will handle browser-device communication.)  Certificates are automatically renewed every 7 days, though the renewal period can be revised up or down depending on the requirements of each use case.  For those that are familiar, this should look and sound a lot like &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; for IoT.&lt;/p&gt;
+
+&lt;p&gt;We strongly recommend securely storing device keys in a secure environment like a trusted platform module (&lt;a href=&quot;https://en.wikipedia.org/wiki/Trusted_Platform_Module&quot;&gt;TPM&lt;/a&gt;).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with &lt;a href=&quot;https://uk.pi-supply.com/&quot;&gt;Pi Supply&lt;/a&gt; to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)&lt;/p&gt;
+
+&lt;p&gt;Figure 3 - Use a TPM, seriously.
+(Another plug for the Security Hat here - you’ll love it.)&lt;/p&gt;
+
+&lt;p&gt;The certificate serves as both the unique device identifier and the means to distribute a public encryption key to encrypt data in motion.  With an installed certificate, the device can establish secure connections to other devices and services, and cryptographically attest to it’s identity using mutual TLS (&lt;a href=&quot;https://en.wikipedia.org/wiki/Mutual_authentication&quot;&gt;mTLS&lt;/a&gt;). For the WoTT agent, we are using Elliptic Curve cryptography (&lt;a href=&quot;https://arstechnica.com/information-technology/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/&quot;&gt;ECC&lt;/a&gt;) because it offers better performance while achieving the same security as RSA.&lt;/p&gt;
+
+&lt;p&gt;It is worth mentioning that mTLS is different than how your browser works. In such a scenario, you as the client (i.e. the browser) verify that the remote server (e.g. https://www.google.com) is indeed being served from Google’s server and not an impersonator (spoofing attack). There is however no way for Google to cryptographically confirm you or your browser identity (which is why we login to access email). With WoTT, we add client-side authentication and eliminate the need for login credentials (username and password), since we can verify the client identity with the certificate.  This is a huge step in moving away from the problem of default login credentials in IoT. There are at least &lt;a href=&quot;https://www.csoonline.com/article/3126924/here-are-the-61-passwords-that-powered-the-mirai-iot-botnet.html&quot;&gt;61 default login credentials&lt;/a&gt; used in the Mirai botnet attack.&lt;/p&gt;
+
+&lt;p&gt;Finally, let me introduce the plat de resistance - &lt;em&gt;the Trust Score&lt;/em&gt;.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).&lt;/p&gt;
+
+&lt;p&gt;Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek&lt;/p&gt;
+
+&lt;p&gt;This Trust Score can then be used to answer the question: &lt;em&gt;should I trust this device?&lt;/em&gt;  Access policies can then be set depending on the security sensitivity of the end-point. For instance, you may allow a device with a Trust Score of 0.4 to communicate with a weather service, but for customer payment data, a Trust Score of 0.9 or higher is needed.&lt;/p&gt;
+
+&lt;p&gt;To pull this all together, we hope to raise the security bar in cyber-physical or IoT systems.  We don’t have a silver bullet, but we do have some common sense solutions to some &lt;em&gt;really&lt;/em&gt; obvious problems that have already been solved in the DevOps world.  We also have a pretty neat way of enabling M2M communication and doing away with perimeter security, but I’ll ploy you with the explanation of ‘zero trust’ in another post.&lt;/p&gt;
+
+&lt;p&gt;Again, I have made some claims here that I will substantiate in future posts.  Check back in, subscribe to the &lt;a href=&quot;link to sign up page&quot;&gt;newsletter&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;follow&lt;/a&gt; to see more.  If you’re interested to try out what we’re building, follow us on [Github] (github.com/wottsecurity) or check out the documentation.&lt;/p&gt;
+
+&lt;p&gt;Want to troll me? Comments below or &lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt; here.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR It’s Let’s Encrypt for IoT - you know you want it.</summary></entry><entry><title type="html">Why we are doing what we do</title><link href="https://wottsecurity.github.io/wott-io/blog/news/2019/06/20/why-we-are-doing-what-we-do" rel="alternate" type="text/html" title="Why we are doing what we do" /><published>2019-06-20T10:00:00+00:00</published><updated>2019-06-20T10:00:00+00:00</updated><id>https://wottsecurity.github.io/wott-io/blog/news/2019/06/20/why-we-are-doing-what-we-do</id><content type="html" xml:base="https://wottsecurity.github.io/wott-io/blog/news/2019/06/20/why-we-are-doing-what-we-do">&lt;h2 id=&quot;tldr-the-future-has-flying-cars-transformers-and-low-calorie-diets&quot;&gt;TL;DR the future has flying cars, transformers and low calorie diets.&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt=&quot;No Image&quot; src=&quot;/wott-io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png&quot; srcset=&quot;/wott-io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png 2x, /wott-io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png 1x&quot; /&gt;
+Figure 1 - Best free photo I could find when searching for ‘open source’&lt;/p&gt;
+
+&lt;p&gt;In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.&lt;/p&gt;
+
+&lt;p&gt;The term ‘Internet of Things’ has unfortunately become a buzzword that draws associations to home devices that are connected to the internet with limited thought given to relevance of the use case, long term sustainability of back-end infrastructure or security.  In trying to describe the integration of internet connectivity into new hardware applications, let us instead refer to &lt;a href=&quot;https://ptolemy.berkeley.edu/projects/cps/&quot;&gt;cyber-physical systems&lt;/a&gt;.  These are the integrations of computation, networking and physical processes.  The field builds on embedded systems that are used in devices whose primary function is not computation.&lt;/p&gt;
+
+&lt;p&gt;The aforementioned examples of internet connected devices are the proverbial tip of the melting iceberg. I am of the opinion that was perhaps stated a bit too early in 2014 by &lt;a href=&quot;https://www.ben-evans.com/benedictevans/2014/5/26/the-internet-of-things&quot;&gt;Ben Evans at a16z&lt;/a&gt;, but is still very relevant, “Today, I have no idea how many devices I own with a chip, but I could tell you how many have a network connection. And I doubt my children will know that, in their turn.”  The principle here is that everything we use will find itself communicating over TCP/IP in the coming years.&lt;/p&gt;
+
+&lt;p&gt;At &lt;a href=&quot;https://wottsecurity.github.io&quot;&gt;WoTT&lt;/a&gt;, we are very excited about this.  We dream of the world of &lt;a href=&quot;https://www.airxos.io/&quot;&gt;unmanned aerial vehicles&lt;/a&gt; (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will &lt;a href=&quot;https://www.nature.com/articles/s41586-019-1119-1&quot;&gt;synthesize speech&lt;/a&gt; from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel &lt;a href=&quot;https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/&quot;&gt;(assuming Google doesn’t cut access to the necessary APIs)&lt;/a&gt;. If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;No Image&quot; src=&quot;/wott-io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png&quot; srcset=&quot;/wott-io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png 2x, /wott-io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)&lt;/p&gt;
+
+&lt;p&gt;We also believe machines will be collaborative.  As a thought experiment, let’s take the usual smart home automation to the extreme and assume that everything in your flat is connected.  Let’s go through your morning ritual:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wake up/shower/brush your teeth (hygiene is important, friends)&lt;/li&gt;
+  &lt;li&gt;Get dressed (black tee and jeans, because even in the future we don’t complicate this)&lt;/li&gt;
+  &lt;li&gt;Look in the mirror (you know you do)&lt;/li&gt;
+  &lt;li&gt;Breakfast&lt;/li&gt;
+  &lt;li&gt;Commute to work (or &lt;a href=&quot;https://stripe.com/gb/blog/remote-hub&quot;&gt;work from home&lt;/a&gt; - yes &lt;a href=&quot;https://www.wott.io&quot;&gt;WoTT&lt;/a&gt; also believes in remote working)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s introduce some intelligence into the process in the form of a Raspberry Pi mounted camera above your mirror that &lt;a href=&quot;https://www.hackster.io/dexterindustries/pi-camera-vision-detect-objects-e6c936&quot;&gt;recognizes objects&lt;/a&gt; and categorizes their attributes over time. From December to February, your machine vision camera tracks that beautiful body of yours and pings your smart fridge to keep ordering the avocados and sliced bread. It lets you indulge and maybe pack on a few (visible) pounds through the winter. But…come March, warmer temperatures and the flight to Barcelona booked for June, your mirror decides that it’s time to cut the winter weight and let’s your fridge know to switch you from the carbs to a low calorie yogurt for breakfast. And boom, you’ve got your &lt;a href=&quot;https://www.quora.com/American-Psycho-1991-book-What-does-the-term-hardbody-mean-Where-did-the-term-originate&quot;&gt;hardbody&lt;/a&gt; back for speedo season without sparing a thought.  All of this because your devices securely share data and make multi-variable decisions.&lt;/p&gt;
+
+&lt;p&gt;The example also illustrates an important point about the future of cyber-physical systems: devices will have &lt;a href=&quot;https://en.wikipedia.org/wiki/Agency_(philosophy)&quot;&gt;agency&lt;/a&gt;. This means that devices will make decisions on your behalf.  In thinking of the billions and billions of devices that consultants have estimated will come online over the next decade, it makes sense that we will not be able to manually control all of them or pre-program an output for every scenario.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://giphy.com/gifs/mike-myers-JWH857oECO0rC&quot; alt=&quot;My mental image of a consulting firm’s quantification of billions of IoT devices&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure 3 - My mental image of a consulting firm’s quantification of billions of IoT devices.&lt;/p&gt;
+
+&lt;p&gt;Now here comes the teaser - &lt;em&gt;how do you implement reasonable security/privacy practices in a world where devices are autonomously making decisions or are literally in the driver’s seat?&lt;/em&gt;  At WoTT, we aim to deal with that question - it keeps us up at night.  For us, security is the burning question that needs to be answered before we step into a cyber-physical future.&lt;/p&gt;
+
+&lt;p&gt;I’ll save the self-indulgent explanation of how we aim to solve it for a later post and point you to our &lt;a href=&quot;https://wottsecurity.github.io&quot;&gt;website&lt;/a&gt; if you want more information.  Here instead, I want to briefly share some of our thoughts on security.  Security is sexy lately and like anything in the spotlight, the space is buzzing with new ideas, viewpoints and philosophies.  It is an important step for consumers, users and mainstream media to acknowledge that security/privacy is a topic requiring some attention.  We take a clear stand in favour of the following principles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open source: Transparency, peer audit and crowdsourced vulnerability reporting are the future. Security by obfuscation means there are fewer eyes on the problem and users have no idea that vulnerabilities exist.&lt;/li&gt;
+  &lt;li&gt;Secure by design: Security belongs directly in the device not just on the users’ network.  Some burden of security should be on the technology provider not the user alone. In fact, the best security does not rely on the end user at all.&lt;/li&gt;
+  &lt;li&gt;Shift-left: The cheapest and most efficient way to include security is during development rather than during security audits after the build is complete. It requires upskilling and new tooling, but devs are capable people - let’s give them the opportunity to shine.&lt;/li&gt;
+  &lt;li&gt;Zero Trust: Networks are not impenetrable. Perimeter security is a false sense of security. Assume the network is hostile and take measures to authenticate and encrypt every transmission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In closing, we at WoTT are techno-optimists.  While societies, cities and civilizations shift, there are upcoming challenges that we will need to collectively address.  WoTT is going to tackle security - well, part of it.&lt;/p&gt;
+
+&lt;p&gt;I have made a lot of claims here.  For the sake of being thorough and my attention span, I will explore each of these in separate posts over the coming weeks.  Check back in to the [blog here] (wott.io/blog), subscribe to the newsletter here (wott.io/blog) or [follow here] (twitter.com/wottsecurity).&lt;/p&gt;
+
+&lt;p&gt;Interested to see what we’re building? Follow us on &lt;a href=&quot;github.com/wottsecurity&quot;&gt;Github&lt;/a&gt; or check out the &lt;a href=&quot;https://wottsecurity.github.io&quot;&gt;website&lt;/a&gt;.  Want to troll me? Comments below or &lt;a href=&quot;twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="news" /><category term="Open Source" /><summary type="html">TL;DR the future has flying cars, transformers and low calorie diets.</summary></entry></feed>
