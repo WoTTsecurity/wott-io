@@ -7,6 +7,8 @@ language: 'en-uk'
 
 baseurl: '/wott-io/'
 url: 'https://wottsecurity.github.io'
+baseurl: '/'
+url: 'http://127.0.0.1:4000'
 
 # Website info
 title: Web of Trusted Things
@@ -30,10 +32,11 @@ permalink: /blog/:categories/:year/:month/:day/:title
 # permalink: /tag/:tag
 
 plugins_dir:
-  - _plugins
+  -_plugins
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-assets
 
 pagination:
   enabled: true
