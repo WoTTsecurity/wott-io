@@ -12,7 +12,7 @@ class: post-template
 
 TL;DR Proprietary security is a fresh cow pie hiding in the tall grass.
 
-{% asset cow.jpg srcset:width="1580 2x" srcset:width="790 1x" alt="Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?" class="img-fluid" %}
+{% asset blog/cow.jpg srcset:width="1300 2x" srcset:width="650 1x" alt="Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?" class="img-fluid" %}
 
 Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?
 
