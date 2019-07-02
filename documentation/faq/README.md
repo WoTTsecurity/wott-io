@@ -1,4 +1,4 @@
-## Frequently asked questions
+# Frequently asked questions
 
 - [What Operating Systems does the WoTT agent support?](#1)
 - [Do I need a WoTT Dashboard account to use the WoTT Agent?](#2)
