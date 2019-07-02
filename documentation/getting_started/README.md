@@ -35,7 +35,6 @@ We do this via our Dasboard which you can use to monitor your devices. The Dashb
 
 ## Installing the WoTT agent and claiming your device
 
-We'll run you through installing the WoTT agent on your device and claiming it on the WoTT Dashboard.
 First, create an account for the [WoTT Dashboard](https://dash.wott.io) and login - you will need this to claim your device later.
 
 Currently, the Agent is only available to Debian package distributions such as Raspbian (for Pi) or Debian. You will also need to have `curl` installed.
