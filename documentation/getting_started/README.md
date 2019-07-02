@@ -82,11 +82,11 @@ Let's break down the fields:
 Once you've added a credential, you can check for it on your device by running:
 
 ```
-cat /opt/wott/credentials/NAME.json
+$ cat /opt/wott/credentials/NAME.json
 ```
 Note that you will either have to wait 15 minutes for the WoTT agent to refresh or restart it immediately with:
 ```
-sudo service wott-agent restart
+$ sudo service wott-agent restart
 ```
 Additionally, older Pi hardware may take longer to load these certificates, so do wait a few minutes if the file has not downloaded yet. 
 
@@ -95,6 +95,6 @@ Additionally, older Pi hardware may take longer to load these certificates, so d
 You're now set up with both the WoTT Agent and Dash and have taken the first steps in securing your IoT hardware and applications. 
 
 WoTT certificates refresh every 7 days, so you will need to account for that in your applications.
-Credentials are downloaded either when WoTT fetches data or when restarted. 
+Credentials are downloaded either when WoTT fetches data or when restarted. You may also find yourself being denied permissions for some of the commands we've shown you, use `sudo` where necessary to circumvent this.
 
 These certificates and credentials can now be used to secure end-to-end device communication and web applications, check out some of the use cases and examples on the [WoTT Agent Github](https://github.com/WoTTsecurity/agent) for inspiration and ideas on how to use WoTT for your own projects.
