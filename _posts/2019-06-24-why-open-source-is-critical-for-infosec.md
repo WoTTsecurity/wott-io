@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/image_0.png
+cover:  image_0.png
 title: Why open source is critical for InfoSec
 date: 2019-06-24 10:00:00
 category: thoughts

@@ -26,15 +26,13 @@ facebook: wott # replace by your username
 
 # Permalinks
 permalink: /blog/:categories/:year/:month/:day/:title
-# permalink: /author/:author
-# permalink: /tag/:tag
 
 plugins_dir:
   - _plugins
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
-  - jekyll-assets
+  - jekyll-minimagick
 
 pagination:
   enabled: true
@@ -46,6 +44,20 @@ pagination:
   trail:
     before: 2
     after: 2
+
+mini_magick:
+  cover_blog_mini:
+    source: assets/images/blogcover
+    destination: assets/images/blogcover/mini
+    resize: "320x320"
+  cover_blog_full:
+    source: assets/images/blogcover
+    destination: assets/images/blogcover/full
+    resize: "1024x1024"
+  images_blog:
+    source: assets/images/blog
+    destination: assets/images/blog
+    resize: "1024x1024"
 
 feed:
   path: feed.xml

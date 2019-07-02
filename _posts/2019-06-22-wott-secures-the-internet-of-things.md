@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/image_0.png
+cover:  image_0.png
 title: WoTT secures the Internet of Things
 date: 2019-06-22 10:00:00
 category: thoughts
