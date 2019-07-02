@@ -65,7 +65,7 @@ See below for an example of a Raspberry Pi with its WoTT meta tags (automaticall
 
 ## Managing your own credentials through the WoTT Dashboard
 
-Earlier we touched upon scenarios where you might require API keys or logins for your applications. Notice on the left hand side of the WoTT Dashboard a sidebar containing a few options. 
+In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.
 
 ![sidebar](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/sidebar.png)
 
@@ -75,11 +75,11 @@ Navigate to 'Credentials.' Select 'Add a credential'
 
 Let's break down the fields:
 
-- **Name:** refers to the name of the credential file. We reccommend you name it something relevant to your application/hardware; for example `my_app`. 
-- **Key:** this is the credential's contents. For example, an `api_key`, `login_details`, or simply `credentials`.
-- **Value:** the value of the login/key required for access (the bit that should be hidden). This should be done in `username:password` format for a login.
-- **Owner:** optional field, reccommended for Raspberry Pis. The owner refers to Linux user that will own the file on the system. On Raspberry Pi, the default user is `pi`.
-- **Tags:** assign tags to your credentials to match the tags on the device that you are downloading to. This way only the credentials you need are downloaded.
+- **Name:** name of credential file, for example `my_app`. 
+- **Key:** contents of credential, for example: `api_key`, `login_details`, or simply `credentials`.
+- **Value:** actual value of the login/key required for access (the bit that should be hidden). This should be done in `username:password` format for a login.
+- **Owner:** optional field, reccommended for Raspberry Pis. The owner is the Linux user that will own the file on the system. On Raspberry Pi, the default user is `pi`.
+- **Tags:** must match the tags on the device that you are downloading to.
 
 Once you've added a credential, you can check for it on your device by running:
 
