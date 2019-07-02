@@ -46,7 +46,7 @@ $ sudo apt install wott-agent
 ```
 With the WoTT Agent successfully installed, your terminal will output your WoTT Device ID, claim token, and a link to claim the device. Copy and paste this link into your browser. If you are logged in from earlier, the fields may already have autofilled. Otherwise fill in the details in the relevant fields.
 
-![claim token]()
+![claim device](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/claim-device.png)
 
 You can view your Device ID and claim token using the following commands as well:
 
@@ -59,15 +59,17 @@ Through the dashboard you will be able to see the relative trust scores of your 
 
 The below image shows an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user's personal tags for the Pi's purpose.
 
-![raspberry pi profoile]()
+![raspberry pi profoile](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/rasbpi-profile.png)
 
 ## Managing your own credentials through the Dash
 
-Earlier we touched upon scenarios where you might require API keys or logins for your applications. You will notice on the left hand side of the WoTT Dash a sidebar containing a few options. One of these options is 'Credentials.' WoTT provides a means to manage and use credentials so you can download these onto your devices for your applications or hardware. 
+Earlier we touched upon scenarios where you might require API keys or logins for your applications. You will notice on the left hand side of the WoTT Dash a sidebar containing a few options. 
 
-Navigate to the 'Credentials' page and you will be able to add a new credential. You'll see the following form
+![sidebar](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/sidebar.png)
 
-![credentials]()
+One of these options is 'Credentials.' WoTT provides a means to manage and use credentials so you can download these onto your devices for your applications or hardware. Navigate to the 'Credentials' page and you will be able to add a new credential. You'll see the following form
+
+![credentials](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/credentials.png)
 
 Let's break down the fields:
 
