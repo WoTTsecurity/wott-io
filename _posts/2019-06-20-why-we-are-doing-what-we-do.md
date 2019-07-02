@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/image_0.png
+cover:  image_0.png
 title: Why we are doing what we do
 date: 2019-06-20 10:00:00
 category: news
