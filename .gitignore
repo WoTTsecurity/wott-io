@@ -4,8 +4,6 @@
 # Jekyll build
 /_site/
 .jekyll-metadata
-_config.yml
-_config_dev.yml
 
 # webstorm
 .idea/
