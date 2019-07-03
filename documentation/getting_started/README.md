@@ -48,7 +48,7 @@ $ sudo apt install wott-agent
 The terminal will now output your WoTT Device ID, claim token, and a link to claim the device. 
 Copy and paste this link into your browser- the fields may already have autofilled. Otherwise fill in the details in the relevant fields.
 
-![claim device](/assets/images/docs/claim-device.png)
+![claim device](assets docs/claim-device.png)
 
 **Note:** you can view your Device ID and claim token using the following commands as well:
 
@@ -60,17 +60,17 @@ Your device will now be registered and viewable on the WoTT Dashboard. You can n
 
 See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user's personal tags for the Pi's purpose.
 
-![raspberry pi profile](/assets/images/docs/rasbpi-profile.png)
+![raspberry pi profile](assets docs/rasbpi-profile.png)
 
 ## Managing your own credentials through the WoTT Dashboard
 
 In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.
 
-![sidebar](/assets/images/docs/sidebar.png)
+![sidebar](assets docs/sidebar.png)
 
 Navigate to 'Credentials.' Select 'Add a credential'
 
-![credentials](/assets/images/docs/credentials.png)
+![credentials](assets docs/credentials.png)
 
 Let's break down the fields:
 
