@@ -28,10 +28,12 @@ navigation: True
 <div class="block_inner"><div class="vertical_aligner">
 <span class="t_m1">Subscribe to our newsletter</span>
 </div></div>
-<div class="block_inner"><form class="vertical_aligner" action="" method="">
-<input id="email_subscribe" value="" placeholder="Your email address"/>
-<button type="submit">submit</button>
-</form></div>
+<div class="block_inner">
+<form class="vertical_aligner"  action="{{site.mailchimp-list}}" method="post">
+<input type="email" id="mce-EMAIL" name="EMAIL" value="" placeholder="Your email address"/>
+<button type="submit" id="submit" name="subscribe">submit</button>
+</form>
+</div>
 </div>
 
 </div>
