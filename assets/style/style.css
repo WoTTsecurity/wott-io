@@ -172,7 +172,7 @@ footer{display:block; width:100%; height:auto;}
 .product-template .block_info .t_h2{width:60%; margin-left:20%; margin-right:20%; padding-bottom:0px; color: #272d37; font-weight: 500; line-height:32px; line-height:2.2rem; line-height:2.2vw;}
 .product-template .transparent_block{width:100%; font-size:0px; text-align:center; align-content:center;}
 .product-template .transparent_block .blocks{display:inline-block; width:50%; max-width:50%; vertical-align:top; padding-bottom: 60px; padding-bottom: 4rem; padding-bottom: 5vw; }
-.product-template .transparent_block .blocks:first-of-type{background: linear-gradient(0deg, rgba(255,255,255,0.8) 95%, transparent); background: webkit-linear-gradient(0deg, rgba(255,255,255,0.8), transparent); background: -moz-linear-gradient(0deg, rgba(255,255,255,0.8), transparent); background: -o-linear-gradient(0deg, rgba(255,255,255,0.8), transparent);}
+.product-template .transparent_block .blocks:first-of-type{background-color:rgba(255,255,255,1);}
 .product-template .transparent_block .blocks .info_block{display:block; width:100%; white-space:normal; vertical-align: top;}
 .product-template .transparent_block .blocks .info_block .t_i1{color:#272d37; padding-bottom:0px;}
 .product-template .transparent_block .blocks .info_block .t_n1{color:#272d37; padding-bottom:0px;}
