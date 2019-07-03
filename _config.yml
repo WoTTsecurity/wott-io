@@ -32,6 +32,7 @@ plugins_dir:
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-assets
   - jekyll-minimagick
 
 pagination:
