@@ -60,7 +60,7 @@ Your device will now be registered and viewable on the WoTT Dashboard. You can n
 
 See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user's personal tags for the Pi's purpose.
 
-![raspberry pi profoile](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/rasbpi-profile.png)
+![raspberry pi profile](https://github.com/WoTTsecurity/wott-io/blob/master/documentation/getting_started/images/rasbpi-profile.png)
 
 ## Managing your own credentials through the WoTT Dashboard
 
