@@ -11,7 +11,7 @@ We provide this in a number of ways:
 - Cryptographic identity (verification of access)
 - Enabling the removal of hard coded credentials from web applications and firmware
 
-You can access all these features by installing the [WoTT Agent](https://github.com/WoTTsecurity/agent) and using the [WoTT IO dash](https://dash.wott.io) to manage your devices through a simple and user-friendly interface. We'll walk you through step-by-step in setting up and installing the WoTT agent so you can start to implement hassle-free security on your IoT devices. 
+You can access all these features by installing the [WoTT Agent](https://github.com/WoTTsecurity/agent) and using the [WoTT Dashboard](https://dash.wott.io) to manage your devices through a simple and user-friendly interface. We'll walk you through step-by-step in setting up and installing the WoTT agent so you can start to implement hassle-free security on your IoT devices. 
 
 Ultimately we want to give you the developers the safety of secure devices on the internet so you can integrate your projects on a multitude of platforms without the complexity of managing individual certificates or authenitication. WoTT secures your projects so that you don't have to.
 
@@ -25,7 +25,7 @@ The agent does this based on a unique value assigned to your device which acts a
 
 The certificates are managed entirely by WoTT - the only thing you need to do to begin securing your device is install the WoTT Agent.
 
-## Credentials and WoTT IO Dashboard
+## Credentials and the WoTT Dashboard
 
 In an ideal world, we would do away with the need for usernames and passwords entirely and rely on cryptographic identity alone. However, servers cannot verify identity from browsers via cryptographic identity (yet). Servers are unable to verify who you are which is why you are required to login to access for example your email or Google cloud services. The same applies to Web Applications that you as an IoT developer create which can be accessed from any browser.
 
@@ -74,11 +74,11 @@ Navigate to 'Credentials.' Select 'Add a credential'
 
 Let's break down the fields:
 
-- **Name:** name of credential file, for example `my_app`. 
-- **Key:** contents of credential, for example: `api_key`, `login_details`, or simply `credentials`.
-- **Value:** actual value of the login/key required for access (the bit that should be hidden). This should be done in `username:password` format for a login.
-- **Owner:** optional field, reccommended for Raspberry Pis. The owner is the Linux user that will own the file on the system. On Raspberry Pi, the default user is `pi`.
-- **Tags:** must match the tags on the device that you are downloading to.
+* **Name:** name of credential file, for example `my_app`. 
+* **Key:** contents of credential, for example: `api_key`, `login_details`, or simply `credentials`.
+* **Value:** actual value of the login/key required for access (the bit that should be hidden). This should be done in `username:password` format for a login.
+* **Owner:** optional field, reccommended for Raspberry Pis. The owner is the Linux user that will own the file on the system. On Raspberry Pi, the default user is `pi`.
+* **Tags:** must match the tags on the device that you are downloading to.
 
 Once you've added a credential, you can check for it on your device by running:
 
