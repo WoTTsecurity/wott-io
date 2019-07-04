@@ -3,10 +3,6 @@ language: minimal
 services:
   - docker
 
-branches:
-  only:
-    - master
-
 before_install:
   - docker pull wott/wott-io
   - docker build -t wott/wott-io --cache-from wott/wott-io .
