@@ -8,6 +8,8 @@ language: 'en-uk'
 baseurl: '/wott-io/'
 url: 'https://wottsecurity.github.io'
 
+blogimg: 'https://wottsecurity.github.io/wott-io/assets/images/blog/'
+
 # Website info
 title: Web of Trusted Things
 description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
