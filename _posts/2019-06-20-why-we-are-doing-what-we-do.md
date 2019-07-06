@@ -1,19 +1,19 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover: image_0.png
 title: Why we are doing what we do
+description: In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
 date: 2019-06-20 10:00:00
 category: news
 author: Al Esmail
-tags: [Open Source]
+tags: [engineering,wott,privatelink,heroky postgres,vpc]
 class: post-template
 ---
 
 ## TL;DR the future has flying cars, transformers and low calorie diets.
 
-{% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
-
+![Best free photo I could find when searching for ‘open source’]({{ site.blogimg }}open-source.png)
 Figure 1 - Best free photo I could find when searching for ‘open source’
 
 In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
@@ -24,8 +24,7 @@ The aforementioned examples of internet connected devices are the proverbial tip
 
 At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
 
-{% asset blog/neural-implant.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
-
+![Representation of a neural implant (FYI - It’s not accurate.)]({{ site.blogimg }}neural-implant.png)
 Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)
 
 We also believe machines will be collaborative.  As a thought experiment, let’s take the usual smart home automation to the extreme and assume that everything in your flat is connected.  Let’s go through your morning ritual:
@@ -40,8 +39,7 @@ Let’s introduce some intelligence into the process in the form of a Raspberry 
 
 The example also illustrates an important point about the future of cyber-physical systems: devices will have [agency](https://en.wikipedia.org/wiki/Agency_(philosophy)). This means that devices will make decisions on your behalf.  In thinking of the billions and billions of devices that consultants have estimated will come online over the next decade, it makes sense that we will not be able to manually control all of them or pre-program an output for every scenario.
 
-![My mental image of a consulting firm’s quantification of billions of IoT devices](https://giphy.com/gifs/mike-myers-JWH857oECO0rC)
-
+![My mental image of a consulting firm’s quantification of billions of IoT devices](https://media.giphy.com/media/JWH857oECO0rC/giphy.gif)
 Figure 3 - My mental image of a consulting firm’s quantification of billions of IoT devices.  
 
 Now here comes the teaser - _how do you implement reasonable security/privacy practices in a world where devices are autonomously making decisions or are literally in the driver’s seat?_  At WoTT, we aim to deal with that question - it keeps us up at night.  For us, security is the burning question that needs to be answered before we step into a cyber-physical future.

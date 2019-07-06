@@ -1,8 +1,9 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover:  Image_3.png
 title: Why shift-left security is relevant for IoT
+description: In our first blog post, I articulated that we are strong proponents of shift-left security. The idea that security should be incorporated as early as possible during application and infrastructure development.
 date: 2019-06-23 10:00:00
 category: thoughts
 author: Al Esmail
@@ -12,7 +13,7 @@ class: post-template
 
 TL;DR Cyber is best handled by developers with big, bulging...brains.
 
-![Natalie Portman](https://giphy.com/gifs/film-4-natalie-portman-lQaO9Cf50zlM4)
+![Cyber is sexier than a Harvard trained, Academy Award winning actress.](https://media.giphy.com/media/lQaO9Cf50zlM4/giphy.gif)
 Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress.
 
 In our [first blog post](link to why we do what we do), I articulated that we are strong proponents of shift-left security.  The idea that security should be incorporated as early as possible during application and infrastructure development.  In this post, I will explain why we feel that developers are in a strong position to improve security posture and why it’s more efficient for them to be involved in the solution.
@@ -25,8 +26,7 @@ Given this high stakes sport is played by crafty and pragmatic geniuses, the bes
 
 Let’s define [DevSecOps](https://opensource.com/article/19/1/what-devsecops) a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the [cost of fixing flaws](https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336) by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.
 
-{% asset blog/nist.png srcset:width="1300 2x" srcset:width="650 1x" alt="The NIST says so. Prove them wrong if you want" class="img-fluid" %}
-
+![The NIST says so. Prove them wrong if you want]({{ site.blogimg }}nist.png)
 Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.
 
 In considering end-points, DevSecOps or shift-left security introduces another important concept: _secure by design_.  Presently, CISOs turn to perimeter security solutions (firewalls and networking monitoring) to protect devices.  Though, the latest thinking proposes making the assumption that closed networks have already been compromised and are hostile [Zero Trust](https://www.oreilly.com/library/view/zero-trust-networks/9781491962183/ch01.html ). I will take this concept further in a future post and consider remote and open networks.  Given the assumption that networks are hostile, we must build security into the device itself.  The only way to do that is during design and so we shift security left.

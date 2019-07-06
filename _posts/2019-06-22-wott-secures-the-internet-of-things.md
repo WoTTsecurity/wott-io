@@ -1,8 +1,9 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover:  Image_1.png
 title: WoTT secures the Internet of Things
+description: In my first blog post, I articulated why we do what we do at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.
 date: 2019-06-22 10:00:00
 category: thoughts
 author: Al Esmail
@@ -12,7 +13,7 @@ class: post-template
 
 TL;DR It’s Let’s Encrypt for IoT - you know you want it.
 
-
+![If the web can have it, why can’t IoT?]({{ site.blogimg }}why_cant_iot.png)
 Figure 1 - If the web can have it, why can’t IoT?
 
 In my first blog post, I articulated [why we do what we do](link to first blog post) at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will [play a big role in security](link to shift left security article).) It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on [Github](github.com/wottsecurity).
@@ -42,6 +43,7 @@ Certificates are provisioned automatically through the WoTT agent from our own C
 
 We strongly recommend securely storing device keys in a secure environment like a trusted platform module ([TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module)).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with [Pi Supply](https://uk.pi-supply.com/) to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)
 
+![Use a TPM, seriously.]({{ site.blogimg }}use_a_tmp_seriously.png)
 Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)
 
@@ -51,6 +53,7 @@ It is worth mentioning that mTLS is different than how your browser works. In su
 
 Finally, let me introduce the plat de resistance - _the Trust Score_.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).
 
+![This visual is a little basic. I probably should have shown you a clip of Alex Trebek]({{ site.blogimg }}total_trust_score.png)
 Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek
 
 This Trust Score can then be used to answer the question: _should I trust this device?_  Access policies can then be set depending on the security sensitivity of the end-point. For instance, you may allow a device with a Trust Score of 0.4 to communicate with a weather service, but for customer payment data, a Trust Score of 0.9 or higher is needed.
