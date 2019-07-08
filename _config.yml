@@ -5,7 +5,8 @@ highlighter: rouge
 # paginate_path: /page:num/
 language: 'en-uk'
 
-baseurl: '/wott-io/'
+
+baseurl: ''
 url: 'http://wott.io'
 
 # Website info
