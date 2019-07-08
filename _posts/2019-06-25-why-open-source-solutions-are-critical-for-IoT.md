@@ -39,4 +39,4 @@ The result would be a device that could be supported by multiple services and su
 
 Cheaper, simpler, secure and interoperable. I like the sound of that.
 
-Check back in to [blog]({{site.url}}/blog), join the [newsletter](link to newsletter sign up) or follow on [twitter](https://www.twitter.com/wottsecurity).
+Check back in to [blog]({{site.url}}/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://www.twitter.com/wottsecurity).
