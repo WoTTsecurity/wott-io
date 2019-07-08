@@ -30,12 +30,12 @@ The opportunity to find interesting use cases beyond turning the lights on in my
 While it is tempting to build the one proprietary platform that will monopolize all others, what IoT needs is common technologies that are accessible to all.  What better way to achieve this goal than with open-source tools?
 
 Consider an end to end solution like this:
-C* ommon mass produced, reusable, modular hardware - Raspberry Pi (Admit it, you’re already using them in real-world use cases - not just for prototyping.)
+* Common mass produced, reusable, modular hardware - Raspberry Pi (Admit it, you’re already using them in real-world use cases - not just for prototyping.)
 * Common operating system - Linux
 * Common communication protocol - MQTT
-* Security - let’s be professional about it and use x509 certificates  
+* Security - let’s be professional about it and use x509 certificates
 
-The result would be a device that could be supported by multiple services and supported by many developers.  Documentation and support would be plentifully provided by the community.  Hardware costs could decrease from larger production runs to meet increased demand.  
+The result would be a device that could be supported by multiple services and supported by many developers.  Documentation and support would be plentifully provided by the community.  Hardware costs could decrease from larger production runs to meet increased demand.
 
 Cheaper, simpler, secure and interoperable. I like the sound of that.
 
