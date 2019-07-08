@@ -2,11 +2,9 @@
 layout: docs-cat
 description: 'Frequently asked questions regarding WoTT'
 title: 'Frequently Asked Questions'
-full_description: 'The frequently asked questions we receive at WoTT regarding our Agent and services'
+full_description: 'Some frequently asked questions we receive at WoTT regarding our Agent and services, we hope you find the answer to your questions here but please refer to our support thread if you are in need of more assistance.'
 title_content: 'FAQ'
 ---
-
-# Frequently asked questions
 
 * [What Operating Systems does the WoTT agent support?](#wott-operating-system)
 * [Do I need a WoTT Dashboard account to use the WoTT Agent?](#do-i-need-dashboard)
