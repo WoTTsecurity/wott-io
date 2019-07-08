@@ -15,7 +15,7 @@ TL;DR It’s Let’s Encrypt for IoT - you know you want it.
 
 Figure 1 - If the web can have it, why can’t IoT?
 
-In my first blog post, I articulated [why we do what we do]({{site.url}}/blog/news/2019/06/20/why-we-are-doing-what-we-do) at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will [play a big role in security]({{site.url}}/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot). It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on [Github](https://github.com/wottsecurity).
+In my first blog post, I articulated [why we do what we do](link to first blog post) at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will [play a big role in security](link to shift left security article).) It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on [Github](github.com/wottsecurity).
 
 The aim for WoTT is to do three things:
 ​​
@@ -27,7 +27,7 @@ In plain English, the goal is to allow other devices and services to ask the que
 
 We do this in the shape of a dynamic Trust Score.
 
-Naturally, we have a lovely feature set that extends beyond this core to simplify the lives of developers.  We want developers to be able to focus on product rather than invest too many cycles into security.  Here are some additional features (We would love to know which ones you like via comment/[Twitter](https://www.twitter.com/wottsecurity)):
+Naturally, we have a lovely feature set that extends beyond this core to simplify the lives of developers.  We want developers to be able to focus on product rather than invest too many cycles into security.  Here are some additional features (We would love to know which ones you like via comment/[Twitter](twitter.com/wottsecurity)):
 
 * Fleet management dashboard
 * Vulnerability warnings (CVE)
@@ -57,6 +57,6 @@ This Trust Score can then be used to answer the question: _should I trust this d
 
 To pull this all together, we hope to raise the security bar in cyber-physical or IoT systems.  We don’t have a silver bullet, but we do have some common sense solutions to some _really_ obvious problems that have already been solved in the DevOps world.  We also have a pretty neat way of enabling M2M communication and doing away with perimeter security, but I’ll ploy you with the explanation of ‘zero trust’ in another post.
 
-Again, I have made some claims here that I will substantiate in future posts.  Check back in, subscribe to the [newsletter](http://eepurl.com/ge0niv) or [follow](https://twitter.com/wottsecurity) to see more.  If you’re interested to try out what we’re building, follow us on [Github](https://github.com/wottsecurity) or check out the documentation.  
+Again, I have made some claims here that I will substantiate in future posts.  Check back in, subscribe to the [newsletter](link to sign up page) or [follow](https://twitter.com/wottsecurity) to see more.  If you’re interested to try out what we’re building, follow us on [Github] (github.com/wottsecurity) or check out the documentation.  
 
-Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity) here.
+Want to troll me? Comments below or [twitter](twitter.com/wottsecurity) here.

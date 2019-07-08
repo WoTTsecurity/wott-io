@@ -9,11 +9,9 @@ disqus: false
 <span class="t_i1">{{ page.title }}</span>
 <span class="t_m2">By {{ page.author }} on {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} | 0 Comments</span>
 </div>
-<div class="blog_image" style="background-image:url({{ site.url }}{{ site.baseurl }}assets/images/blogcover/full/{{ page.cover }});"></div>
+<div class="blog_image" style="background-image:url({{ site.url }}{{ site.baseurl }}assets/images/blogcover/full/{{ page.cover }});"></div><div class="blog_image_bg"></div>
 
-
-<div class="blog_image_bg"></div>
-<div class="blog_tags"><span>engineering</span><span>wott</span><span>privatelink</span><span>heroky postgres</span><span>vpc</span></div>
+{% if page.tags %}<div class="blog_tags">{% for tag in page.tags limit:6%}<a href="">{{ tag }}</a>{% endfor %}</div>{% endif %}
 
 <div class="social_network">
 <div class="title_b">share</div>
@@ -28,9 +26,10 @@ disqus: false
 <div class="arrow_b"></div>
 </div>
 
-<div class="blog_content">
+<div class="blog_content content_info_block">
 {{ content }}
 </div>
+
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
