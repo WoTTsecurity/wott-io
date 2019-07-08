@@ -1,1 +1,1 @@
-Sitemap: https://wottsecurity.github.io/wott-io/sitemap.xml
+Sitemap: http://wott.io/sitemap.xml
