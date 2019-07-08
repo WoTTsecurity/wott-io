@@ -1,19 +1,19 @@
 ---
 layout: post
 current: post
-cover: image_0.png
+cover: 2019-06-20-why-we-are-doing-what-we-do-cover.png
 title: Why we are doing what we do
 description: In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
 date: 2019-06-20 10:00:00
 category: news
 author: Al Esmail
-tags: [engineering,wott,privatelink,heroky postgres,vpc]
+tags: [Open Source]
 class: post-template
 ---
 
 ## TL;DR the future has flying cars, transformers and low calorie diets.
 
-![Best free photo I could find when searching for ‘open source’]({{ site.blogimg }}open-source.png)
+{% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 Figure 1 - Best free photo I could find when searching for ‘open source’
 
 In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply say that we are an open source software company concerned with security for cyber-physical systems - i.e. protecting the ‘real world’ stuff that is being connected to the internet like cars, trains, factories, implanted medical devices and of course smart toasters.
@@ -24,7 +24,7 @@ The aforementioned examples of internet connected devices are the proverbial tip
 
 At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
 
-![Representation of a neural implant (FYI - It’s not accurate.)]({{ site.blogimg }}neural-implant.png)
+{% asset blog/neural-implant.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)
 
 We also believe machines will be collaborative.  As a thought experiment, let’s take the usual smart home automation to the extreme and assume that everything in your flat is connected.  Let’s go through your morning ritual:

@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  Image_4.png
+cover:  2019-06-24-why-open-source-is-critical-for-infosec.png
 title: Why open source is critical for InfoSec
 description: In a previous post, I advocated for the merits of DevSecOps and shift left security.  In this post, I will present our position on open source security vs. security by obfuscation (STO). 
 date: 2019-06-24 10:00:00
@@ -30,7 +30,8 @@ Let’s begin in 1883 when the Dutch-born cryptographer, Auguste Kerkchoffs arti
 Some of these are certainly redundant given advances in computation since the 19th century but the second principle remains and is referred to as Kerchoffs’ principle.  The principle was stated slightly differently (or perhaps restated) as "the enemy knows the system", by American mathematician, Claude Shannon.  The latter is referred to as [Shannon’s maxim](http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf). (An aside, I would be tickled to be the author of either a maxim or a principle but alas, such accolades have eluded me.)
 
 In searching for academic references to STO, I unfortunately was hard pressed to find even a postulate in favor of the practice.  I did not intend to run STO through the google test but the fourth organic result gives an indication of popular perception (don’t use it).  Though, Ross Patel does make a fair argument that [STO can enhance security](https://www.bcs.org/content/ConWebDoc/2788) in conjunction with other security methods.  He cites the example of network administrators placing sensitive services on non-standard ports to evade script kiddies and programs that exploit common vulnerabilities.  
-![Google test fail3]({{ site.blogimg }}google_test_fail3.png)
+
+{% asset blog/google_test_fail3.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 Figure 3 - Google test fail3.
 
 It is a fair point that STO can indeed increase security if the means of obfuscation is consistently unique.  A metaphor to drive the point home - open source security is the safe in which you store the jewels; STO is the act of hiding the safe. Of course your safe is useless without a [strong password](link to wott secures internet of things blog post).  That being said, a security company that offered a service to hide your safe behind the family portrait (and offered the same service to all its clients) is probably not offering a valuable service and likely why popular opinion does not favor the method. However, choosing to hide your safe somewhere non-obvious and random would indeed be a valuable addition to your security system.  
