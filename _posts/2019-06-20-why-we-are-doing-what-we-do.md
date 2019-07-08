@@ -22,7 +22,7 @@ The term ‘Internet of Things’ has unfortunately become a buzzword that draws
 
 The aforementioned examples of internet connected devices are the proverbial tip of the melting iceberg. I am of the opinion that was perhaps stated a bit too early in 2014 by [Ben Evans at a16z](https://www.ben-evans.com/benedictevans/2014/5/26/the-internet-of-things), but is still very relevant, “Today, I have no idea how many devices I own with a chip, but I could tell you how many have a network connection. And I doubt my children will know that, in their turn.”  The principle here is that everything we use will find itself communicating over TCP/IP in the coming years.
 
-At [WoTT](http://wott.io), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
+At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
 
 {% asset blog/neural-implant.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 
@@ -34,7 +34,7 @@ We also believe machines will be collaborative.  As a thought experiment, let’
 * Get dressed (black tee and jeans, because even in the future we don’t complicate this)
 * Look in the mirror (you know you do)
 * Breakfast
-* Commute to work (or [work from home](https://stripe.com/gb/blog/remote-hub) - yes [WoTT](http://wott.io) also believes in remote working)
+* Commute to work (or [work from home](https://stripe.com/gb/blog/remote-hub) - yes [WoTT]({{site.url}}) also believes in remote working)
 
 Let’s introduce some intelligence into the process in the form of a Raspberry Pi mounted camera above your mirror that [recognizes objects](https://www.hackster.io/dexterindustries/pi-camera-vision-detect-objects-e6c936) and categorizes their attributes over time. From December to February, your machine vision camera tracks that beautiful body of yours and pings your smart fridge to keep ordering the avocados and sliced bread. It lets you indulge and maybe pack on a few (visible) pounds through the winter. But…come March, warmer temperatures and the flight to Barcelona booked for June, your mirror decides that it’s time to cut the winter weight and let’s your fridge know to switch you from the carbs to a low calorie yogurt for breakfast. And boom, you’ve got your [hardbody](https://www.quora.com/American-Psycho-1991-book-What-does-the-term-hardbody-mean-Where-did-the-term-originate) back for speedo season without sparing a thought.  All of this because your devices securely share data and make multi-variable decisions.
 
@@ -46,7 +46,7 @@ Figure 3 - My mental image of a consulting firm’s quantification of billions o
 
 Now here comes the teaser - _how do you implement reasonable security/privacy practices in a world where devices are autonomously making decisions or are literally in the driver’s seat?_  At WoTT, we aim to deal with that question - it keeps us up at night.  For us, security is the burning question that needs to be answered before we step into a cyber-physical future.
 
-I’ll save the self-indulgent explanation of how we aim to solve it for a later post and point you to our [website](http://wott.io) if you want more information.  Here instead, I want to briefly share some of our thoughts on security.  Security is sexy lately and like anything in the spotlight, the space is buzzing with new ideas, viewpoints and philosophies.  It is an important step for consumers, users and mainstream media to acknowledge that security/privacy is a topic requiring some attention.  We take a clear stand in favour of the following principles:
+I’ll save the self-indulgent explanation of how we aim to solve it for a later post and point you to our [website]({{site.url}}) if you want more information.  Here instead, I want to briefly share some of our thoughts on security.  Security is sexy lately and like anything in the spotlight, the space is buzzing with new ideas, viewpoints and philosophies.  It is an important step for consumers, users and mainstream media to acknowledge that security/privacy is a topic requiring some attention.  We take a clear stand in favour of the following principles:
 
 * Open source: Transparency, peer audit and crowdsourced vulnerability reporting are the future. Security by obfuscation means there are fewer eyes on the problem and users have no idea that vulnerabilities exist.
 * Secure by design: Security belongs directly in the device not just on the users’ network.  Some burden of security should be on the technology provider not the user alone. In fact, the best security does not rely on the end user at all.
@@ -55,8 +55,8 @@ I’ll save the self-indulgent explanation of how we aim to solve it for a later
 
 In closing, we at WoTT are techno-optimists.  While societies, cities and civilizations shift, there are upcoming challenges that we will need to collectively address.  WoTT is going to tackle security - well, part of it.
 
-I have made a lot of claims here.  For the sake of being thorough and my attention span, I will explore each of these in separate posts over the coming weeks.  Check back in to the [blog here](http://wott.io/blog), subscribe to the [newsletter here](http://eepurl.com/ge0niv) or [follow here](https://www.twitter.com/wottsecurity).
+I have made a lot of claims here.  For the sake of being thorough and my attention span, I will explore each of these in separate posts over the coming weeks.  Check back in to the [blog here]({{site.url}}/blog), subscribe to the [newsletter here](http://eepurl.com/ge0niv) or [follow here](https://www.twitter.com/wottsecurity).
 
-Interested to see what we’re building? Follow us on [Github](https://github.com/wottsecurity) or check out the [website](http://wott.io).  
+Interested to see what we’re building? Follow us on [Github](https://github.com/wottsecurity) or check out the [website]({{site.url}}).  
 
 Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity).

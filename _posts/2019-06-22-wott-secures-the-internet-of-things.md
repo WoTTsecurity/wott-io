@@ -15,7 +15,7 @@ TL;DR It’s Let’s Encrypt for IoT - you know you want it.
 
 Figure 1 - If the web can have it, why can’t IoT?
 
-In my first blog post, I articulated [why we do what we do](http://wott.io/blog/news/2019/06/20/why-we-are-doing-what-we-do) at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will [play a big role in security](http://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot). It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on [Github](https://github.com/wottsecurity).
+In my first blog post, I articulated [why we do what we do]({{site.url}}/blog/news/2019/06/20/why-we-are-doing-what-we-do) at WoTT.  Namely, that security is a necessary condition for a future involving advanced cyber-physical systems where devices have agency.  In this post, I will share the details of our open-source developer tools. (We think devs will [play a big role in security]({{site.url}}/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot). It’s free to use for most everyone (except enterprises) - you can contribute or check the code base on [Github](https://github.com/wottsecurity).
 
 The aim for WoTT is to do three things:
 ​​
