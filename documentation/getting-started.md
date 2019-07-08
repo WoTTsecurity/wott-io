@@ -1,27 +1,25 @@
 ---
 layout: docs-cat
-description: 'Getting started with WoTT Agent and Dashboard'
-title: 'Getting Started and Setup'
-full_description: 'Get started here with the WoTT Agent and Dashboard. We'll take you from setup and installation of the WoTT Agent to registering for our Dashboard so you can manage your devices.'
+description: 'Getting started with WoTT'
+title: 'Getting Started with the WoTT Agent and Dashboard'
+full_description: We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security into your IoT devices.
 title_content: 'Getting Started'
 ---
 
 Welcome to WoTT - the first step to securing your IoT devices.
-
 
 ## A brief overview of WoTT's services
 
 WoTT's primary goal is to simplify and manage end-to-end security for IoT developers. 
 We provide this in a number of ways:
 
-- Simplified encryption of device communication
-- Cryptographic identity (verification of access)
-- Enabling the removal of hard coded credentials from web applications and firmware
+* Simplified encryption of device communication
+* Cryptographic identity (verification of access)
+* Enabling the removal of hard coded credentials from web applications and firmware
 
 You can access all these features by installing the [WoTT Agent](https://github.com/WoTTsecurity/agent) and using the [WoTT Dashboard](https://dash.wott.io) to manage your devices through a simple and user-friendly interface. We'll walk you through step-by-step in setting up and installing the WoTT agent so you can start to implement hassle-free security on your IoT devices. 
 
 Ultimately we want to give you the developers the safety of secure devices on the internet so you can integrate your projects on a multitude of platforms without the complexity of managing individual certificates or authenitication. WoTT secures your projects so that you don't have to.
-
 
 ## A little more on 'cryptographic' identity
 
@@ -33,7 +31,6 @@ The agent does this based on a unique value assigned to your device which acts a
 
 The certificates are managed entirely by WoTT - the only thing you need to do to begin securing your device is install the WoTT Agent.
 
-
 ## Credentials and the WoTT Dashboard
 
 In an ideal world, we would do away with the need for usernames and passwords entirely and rely on cryptographic identity alone. However, servers cannot verify identity from browsers via cryptographic identity (yet). Servers are unable to verify who you are which is why you are required to login to access for example your email or Google cloud services. The same applies to Web Applications that you as an IoT developer create which can be accessed from any browser.
@@ -41,7 +38,6 @@ In an ideal world, we would do away with the need for usernames and passwords en
 As a developer, you will likely be accessing a large range of internet/cloud services that require basic HTTP authentication or an API key. In most instances, such credentials are hard coded into applications and can be easily read with access to said applications. WoTT introduces credential management so that you can remotely download the necessary credentials onto your device as a JSON file. This removes the need for hard coded keys and logins from your application. 
 
 We do this via our Dasboard which you can use to monitor your devices. The Dashboard gives your device a trust score (based on how secure it is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.
-
 
 ## Installing the WoTT agent and claiming your device
 
@@ -72,7 +68,6 @@ See below for an example of a Raspberry Pi with its WoTT meta tags (automaticall
 
 ![raspberry pi profile](assets docs/rasbpi-profile.png)
 
-
 ## Managing your own credentials through the WoTT Dashboard
 
 In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.
@@ -101,7 +96,6 @@ Note that you will either have to wait 15 minutes for the WoTT agent to refresh 
 $ sudo service wott-agent restart
 ```
 Additionally, older Pi hardware may take longer to load these certificates, so do wait a few minutes if the file has not downloaded yet. 
-
 
 ## Finishing notes
 

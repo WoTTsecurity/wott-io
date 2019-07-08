@@ -2,7 +2,7 @@
 layout: docs-cat
 description: 'Frequently asked questions regarding WoTT'
 title: 'Frequently Asked Questions'
-full_description: 'Some frequently asked questions we receive at WoTT regarding our Agent and services, we hope you find the answer to your questions here but please refer to our support thread if you are in need of more assistance.'
+full_description: Some frequently asked questions we receive at WoTT regarding our Agent and services, we hope you find the answer to your questions here but please refer to our support thread if you are in need of more assistance.
 title_content: 'FAQ'
 ---
 
