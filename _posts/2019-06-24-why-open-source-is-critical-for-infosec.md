@@ -16,7 +16,7 @@ TL;DR Proprietary security is a fresh cow pie hiding in the tall grass.
 
 Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie?
 
-In a previous post, I advocated for the merits of [DevSecOps](link to shift left article) and shift left security.  In this post, I will present our position on open source security vs. security by obfuscation (STO).  If you read the title and are familiar with the mid-western American expression [cow pie](https://www.urbandictionary.com/define.php?term=Cow%20pie), you hopefully know where I am going.  If not, here’s a verbose description: fresh bovine excrement collapses under its own weight to form a flat cylindrical shape about the size of a pie and is well concealed by uncut grass.  It’ll really mess up your cowboy (or cowgirl) boots - get the picture?
+In a previous post, I advocated for the merits of [DevSecOps]({{site.url}}/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot) and shift left security.  In this post, I will present our position on open source security vs. security by obfuscation (STO).  If you read the title and are familiar with the mid-western American expression [cow pie](https://www.urbandictionary.com/define.php?term=Cow%20pie), you hopefully know where I am going.  If not, here’s a verbose description: fresh bovine excrement collapses under its own weight to form a flat cylindrical shape about the size of a pie and is well concealed by uncut grass.  It’ll really mess up your cowboy (or cowgirl) boots - get the picture?
 
 Let’s begin in 1883 when the Dutch-born cryptographer, Auguste Kerkchoffs articulated six design principles on [La Cryptographie Militaire](http://www.gutenberg.us/articles/shannon%27s_maxim):
 
@@ -31,7 +31,7 @@ Some of these are certainly redundant given advances in computation since the 19
 
 In searching for academic references to STO, I unfortunately was hard pressed to find even a postulate in favor of the practice.  I did not intend to run STO through the google test but the fourth organic result gives an indication of popular perception (don’t use it).  Though, Ross Patel does make a fair argument that [STO can enhance security](https://www.bcs.org/content/ConWebDoc/2788) in conjunction with other security methods.  He cites the example of network administrators placing sensitive services on non-standard ports to evade script kiddies and programs that exploit common vulnerabilities.  
 
-It is a fair point that STO can indeed increase security if the means of obfuscation is consistently unique.  A metaphor to drive the point home - open source security is the safe in which you store the jewels; STO is the act of hiding the safe. Of course your safe is useless without a [strong password](link to wott secures internet of things blog post).  That being said, a security company that offered a service to hide your safe behind the family portrait (and offered the same service to all its clients) is probably not offering a valuable service and likely why popular opinion does not favor the method. However, choosing to hide your safe somewhere non-obvious and random would indeed be a valuable addition to your security system.  
+It is a fair point that STO can indeed increase security if the means of obfuscation is consistently unique.  A metaphor to drive the point home - open source security is the safe in which you store the jewels; STO is the act of hiding the safe. Of course your safe is useless without a [strong password]({{site.url}}/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things). That being said, a security company that offered a service to hide your safe behind the family portrait (and offered the same service to all its clients) is probably not offering a valuable service and likely why popular opinion does not favor the method. However, choosing to hide your safe somewhere non-obvious and random would indeed be a valuable addition to your security system.  
 
 I would propose that security systems/methods/software that are used in many places or by many clients should adhere to Kerchoffs’ principle. Consider the following assumptions:
 
@@ -56,6 +56,6 @@ What these companies have in common is that they are building developer tools.  
 
 To conclude, security through obfuscation is a single piece to consider in building a strong system.  The _plat de resistance_ in your security system should be open source, resilient in enemy hands and supported by crowdsourced audit.
 
-Join the [newsletter](wott newsletter sign up link) or follow on [twitter](twitter.com/wottsecurity).
+Join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://www.twitter.com/wottsecurity).
 
-Want to troll me? Comments below or [twitter](twitter.com/wottsecurity).
+Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity).

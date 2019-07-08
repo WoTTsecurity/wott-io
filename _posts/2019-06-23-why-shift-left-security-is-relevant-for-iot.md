@@ -15,7 +15,7 @@ TL;DR Cyber is best handled by developers with big, bulging...brains.
 ![Natalie Portman](https://giphy.com/gifs/film-4-natalie-portman-lQaO9Cf50zlM4)
 Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress.
 
-In our [first blog post](link to why we do what we do), I articulated that we are strong proponents of shift-left security.  The idea that security should be incorporated as early as possible during application and infrastructure development.  In this post, I will explain why we feel that developers are in a strong position to improve security posture and why it’s more efficient for them to be involved in the solution.
+In our [first blog post]({{site.url}}/blog/news/2019/06/20/why-we-are-doing-what-we-do), I articulated that we are strong proponents of shift-left security.  The idea that security should be incorporated as early as possible during application and infrastructure development.  In this post, I will explain why we feel that developers are in a strong position to improve security posture and why it’s more efficient for them to be involved in the solution.
 
 Firstly, let me say that I think cyber is sexy - well, sexy in a very particular way.  It’s easy to lose sight of it in Whatsapp headlines or unflattering Julian Assange photos.  Normally though, the protagonist hacker is presented to us as odd in social disposition but powerful in IQ, perception and virtue - think Rami Malek playing Eliot Alderson - leader of _fsociety_. Sexy, right?
 
@@ -35,4 +35,6 @@ To hammer home the point, let’s use simile (not metaphor): network monitoring 
 
 To conclude, cyber is sexy and the only obvious thing to do is to bring in the A-team and involve developers in security decision-making. We know you’re packing heat in those brains of yours, girls and boys. Get off the bench, get in the game, do your part, be part of the solution, be a whitehat, etcetera, etcetera, etcetera.
 
-I claim that open networks are an important use case to cover. Will cover that in a future blog - Check back in to the [blog]({{site.url}}/blog), join the [newsletter] or follow on [twitter](https://twitter.com/wottsecurity). Want to troll me? Comments below or Twitter
+I claim that open networks are an important use case to cover. Will cover that in a future blog - Check back in to the [blog]({{site.url}}/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://twitter.com/wottsecurity). 
+
+Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity)

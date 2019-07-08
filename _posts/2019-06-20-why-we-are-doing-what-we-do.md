@@ -34,7 +34,7 @@ We also believe machines will be collaborative.  As a thought experiment, let’
 * Get dressed (black tee and jeans, because even in the future we don’t complicate this)
 * Look in the mirror (you know you do)
 * Breakfast
-* Commute to work (or [work from home](https://stripe.com/gb/blog/remote-hub) - yes [WoTT](https://www.wott.io) also believes in remote working)
+* Commute to work (or [work from home](https://stripe.com/gb/blog/remote-hub) - yes [WoTT]({{site.url}}) also believes in remote working)
 
 Let’s introduce some intelligence into the process in the form of a Raspberry Pi mounted camera above your mirror that [recognizes objects](https://www.hackster.io/dexterindustries/pi-camera-vision-detect-objects-e6c936) and categorizes their attributes over time. From December to February, your machine vision camera tracks that beautiful body of yours and pings your smart fridge to keep ordering the avocados and sliced bread. It lets you indulge and maybe pack on a few (visible) pounds through the winter. But…come March, warmer temperatures and the flight to Barcelona booked for June, your mirror decides that it’s time to cut the winter weight and let’s your fridge know to switch you from the carbs to a low calorie yogurt for breakfast. And boom, you’ve got your [hardbody](https://www.quora.com/American-Psycho-1991-book-What-does-the-term-hardbody-mean-Where-did-the-term-originate) back for speedo season without sparing a thought.  All of this because your devices securely share data and make multi-variable decisions.
 
@@ -55,6 +55,8 @@ I’ll save the self-indulgent explanation of how we aim to solve it for a later
 
 In closing, we at WoTT are techno-optimists.  While societies, cities and civilizations shift, there are upcoming challenges that we will need to collectively address.  WoTT is going to tackle security - well, part of it.
 
-I have made a lot of claims here.  For the sake of being thorough and my attention span, I will explore each of these in separate posts over the coming weeks.  Check back in to the [blog here] (wott.io/blog), subscribe to the newsletter here (wott.io/blog) or [follow here] (twitter.com/wottsecurity).
+I have made a lot of claims here.  For the sake of being thorough and my attention span, I will explore each of these in separate posts over the coming weeks.  Check back in to the [blog here]({{site.url}}/blog), subscribe to the [newsletter here](http://eepurl.com/ge0niv) or [follow here](https://www.twitter.com/wottsecurity).
 
-Interested to see what we’re building? Follow us on [Github](github.com/wottsecurity) or check out the [website]({{site.url}}).  Want to troll me? Comments below or [twitter](twitter.com/wottsecurity).
+Interested to see what we’re building? Follow us on [Github](https://github.com/wottsecurity) or check out the [website]({{site.url}}).  
+
+Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity).
