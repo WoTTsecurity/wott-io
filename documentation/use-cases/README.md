@@ -1,3 +1,11 @@
+---
+layout: docs-cat
+description: 'Use cases and examples for WoTT Agent and Dashboard'
+title: 'Use Cases and Examples for WoTT'
+full_description: 'Use cases and examples utilising the WoTT Agent and Dashboard to manage security for IoT devices'
+title_content: 'Use Cases and Examples'
+---
+
 # Use Cases and Examples
 
 ## How to use WoTT

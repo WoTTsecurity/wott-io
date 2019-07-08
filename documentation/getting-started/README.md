@@ -1,3 +1,11 @@
+---
+layout: docs-cat
+description: 'Getting started with WoTT Agent and Dashboard'
+title: 'Getting Started and Setup'
+full_description: 'Getting Started with the WoTT Agent and Dashboard from setup to installation'
+title_content: 'Getting Started'
+---
+
 # Getting Started
 
 Welcome to WoTT - the first step to securing your IoT devices.

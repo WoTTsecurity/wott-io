@@ -1,3 +1,11 @@
+---
+layout: docs-cat
+description: 'Frequently asked questions regarding WoTT'
+title: 'Frequently Asked Questions'
+full_description: 'The frequently asked questions we receive at WoTT regarding our Agent and services'
+title_content: 'FAQ'
+---
+
 # Frequently asked questions
 
 * [What Operating Systems does the WoTT agent support?](#wott-operating-system)
