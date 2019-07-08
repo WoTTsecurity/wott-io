@@ -5,8 +5,8 @@ highlighter: rouge
 # paginate_path: /page:num/
 language: 'en-uk'
 
-baseurl: ''
-url: 'https://wott.io/'
+baseurl: '/'
+url: 'https://wott.io'
 
 # Website info
 title: Web of Trusted Things
