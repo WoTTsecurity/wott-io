@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  Image_5.png
+cover:  2019-06-25-why-open-source-solutions-are-critical-for-IoT.png
 title: Why open source solutions are critical for IoT
 description: In my last post, I described the relevance of open source security.  For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.
 date: 2019-06-25 10:00:00
@@ -13,7 +13,7 @@ class: post-template
 
 TL;DR IoT needs one ring to rule them all and it’s not a platform.
 
-![Cyber is sexier than a Harvard trained, Academy Award winning actress.]({{ site.blogimg }}iot-monster.png)
+{% asset blog/iot-monster.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
 
 In my last post, I described the relevance of [open source security](link to open source security blog post).  For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.
 
