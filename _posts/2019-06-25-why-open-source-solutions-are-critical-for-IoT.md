@@ -14,7 +14,7 @@ TL;DR IoT needs one ring to rule them all and it’s not a platform.
 
 {% asset blog/iot-monster.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" class="img-fluid" %}
 
-In my last post, I described the relevance of [open source security](https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec). For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.
+In my last post, I described the relevance of [open source security](http://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec). For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.
 
 Consider the challenge of building an IoT solution from end to end:
 
@@ -39,4 +39,4 @@ The result would be a device that could be supported by multiple services and su
 
 Cheaper, simpler, secure and interoperable. I like the sound of that.
 
-Check back in to [blog](https://wott.io/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://www.twitter.com/wottsecurity).
+Check back in to [blog](http://wott.io/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://www.twitter.com/wottsecurity).
