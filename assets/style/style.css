@@ -178,11 +178,11 @@ footer{display:block; width:100%; height:auto;}
 
 .product-template{}
 .product-template .centred_data{padding-bottom: 60px; padding-bottom: 4rem; padding-bottom: 5vw;}
-.product-template .block_info{padding: 60px 0px; padding: 4rem 0px; padding: 5vw 0px;}
+.product-template .block_info{padding: 60px 0px; padding: 4rem 0px; padding: 5vw 0px; position:relative; z-index:1;}
 .product-template .block_info .t_h2{width:60%; margin-left:20%; margin-right:20%; padding-bottom:0px; color: #272d37; font-weight: 500; line-height:32px; line-height:2.2rem; line-height:2.2vw;}
-.product-template .transparent_block{width:100%; font-size:0px; text-align:center; align-content:center;}
+.product-template .transparent_block{width:100%; font-size:0px; text-align:center; align-content:center; position:relative; z-index:0;}
 .product-template .transparent_block .blocks{display:inline-block; width:50%; max-width:50%; vertical-align:top; padding-bottom: 60px; padding-bottom: 4rem; padding-bottom: 5vw; }
-.product-template .transparent_block .blocks:first-of-type{background-color:rgba(255,255,255,1);}
+.product-template .transparent_block .blocks:first-of-type{background:rgba(255,255,255,1); background:linear-gradient(transparent, rgba(255,255,255,1));}
 .product-template .transparent_block .blocks .info_block{display:block; width:100%; white-space:normal; vertical-align: top;}
 .product-template .transparent_block .blocks .info_block .t_i1{color:#272d37; padding-bottom:0px;}
 .product-template .transparent_block .blocks .info_block .t_n1{color:#272d37; padding-bottom:0px;}
