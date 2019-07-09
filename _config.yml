@@ -46,6 +46,12 @@ pagination:
     before: 2
     after: 2
 
+assets:
+  gzip: true
+  cdn:
+    baseurl: true
+    url: https://wott.io
+
 mini_magick:
   cover_blog_mini:
     source: assets/images/blogcover
