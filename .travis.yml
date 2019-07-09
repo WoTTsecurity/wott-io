@@ -8,7 +8,7 @@ before_install:
   - docker build -t wott/wott-io --cache-from wott/wott-io .
 
 script:
-  - docker run -v $(pwd):/usr/src/app wott/wott-io /bin/sh -c "bundle exec jekyll build JEKYLL_ENV=production --verbose"
+  - docker run -v $(pwd):/usr/src/app -e JEKYLL_ENV=production wott/wott-io /bin/sh -c "bundle exec jekyll build --verbose"
 
 deploy:
   provider: pages

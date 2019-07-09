@@ -48,6 +48,8 @@ pagination:
 
 assets:
   cdn:
+    baseurl: false
+    destination: false
     url: 'https://wott.io/assets'
 
 mini_magick:
