@@ -12,6 +12,7 @@ class: post-template
 
 TL;DR It’s Let’s Encrypt for IoT - you know you want it.
 
+{% asset blog/green-padlock.png srcset:width="1300 2x" srcset:width="650 1x" alt="If the web can have it, why can’t IoT?" %}
 
 Figure 1 - If the web can have it, why can’t IoT?
 
@@ -42,6 +43,8 @@ Certificates are provisioned automatically through the WoTT agent from our own C
 
 We strongly recommend securely storing device keys in a secure environment like a trusted platform module ([TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module)).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with [Pi Supply](https://uk.pi-supply.com/) to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)
 
+{% asset blog/key.png srcset:width="1300 2x" srcset:width="650 1x" alt="Use a TPM, seriously" %}
+
 Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)
 
@@ -50,6 +53,8 @@ The certificate serves as both the unique device identifier and the means to dis
 It is worth mentioning that mTLS is different than how your browser works. In such a scenario, you as the client (i.e. the browser) verify that the remote server (e.g. https://www.google.com) is indeed being served from Google’s server and not an impersonator (spoofing attack). There is however no way for Google to cryptographically confirm you or your browser identity (which is why we login to access email). With WoTT, we add client-side authentication and eliminate the need for login credentials (username and password), since we can verify the client identity with the certificate.  This is a huge step in moving away from the problem of default login credentials in IoT. There are at least [61 default login credentials](https://www.csoonline.com/article/3126924/here-are-the-61-passwords-that-powered-the-mirai-iot-botnet.html) used in the Mirai botnet attack.
 
 Finally, let me introduce the plat de resistance - _the Trust Score_.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).
+
+{% asset blog/trust-score.png srcset:width="1300 2x" srcset:width="650 1x" alt="trust score" %}
 
 Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek
 
