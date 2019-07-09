@@ -1,2 +1,8 @@
 baseurl: '/'
 url: 'http://127.0.0.1:4000'
+
+assets:
+  cdn:
+    baseurl: false
+    destination: false
+    url: 'http://127.0.0.1:4000/assets'

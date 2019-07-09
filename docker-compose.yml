@@ -5,7 +5,7 @@ services:
     ports:
      - "4000:4000"
     environment:
-     - JEKYLL_ENV=development
+     - JEKYLL_ENV=production
     volumes:
       - .:/usr/src/app
     command: jekyll serve --host 0.0.0.0 --incremental --limit_posts 15 --config _config.yml,_config_dev.yml
