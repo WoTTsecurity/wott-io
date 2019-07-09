@@ -40,7 +40,7 @@ Let’s introduce some intelligence into the process in the form of a Raspberry 
 
 The example also illustrates an important point about the future of cyber-physical systems: devices will have [agency](https://en.wikipedia.org/wiki/Agency_(philosophy)). This means that devices will make decisions on your behalf.  In thinking of the billions and billions of devices that consultants have estimated will come online over the next decade, it makes sense that we will not be able to manually control all of them or pre-program an output for every scenario.
 
-![My mental image of a consulting firm’s quantification of billions of IoT devices](https://giphy.com/gifs/mike-myers-JWH857oECO0rC)
+![My mental image of a consulting firm’s quantification of billions of IoT devices](https://media.giphy.com/media/JWH857oECO0rC/giphy.gif)
 
 Figure 3 - My mental image of a consulting firm’s quantification of billions of IoT devices.  
 
