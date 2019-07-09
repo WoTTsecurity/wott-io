@@ -47,10 +47,8 @@ pagination:
     after: 2
 
 assets:
-  gzip: true
   cdn:
-    baseurl: true
-    url: https://wott.io
+    url: 'https://wott.io/assets'
 
 mini_magick:
   cover_blog_mini:
