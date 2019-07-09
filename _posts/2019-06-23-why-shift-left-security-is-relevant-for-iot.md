@@ -12,7 +12,7 @@ class: post-template
 
 TL;DR Cyber is best handled by developers with big, bulging...brains.
 
-![Natalie Portman](https://giphy.com/gifs/film-4-natalie-portman-lQaO9Cf50zlM4)
+![Natalie Portman](https://media.giphy.com/media/lQaO9Cf50zlM4/giphy.gif)
 Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress.
 
 In our [first blog post]({{site.url}}/blog/news/2019/06/20/why-we-are-doing-what-we-do), I articulated that we are strong proponents of shift-left security.  The idea that security should be incorporated as early as possible during application and infrastructure development.  In this post, I will explain why we feel that developers are in a strong position to improve security posture and why it’s more efficient for them to be involved in the solution.
