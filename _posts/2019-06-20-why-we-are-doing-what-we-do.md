@@ -12,7 +12,7 @@ class: post-template
 
 ## TL;DR the future has flying cars, transformers and low calorie diets.
 
-{% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
+{% asset blog/open-source.png srcset:width="1300 2x" srcset:width="650 1x" alt="open source" %}
 
 Figure 1 - Best free photo I could find when searching for ‘open source’
 
@@ -24,7 +24,7 @@ The aforementioned examples of internet connected devices are the proverbial tip
 
 At [WoTT]({{site.url}}), we are very excited about this.  We dream of the world of [unmanned aerial vehicles](https://www.airxos.io/) (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will [synthesize speech](https://www.nature.com/articles/s41586-019-1119-1) from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel [(assuming Google doesn’t cut access to the necessary APIs)](https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/). If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.
 
-{% asset blog/neural-implant.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" %}
+{% asset blog/neural-implant.png srcset:width="1300 2x" srcset:width="650 1x" alt="neural implant" %}
 
 Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)
 
