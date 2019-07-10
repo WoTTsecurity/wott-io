@@ -28,3 +28,13 @@ Development-specific overrides are configured in [_config_dev.yml](https://githu
 ## Production environment
 
 The production environment is built using [Travis CI](https://github.com/WoTTsecurity/wott-io/blob/master/.travis.yml) and then published to Github Pages as a static page.
+
+## Upgrading Gemfile
+
+If you need to add a new requirement to `Gemfile`, run the following command to update `Gemfile.lock`:
+
+```
+$ docker build . -t wott/wott-io && \
+  rm -f Gemfile.lock && \
+  docker run --rm -v $(pwd):/usr/src/app wott/wott-io bundle install
+```
