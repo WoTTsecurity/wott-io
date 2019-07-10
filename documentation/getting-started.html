@@ -117,26 +117,16 @@
 	<li><a href="https://wott.io/documentation/getting_started/test">Sections and outlines in HTML5</a></li>
 	</ul>
 	</div></div>
-    <div class="b_content docs_content content_info_block">
+    <div class="b_content docs_content">
     <div class="inner-content">
 <div class="info_docs">
 <span class="t_hm">introduction</span>
 <span class="t_i1">Getting Started with the WoTT Agent and Dashboard</span>
 <span class="t_m2">We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security into your IoT devices.</span>
 </div>
-
-<div class="white_shadow_block docs_icon_menu">
-<div class="icon_info">
-<a href="https://wott.io/documentation/getting-started" class="info_block"><div class="icon" style="background-image:url(https://wott.io/assets/style/img/startup-3.svg);"></div><span class="t_m1">Getting Started</span><span class="t_m2">Transparency, peer audit and crowdsourced vulnerability reporting are the future.</span></a>
-<a href="https://wott.io/documentation/use-cases" class="info_block"><div class="icon" style="background-image:url(https://wott.io/assets/style/img/settings_87590.svg);"></div><span class="t_m1">Setup</span><span class="t_m2">Security belongs directly in the device not just on the users’ network.</span></a>
-<a href="https://wott.io/documentation/faq" class="info_block"><div class="icon" style="background-image:url(https://wott.io/assets/style/img/help.svg);"></div><span class="t_m1">FAQ</span><span class="t_m2">The cheapest and most efficient way to include security is during development</span></a>
-<a href="https://www.raspberrypi.org/forums/viewtopic.php?f=41&t=243538" class="info_block"><div class="icon" style="background-image:url(https://wott.io/assets/style/img/support-2.svg);"></div><span class="t_m1">Get Support</span><span class="t_m2">Networks are not impenetrable. Perimeter security is a false sense of security.</span></a>
-</div>
-</div>
-
-<div class="info_docs">
+<div class="info_docs content_info_block">
 <span class="t_m1">Getting Started</span>
-<span class="t_m2"><p>Welcome to WoTT - the first step to securing your IoT devices.</p>
+<p>Welcome to WoTT - the first step to securing your IoT devices.</p>
 
 <h2 id="a-brief-overview-of-wotts-services">A brief overview of WoTT’s services</h2>
 
@@ -187,7 +177,7 @@ $ sudo apt install wott-agent
 <p>The terminal will now output your WoTT Device ID, claim token, and a link to claim the device. 
 Copy and paste this link into your browser- the fields may already have autofilled. Otherwise fill in the details in the relevant fields.</p>
 
-<p><img alt="Claim device on WoTT Dashboard" class="img-fluid" src="https://wott.io/assets/docs/claim-device-b8dea404ef9e7d75450ebeadbcfdb393453f4de81e9f27644bb3c26652939faa.png" integrity="sha256-uN6kBO+efXVFDr6tvP2zk0U/TegenydkS7PCZlKTn6o=" crossorigin="anonymous" srcset="https://wott.io/assets/8087e4-e515151fb428d3ef1629f9e3ae07752f144444a3bf7dee66d3ecd54d63b4d670.png 2x, https://wott.io/assets/454a75-8b3dfa9625daa6ec02f6c7cc9865c8b99559de1f052715246d5801ea97dfb527.png 1x" /></p>
+<p><img alt="Claim device on WoTT Dashboard" class="img-fluid" src="https://wott.io/assets/docs/claim-device-b8dea404ef9e7d75450ebeadbcfdb393453f4de81e9f27644bb3c26652939faa.png" integrity="sha256-uN6kBO+efXVFDr6tvP2zk0U/TegenydkS7PCZlKTn6o=" crossorigin="anonymous" srcset="https://wott.io/assets/8087e4-d088472c42746513095523e4ed26c7d1a011d18c54f5aaa7e53fc5345afc1fdb.png 2x, https://wott.io/assets/454a75-5c6fabb1e38224d624861489f7e160cc7746a3b4c08555c7911fbc70999cc621.png 1x" /></p>
 
 <p><strong>Note:</strong> you can view your Device ID and claim token using the following commands as well:</p>
 
@@ -198,17 +188,17 @@ $ wott-agent claim-token
 
 <p>See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user’s personal tags for the Pi’s purpose.</p>
 
-<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-e60f9ce2e5e12eb1f913f4d949f82a2f6832e2ad6e777f1a5afc143b7801f12b.png 2x, https://wott.io/assets/cbc4d6-05378d4a08fb334ac4da4bbe454a89fe9ec4372da4f51e4223f793e6b81f84b4.png 1x" /></p>
+<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-a13d9a56fbfff720d72246909444405973b5ef76252a2a9a0b3c80d09ecf4b44.png 2x, https://wott.io/assets/cbc4d6-24b3d0d319bd21ef10e0cb60dbfca63ab59414f7595f0cbe18c2d84349f2f5e2.png 1x" /></p>
 
 <h2 id="managing-your-own-credentials-through-the-wott-dashboard">Managing your own credentials through the WoTT Dashboard</h2>
 
 <p>In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.</p>
 
-<p><img alt="WoTT Dashboard sidebar" class="img-fluid" src="https://wott.io/assets/docs/sidebar-990e2a349f1f2c209e2c0665cafbc5181c4cfbdda747f1da414a9359478d596f.png" integrity="sha256-mQ4qNJ8fLCCeLAZlyvvFGBxM+92nR/HaQUqTWUeNWW8=" crossorigin="anonymous" srcset="https://wott.io/assets/826b17-b9abe66362813ecbd2a54cbde7b8c76a606ec464d2d752ccaa7194afcfbfc462.png 2x, https://wott.io/assets/8d71e4-ebfc18ed8fe4ab5f7a8dedcb362d470798b780b2b0cdd9148d32398eb738a87a.png 1x" /></p>
+<p><img alt="WoTT Dashboard sidebar" class="img-fluid" src="https://wott.io/assets/docs/sidebar-990e2a349f1f2c209e2c0665cafbc5181c4cfbdda747f1da414a9359478d596f.png" integrity="sha256-mQ4qNJ8fLCCeLAZlyvvFGBxM+92nR/HaQUqTWUeNWW8=" crossorigin="anonymous" srcset="https://wott.io/assets/826b17-2305e67d47b7a5c55f4d2e69e50f00f3228051c6a6bcfeea196d7b8a1bcc0a04.png 2x, https://wott.io/assets/8d71e4-2bb29cfa96392e3bc596069f86a7995e835f0dc6ad5f5c20bcd29ca5b3430d41.png 1x" /></p>
 
 <p>Navigate to ‘Credentials.’ Select ‘Add a credential’</p>
 
-<p><img alt="WoTT Credentias menu" class="img-fluid" src="https://wott.io/assets/docs/credentials-25ee1479b32fff12d704e02a2c0922537a115a4c501419a5a261595ad6c5aa4c.png" integrity="sha256-Je4UebMv/xLXBOAqLAkiU3oRWkxQFBmlomFZWtbFqkw=" crossorigin="anonymous" srcset="https://wott.io/assets/c97e2d-968519e788829b604da389b6cc709836bab1b1f96f28f6774063cc141e6cd88e.png 2x, https://wott.io/assets/7ba295-2f9a2077c7d5066ca15c6d403eac1e591a9129b7155e003c67ed97bf4ac8526a.png 1x" /></p>
+<p><img alt="WoTT Credentias menu" class="img-fluid" src="https://wott.io/assets/docs/credentials-25ee1479b32fff12d704e02a2c0922537a115a4c501419a5a261595ad6c5aa4c.png" integrity="sha256-Je4UebMv/xLXBOAqLAkiU3oRWkxQFBmlomFZWtbFqkw=" crossorigin="anonymous" srcset="https://wott.io/assets/c97e2d-d05b4be8d7dfad0f7cb721007fc7b50d41be6aae0a8b0a0041c8cab2afc20c1d.png 2x, https://wott.io/assets/7ba295-e1eb85594c8cb299276d105fdd1dea1aff2a4f417ccd7023f7cbd479323ddbfd.png 1x" /></p>
 
 <p>Let’s break down the fields:</p>
 
@@ -237,7 +227,7 @@ $ wott-agent claim-token
 Credentials are downloaded either when WoTT fetches data or when restarted. You may also find yourself being denied permissions for some of the commands we’ve shown you, use <code class="highlighter-rouge">sudo</code> where necessary to circumvent this.</p>
 
 <p>These certificates and credentials can now be used to secure end-to-end device communication and web applications, check out some of the use cases and examples on the <a href="https://github.com/WoTTsecurity/agent">WoTT Agent Github</a> for inspiration and ideas on how to use WoTT for your own projects.</p>
-</span>
+
 </div>
 
 </div>
