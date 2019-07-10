@@ -12,6 +12,8 @@ class: post-template
 
 # Using WoTT with Google Core IoT
 
+## Introduction
+
 Before we get started, you will need to install the `gcloud` tool. This is used to interact with Google's services. You can find installation instructions [here](https://cloud.google.com/iot/docs/how-tos/getting-started). Follow the instructions for your specific distribution.
 
 You will also need to have at least one device with the [WoTT agent installed](https://https://github.com/WoTTsecurity/agent) if you do not already. This will provide you with your unique Device ID and token which can be added to the [WoTT dashboard](https://dash.wott.io) as per instructions. You will need the Device ID later.
