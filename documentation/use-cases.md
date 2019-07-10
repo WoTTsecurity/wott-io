@@ -54,7 +54,7 @@ There are still many cases where we cannot verify a device's access rights throu
 
 Uses a similar WebApp to the certificate authenticated app but uses HTTP Basic Authentication instead which can be thought of as a typical login. A WoTT Agent device acts as a server and we show you how to use credentials to add login details for browser access.
 
-#### [Using WoTT credentials to manage Adafruit IO access through an MQTT Client](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/adafruit-io)
+#### [Using WoTT credentials to manage Adafruit IO access through an MQTT Client]({{site.url}}/blog/tutorials/2019/06/27/adafruit-io)
 
 Adafruit IO is a service provided by Adafruit that concerns itself with simplifying the presentation and usage of data for IoT devices. To access Adafruit IO feeds within your own applications, you need your Adafruit IO username and access AIO key. This example shows how to store those credentials securely in WoTT and call the credentials to secure access to the feed within a Python 3 application.
 
