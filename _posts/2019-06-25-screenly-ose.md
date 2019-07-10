@@ -35,7 +35,7 @@ Then navigate to the Address shown and login with your network details. This wil
 Now we need to secure access to your Screenly OSE device. If you haven't installed the WoTT Agent already, you can install it via the Screenly OSE installer. Just run:
 
 ```
-$ ./screenly/.bin/run-upgrade.sh
+$ ./screenly/bin/run-upgrade.sh
 ```
 and select the WoTT agent from the installation options.
 
