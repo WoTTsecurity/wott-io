@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Using WoTT credentials to manage access to a Python 3 WebApp</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wott.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Using WoTT credentials to manage access to a Python 3 WebApp" />
+    <meta property="og:description" content="Another simple WebApp example Introduction In a previous example we introduced you to setting up a Simple WebApp using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we’ll be using another simple WebApp that instead" />
+    <meta property="og:url" content="https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth" />
+    <meta property="og:image" content="https://wott.io/image_0.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="2019-06-18T17:00:00+00:00" />
+    <meta property="article:modified_time" content="2019-06-18T17:00:00+00:00" />
+    <meta property="article:tag" content="Open Source" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Using WoTT credentials to manage access to a Python 3 WebApp" />
+    <meta name="twitter:description" content="Another simple WebApp example Introduction In a previous example we introduced you to setting up a Simple WebApp using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we’ll be using another simple WebApp that instead" />
+    <meta name="twitter:url" content="https://wott.io/" />
+    <meta name="twitter:image" content="https://wott.io/image_0.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Open Source" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/assets/images/blog-icon.png"
+    },
+    "url": "https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/image_0.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth"
+    },
+    "description": "Another simple WebApp example Introduction In a previous example we introduced you to setting up a Simple WebApp using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we’ll be using another simple WebApp that instead"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Using WoTT credentials to manage access to a Python 3 WebApp" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav">
+
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">Using WoTT credentials to manage access to a Python 3 WebApp</span>
+<span class="t_m2">By Fiona McAllister on June 18, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style="background-image:url(https://wott.io/assets/images/blogcover/full/image_0.png);"></div><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/sn/facebook.png);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/twitter.png);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth&text=Using WoTT credentials to manage access to a Python 3 WebApp" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/send.png);"><a target="_blank" href="mailto:?subject=Using WoTT credentials to manage access to a Python 3 WebApp&body=/blog/tutorials/2019/06/18/simple-webapp-auth" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/pinterest.png);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth&media=https://wott.io/assets/images/blogcover/full/image_0.png&description= Another simple WebApp example Introduction In a previous example we introduced you to setting up a Simple WebApp using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we’ll be using another simple WebApp that instead uses HTTP... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/linkedin.png);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth&title=Using WoTT credentials to manage access to a Python 3 WebApp" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+<h1 id="another-simple-webapp-example">Another simple WebApp example</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In a previous example we introduced you to setting up a <a href="https://wott.io/blog/tutorials/2019/06/16/simple-webapp">Simple WebApp</a> using mTLS to provide security. This is one of a few ways to secure connection between a client and a server.</p>
+
+<p>In this example, we’ll be using another simple WebApp that instead uses HTTP Basic Auth to verify login and access.</p>
+
+<p>You will need 1 device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the <a href="https://dash.wott.io">WoTT Dashboard</a> and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.</p>
+
+<h2 id="using-wott-dashboard">Using WoTT Dashboard</h2>
+
+<p>WoTT provides an online client that you can interface with to register your WoTT Agent enabled devices. We strongly encourage you to do so in the interests of protecting your IoT devices.</p>
+
+<p>For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.</p>
+
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-b2dc70b4e37947f1f3800af10aaae5abc73d1ea04271e29de1e199206bf9bd0d.png 2x, https://wott.io/assets/656774-bbefbcde9fb628149b27d2d451d3cf3c3dc23ffc440e682c89c233f465d91454.png 1x" /></p>
+
+<p>If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wott-agent claim-url
+$ wott-agent whoami
+$ wott-agent claim-token
+</code></pre></div></div>
+
+<p>This will give you all the information you need to manually claim your device.</p>
+
+<h2 id="adding-credentials">Adding Credentials</h2>
+
+<p>Once you have your devices enrolled, you need to navigate to the Credentials page in the Dashboard. You will need to add a credential to use to access the WebApp later. 
+The credential subheaders may seem a little confusing. In essence, <code class="highlighter-rouge">Name</code> refers to the name of the application you need credentials for. In our case, it’s the simple WebApp. The <code class="highlighter-rouge">Key</code> is how the application then queries its credentials with <code class="highlighter-rouge">Value</code> referring to the actual contents of the key (the secure bit). <code class="highlighter-rouge">Tags</code> is to match the tags of your chosen device to the credential so you can manage which credentials are downloaded to each device.</p>
+
+<p>For our example, add the following credential:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name = my_simple_web_app
+Key = web_app_credentials
+Value = username:password
+Tags = home-lab
+</code></pre></div></div>
+
+<p>In place of <code class="highlighter-rouge">username:password</code> you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is <code class="highlighter-rouge">home-lab</code>. If all is successful, the page should now look something like this:</p>
+
+<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-73360d2a4303528d80f64d8dcd5c7cca7e2c5432dab24c4e8006b7ce87ebbe54.png 2x, https://wott.io/assets/deedd0-41c0d6ac99a39bc60b19e1b4b3f73e2001672e92e83ccdeb02648e7acd92f3ab.png 1x" /></p>
+
+<p>You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:</p>
+
+<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-cff5bf74f446eff0fadd14b6db7a7443297ae38ab6280fa11e29111e01b97267.png 2x, https://wott.io/assets/2ee7eb-944f83560645c542f3d43d0576404db89168f8f85e12215d373ed0acc2cc1762.png 1x" /></p>
+
+<p>Select the device that will be acting as your server, or <code class="highlighter-rouge">home-lab</code>. In the overview tab, you will be able to add tags to your device. Add <code class="highlighter-rouge">home-lab</code> and ensure that it is spelt correctly to match the credentials tag or it <strong>will not</strong> download.</p>
+
+<p>The credentials are now ready to be used on your specified WoTT enabled device provided they are tagged correctly. On this device, you will now need to relaunch the WoTT Agent to download the new credentials:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service wott-agent restart
+</code></pre></div></div>
+<p>There will now be a JSON file in your WoTT agent’s credentials with your information which the app will parse and process.</p>
+
+<p><strong>Note:</strong> If you change the Name of the new credentials, you will need to edit the name of the JSON file being read within the app as it currently assumes you have named it <code class="highlighter-rouge">my_simple_web_app</code> as per instructions.</p>
+
+<h2 id="setting-up-the-webapp">Setting up the WebApp</h2>
+
+<p>As with the other example, you will need to download the WebApp files into a new directory. Use <code class="highlighter-rouge">sudo</code> where necessary.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update &amp;&amp; apt install -y python3 python3-pip curl
+$ mkdir ~/wott-webapp-auth-example
+$ cd ~/wott-webapp-auth-example
+$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/app.py
+$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/requirements.txt
+$ pip3 install -r requirements.txt
+$ sudo python3 app.py
+</code></pre></div></div>
+
+<p>This will start your app on the server 127.0.0.1 at port 8080. You should receive a response like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* Serving Flask app "app" (lazy loading)
+* Environment: production
+  WARNING: Do not use for the development server in a production environment.
+  Use a production WSGI server instead.
+* Debug mode: Off
+* Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+</code></pre></div></div>
+
+<h2 id="accessing-the-webapp">Accessing the WebApp</h2>
+
+<p>Launch http://127.0.0.1:8080/ on your device’s browser. Here, provided you have encountered no errors, you’ll be prompted to enter a username and password. If you have followed the steps so far the username should be <code class="highlighter-rouge">username</code> and the password <code class="highlighter-rouge">password</code>.</p>
+
+<p>With the correct details, you will be greeted with the following screen message:</p>
+
+<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-7ae538dc28353193b3fec4296c7ec12e554559c6f913187cf86791d742dd2ce5.png 2x, https://wott.io/assets/954347-d4a5b70b186779ba47523204d9eb85df312c53b0b34f565dd66000ac199f2f70.png 1x" /></p>
+
+<p>And that’s it, you’ve set up basic HTML auth on a WebApp!</p>
+
+<h2 id="common-errors">Common Errors</h2>
+
+<p><strong>No module named flask</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>File "/Users/user/dir/app_dir/app.py", line 1, in &lt;module&gt;
+    from flask import Flask
+ImportError: No module named flask
+</code></pre></div></div>
+
+<p>This can occur if the requirements file does not install properly or you are in the wrong virtualenv. Make sure to source your venv and install requirements.txt properly</p>
+
+<p><strong>404: Not Found when running either app.py or installing requirements.txt</strong></p>
+
+<p>When using curl commands to download the files from Github, make sure you use the correct URL. If you’re unsure, go to the GitHub page directly and click on the files and view them in raw format. Copy this link into the curl command if all else fails.</p>
+
+<h2 id="accessing-the-webapp-from-a-new-client">Accessing the WebApp from a new client</h2>
+
+<p>While making sure the server device is still running:</p>
+
+<p>Obtain your server device IP using <code class="highlighter-rouge">ip addr show</code> in a separate terminal if you do not know what it is already. The port we are calling is 8080.</p>
+
+<p>You can either enter the IP address followed by <code class="highlighter-rouge">:8080</code> and enter the username and password through the WebApp and receive the same screen as before; or you can use a curl command in your client device’s terminal in the following format:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://username:password@SERVER_IP:8080
+</code></pre></div></div>
+<p>Once again, if succussful you will receive the following message:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Login successful. Hello from WoTT!
+</code></pre></div></div>
+
+<h2 id="closing-notes">Closing Notes</h2>
+
+<p>We have now seen how we can use WoTT to generate secure credentials to access a WebApp via HTTP Basic auth. This can be done from any device to the server on the WoTT agent enabled device provided you have access to the credentials and the server’s IP. Once again, make sure to bind your WebApp to your localhost for security.</p>
+
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Using WoTT credentials to manage access to Adafruit IO feeds</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on June 27, 2019</span>
+  <span class="description">
+   # Using Adafruit IO with WoTT Credentials ## Introduction [Adafruit IO](https://io.adafruit.com) is a free cloud service interested in making IoT accessible to everyone through presenting data in a useful and user-friendly way. Services that they provide include linking your IoT devices to Twitter and weather services. You can also use Adafruit IO... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">Using WoTT credentials to manage access to Screenly OSE</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on June 25, 2019</span>
+  <span class="description">
+   # Using WoTT to secure access to Screenly ## Introduction Screenly is a service that provides digital signage and acts as an OS on the host device. Essentially it treats your host device as a streaming service that projects visual media (such as images and webpages) onto a monitor from multiple different... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/2019-06-25-why-open-source-solutions-are-critical-for-IoT.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">thoughts</span>
+  <a class="title" href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Why open source solutions are critical for IoT</a>
+  <span class="author_time">By <a>Al Esmail</a> on June 25, 2019</span>
+  <span class="description">
+   TL;DR IoT needs one ring to rule them all and it’s not a platform. {% asset blog/iot-monster.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" class="img-fluid" %} In my last post, I described the relevance of [open source security]({{site.url}}/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec). For very different reasons, I will argue here that the internet of things (and cyber-physical... </span>
+  <a class="read_full" href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Continue reading </a>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+<li><a href="" title="">Authentication</a></li>
+<li><a href="" title="">Free SSL for IoT</a></li>
+<li><a href="" title="">Credential Manager</a></li>
+<li><a href="" title="">Security Console</a></li>
+<li><a href="" title="">Encryption</a></li>
+<li><a href="" title="">Monitoring</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">latest news</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" title="Using WoTT credentials to manage access to Adafruit IO feeds">Using WoTT credentials to manage access to Adafruit IO feeds</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" title="Using WoTT credentials to manage access to Screenly OSE">Using WoTT credentials to manage access to Screenly OSE</a></li>
+
+ <li><a href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" title="Why open source solutions are critical for IoT">Why open source solutions are critical for IoT</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; 2019 by WOTT.io All rights reserved</li>
+<li><a href="/tos" title="">Terms of service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134852372-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>
