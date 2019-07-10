@@ -38,11 +38,11 @@ Our use cases can be divided into certificate managed or credential managed exam
 Many of the IoT cloud service examples use MQTT, a lightweight messaging protocol to publish/subscribe messages. This is ideal for unreliable network connections or high-latency environments (as can be with IoT devices) but is typically not encrypted and uses TCP transport protocols by default. 
 WoTT uses mTLS which runs over the TCP layer. In essence, mTLS establishes a handshake and only allows connectivity if the handshake is successful (certificates are accepted).
 
-#### [Google Core IoT](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/google-core-iot)
+#### [Google Core IoT]({{site.url}}/blog/tutorials/2019/06/14/google-core-iot)
 
 Google Cloud Platform provides services that developers can use. Here we show you how to set up your WoTT Agent device and enroll it to your Google Cloud project to communicate with Google's services. Includes Google's MQTT example. 
 
-#### [A Simple WebApp](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/simple-webapp)
+#### [A Simple WebApp]({{site.url}}/blog/tutorials/2019/06/16/simple-webapp)
 
 You will need 2 WoTT Agent devices: one acting as server, one as client. This example uses the concept of WoTT's cryptographic identity to verify devices and verify connection. We've included a very somple WebApp for the example, but the principle applies to any WebApp that you develop yourself- just ensure you do the correct setup as illustrated in the guide.
 
@@ -50,15 +50,15 @@ You will need 2 WoTT Agent devices: one acting as server, one as client. This ex
 
 There are still many cases where we cannot verify a device's access rights through certificates alone. Securing browser accessible apps and some IoT cloud services require authentication. Our credential service is here so you can manage this from the WoTT Dashboard. You will need to have an account with WoTT for the following examples.
 
-#### [Simple WebApp with Basic HTTP Auth access](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/simple-webapp-auth)
+#### [Simple WebApp with Basic HTTP Auth access]({{site.url}}/blog/tutorials/2019/06/18/simple-webapp-auth)
 
 Uses a similar WebApp to the certificate authenticated app but uses HTTP Basic Authentication instead which can be thought of as a typical login. A WoTT Agent device acts as a server and we show you how to use credentials to add login details for browser access.
 
-#### [Using WoTT credentials to manage Adafruit IO access through an MQTT Client](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/adafruit-io)
+#### [Using WoTT credentials to manage Adafruit IO access through an MQTT Client]({{site.url}}/blog/tutorials/2019/06/27/adafruit-io)
 
 Adafruit IO is a service provided by Adafruit that concerns itself with simplifying the presentation and usage of data for IoT devices. To access Adafruit IO feeds within your own applications, you need your Adafruit IO username and access AIO key. This example shows how to store those credentials securely in WoTT and call the credentials to secure access to the feed within a Python 3 application.
 
-#### [Managing access to Screenly OSE via HTTP authentication with WoTT authentication](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/screenly)
+#### [Managing access to Screenly OSE via HTTP authentication with WoTT authentication]({{site.url}}/blog/tutorials/2019/06/25/screenly-ose)
 
 Screenly OSE is a free digital signage platform. Access to Screenly OSE's management page can be secured with HTTP authentication via a login with a username and password. This example shows how to use WoTT dash to create and store these access credentials. These credentials can then be used within Screenly OSE.
 
