@@ -50,7 +50,7 @@ You will need 2 WoTT Agent devices: one acting as server, one as client. This ex
 
 There are still many cases where we cannot verify a device's access rights through certificates alone. Securing browser accessible apps and some IoT cloud services require authentication. Our credential service is here so you can manage this from the WoTT Dashboard. You will need to have an account with WoTT for the following examples.
 
-#### [Simple WebApp with Basic HTTP Auth access](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/simple-webapp-auth)
+#### [Simple WebApp with Basic HTTP Auth access]({{site.url}}/blog/tutorials/2019/06/18/simple-webapp-auth)
 
 Uses a similar WebApp to the certificate authenticated app but uses HTTP Basic Authentication instead which can be thought of as a typical login. A WoTT Agent device acts as a server and we show you how to use credentials to add login details for browser access.
 

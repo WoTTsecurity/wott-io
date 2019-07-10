@@ -2,8 +2,8 @@
 layout: post
 current: post
 cover:  image_0.png
-title: Using WoTT to secure access to Google Core IoT
-date: 2019-06-14 17:00:00
+title: Using WoTT credentials to manage access to a Python 3 WebApp
+date: 2019-06-25 17:00:00
 category: tutorials
 author: Fiona McAllister
 tags: [Open Source]
@@ -14,11 +14,11 @@ class: post-template
 
 ## Introduction
 
-In a previous example we introduced you to setting up a [Simple WebApp](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/simple-webapp) using mTLS to provide security. This is one of a few ways to secure connection between a client and a server.
+In a previous example we introduced you to setting up a [Simple WebApp]({{site.url}}/blog/tutorials/2019/06/16/simple-webapp) using mTLS to provide security. This is one of a few ways to secure connection between a client and a server.
 
 In this example, we'll be using another simple WebApp that instead uses HTTP Basic Auth to verify login and access.
 
-You will need 1 device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the [WoTT Dashboard](dash.wott.io) and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.
+You will need 1 device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the [WoTT Dashboard](https://dash.wott.io) and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.
 
 
 ## Using WoTT Dashboard
