@@ -34,6 +34,7 @@ plugins:
   - jekyll-assets
   - jekyll-minimagick
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 pagination:
   enabled: true

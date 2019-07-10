@@ -4,6 +4,10 @@ description: 'Getting started with WoTT'
 title: 'Getting Started with the WoTT Agent and Dashboard'
 full_description: We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security into your IoT devices.
 title_content: 'Getting Started'
+redirect_from:
+  - /getting-started-1
+  - /getting-started
+  - /blog/categories/getting-started
 ---
 
 Welcome to WoTT - the first step to securing your IoT devices.
