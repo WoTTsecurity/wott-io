@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  2019-06-23-why-shift-left-security-is-relevant-for-iot.png
+cover:  image_0.png
 title: Why shift-left security is relevant for IoT
 date: 2019-06-23 10:00:00
 category: thoughts
