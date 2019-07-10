@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Using WoTT to secure access to Google Core IoT</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wott.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wott.io/blog/tutorials/2019/06/14/google-core-iot" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Using WoTT to secure access to Google Core IoT" />
+    <meta property="og:description" content="Using WoTT with Google Core IoT Introduction Before we get started, you will need to install the gcloud tool. This is used to interact with Google’s services. You can find installation instructions here. Follow the instructions for your specific distribution. You will also need to have at least one device" />
+    <meta property="og:url" content="https://wott.io/blog/tutorials/2019/06/14/google-core-iot" />
+    <meta property="og:image" content="https://wott.io/image_0.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="2019-06-14T17:00:00+00:00" />
+    <meta property="article:modified_time" content="2019-06-14T17:00:00+00:00" />
+    <meta property="article:tag" content="Open Source" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Using WoTT to secure access to Google Core IoT" />
+    <meta name="twitter:description" content="Using WoTT with Google Core IoT Introduction Before we get started, you will need to install the gcloud tool. This is used to interact with Google’s services. You can find installation instructions here. Follow the instructions for your specific distribution. You will also need to have at least one device" />
+    <meta name="twitter:url" content="https://wott.io/" />
+    <meta name="twitter:image" content="https://wott.io/image_0.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Open Source" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/assets/images/blog-icon.png"
+    },
+    "url": "https://wott.io/blog/tutorials/2019/06/14/google-core-iot",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/image_0.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/tutorials/2019/06/14/google-core-iot"
+    },
+    "description": "Using WoTT with Google Core IoT Introduction Before we get started, you will need to install the gcloud tool. This is used to interact with Google’s services. You can find installation instructions here. Follow the instructions for your specific distribution. You will also need to have at least one device"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Using WoTT to secure access to Google Core IoT" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav">
+
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">Using WoTT to secure access to Google Core IoT</span>
+<span class="t_m2">By Fiona McAllister on June 14, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style="background-image:url(https://wott.io/assets/images/blogcover/full/image_0.png);"></div><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/sn/facebook.png);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/tutorials/2019/06/14/google-core-iot" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/twitter.png);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/tutorials/2019/06/14/google-core-iot&text=Using WoTT to secure access to Google Core IoT" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/send.png);"><a target="_blank" href="mailto:?subject=Using WoTT to secure access to Google Core IoT&body=/blog/tutorials/2019/06/14/google-core-iot" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/pinterest.png);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/06/14/google-core-iot&media=https://wott.io/assets/images/blogcover/full/image_0.png&description= Using WoTT with Google Core IoT Introduction Before we get started, you will need to install the gcloud tool. This is used to interact with Google’s services. You can find installation instructions here. Follow the instructions for your specific distribution. You will also need to have at least one device with the... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/linkedin.png);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/tutorials/2019/06/14/google-core-iot&title=Using WoTT to secure access to Google Core IoT" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+<h1 id="using-wott-with-google-core-iot">Using WoTT with Google Core IoT</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Before we get started, you will need to install the <code class="highlighter-rouge">gcloud</code> tool. This is used to interact with Google’s services. You can find installation instructions <a href="https://cloud.google.com/iot/docs/how-tos/getting-started">here</a>. Follow the instructions for your specific distribution.</p>
+
+<p>You will also need to have at least one device with the <a href="https://github.com/WoTTsecurity/agent">WoTT agent installed</a> if you do not already. This will provide you with your unique Device ID and token which can be added to the <a href="https://dash.wott.io">WoTT dashboard</a> as per instructions. You will need the Device ID later.</p>
+
+<p>Finally, you also need to have <code class="highlighter-rouge">curl</code> and <code class="highlighter-rouge">jq</code> installed (both should be available in your favorite package manager)</p>
+
+<h2 id="creating-a-registry">Creating a registry</h2>
+
+<p>First we need to get the CA certificate:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -s https://api.wott.io/v0.2/ca | jq -r '.ca_certificate' &gt; ca.crt
+</code></pre></div></div>
+
+<p>Next, we need to create the registry. Substitute <code class="highlighter-rouge">REGISTRY_ID</code> and <code class="highlighter-rouge">PROJECT_ID</code> with your corresponding information. You may also want to change the name of the pub/sub topic. Available regions for Cloud IoT are <code class="highlighter-rouge">us-central1</code>, <code class="highlighter-rouge">europe-west1</code>, and <code class="highlighter-rouge">asia-east1</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcloud iot registries create REGISTRY_ID \
+    --project=PROJECT_ID \
+    --region=us-central1 \
+    --no-enable-http-config \
+    --enable-mqtt-config \
+    --public-key-path=ca.crt \
+    --state-pubsub-topic=wott-pubsub
+</code></pre></div></div>
+
+<p>That’s it. We have now created a WoTT enabled Google Core IoT registry. Now we need to enroll our first device.</p>
+
+<h2 id="enrolling-devices">Enrolling devices</h2>
+
+<p>The first thing we need to do is to download the certificate of the device. To do that we nned to issue an API call to WoTT’s API.
+To do this, you will need the Device ID of the WoTT agent-enabled device. The relevant information of your device can be found on the WoTT Dash.</p>
+
+<p>If you do not have the dash set up, you can manually retrieve this information via command line using: <code class="highlighter-rouge">$ sudo wott-agent whoami</code> and substitute that value into <code class="highlighter-rouge">mydevice</code> as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export DEVICE_ID=mydevice.d.wott.local
+$ curl -s "https://api.wott.io/v0.2/device-cert/$DEVICE_ID" &gt; device.crt
+</code></pre></div></div>
+
+<p>Google’s Device ID <a href="https://cloud.google.com/iot/docs/requirements#permitted_characters_and_size_requirements">must start with a letter ([a-zA-Z]))</a>. If your WoTT ID starts with a number, you will need to prefix it with a character. In the example below, we prefix the Device ID with <code class="highlighter-rouge">a-</code> to circumvent this (but you can prefix it with anything you want as long as it starts with a character):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export GOOGLE_DEVICE_ID=$(echo $DEVICE_ID | sed 's/^[0-9]/a-/g')
+$ curl -s "https://api.wott.io/v0.2/device-cert/$DEVICE_ID" &gt; device.crt
+</code></pre></div></div>
+
+<p>This achieves the same as before but gives you a valid Google Device ID that you can use to communicate with Google’s services.</p>
+
+<p><strong>Note:</strong>
+The WoTT Device ID (the string of characters found in <code class="highlighter-rouge">mydevice</code>) is unique and registered to your specific device. This ID can start with either a letter <em>or</em> a number.
+Therefore, you need to prefix your devices if your particular WoTT Device ID starts with a number in order for it to be a valid Google Device ID.
+In order to communicate with either WoTT or Google services, you will need to use the corresponding Device ID for each service; however in many cases this will be the same.</p>
+
+<p>With the certificate downloaded, we can now enroll the device (ensure you use the correct Device ID):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcloud iot devices create "$GOOGLE_DEVICE_ID" \
+    --project=PROJECT_ID \
+    --region=REGION \
+    --registry=REGISTRY_ID \
+    --public-key path=device.crt,type=es256-x509-pem
+</code></pre></div></div>
+
+<p>We now have our first device enrolled. Please do however note that the WoTT uses short-lived certificates (7 days), so you will need to upload these certificates every week.</p>
+
+<p>For information on how to update/rotate the key of your device, you need to issue a PATCH command to the API. For details, see <a href="https://cloud.google.com/iot/docs/samples/device-manager-samples#patch_a_device_with_ec_credentials">this article</a>.</p>
+
+<h2 id="connecting-the-device">Connecting the device</h2>
+
+<p>To test the connection, we will use Google’s <a href="https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/iot/api-client/mqtt_example">MQTT example code</a>.</p>
+
+<p>On your device, run the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install -y git-core python3-pip wget
+$ sudo pip3 install virtualenv
+$ mkdir ~/src
+$ cd ~/src
+$ git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
+$ cd python-docs-samples/iot/api-client/mqtt_example/
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ wget https://pki.google.com/roots.pem
+</code></pre></div></div>
+
+<p>We have now installed everything we need to start the agent, so let’s give it a shot with an example.
+You will need to ensure you remain in the current directory.</p>
+
+<p>Run the following (ensuring you substitute the correct details):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo -E ./venv/bin/python cloudiot_mqtt_example.py \
+    --project=PROJECT_ID \
+    --cloud_region=REGION \
+    --registry=REGISTRY_ID \
+    --device=$GOOGLE_DEVICE_ID \
+    --private_key_file=/opt/wott/certs/client.key \
+    --algorithm ES256 \
+    --ca_certs=roots.pem \
+    --message_type state \
+    device_demo
+</code></pre></div></div>
+
+<p>You should now see that your device is publishing messages.</p>
+
+<h2 id="verify-the-connection">Verify the connection</h2>
+
+<p>You can now verify the connection above using either the web interface, or the <code class="highlighter-rouge">gcloud</code> command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud iot devices configs describe \
+    --project=PROJECT_ID \
+    --region=REGION \
+    --registry=REGISTRY_ID \
+    --device=DEVICE_ID
+</code></pre></div></div>
+
+<p>You should get a response similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudUpdateTime: '2019-01-30T08:51:10.896665Z'
+deviceAckTime: '2019-01-30T11:57:15.586890Z'
+version: '1'
+</code></pre></div></div>
+
+<h2 id="send-a-message">Send a message</h2>
+
+<p>You can send a message to the device from within the Google Cloud Console. After sending the message, it should appear in the logs as such:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Received message 'b'Hello world'' on topic '/devices/x.d.wott.local/commands' with Qos 0
+</code></pre></div></div>
+
+<h2 id="reference-implementation">Reference implementation</h2>
+
+<p>You may also want to take a look at our Balena <a href="https://github.com/WoTTsecurity/wott-agent-balena/tree/master/google-core-iot">reference implementation</a> of the above.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Using WoTT credentials to manage access to Adafruit IO feeds</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on June 27, 2019</span>
+  <span class="description">
+   # Using Adafruit IO with WoTT Credentials ## Introduction [Adafruit IO](https://io.adafruit.com) is a free cloud service interested in making IoT accessible to everyone through presenting data in a useful and user-friendly way. Services that they provide include linking your IoT devices to Twitter and weather services. You can also use Adafruit IO... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">Using WoTT credentials to manage access to Screenly OSE</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on June 25, 2019</span>
+  <span class="description">
+   # Using WoTT to secure access to Screenly ## Introduction Screenly is a service that provides digital signage and acts as an OS on the host device. Essentially it treats your host device as a streaming service that projects visual media (such as images and webpages) onto a monitor from multiple different... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/image_0.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/06/25/simple-webapp-auth">Using WoTT credentials to manage access to a Python 3 WebApp</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on June 25, 2019</span>
+  <span class="description">
+   # Another simple WebApp example ## Introduction In a previous example we introduced you to setting up a [Simple WebApp]({{site.url}}/blog/tutorials/2019/06/16/simple-webapp) using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we'll be using another simple WebApp that instead... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/25/simple-webapp-auth">Continue reading </a>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+<li><a href="" title="">Authentication</a></li>
+<li><a href="" title="">Free SSL for IoT</a></li>
+<li><a href="" title="">Credential Manager</a></li>
+<li><a href="" title="">Security Console</a></li>
+<li><a href="" title="">Encryption</a></li>
+<li><a href="" title="">Monitoring</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">latest news</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" title="Using WoTT credentials to manage access to Adafruit IO feeds">Using WoTT credentials to manage access to Adafruit IO feeds</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" title="Using WoTT credentials to manage access to Screenly OSE">Using WoTT credentials to manage access to Screenly OSE</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/06/25/simple-webapp-auth" title="Using WoTT credentials to manage access to a Python 3 WebApp">Using WoTT credentials to manage access to a Python 3 WebApp</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; 2019 by WOTT.io All rights reserved</li>
+<li><a href="/tos" title="">Terms of service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134852372-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>
