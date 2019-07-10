@@ -58,7 +58,7 @@ Uses a similar WebApp to the certificate authenticated app but uses HTTP Basic A
 
 Adafruit IO is a service provided by Adafruit that concerns itself with simplifying the presentation and usage of data for IoT devices. To access Adafruit IO feeds within your own applications, you need your Adafruit IO username and access AIO key. This example shows how to store those credentials securely in WoTT and call the credentials to secure access to the feed within a Python 3 application.
 
-#### [Managing access to Screenly OSE via HTTP authentication with WoTT authentication](https://github.com/WoTTsecurity/agent/tree/master/docs/examples/screenly)
+#### [Managing access to Screenly OSE via HTTP authentication with WoTT authentication]({{site.url}}/blog/tutorials/2019/06/25/screenly-ose)
 
 Screenly OSE is a free digital signage platform. Access to Screenly OSE's management page can be secured with HTTP authentication via a login with a username and password. This example shows how to use WoTT dash to create and store these access credentials. These credentials can then be used within Screenly OSE.
 
