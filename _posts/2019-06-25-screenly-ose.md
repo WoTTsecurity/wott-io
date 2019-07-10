@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover:  image_5.png
 title: Using WoTT credentials to manage access to Screenly OSE 
 date: 2019-06-25 17:00:00
 category: tutorials
