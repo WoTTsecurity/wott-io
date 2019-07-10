@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover:  2019-06-25-why-open-source-solutions-are-critical-for-IoT.png
 title: Why open source solutions are critical for IoT
 date: 2019-06-25 10:00:00
 category: thoughts

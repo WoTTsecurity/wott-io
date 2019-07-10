@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  image_0.png
+cover:  2019-06-20-why-we-are-doing-what-we-do.png
 title: Why we are doing what we do
 date: 2019-06-20 10:00:00
 category: news
