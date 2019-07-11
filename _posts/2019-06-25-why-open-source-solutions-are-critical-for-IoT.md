@@ -1,13 +1,15 @@
 ---
 layout: post
 current: post
-cover:  2019-06-25-why-open-source-solutions-are-critical-for-IoT.png
+cover:  2019-06-25-why-open-source-solutions-are-critical-for-iot.png
 title: Why open source solutions are critical for IoT
 date: 2019-06-25 10:00:00
 category: thoughts
 author: Al Esmail
 tags: [Open Source]
 class: post-template
+redirect_from:
+- /blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT
 ---
 
 TL;DR IoT needs one ring to rule them all and it’s not a platform.
