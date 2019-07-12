@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: image_5.png
+cover: Image_5.png
 title: Using WoTT to secure access to Google Core IoT
 date: 2019-06-14 17:00:00
 category: tutorials
