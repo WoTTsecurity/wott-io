@@ -16,9 +16,9 @@ class: post-template
 
 One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how your client (e.g. your web browser) only verifies the identity of the server. The client itself does not need to present any identity. The identity piece is normally solved using some kind of credential (such as a username/password or API token).
 
-By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as we remove the need for API key/credential management).
+By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
-In this article we will make this all more concrete and create a sample implementation. The sample installation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server. Additionally, we also need a secondary device that we will use to speak to server.
+In this article we will make this all more concrete and create a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
 
 Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use [Let's Encrypt](https://letsencrypt.org/) as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.
 
@@ -34,7 +34,7 @@ Let's start by setting up the server. To save you the time (and potential typos)
 
 ```
 $ git clone https://github.com/WoTTsecurity/examples.git
-$ cd nginx-with-mtls-and-appserver
+$ cd examples/nginx-with-mtls-and-appserver
 $ docker-compose build
 ```
 
@@ -60,7 +60,7 @@ To test the connection from your client, we need to find out two things:
 
 ## Let's test the client
 
-Armed with the above information, we can now turn to our trusty old `curl` to test the setup.
+Armed with the above information, we can now turn to our trusty old friend `curl`.
 
 First, let's try connecting without passing on our certificate:
 
@@ -81,7 +81,7 @@ $ sudo curl \
 
 ```
 
-Because we have configured Nginx to require an SSL certificate, it will reject the connection, and you won't even be able to reach the appserver that we reverse proxy to.
+Because we have configured Nginx to require an SSL certificate, the server will reject the connection, and you won't even be able to reach the appserver that we reverse proxy to.
 
 If we however pass on our certificate (and key), we are able to successfully access the appserver:
 
@@ -118,7 +118,7 @@ Next, we need to tell `curl` to use the WoTT CA certificate to verify the remote
   --cacert /opt/wott/certs/ca.crt
 ```
 
-Lastly, we use a neat little feature in `curl` to tell it to map 'MyServerID.d.wott.local' to an IP address. We could instead have added this to our `/etc/hosts` file, but this is a quicker workaround when testing:
+Lastly, we use a neat little feature in `curl` to tell it to map 'MyServerID.d.wott.local' to an IP address. We could instead have added this to our `/etc/hosts` file, but this is a quicker workaround when testing.
 
 ```
   --resolve 'MyServerID.d.wott.local:443:192.168.X.Y'
@@ -127,7 +127,7 @@ Lastly, we use a neat little feature in `curl` to tell it to map 'MyServerID.d.w
 
 ### Nginx
 
-Let's move on to Nginx. We use Nginx as a reverse proxy for the appserver that we will cover next. We do this for a few reasons. The first reason is simply because Nginx is battle tested and does the first level of screening. If for instance, the client fails to present a valid certificate, the request will not be forwarded to the appserver. Hence this is a nice safety net from possible bugs in the appserver code.
+Let's move on to Nginx. We use Nginx as a reverse proxy for the appserver that we will cover below. We do this for a few reasons. The first reason is simply because Nginx is battle tested and does the first level of screening. If for instance, the client fails to present a valid certificate, the request will not be forwarded to the appserver. Hence this is a nice safety net from possible bugs in the appserver code.
 
 In this particular example, we also terminate the TLS connection in Nginx. Should we want to improve security further (and adopt proper Zero Trust Networking), we could encrypt the traffic Nginx and the appserver too (even if they are on the same host in this case).
 
