@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: image_5.png
+cover: Image_5.png
 title: Using WoTT credentials to manage access to a Python 3 WebApp
 date: 2019-06-18 17:00:00
 category: tutorials
