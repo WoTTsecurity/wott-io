@@ -114,7 +114,7 @@
 <div class="blog_content content_info_block">
 <p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
 
-<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-5df3c40c4467e4e50340c37ae2cc5cc2210c1622a9b803d0d979e66311d09ddb.png 2x, https://wott.io/assets/1d2430-6005f474280c964520e73e36e8128c187ab6ce66d1caed4ba233735db3b58269.png 1x" /></p>
+<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-781c99c1b99985cc2996b6b1f6a6677c1d78084131b2f827fba4e0d183e20388.png 2x, https://wott.io/assets/1d2430-f92d864fab0a4411d7d819100dccbfef3a958dead561fbdeb8c1809d196112e2.png 1x" /></p>
 
 <p>Figure 1 - If the web can have it, why can’t IoT?</p>
 
@@ -149,7 +149,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
 
-<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-652b8c3d852b0499707147dda70b5352f57b0661b69df649f4ec4e175fbf0af9.png 2x, https://wott.io/assets/1fded8-eb4e876fb4e7508f23a1cea766644deec105b36ade8d717446a63a4f876c6c81.png 1x" /></p>
+<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-585828d251d71a7e1d4ae017e1b56170d401364d6d97d2689f521ed76c2857b5.png 2x, https://wott.io/assets/1fded8-1f27e0645ad106200f0b5901e5792d9102c484c2524e238113cff58ebe3844b4.png 1x" /></p>
 
 <p>Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)</p>
@@ -160,7 +160,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
 
-<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-2a0f6c0ae3e2feca90900cca298572882c1af2c53de0a6940abbbb7d98227e46.png 2x, https://wott.io/assets/3b95f7-43b966e7eb5498072f112d7c68e04460a7dc9f2953936e425d5d32c85e26f731.png 1x" /></p>
+<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-89e2c3446b4fccc38af34d2a3b18578a4cb99b1d9720e315ba4ab4166b2a18b9.png 2x, https://wott.io/assets/3b95f7-db8a9e94c71815ffce0da1c69f405354aa173ee8d5f6aa93512e0920d903c697.png 1x" /></p>
 
 <p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
 
@@ -176,6 +176,20 @@ The fundamental building block that we use to encrypt communication between two 
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/datacenter.png);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Configuring Nginx with client certificate authentication (mTLS)</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 15, 2019</span>
+  <span class="description">
+   # Configuring Nginx with client certificate authentication (mTLS) **Required Skill Level**: Medium to Expert One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Continue reading </a>
+  </div>
+  </div>
+
+
 
   <div class="post">
   <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/Image_5.png);"></div>
@@ -200,20 +214,6 @@ The fundamental building block that we use to encrypt communication between two 
   <span class="description">
    # Using WoTT to secure access to Screenly ## Introduction Screenly is a service that provides digital signage and acts as an OS on the host device. Essentially it treats your host device as a streaming service that projects visual media (such as images and webpages) onto a monitor from multiple different... </span>
   <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">Continue reading </a>
-  </div>
-  </div>
-
-
-
-  <div class="post">
-  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/2019-06-25-why-open-source-solutions-are-critical-for-iot.png);"></div>
-  <div class="post_prewinfo">
-  <span class="category_name">thoughts</span>
-  <a class="title" href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Why open source solutions are critical for IoT</a>
-  <span class="author_time">By <a>Al Esmail</a> on June 25, 2019</span>
-  <span class="description">
-   TL;DR IoT needs one ring to rule them all and it’s not a platform. {% asset blog/iot-monster.png srcset:width="1300 2x" srcset:width="650 1x" alt="No Image" class="img-fluid" %} In my last post, I described the relevance of [open source security]({{site.url}}/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec). For very different reasons, I will argue here that the internet of things (and cyber-physical... </span>
-  <a class="read_full" href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Continue reading </a>
   </div>
   </div>
 
@@ -248,11 +248,11 @@ The fundamental building block that we use to encrypt communication between two 
 <div class="menu news"><ul>
 <li><a href="" title="">latest news</a></li>
 
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
+
  <li><a href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" title="Using WoTT credentials to manage access to Adafruit IO feeds">Using WoTT credentials to manage access to Adafruit IO feeds</a></li>
 
  <li><a href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" title="Using WoTT credentials to manage access to Screenly OSE">Using WoTT credentials to manage access to Screenly OSE</a></li>
-
- <li><a href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" title="Why open source solutions are critical for IoT">Why open source solutions are critical for IoT</a></li>
 
 </ul></div>
 </div>

@@ -1,4 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-07-12T12:15:48+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>WoTT is a free, automated, open-source public key infrastructure for connected hardware</subtitle><entry><title type="html">Using WoTT credentials to manage access to Adafruit IO feeds</title><link href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" rel="alternate" type="text/html" title="Using WoTT credentials to manage access to Adafruit IO feeds" /><published>2019-06-27T17:00:00+00:00</published><updated>2019-06-27T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/06/27/adafruit-io</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">&lt;h1 id=&quot;using-adafruit-io-with-wott-credentials&quot;&gt;Using Adafruit IO with WoTT Credentials&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-07-15T09:35:50+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>WoTT is a free, automated, open-source public key infrastructure for connected hardware</subtitle><entry><title type="html">Configuring Nginx with client certificate authentication (mTLS)</title><link href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" rel="alternate" type="text/html" title="Configuring Nginx with client certificate authentication (mTLS)" /><published>2019-07-15T08:00:00+00:00</published><updated>2019-07-15T08:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">&lt;h1 id=&quot;configuring-nginx-with-client-certificate-authentication-mtls&quot;&gt;Configuring Nginx with client certificate authentication (mTLS)&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Medium to Expert&lt;/p&gt;
+
+&lt;p&gt;One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how your client (e.g. your web browser) only verifies the identity of the server. The client itself does not need to present any identity. The identity piece is normally solved using some kind of credential (such as a username/password or API token).&lt;/p&gt;
+
+&lt;p&gt;By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation &lt;em&gt;easier&lt;/em&gt; (as it removes the need for API key/credential management).&lt;/p&gt;
+
+&lt;p&gt;In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.&lt;/p&gt;
+
+&lt;p&gt;Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.&lt;/p&gt;
+
+&lt;h2 id=&quot;preparation&quot;&gt;Preparation&lt;/h2&gt;
+
+&lt;p&gt;Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this &lt;a href=&quot;https://wott.io/documentation/getting-started&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once you have the WoTT agent installed, we need to install both &lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/debian/&quot;&gt;Docker CE&lt;/a&gt; and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;apt update &amp;amp;&amp;amp; apt install docker-compose)&lt;/code&gt;). We use these to simplify the installation, as we are able to better pin the requirements.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-the-server&quot;&gt;Setting up the server&lt;/h2&gt;
+
+&lt;p&gt;Let’s start by setting up the server. To save you the time (and potential typos), we have create a sample repo for this, so all you need to do is to clone the repository:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/WoTTsecurity/examples.git
+$ cd examples/nginx-with-mtls-and-appserver
+$ docker-compose build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to Docker and Docker Compose, this is all we need to kick off the demo. The only final thing we need to do is to add the device that we will be connecting &lt;em&gt;from&lt;/em&gt; to the whitelist. You can find out the WoTT Device ID by running &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo wott-agent whoami&lt;/code&gt; on the device you’re connecting from.&lt;/p&gt;
+
+&lt;p&gt;With the Device ID at hand, simply run the following commands on the server:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo &quot;MyDeviceId.d.wott.local&quot; &amp;gt;&amp;gt; appserver/whitelist.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can now fire up the server by simply running:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker-compose up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To test the connection from your client, we need to find out two things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The IP of the server&lt;/li&gt;
+  &lt;li&gt;The WoTT Device ID of the server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lets-test-the-client&quot;&gt;Let’s test the client&lt;/h2&gt;
+
+&lt;p&gt;Armed with the above information, we can now turn to our trusty old friend &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, let’s try connecting without passing on our certificate:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo curl \
+  --cacert /opt/wott/certs/ca.crt \
+  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
+  https://MyServerId.d.wott.local
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;400 No required SSL certificate was sent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&amp;lt;h1&amp;gt;&lt;/span&gt;400 Bad Request&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&lt;/span&gt;No required SSL certificate was sent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&amp;lt;center&amp;gt;&lt;/span&gt;nginx/1.16.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Because we have configured Nginx to require an SSL certificate, the server will reject the connection, and you won’t even be able to reach the appserver that we reverse proxy to.&lt;/p&gt;
+
+&lt;p&gt;If we however pass on our certificate (and key), we are able to successfully access the appserver:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo curl \
+  --key /opt/wott/certs/client.key \
+  --cert /opt/wott/certs/client.crt \
+  --cacert /opt/wott/certs/ca.crt \
+  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
+  https://MyServerId.d.wott.local
+
+Access Granted!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;thats-really-cool-but-what-happened-here&quot;&gt;That’s really cool, but what happened here?&lt;/h2&gt;
+
+&lt;p&gt;There’s a lot to unpack in what we did above, so let’s start with the client and work our way forward.&lt;/p&gt;
+
+&lt;h3 id=&quot;client&quot;&gt;Client&lt;/h3&gt;
+
+&lt;p&gt;Let’s break down the &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; command we used to successfully connect to the server.&lt;/p&gt;
+
+&lt;p&gt;These two lines tell &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to send the client certificate and key.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --key /opt/wott/certs/client.key
+  --cert /opt/wott/certs/client.crt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This is our cryptographic identity provided by WoTT. In short, this replaces the need for a username and pasword. It should however be said that the key is not sent to the server (unlike a password), but rather it is used for a cryptographic challenge (vastly simplified).&lt;/p&gt;
+
+&lt;p&gt;Next, we need to tell &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to use the WoTT CA certificate to verify the remote server against (since WoTT is not a public CA):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --cacert /opt/wott/certs/ca.crt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, we use a neat little feature in &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to tell it to map ‘MyServerID.d.wott.local’ to an IP address. We could instead have added this to our &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/hosts&lt;/code&gt; file, but this is a quicker workaround when testing.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --resolve 'MyServerID.d.wott.local:443:192.168.X.Y'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginx&quot;&gt;Nginx&lt;/h3&gt;
+
+&lt;p&gt;Let’s move on to Nginx. We use Nginx as a reverse proxy for the appserver that we will cover below. We do this for a few reasons. The first reason is simply because Nginx is battle tested and does the first level of screening. If for instance, the client fails to present a valid certificate, the request will not be forwarded to the appserver. Hence this is a nice safety net from possible bugs in the appserver code.&lt;/p&gt;
+
+&lt;p&gt;In this particular example, we also terminate the TLS connection in Nginx. Should we want to improve security further (and adopt proper Zero Trust Networking), we could encrypt the traffic Nginx and the appserver too (even if they are on the same host in this case).&lt;/p&gt;
+
+&lt;p&gt;If the certificate is valid, Nginx will then reverse proxy the connection to the appserver.&lt;/p&gt;
+
+&lt;p&gt;The Nginx configuration is fairly straight forward and can be found &lt;a href=&quot;https://github.com/WoTTsecurity/examples/blob/master/nginx-with-mtls-and-appserver/nginx/reverse-proxy.conf&quot;&gt;here&lt;/a&gt;. The most noteworthy lines in the configuration are these:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This will return a 403 to all clients without a proper certificate
+if ($ssl_client_verify != &quot;SUCCESS&quot;) { return 403; }
+
+# This tells Nginx what CA to verify against
+ssl_client_certificate /opt/wott/certs/ca.crt;
+
+# This tells Nginx to verify clients
+ssl_verify_client on;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In theory, we could extend this further and write a &lt;a href=&quot;https://github.com/openresty/lua-nginx-module#readme&quot;&gt;LUA script&lt;/a&gt; to do further validation, and even incorporate the whitelisting that we will get to in the appserver section, but that’s something for another day.&lt;/p&gt;
+
+&lt;h3 id=&quot;appserver&quot;&gt;Appserver&lt;/h3&gt;
+
+&lt;p&gt;Assuming the client passed all validations, the request will be passed on to the appsever. The &lt;a href=&quot;https://github.com/WoTTsecurity/examples/blob/master/nginx-with-mtls-and-appserver/appserver/app.py&quot;&gt;appserver&lt;/a&gt; is a simple Flask app. In essence, all it does is to provide some validations on the headers. Since Nginx will pass on various HTTP Headers to the appserver, we can use them to implement access control.&lt;/p&gt;
+
+&lt;p&gt;When a request hits the appserver, it will check the HTTP header &lt;code class=&quot;highlighter-rouge&quot;&gt;Ssl-Client-Verify&lt;/code&gt; is set to ‘SUCCESS’. If it isn’t, the request will be rejected with an error message. In theory, this shouldn’t be possible, since Nginx should never forward such request, but when it comes to security it’s better to be safe than sorry.&lt;/p&gt;
+
+&lt;p&gt;Assuming the above condition is correct, the appserver will parse the Client ID (from the ‘Ssl-Client’ header) and compare it to a whitelist (&lt;code class=&quot;highlighter-rouge&quot;&gt;whitelist.txt&lt;/code&gt; from above). The whitelist is a simple text file with one Device ID per line. Only if the Client ID (i.e. the WoTT Device ID) matches a record in the whitelist, the appserver will return “Access Granted!”.&lt;/p&gt;
+
+&lt;p&gt;While the appserver is far from ready for production usage, it should help illustrate the setup such that it could be adopted into most languages and frameworks.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Hopefully you found this tutorial useful and that it helped bring the concept of Zero Trust Networking and mTLS to life with a real-world example of how it can be implemented with a relatively small amount of code.&lt;/p&gt;
+
+&lt;p&gt;If you have any questions, please get in touch with us on &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;Twitter&lt;/a&gt; or open a Github Issue if you found any issues.&lt;/p&gt;</content><author><name>Viktor Petersson</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Configuring Nginx with client certificate authentication (mTLS)</summary></entry><entry><title type="html">Using WoTT credentials to manage access to Adafruit IO feeds</title><link href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" rel="alternate" type="text/html" title="Using WoTT credentials to manage access to Adafruit IO feeds" /><published>2019-06-27T17:00:00+00:00</published><updated>2019-06-27T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/06/27/adafruit-io</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">&lt;h1 id=&quot;using-adafruit-io-with-wott-credentials&quot;&gt;Using Adafruit IO with WoTT Credentials&lt;/h1&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -23,11 +165,11 @@ $ pip3 install adafruit-io
 
 &lt;p&gt;Login to the Adafruit IO dashboard. Navigate to the ‘Feeds’ page on the left-hand side menu. Hover over actions and select ‘Create a New Feed.’ The feed acts as a channel or datastream through which your device connects to Adafruit IO. We are going to create a feed that is called via MQTT. In other words, the feed becomes the topic from which messages are published/subscribed to.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;create feed&quot; src=&quot;https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png&quot; integrity=&quot;sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/25fd86-a3209c0ccb9645b76e9b1642764df56d354886697a3d339d36e76d7bdec2f16c.png 2x, https://wott.io/assets/cd12eb-aca71a2e7da74218a6a3d0d45e0b372ffb9a0968e8f1e6a960726dc27363a0f4.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;create feed&quot; src=&quot;https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png&quot; integrity=&quot;sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/25fd86-cf2fb0441f92dd0b4b37d4445dc7dde64d8e5bb69b69c2091b57296e7835f0a5.png 2x, https://wott.io/assets/cd12eb-cdabb6b677c8a7b80a04ae43e7e4068f10629268a18b2ac5cff18db0d8c24237.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed ‘data feed.’ The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;name feed&quot; src=&quot;https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png&quot; integrity=&quot;sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/de0189-75d902806c794c016bc194ac901d940b994c63fafe21a203577b82a56bc083f1.png 2x, https://wott.io/assets/60856b-2fab37aa89b7e73140cded70ff34ff121e2bd513a9b9fd41fdaa7b6ba9359032.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;name feed&quot; src=&quot;https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png&quot; integrity=&quot;sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/de0189-afbc99693272cd55c4b13c6bf87e3b99bc686b9e9d93e104baa4d75229ef5929.png 2x, https://wott.io/assets/60856b-9a6a4c59392548d2083ce4dcfcd68e4c2723888f6404ee2b6b8c48fd129c795b.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; it is possible to create the feeds using a simple python application. If you prefer a more codified style of set up, you can follow &lt;a href=&quot;https://adafruit-io-python-client.readthedocs.io/en/latest/feeds.html&quot;&gt;this&lt;/a&gt; guide.&lt;/p&gt;
 
@@ -35,11 +177,11 @@ $ pip3 install adafruit-io
 
 &lt;p&gt;In order to call the Adafruit API via HTTP access, it requires a key. You can find this key on the left-hand side of your Adafruit dasboard as you did with ‘Feeds’ under &lt;code class=&quot;highlighter-rouge&quot;&gt;AIO key&lt;/code&gt;. You will be brought to a page akin to this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;AIO key&quot; src=&quot;https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png&quot; integrity=&quot;sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/9d26f5-e2c043174e352a6c486fd026d20a0737aa421a05cfd1ad0c6adfb2700db0c8ac.png 2x, https://wott.io/assets/953c52-6568272b8d733ac8ac49f491a08b620bcb97ee442eb4c4a264d2fb02775b670e.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;AIO key&quot; src=&quot;https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png&quot; integrity=&quot;sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/9d26f5-907c59fcd29efc30cb4a5ed9eda4934b729e03894f165b8444ef182de654e19b.png 2x, https://wott.io/assets/953c52-34608e4a8084840dc333caf2adb6e8d0eb198a083039d34036ec9c360294ca09.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;These are your unique Adafruit details. We can add these to WoTT’s dashboard as a new credential where the value is your personal username followed by the &lt;code class=&quot;highlighter-rouge&quot;&gt;Active Key&lt;/code&gt; value. To do so, you will need to login or create an account for the &lt;a href=&quot;https://dash.wott.io&quot;&gt;WoTT dash&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-94fc8f0b09ef29ac1061055fd7393dad9bf364a9f11fdd84a42ebbbe428d9dc3.png 2x, https://wott.io/assets/deedd0-84939d636b841f87b985a340275fd851b6377a892de7b755219a407f433522ac.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-e1efa19757b25d95607e0cfbb9a3f3e49701ab7645bf9c95108772f1b17012e4.png 2x, https://wott.io/assets/deedd0-403f4ad5e4e5aa5931daddd5c03e23dd5712b7f377fa40e16eb02e167590fdbf.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:&lt;/p&gt;
 
@@ -49,7 +191,7 @@ $ wott-aget claim-token
 
 &lt;p&gt;and pasting the output into the ‘Claim Device’ segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, &lt;code class=&quot;highlighter-rouge&quot;&gt;adafruit&lt;/code&gt; to it. Through these tags, WoTT identifies which devices specific credentials are intended for.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Adafruit tags&quot; src=&quot;https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png&quot; integrity=&quot;sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/378d39-e5a73a56f3e694bf2abbe1b5095cf44e0a23ea89ddd6b6ddfa94adb9454d6957.png 2x, https://wott.io/assets/7d7aaa-48c4273f1c6cb674c42715067887a9e25538d8460fc9087c0d5d8b4248dbc8b1.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Adafruit tags&quot; src=&quot;https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png&quot; integrity=&quot;sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/378d39-95d6d77e2d42ba14568fd7ebbf61f26b92e7637c244b37ff97617ea0b3cd9c91.png 2x, https://wott.io/assets/7d7aaa-ce5f758c985706997f85b2c1fddcf6f41beb32643ba4c173c2de5c4184eb6695.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that we are all set up, we need to create the credentials with the Adafruit information. Navigate to the ‘Credentials’ page of the WoTT dash and a new credential. Input the following into the fields:&lt;/p&gt;
 
@@ -90,7 +232,7 @@ Feed data feed received new value: 52
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;On your Adafruit IO dash, you should see the data being received on your feed:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;feed data&quot; src=&quot;https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png&quot; integrity=&quot;sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/13d874-9b39d1f729042b961046e9785807cb83a7ac4bf3bbb5b127edda8d75673f5c00.png 2x, https://wott.io/assets/861588-6fdd9f5793b1462567a346c540a1f1197b76e454a0a4e3758f7792d18fb77c32.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;feed data&quot; src=&quot;https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png&quot; integrity=&quot;sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/13d874-f4ddf7f3e25f20faad11ab2098feb9a6c8e3664d36821a63cf0537faf42a7975.png 2x, https://wott.io/assets/861588-29abc5ed07eca6b84a7702866b32720d49776972075d6cb40ec3ce2c9e51524c.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; your values will be different to this example as they are randomly generated, use the above as a reference point only.&lt;/p&gt;
 
@@ -159,11 +301,11 @@ $ wott-aget claim-token
 
 &lt;p&gt;Your Raspberry Pi should now be registered. Navigate to your Dashboard and select the Pi:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Pi&quot; src=&quot;https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png&quot; integrity=&quot;sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e711ef-1b25008eea9dfdf1a767efdb1bcef48defdadd6ad9e6a40a8353b39c6980cfa7.png 2x, https://wott.io/assets/d66040-f30fb088ac275ba2b53700cfb25211c8f41733eebfa16c93055f10818ecb045c.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Pi&quot; src=&quot;https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png&quot; integrity=&quot;sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e711ef-698b2327fe8bb8c7ece8ff49ff563e39de2e1ac109ce9e0563bdedb5783ce8d1.png 2x, https://wott.io/assets/d66040-65c7af07bdfd80385596cbc18234c2b09eb34738808ec731843433a0b1295363.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On the overview page, add a tag. This will be important for the credentials. This tag can be whatever you want, however we suggest something like &lt;code class=&quot;highlighter-rouge&quot;&gt;screenly-pi&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt; or a variant of that form:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;tag&quot; src=&quot;https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png&quot; integrity=&quot;sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/c5a555-9fea8b87049d5b23bfa0484e2c6ebbc0817f85d23dcd980bcb9099bd84667792.png 2x, https://wott.io/assets/6b3f4b-1e5ed4caba8b1a833efbfd06e9b8b7336b1231fa4cc8f2a7cdb24abca356475a.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;tag&quot; src=&quot;https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png&quot; integrity=&quot;sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/c5a555-73488bc216e311a560b5758b70d958d97b0e74bad44bbf4f52a5785d63ab0ad5.png 2x, https://wott.io/assets/6b3f4b-e461e33b92eab2bc624ccd0183c9e9a339d3ca7431e4ce1f3743072d7ee39634.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now navigate to credentials and add a new credential with the following details:&lt;/p&gt;
 
@@ -202,15 +344,15 @@ $ sudo service screenly-web restart
 
 &lt;p&gt;Navigate to Settings:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Settings&quot; src=&quot;https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png&quot; integrity=&quot;sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/35f1a7-1ae1396278b601877160dcd9b92c9d0f50eb26ca2e87ead8bbb60c9afbf26642.png 2x, https://wott.io/assets/c82378-765c9cacdb8409dd93dd04270df4e386dc531cfc21f55fb14c4b528e087274c1.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Settings&quot; src=&quot;https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png&quot; integrity=&quot;sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/35f1a7-79daf784d4ea99c015888178f096d7e18c264a6a71781ba1d8c5b5a5995239bb.png 2x, https://wott.io/assets/c82378-3d2fa563626880f6d52577db1bedd17eccb54b4ecdbc7b3f73861d5f2fd7977e.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Scroll down the page and underneath ‘Authentication’ select ‘WoTT’ and save your settings.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;WoTT&quot; src=&quot;https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png&quot; integrity=&quot;sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/561ae0-24833cf5908fb09ca5711fb935fe9b5dac8b34309c2ddd43ae0de5e926adc6b3.png 2x, https://wott.io/assets/052172-0155a5d62e48e8e716fbc8c1dca450ce64fd9c273e1cfd97b81de19b1249b966.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WoTT&quot; src=&quot;https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png&quot; integrity=&quot;sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/561ae0-1b1eb05645ed86867a1754873d1f49863430af4592ef7c6d7bb9f2154daeef2d.png 2x, https://wott.io/assets/052172-c4b7821c91009d19751eef7a387032031eda99b40cc51a413f13ddb9f93c3fba.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You have now enabled the WoTT credentials on Screenly OSE. Test this out by trying to access the management page from another browser (the image example below is opened in Chrome) and you will be required to login with the credentials you specified above (in this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;username&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;password&lt;/code&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Chrome&quot; src=&quot;https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png&quot; integrity=&quot;sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/3fdef5-f3d7b5f07c6da4dfe1336ab66d26595b4eb06d99290d72632ec176ec30ca8423.png 2x, https://wott.io/assets/c39b7a-54d2dd04bb4352c4c7805b2068f515edc0611577d4bb40b78feb353b6f1d93f6.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Chrome&quot; src=&quot;https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png&quot; integrity=&quot;sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/3fdef5-3854af458d2acc09dd8ce59120b3edf2cf73c738e58d1fffba2cb504b0d9e374.png 2x, https://wott.io/assets/c39b7a-059660d420fda2fad4e8f743e3185933698e36bf9b3f3c0d6956bdf289d51b7f.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If your credentials are correct, you will be successfully logged into the main Screenly management page and greeted by the Schedule Overview.&lt;/p&gt;
 
@@ -225,7 +367,7 @@ $ sudo service screenly-web restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;And that’s it, you have successfully used WoTT credentials to set up authentication for Screenly OSE.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to secure access to Screenly</summary></entry><entry><title type="html">Why open source solutions are critical for IoT</title><link href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" rel="alternate" type="text/html" title="Why open source solutions are critical for IoT" /><published>2019-06-25T10:00:00+00:00</published><updated>2019-06-25T10:00:00+00:00</updated><id>https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT</id><content type="html" xml:base="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">&lt;p&gt;TL;DR IoT needs one ring to rule them all and it’s not a platform.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;No Image&quot; class=&quot;img-fluid&quot; src=&quot;https://wott.io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png&quot; integrity=&quot;sha256-pQFVzDrKV3v+zZjel0dkpV6x8obZQgzbYWdNpqJ350I=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/bc774b-b914eb04eb78f1a20c7cbe4b28cb5bcaf19ddd7ea6be2c80097b104a68f2aa08.png 2x, https://wott.io/assets/681e0d-8b791f4a3c35ac6afce1912dc0143742e87e69eee474e2152d6d33f012c64b2b.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;No Image&quot; class=&quot;img-fluid&quot; src=&quot;https://wott.io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png&quot; integrity=&quot;sha256-pQFVzDrKV3v+zZjel0dkpV6x8obZQgzbYWdNpqJ350I=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/bc774b-87f5f3ff151fa428be3de28e9f16c35fe7e1c1d38117ee3d134afb63c79a9868.png 2x, https://wott.io/assets/681e0d-538973d553f7cf0ac01a0af4b62e2644a99a2bfcd87a6dda488610fdc375f07e.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In my last post, I described the relevance of &lt;a href=&quot;https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec&quot;&gt;open source security&lt;/a&gt;. For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.&lt;/p&gt;
 
@@ -325,7 +467,7 @@ Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress
 
 &lt;p&gt;Let’s define &lt;a href=&quot;https://opensource.com/article/19/1/what-devsecops&quot;&gt;DevSecOps&lt;/a&gt; a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the &lt;a href=&quot;https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336&quot;&gt;cost of fixing flaws&lt;/a&gt; by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;The NIST says so. Prove them wrong if you want&quot; class=&quot;img-fluid&quot; src=&quot;https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png&quot; integrity=&quot;sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/5697f2-65afc4d967abe45b6c0a20613eac6aae4c645ec25dbb3833ec36b442b07e1d02.png 2x, https://wott.io/assets/3bcc4b-89a0d09e38cbeb38444ad0b1d0e7ca126f2efd1f87361bd98670c4f4e1b387eb.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;The NIST says so. Prove them wrong if you want&quot; class=&quot;img-fluid&quot; src=&quot;https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png&quot; integrity=&quot;sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/5697f2-0d404dbac40bee193e7eee08117408e724d4ade79116ea28bb2441ff57f99521.png 2x, https://wott.io/assets/3bcc4b-15c5414c87a49ca15af6e70e62918d26f4d550c5689203776fef6925de53936c.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.&lt;/p&gt;
 
@@ -339,7 +481,7 @@ Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress
 
 &lt;p&gt;Want to troll me? Comments below or &lt;a href=&quot;https://www.twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt;&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR Cyber is best handled by developers with big, bulging…brains.</summary></entry><entry><title type="html">WoTT secures the Internet of Things</title><link href="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things" rel="alternate" type="text/html" title="WoTT secures the Internet of Things" /><published>2019-06-22T10:00:00+00:00</published><updated>2019-06-22T10:00:00+00:00</updated><id>https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things</id><content type="html" xml:base="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">&lt;p&gt;TL;DR It’s Let’s Encrypt for IoT - you know you want it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;If the web can have it, why can’t IoT?&quot; src=&quot;https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png&quot; integrity=&quot;sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e44a36-5df3c40c4467e4e50340c37ae2cc5cc2210c1622a9b803d0d979e66311d09ddb.png 2x, https://wott.io/assets/1d2430-6005f474280c964520e73e36e8128c187ab6ce66d1caed4ba233735db3b58269.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;If the web can have it, why can’t IoT?&quot; src=&quot;https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png&quot; integrity=&quot;sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e44a36-781c99c1b99985cc2996b6b1f6a6677c1d78084131b2f827fba4e0d183e20388.png 2x, https://wott.io/assets/1d2430-f92d864fab0a4411d7d819100dccbfef3a958dead561fbdeb8c1809d196112e2.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 1 - If the web can have it, why can’t IoT?&lt;/p&gt;
 
@@ -374,7 +516,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 &lt;p&gt;We strongly recommend securely storing device keys in a secure environment like a trusted platform module (&lt;a href=&quot;https://en.wikipedia.org/wiki/Trusted_Platform_Module&quot;&gt;TPM&lt;/a&gt;).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with &lt;a href=&quot;https://uk.pi-supply.com/&quot;&gt;Pi Supply&lt;/a&gt; to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Use a TPM, seriously&quot; src=&quot;https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png&quot; integrity=&quot;sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/ca4ce4-652b8c3d852b0499707147dda70b5352f57b0661b69df649f4ec4e175fbf0af9.png 2x, https://wott.io/assets/1fded8-eb4e876fb4e7508f23a1cea766644deec105b36ade8d717446a63a4f876c6c81.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Use a TPM, seriously&quot; src=&quot;https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png&quot; integrity=&quot;sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/ca4ce4-585828d251d71a7e1d4ae017e1b56170d401364d6d97d2689f521ed76c2857b5.png 2x, https://wott.io/assets/1fded8-1f27e0645ad106200f0b5901e5792d9102c484c2524e238113cff58ebe3844b4.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)&lt;/p&gt;
@@ -385,7 +527,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 &lt;p&gt;Finally, let me introduce the plat de resistance - &lt;em&gt;the Trust Score&lt;/em&gt;.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;trust score&quot; src=&quot;https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png&quot; integrity=&quot;sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/296f05-2a0f6c0ae3e2feca90900cca298572882c1af2c53de0a6940abbbb7d98227e46.png 2x, https://wott.io/assets/3b95f7-43b966e7eb5498072f112d7c68e04460a7dc9f2953936e425d5d32c85e26f731.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;trust score&quot; src=&quot;https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png&quot; integrity=&quot;sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/296f05-89e2c3446b4fccc38af34d2a3b18578a4cb99b1d9720e315ba4ab4166b2a18b9.png 2x, https://wott.io/assets/3b95f7-db8a9e94c71815ffce0da1c69f405354aa173ee8d5f6aa93512e0920d903c697.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek&lt;/p&gt;
 
@@ -397,7 +539,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 &lt;p&gt;Want to troll me? Comments below or &lt;a href=&quot;https://www.twitter.com/wottsecurity&quot;&gt;twitter&lt;/a&gt; here.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">TL;DR It’s Let’s Encrypt for IoT - you know you want it.</summary></entry><entry><title type="html">Why we are doing what we do</title><link href="https://wott.io/blog/news/2019/06/20/why-we-are-doing-what-we-do" rel="alternate" type="text/html" title="Why we are doing what we do" /><published>2019-06-20T10:00:00+00:00</published><updated>2019-06-20T10:00:00+00:00</updated><id>https://wott.io/blog/news/2019/06/20/why-we-are-doing-what-we-do</id><content type="html" xml:base="https://wott.io/blog/news/2019/06/20/why-we-are-doing-what-we-do">&lt;h2 id=&quot;tldr-the-future-has-flying-cars-transformers-and-low-calorie-diets&quot;&gt;TL;DR the future has flying cars, transformers and low calorie diets.&lt;/h2&gt;
 
-&lt;p&gt;&lt;img alt=&quot;open source&quot; src=&quot;https://wott.io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png&quot; integrity=&quot;sha256-zAh/Q8gDRRd4cfCY13FrIH7I1dexArN32SMtwxoynJA=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/53f3cb-63ba6e6befe40b269b8bf5b9b41d7b800bc8f9f0037dd6b778d12b96e1865e88.png 2x, https://wott.io/assets/31e266-b39f3988ee48b6c8096fbc612dad679fcabbf84897c7cda6865678bf1e5ee240.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;open source&quot; src=&quot;https://wott.io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png&quot; integrity=&quot;sha256-zAh/Q8gDRRd4cfCY13FrIH7I1dexArN32SMtwxoynJA=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/53f3cb-fbed9cbcade0acaf0627a8054547bc8c9b046b0f9a479a3a9807d3ab114549ba.png 2x, https://wott.io/assets/31e266-6c4a9d5bfa38bfc6c8d13a66a075702a9e8c055ca4fda8443e7383e7b88909ee.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 1 - Best free photo I could find when searching for ‘open source’&lt;/p&gt;
 
@@ -409,7 +551,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 &lt;p&gt;At &lt;a href=&quot;https://wott.io&quot;&gt;WoTT&lt;/a&gt;, we are very excited about this.  We dream of the world of &lt;a href=&quot;https://www.airxos.io/&quot;&gt;unmanned aerial vehicles&lt;/a&gt; (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will &lt;a href=&quot;https://www.nature.com/articles/s41586-019-1119-1&quot;&gt;synthesize speech&lt;/a&gt; from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel &lt;a href=&quot;https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/&quot;&gt;(assuming Google doesn’t cut access to the necessary APIs)&lt;/a&gt;. If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;neural implant&quot; src=&quot;https://wott.io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png&quot; integrity=&quot;sha256-J8Afu1rnYUWdg10qzVK4FKSAAK2rjG2xoyEIe5vMbZ8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/3b1603-38676fd27c0bfabd8549e47e17f69cfe29508f7e6be6dd677f97930435fc0057.png 2x, https://wott.io/assets/a551cb-2b82362ecd63670258ddd5a40f03f005ce5b1616fbe1d7d19245b370c3c0b61d.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;neural implant&quot; src=&quot;https://wott.io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png&quot; integrity=&quot;sha256-J8Afu1rnYUWdg10qzVK4FKSAAK2rjG2xoyEIe5vMbZ8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/3b1603-a676875de347da583ad26efa8f620f7edc400d67b1fb62ad95c99acca4d7c879.png 2x, https://wott.io/assets/a551cb-ffd1ff720b240f21c491812a61a6838f7dcaa46c01a7a4cf1ccdd4b8175520a5.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)&lt;/p&gt;
 
@@ -464,7 +606,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 &lt;p&gt;For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png&quot; integrity=&quot;sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/61021b-3d6c88aaab72ad7f4322b0f9348dce9793a906ca3fa7db5c0f6898133edc5b35.png 2x, https://wott.io/assets/656774-341c59730d409961972c74d27dba065068011ce02b8bf768070dfd9b08ff317a.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png&quot; integrity=&quot;sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/61021b-bc550b4b824131a1580f4adeb1943a8fe64c3a7bf5bb637adcf732f915887e6a.png 2x, https://wott.io/assets/656774-f89cd63c79201bf036aa4dfbaeb6bd4f656a56b605d1f8a902bf8b6df965c877.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:&lt;/p&gt;
 
@@ -490,11 +632,11 @@ Tags = home-lab
 
 &lt;p&gt;In place of &lt;code class=&quot;highlighter-rouge&quot;&gt;username:password&lt;/code&gt; you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is &lt;code class=&quot;highlighter-rouge&quot;&gt;home-lab&lt;/code&gt;. If all is successful, the page should now look something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;WoTT Credentials&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-94fc8f0b09ef29ac1061055fd7393dad9bf364a9f11fdd84a42ebbbe428d9dc3.png 2x, https://wott.io/assets/deedd0-84939d636b841f87b985a340275fd851b6377a892de7b755219a407f433522ac.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WoTT Credentials&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-e1efa19757b25d95607e0cfbb9a3f3e49701ab7645bf9c95108772f1b17012e4.png 2x, https://wott.io/assets/deedd0-403f4ad5e4e5aa5931daddd5c03e23dd5712b7f377fa40e16eb02e167590fdbf.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;device list&quot; src=&quot;https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png&quot; integrity=&quot;sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/cc4cb7-2060e2dac234b4758578bda595a2efe5f8c769933c8f45e9ad8e1204b0a609d9.png 2x, https://wott.io/assets/2ee7eb-136d68beed0069c3b52ab65430ee48d5af3cd41d59aa33c830e82218ca5dddd8.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;device list&quot; src=&quot;https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png&quot; integrity=&quot;sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/cc4cb7-ebd455fc45e10ee2e6160aa2d379966f01521f52344b62e34ebbfc86196a53d7.png 2x, https://wott.io/assets/2ee7eb-6980237717854e9b70a7993ba68d81c0632c90c86e77015e7081165f9577324e.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Select the device that will be acting as your server, or &lt;code class=&quot;highlighter-rouge&quot;&gt;home-lab&lt;/code&gt;. In the overview tab, you will be able to add tags to your device. Add &lt;code class=&quot;highlighter-rouge&quot;&gt;home-lab&lt;/code&gt; and ensure that it is spelt correctly to match the credentials tag or it &lt;strong&gt;will not&lt;/strong&gt; download.&lt;/p&gt;
 
@@ -535,7 +677,7 @@ $ sudo python3 app.py
 
 &lt;p&gt;With the correct details, you will be greeted with the following screen message:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;login successful&quot; src=&quot;https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png&quot; integrity=&quot;sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e39f54-6f92d3f9132f05bebb2b2c7ca6a15586a100f6f56225895f11ffca5d557e1e33.png 2x, https://wott.io/assets/954347-53d50912ead5349cbf733ad0f8291aa1d48ef7cf3946a1bfb851612284dc55c5.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;login successful&quot; src=&quot;https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png&quot; integrity=&quot;sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e39f54-19779bff5efc06c6abf59771d91f0241824e1be4746e323ae4003545df0b3f7b.png 2x, https://wott.io/assets/954347-0ff34c0bd7ebfc709baf5d66f6c85e5ddb7665d351f18e95d62bf8d8a7c64a1e.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And that’s it, you’ve set up basic HTML auth on a WebApp!&lt;/p&gt;
 
@@ -658,134 +800,4 @@ Hello from WoTT!
 
 &lt;h2 id=&quot;closing-notes&quot;&gt;Closing notes&lt;/h2&gt;
 
-&lt;p&gt;We have now proven how easy it is to setup a secure connection between two devices using WoTT. The WebApp above can simply be replaced with any other application. Just be mindful of that you should always bind your WebApp to localhost to prevent it from being exposed to the world insecurely.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">A simple WebApp example</summary></entry><entry><title type="html">Using WoTT to secure access to Google Core IoT</title><link href="https://wott.io/blog/tutorials/2019/06/14/google-core-iot" rel="alternate" type="text/html" title="Using WoTT to secure access to Google Core IoT" /><published>2019-06-14T17:00:00+00:00</published><updated>2019-06-14T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/06/14/google-core-iot</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/06/14/google-core-iot">&lt;h1 id=&quot;using-wott-with-google-core-iot&quot;&gt;Using WoTT with Google Core IoT&lt;/h1&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;Before we get started, you will need to install the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud&lt;/code&gt; tool. This is used to interact with Google’s services. You can find installation instructions &lt;a href=&quot;https://cloud.google.com/iot/docs/how-tos/getting-started&quot;&gt;here&lt;/a&gt;. Follow the instructions for your specific distribution.&lt;/p&gt;
-
-&lt;p&gt;You will also need to have at least one device with the &lt;a href=&quot;https://github.com/WoTTsecurity/agent&quot;&gt;WoTT agent installed&lt;/a&gt; if you do not already. This will provide you with your unique Device ID and token which can be added to the &lt;a href=&quot;https://dash.wott.io&quot;&gt;WoTT dashboard&lt;/a&gt; as per instructions. You will need the Device ID later.&lt;/p&gt;
-
-&lt;p&gt;Finally, you also need to have &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;jq&lt;/code&gt; installed (both should be available in your favorite package manager)&lt;/p&gt;
-
-&lt;h2 id=&quot;creating-a-registry&quot;&gt;Creating a registry&lt;/h2&gt;
-
-&lt;p&gt;First we need to get the CA certificate:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl -s https://api.wott.io/v0.2/ca | jq -r '.ca_certificate' &amp;gt; ca.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Next, we need to create the registry. Substitute &lt;code class=&quot;highlighter-rouge&quot;&gt;REGISTRY_ID&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;PROJECT_ID&lt;/code&gt; with your corresponding information. You may also want to change the name of the pub/sub topic. Available regions for Cloud IoT are &lt;code class=&quot;highlighter-rouge&quot;&gt;us-central1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;europe-west1&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;asia-east1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gcloud iot registries create REGISTRY_ID \
-    --project=PROJECT_ID \
-    --region=us-central1 \
-    --no-enable-http-config \
-    --enable-mqtt-config \
-    --public-key-path=ca.crt \
-    --state-pubsub-topic=wott-pubsub
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s it. We have now created a WoTT enabled Google Core IoT registry. Now we need to enroll our first device.&lt;/p&gt;
-
-&lt;h2 id=&quot;enrolling-devices&quot;&gt;Enrolling devices&lt;/h2&gt;
-
-&lt;p&gt;The first thing we need to do is to download the certificate of the device. To do that we nned to issue an API call to WoTT’s API.
-To do this, you will need the Device ID of the WoTT agent-enabled device. The relevant information of your device can be found on the WoTT Dash.&lt;/p&gt;
-
-&lt;p&gt;If you do not have the dash set up, you can manually retrieve this information via command line using: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo wott-agent whoami&lt;/code&gt; and substitute that value into &lt;code class=&quot;highlighter-rouge&quot;&gt;mydevice&lt;/code&gt; as follows:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export DEVICE_ID=mydevice.d.wott.local
-$ curl -s &quot;https://api.wott.io/v0.2/device-cert/$DEVICE_ID&quot; &amp;gt; device.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Google’s Device ID &lt;a href=&quot;https://cloud.google.com/iot/docs/requirements#permitted_characters_and_size_requirements&quot;&gt;must start with a letter ([a-zA-Z]))&lt;/a&gt;. If your WoTT ID starts with a number, you will need to prefix it with a character. In the example below, we prefix the Device ID with &lt;code class=&quot;highlighter-rouge&quot;&gt;a-&lt;/code&gt; to circumvent this (but you can prefix it with anything you want as long as it starts with a character):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export GOOGLE_DEVICE_ID=$(echo $DEVICE_ID | sed 's/^[0-9]/a-/g')
-$ curl -s &quot;https://api.wott.io/v0.2/device-cert/$DEVICE_ID&quot; &amp;gt; device.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This achieves the same as before but gives you a valid Google Device ID that you can use to communicate with Google’s services.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;
-The WoTT Device ID (the string of characters found in &lt;code class=&quot;highlighter-rouge&quot;&gt;mydevice&lt;/code&gt;) is unique and registered to your specific device. This ID can start with either a letter &lt;em&gt;or&lt;/em&gt; a number.
-Therefore, you need to prefix your devices if your particular WoTT Device ID starts with a number in order for it to be a valid Google Device ID.
-In order to communicate with either WoTT or Google services, you will need to use the corresponding Device ID for each service; however in many cases this will be the same.&lt;/p&gt;
-
-&lt;p&gt;With the certificate downloaded, we can now enroll the device (ensure you use the correct Device ID):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gcloud iot devices create &quot;$GOOGLE_DEVICE_ID&quot; \
-    --project=PROJECT_ID \
-    --region=REGION \
-    --registry=REGISTRY_ID \
-    --public-key path=device.crt,type=es256-x509-pem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We now have our first device enrolled. Please do however note that the WoTT uses short-lived certificates (7 days), so you will need to upload these certificates every week.&lt;/p&gt;
-
-&lt;p&gt;For information on how to update/rotate the key of your device, you need to issue a PATCH command to the API. For details, see &lt;a href=&quot;https://cloud.google.com/iot/docs/samples/device-manager-samples#patch_a_device_with_ec_credentials&quot;&gt;this article&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;connecting-the-device&quot;&gt;Connecting the device&lt;/h2&gt;
-
-&lt;p&gt;To test the connection, we will use Google’s &lt;a href=&quot;https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/iot/api-client/mqtt_example&quot;&gt;MQTT example code&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;On your device, run the following commands:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install -y git-core python3-pip wget
-$ sudo pip3 install virtualenv
-$ mkdir ~/src
-$ cd ~/src
-$ git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
-$ cd python-docs-samples/iot/api-client/mqtt_example/
-$ virtualenv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
-$ wget https://pki.google.com/roots.pem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We have now installed everything we need to start the agent, so let’s give it a shot with an example.
-You will need to ensure you remain in the current directory.&lt;/p&gt;
-
-&lt;p&gt;Run the following (ensuring you substitute the correct details):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo -E ./venv/bin/python cloudiot_mqtt_example.py \
-    --project=PROJECT_ID \
-    --cloud_region=REGION \
-    --registry=REGISTRY_ID \
-    --device=$GOOGLE_DEVICE_ID \
-    --private_key_file=/opt/wott/certs/client.key \
-    --algorithm ES256 \
-    --ca_certs=roots.pem \
-    --message_type state \
-    device_demo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You should now see that your device is publishing messages.&lt;/p&gt;
-
-&lt;h2 id=&quot;verify-the-connection&quot;&gt;Verify the connection&lt;/h2&gt;
-
-&lt;p&gt;You can now verify the connection above using either the web interface, or the &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud&lt;/code&gt; command:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcloud iot devices configs describe \
-    --project=PROJECT_ID \
-    --region=REGION \
-    --registry=REGISTRY_ID \
-    --device=DEVICE_ID
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You should get a response similar to this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cloudUpdateTime: '2019-01-30T08:51:10.896665Z'
-deviceAckTime: '2019-01-30T11:57:15.586890Z'
-version: '1'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;send-a-message&quot;&gt;Send a message&lt;/h2&gt;
-
-&lt;p&gt;You can send a message to the device from within the Google Cloud Console. After sending the message, it should appear in the logs as such:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Received message 'b'Hello world'' on topic '/devices/x.d.wott.local/commands' with Qos 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference-implementation&quot;&gt;Reference implementation&lt;/h2&gt;
-
-&lt;p&gt;You may also want to take a look at our Balena &lt;a href=&quot;https://github.com/WoTTsecurity/wott-agent-balena/tree/master/google-core-iot&quot;&gt;reference implementation&lt;/a&gt; of the above.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT with Google Core IoT</summary></entry></feed>
+&lt;p&gt;We have now proven how easy it is to setup a secure connection between two devices using WoTT. The WebApp above can simply be replaced with any other application. Just be mindful of that you should always bind your WebApp to localhost to prevent it from being exposed to the world insecurely.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">A simple WebApp example</summary></entry></feed>
