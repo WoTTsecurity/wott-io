@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: datacenter.png
 title: Configuring Nginx with client certificate authentication (mTLS)
-date: 2019-07-12 12:00:00
+date: 2019-07-15 08:00:00
 category: tutorials
 author: Viktor Petersson
 tags: [Open Source]
