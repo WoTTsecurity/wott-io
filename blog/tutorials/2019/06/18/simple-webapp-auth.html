@@ -84,8 +84,8 @@
 </ul>
 
 <div class="ls_button">
-<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
-<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
 </div>
 
 </div></header>
@@ -128,7 +128,7 @@
 
 <p>For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-bc550b4b824131a1580f4adeb1943a8fe64c3a7bf5bb637adcf732f915887e6a.png 2x, https://wott.io/assets/656774-f89cd63c79201bf036aa4dfbaeb6bd4f656a56b605d1f8a902bf8b6df965c877.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-0d3c820defedefd76c347a3d54b1663227bcefc73b676a8f318106f45043afa4.png 2x, https://wott.io/assets/656774-26c88e3dd4a814df347e07716fa71522e492afdf28afa2ef91888272c2511f0b.png 1x" /></p>
 
 <p>If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:</p>
 
@@ -154,11 +154,11 @@ Tags = home-lab
 
 <p>In place of <code class="highlighter-rouge">username:password</code> you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is <code class="highlighter-rouge">home-lab</code>. If all is successful, the page should now look something like this:</p>
 
-<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-e1efa19757b25d95607e0cfbb9a3f3e49701ab7645bf9c95108772f1b17012e4.png 2x, https://wott.io/assets/deedd0-403f4ad5e4e5aa5931daddd5c03e23dd5712b7f377fa40e16eb02e167590fdbf.png 1x" /></p>
+<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-3ea632d89e504796e2e3e05babac9a56693db6355516b185a010ab024361b24d.png 2x, https://wott.io/assets/deedd0-c62749b135d92cf5eaaf14dd1719c13542519104d1a2375752bb73130aabe064.png 1x" /></p>
 
 <p>You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:</p>
 
-<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-ebd455fc45e10ee2e6160aa2d379966f01521f52344b62e34ebbfc86196a53d7.png 2x, https://wott.io/assets/2ee7eb-6980237717854e9b70a7993ba68d81c0632c90c86e77015e7081165f9577324e.png 1x" /></p>
+<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-d2add39cf39484d566fa161409f73f85cc46938eb25bb06b85d2cbdc7b4423fa.png 2x, https://wott.io/assets/2ee7eb-1dd1a982ffc11648ef8fd864cee9957f15ebb5c0d1ab6fa7affb0e39697895b8.png 1x" /></p>
 
 <p>Select the device that will be acting as your server, or <code class="highlighter-rouge">home-lab</code>. In the overview tab, you will be able to add tags to your device. Add <code class="highlighter-rouge">home-lab</code> and ensure that it is spelt correctly to match the credentials tag or it <strong>will not</strong> download.</p>
 
@@ -199,7 +199,7 @@ $ sudo python3 app.py
 
 <p>With the correct details, you will be greeted with the following screen message:</p>
 
-<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-19779bff5efc06c6abf59771d91f0241824e1be4746e323ae4003545df0b3f7b.png 2x, https://wott.io/assets/954347-0ff34c0bd7ebfc709baf5d66f6c85e5ddb7665d351f18e95d62bf8d8a7c64a1e.png 1x" /></p>
+<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-955510d29686d96cf1379706409291e6c7a81b6011ef088eda398fd9398d83ab.png 2x, https://wott.io/assets/954347-a1425a847480c42319a1aa56dd167a48c89377f5790e5e8f8c0159cf02f2d666.png 1x" /></p>
 
 <p>And that’s it, you’ve set up basic HTML auth on a WebApp!</p>
 
@@ -341,6 +341,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-134852372-1', 'auto');
 ga('send', 'pageview');
+
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
+clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 

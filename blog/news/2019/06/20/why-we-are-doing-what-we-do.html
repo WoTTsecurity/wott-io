@@ -84,8 +84,8 @@
 </ul>
 
 <div class="ls_button">
-<a class="log_in" href="https://dash.wott.io/accounts/login">log in</a>
-<a class="sign_up" href="https://dash.wott.io/accounts/register/">sign up</a>
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
 </div>
 
 </div></header>
@@ -114,7 +114,7 @@
 <div class="blog_content content_info_block">
 <h2 id="tldr-the-future-has-flying-cars-transformers-and-low-calorie-diets">TL;DR the future has flying cars, transformers and low calorie diets.</h2>
 
-<p><img alt="open source" src="https://wott.io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png" integrity="sha256-zAh/Q8gDRRd4cfCY13FrIH7I1dexArN32SMtwxoynJA=" crossorigin="anonymous" srcset="https://wott.io/assets/53f3cb-fbed9cbcade0acaf0627a8054547bc8c9b046b0f9a479a3a9807d3ab114549ba.png 2x, https://wott.io/assets/31e266-6c4a9d5bfa38bfc6c8d13a66a075702a9e8c055ca4fda8443e7383e7b88909ee.png 1x" /></p>
+<p><img alt="open source" src="https://wott.io/assets/blog/open-source-cc087f43c80345177871f098d7716b207ec8d5d7b102b377d9232dc31a329c90.png" integrity="sha256-zAh/Q8gDRRd4cfCY13FrIH7I1dexArN32SMtwxoynJA=" crossorigin="anonymous" srcset="https://wott.io/assets/53f3cb-5d9ffd17f5714896ef23e9c34252310fd75fee1925365bbe13f8289bd86a7ef9.png 2x, https://wott.io/assets/31e266-9aff67a43cac0187a10183418eb444856091480763b8cb6dee7b9cf4ee5a3a4b.png 1x" /></p>
 
 <p>Figure 1 - Best free photo I could find when searching for ‘open source’</p>
 
@@ -126,7 +126,7 @@
 
 <p>At <a href="https://wott.io">WoTT</a>, we are very excited about this.  We dream of the world of <a href="https://www.airxos.io/">unmanned aerial vehicles</a> (UAVs) quietly and autonomously zipping around overhead easing congestion and speeding up the time it takes to get from Heathrow to Old street (Newark to the West Village is an equally hateful commute that I would love to solve with UAVs).  We’re patiently waiting for neural implants that will <a href="https://www.nature.com/articles/s41586-019-1119-1">synthesize speech</a> from thought and that let us skip to the next SNL clip in the queue or adjust the temperature based on how we feel <a href="https://www.home-assistant.io/blog/2019/05/08/nest-data-bye-bye/">(assuming Google doesn’t cut access to the necessary APIs)</a>. If we’re really lucky, maybe we’ll get more transformers - yes, it was done back in 2016.</p>
 
-<p><img alt="neural implant" src="https://wott.io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png" integrity="sha256-J8Afu1rnYUWdg10qzVK4FKSAAK2rjG2xoyEIe5vMbZ8=" crossorigin="anonymous" srcset="https://wott.io/assets/3b1603-a676875de347da583ad26efa8f620f7edc400d67b1fb62ad95c99acca4d7c879.png 2x, https://wott.io/assets/a551cb-ffd1ff720b240f21c491812a61a6838f7dcaa46c01a7a4cf1ccdd4b8175520a5.png 1x" /></p>
+<p><img alt="neural implant" src="https://wott.io/assets/blog/neural-implant-27c01fbb5ae761459d835d2acd52b814a48000adab8c6db1a321087b9bcc6d9f.png" integrity="sha256-J8Afu1rnYUWdg10qzVK4FKSAAK2rjG2xoyEIe5vMbZ8=" crossorigin="anonymous" srcset="https://wott.io/assets/3b1603-aeaf4d44b7939605c69b9a3354cb71c4e3042eae675182011d3704b0517ffeb9.png 2x, https://wott.io/assets/a551cb-bfc74a701b2478b07fc877c0ccae9d7d076d972d4484d3e954ea2ef192195e85.png 1x" /></p>
 
 <p>Figure 2 - Representation of a neural implant (FYI - It’s not accurate.)</p>
 
@@ -271,6 +271,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-134852372-1', 'auto');
 ga('send', 'pageview');
+
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
+clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 
