@@ -18,13 +18,13 @@ One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). 
 
 By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
-In this article we will make this all more concrete and create a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
+In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
 
 Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use [Let's Encrypt](https://letsencrypt.org/) as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.
 
 ## Preparation
 
-Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this [here]({[site.url]}/documentation/getting-started).
+Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this [here]({{ site.url }}/documentation/getting-started).
 
 Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose)`). We use these to simplify the installation, as we are able to better pin the requirements.
 
@@ -67,7 +67,7 @@ First, let's try connecting without passing on our certificate:
 ```
 $ sudo curl \
   --cacert /opt/wott/certs/ca.crt \
-  --resolve 'MyServerID.d.wott.local:443:192.168.X.Y' \
+  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
   https://MyServerId.d.wott.local
 
   <html>
@@ -90,7 +90,7 @@ $ sudo curl \
   --key /opt/wott/certs/client.key \
   --cert /opt/wott/certs/client.crt \
   --cacert /opt/wott/certs/ca.crt \
-  --resolve 'MyServerID.d.wott.local:443:192.168.X.Y' \
+  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
   https://MyServerId.d.wott.local
 
 Access Granted!
@@ -110,7 +110,7 @@ These two lines tell `curl` to send the client certificate and key.
   --key /opt/wott/certs/client.key
   --cert /opt/wott/certs/client.crt
 ```
-This is our cryptographic identity that we will later use on the server for identification. It should however be said that the key is not sent to the server, but rather it is used for a cryptographic challenge (vastly simplified).
+This is our cryptographic identity provided by WoTT. In short, this replaces the need for a username and pasword. It should however be said that the key is not sent to the server (unlike a password), but rather it is used for a cryptographic challenge (vastly simplified).
 
 Next, we need to tell `curl` to use the WoTT CA certificate to verify the remote server against (since WoTT is not a public CA):
 
