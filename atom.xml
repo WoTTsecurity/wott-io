@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</title>
+        
+          <description>&lt;h1 id=&quot;using-wott-to-secure-access-to-a-mosquitto-mqtt-server&quot;&gt;Using WoTT to Secure Access to a Mosquitto MQTT Server&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Mon, 15 Jul 2019 17:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt</link>
+        <guid isPermaLink="true">https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Configuring Nginx with client certificate authentication (mTLS)</title>
         
           <description>&lt;h1 id=&quot;configuring-nginx-with-client-certificate-authentication-mtls&quot;&gt;Configuring Nginx with client certificate authentication (mTLS)&lt;/h1&gt;
