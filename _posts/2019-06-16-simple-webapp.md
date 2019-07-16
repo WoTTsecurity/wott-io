@@ -39,7 +39,6 @@ $ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/
 $ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp/requirements.txt
 $ pip3 install -r requirements.txt
 $ python3 app.py
-[...]
 ```
 If you have the examples repository cloned, navigate to the directory which it is in and do the following instead:
 

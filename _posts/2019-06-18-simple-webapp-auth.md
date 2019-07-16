@@ -18,8 +18,14 @@ In a previous example we introduced you to setting up a [Simple WebApp]({{site.u
 
 In this example, we'll be using another simple WebApp that instead uses HTTP Basic Auth to verify login and access.
 
-You will need 1 device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the [WoTT Dashboard](https://dash.wott.io) and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.
+You will need one device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the [WoTT Dashboard](https://dash.wott.io) and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.
 
+You will also need to have our [examples](https://github.com/WoTTsecurity/examples) repository cloned. To do so:
+
+```
+git clone https://github.com/WoTTsecurity/examples.git
+```
+Otherwise you can use `curl` to download the relevant files. We'll include the relevant commands for both.
 
 ## Using WoTT Dashboard
 
@@ -32,9 +38,9 @@ For this example, you will need to have the WoTT Dash set up, so if you haven't 
 If you have already got the WoTT Agent installed but haven't got the dash and the claim information, don't worry. Follow these commands to get the information you need to set it up:
 
 ```
-$ wott-agent claim-url
-$ wott-agent whoami
-$ wott-agent claim-token
+$ sudo wott-agent claim-url
+$ sudo wott-agent whoami
+$ sudo wott-agent claim-token
 ```
 
 This will give you all the information you need to manually claim your device.
@@ -75,16 +81,26 @@ There will now be a JSON file in your WoTT agent's credentials with your informa
 
 ## Setting up the WebApp
 
-As with the other example, you will need to download the WebApp files into a new directory. Use `sudo` where necessary. 
+If you are using `curl`, you will need to download these files into a new directory. Use `sudo` where necessary. 
 
 ```
 $ apt update && apt install -y python3 python3-pip curl
 $ mkdir ~/wott-webapp-auth-example
 $ cd ~/wott-webapp-auth-example
-$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/app.py
-$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/requirements.txt
+$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp-auth/app.py
+$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp-auth/requirements.txt
 $ pip3 install -r requirements.txt
 $ sudo python3 app.py
+```
+
+If you have our examples repository cloned instead (recommended), then navigate to the directory containing it and do the following instead:
+
+```
+$ apt update && apt install -y python3 python3-pip curl
+$ cd examples
+$ cd simple-webapp-auth
+$ pip3 install -r requirements.txt
+$ python3 app.py
 ```
 
 This will start your app on the server 127.0.0.1 at port 8080. You should receive a response like so:
