@@ -15,10 +15,10 @@ class: post-template
 ## Introduction 
 
 Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices. 
-By default the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure- though most of these options involve a password file.
 
-Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol essentially identifying the devices cryptographically removing the need for usernames and passwords. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach in security. We circumvent this by using identity to secure this instead.
-This example looks at publishing messages to a temperature topic hosted by the Mosquitto server.
+By default the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure- though most of these options involve a password file. There is a second option you can use (and the one we will be using in this example) through an ACL file - or Access Control List. The ACL is essentially a list of permissions that are granted to particular users or processes. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach in security. We circumvent this by using WoTT's unique device ID to secure this instead through the ACL file.
+
+Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol. Essentially we are identifying the devices cryptographically thus removing the need for usernames and passwords by assigning specific permissions to allowed users (or allowed devices) according to their WoTT device ID. In this example, we are securing messages to an MQTT temperature topic hosted by the Mosquitto server.
 
 You will need two WoTT devices with the [WoTT Agent]({{site.url}}/documentation/getting-started) installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).
 
