@@ -2,7 +2,7 @@
 layout: post
 current: post
 cover: fancy-board.jpeg
-title: Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server
+title: Using WoTT to Secure Access to a Mosquitto MQTT Server 
 date: 2019-07-15 17:00:00
 category: tutorials
 author: Fiona McAllister
@@ -10,15 +10,15 @@ tags: [Open Source]
 class: post-template
 ---
 
-# Using WoTT to Secure Access to a Mosquitto MQTT Server
+# Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server
 
 ## Introduction 
 
 Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices. 
 
-By default the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure- though most of these options involve a password file. There is a second option you can use (and the one we will be using in this example) through an ACL file - or Access Control List. The ACL is essentially a list of permissions that are granted to particular users or processes. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach in security. We circumvent this by using WoTT's unique device ID to secure this instead through the ACL file.
+By default, the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure, although most of these options involve a password file. There is a second option you can use (and the one we will be using in this example) through an ACL file - or Access Control List. The ACL is essentially a list of permissions that are granted to particular users or processes. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach of security. We circumvent this by using WoTT's unique device ID to secure the connection instead through the ACL file.
 
-Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol. Essentially we are identifying the devices cryptographically thus removing the need for usernames and passwords by assigning specific permissions to allowed users (or allowed devices) according to their WoTT device ID which is recorded in the ACL file. In this example, we are securing messages to an MQTT temperature topic hosted by the Mosquitto server.
+Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol. Essentially we are identifying the devices cryptographically thus removing the need for usernames and passwords. This is done by assigning specific permissions to allowed users (or devices) according to their WoTT device ID which is recorded in the ACL file. In this example, we are securing messages to an MQTT temperature topic hosted by the Mosquitto server.
 
 You will need two WoTT devices with the [WoTT Agent]({{site.url}}/documentation/getting-started) installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).
 
@@ -52,13 +52,13 @@ First, we need to set up and establish our server with Mosquitto. For this we wi
 $ cd examples
 $ cd mosquitto-server
 ```
-running `ls` you will notice there are 3 files including a 'mosquitto.conf' file. This contains the information we need to set up our Mosquitto server. By default we have the `acl_file` enabled. This is to secure access to the server later, however if you want to test this without the ACL configured, just find and comment out this line in the config:
+running `ls` you will notice there are 3 files including a `mosquitto.conf` file. This contains the information we need to set up our Mosquitto server. By default we have the `acl_file` enabled. This is to secure access to the server later, however if you want to test this without the ACL configured, just find and comment out this line in the config:
 
 ```
 acl_file /mosquitto/config/permission.acl
 ```
 
-This means that all messages to the server are accepted. This may be useful to you for testing when establishing connection between your devices although we reccommend keeping the file as is. 
+This means that *all* messages to the server are now accepted. This may be useful to you for testing when establishing connection between your devices although we reccommend keeping the file as is. 
 
 In this example, we provide the ACL file for you to configure with WoTT Device details to secure this. This file is in the same directory as `permissions.acl.`
 Open this in your favourite text editor. You will notice it is filled with comments. Each block refers to a type of permissions you can associate with a device followed by the topic that you are giving permissions for. For this example, our messaging topic is `wott/temperature` and can receive messages of temperature. 
@@ -93,9 +93,9 @@ On your client device, assuming you have our examples repository downloaded, nav
 $ cd examples
 $ cd mosquitto-client
 ```
-There are 3 files of note in this directory, `pub.sh`, `sub.sh`, and, `Dockerfile`. You do not need to alter any of these files at all for this example. There is an additional `README.md` file containing client set up instructions although these are also contained in this document. If you choose to use these files in the future, you can refer to the `README` instead of ths this tutorial for quick reference. 
+There are 3 files of note in this directory, `pub.sh`, `sub.sh`, and, `Dockerfile`. You do not need to alter any of these files for this example. There is an additional `README.md` file containing client set up instructions although these are also contained in this document. If you choose to use these files in the future, you can refer to the `README` instead of this tutorial for quick reference. 
 
-We will familiarise you with the files in the meantime for this tutorial.
+We will familiarise you with the files in the meantime.
 
 ### Subscribing 
 
