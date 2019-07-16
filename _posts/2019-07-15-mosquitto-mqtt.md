@@ -20,7 +20,7 @@ By default the connection between a Mosquitto run client and server is unencrypt
 Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol essentially identifying the devices cryptographically removing the need for usernames and passwords. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach in security. We circumvent this by using identity to secure this instead.
 This example looks at publishing messages to a temperature topic hosted by the Mosquitto server.
 
-You will need two WoTT devices with the [WoTT Agent]({site.url}/documentation/getting-started) installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).
+You will need two WoTT devices with the [WoTT Agent]({{site.url}}/documentation/getting-started) installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).
 
 For this example, you will need Docker CE and therefore a distribution of Raspbian or Debian. Installation instructions for Docker [here](https://docs.docker.com/install/linux/docker-ce/debian/).
 Installation of Docker CE is a different on Rasbperry Pis. More information is in the Docker installation link above.
