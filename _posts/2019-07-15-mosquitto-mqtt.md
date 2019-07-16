@@ -25,7 +25,7 @@ You will need two WoTT devices with the [WoTT Agent]({{site.url}}/documentation/
 For this example, you will need Docker CE and therefore a distribution of Raspbian or Debian. Installation instructions for Docker [here](https://docs.docker.com/install/linux/docker-ce/debian/).
 Installation of Docker CE is a different on Rasbperry Pis. More information is in the Docker installation link above.
 
-We will also be asking you to clone our code snippets repository from Github, so ensure you have `git` on your system. Otherwise you can opt to use `curl` to manually clone the required files. For this tutorial, we will assume you have cloned our repo.
+We will also be asking you to clone our code snippets repository from Github, so ensure you have `git` on your system. Otherwise you can opt to use `curl` to manually clone the required files (see previous code snippet examples on how to use `curl` for installation). For this tutorial, we will assume you have cloned our repo.
 
 **Note:** while not required, familiarity with Mosquitto config files may also be helpful. If not, don't worry; but we encourage you to play around with our included files.
 
