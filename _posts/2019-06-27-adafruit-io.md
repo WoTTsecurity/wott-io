@@ -18,7 +18,14 @@ class: post-template
 
 We're interested in Adafruit IO as it provides a means for us to communicate with our IoT devices via messages through either an MQTT or HTTP service. WWe can therefore interact with Adafruit's services and use our WoTT provided credentials to secure it.
 
-For this example you will need a device with the WoTT agent installed and a browser. You will also need an Adafruit IO account as well as a WoTT dash account. We will show you to set these up later in the guide if you haven't done so already. You should also have `curl` installed.
+For this example you will need a device with the WoTT agent installed and a browser. You will also need an Adafruit IO account as well as a WoTT dash account. We will show you to set these up later in the guide if you haven't done so already. 
+
+This example contains code snippets. To access these, clone our [examples](https://github.com/WoTTsecurity/examples) repository by doing the following:
+
+```
+git clone https://github.com/WoTTsecurity/examples.git
+```
+Alternatively, you can use `curl` and download the relevant files. Instructions included for both. 
 
 ## Installing and setting up to use Adafruit IO
 
@@ -58,8 +65,8 @@ These are your unique Adafruit details. We can add these to WoTT's dashboard as 
 If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:
 
 ``` 
-$ wott-agent whoami
-$ wott-aget claim-token
+$ sudo wott-agent whoami
+$ sudo wott-aget claim-token
 ```
 
 and pasting the output into the 'Claim Device' segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, `adafruit` to it. Through these tags, WoTT identifies which devices specific credentials are intended for.
@@ -87,14 +94,22 @@ There will now be a JSON file on your system containing your credentials.
 
 ## Setting up Adafruit feed sharing with an MQTT Client
 
-We have included a modified example of the Adafruit feed sharing tutorial in this guide which utilises WoTT's credentials rather than hard coding your details into the application. To run the example:
+We have included a modified example of the Adafruit feed sharing tutorial in this guide which utilises WoTT's credentials rather than hard coding your details into the application. To run the example using `curl`:
 
 ```
 $ mkdir ~/wott-adafruit-mqtt-example
 $ cd ~/wott-adafruit-mqtt-example
-$ curl -o mqtt_shared_feeds.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/adafruit-io/mqtt_shared_feeds.py
+$ curl -o mqtt_shared_feeds.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/adafruit-io/mqtt_shared_feeds.py
 $ sudo python3 mqtt_shared_feeds.py
 ```
+
+If you have our repository cloned instead, navigate to the examples directory and do the following instead:
+
+```
+$ cd adafruit-io
+$ sudo python3 mqtt_shared_feeds.py
+```
+
 If you are successful, you should receive a message like so:
 
 ```

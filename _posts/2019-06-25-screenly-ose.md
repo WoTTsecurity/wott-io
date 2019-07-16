@@ -52,8 +52,8 @@ You will now need to register the Pi on the WoTT dashboard.
 Login to the WoTT Dash and navigate to 'Claim Device.' If you have installed the WoTT agent recently, the relevant information should be displayed on your terminal screen. If not, use the following commands:
 
 ``` 
-$ wott-agent whoami
-$ wott-aget claim-token
+$ sudo wott-agent whoami
+$ sudo wott-aget claim-token
 ```
 
 This will give you your Device ID and the token value to claim your device. 
