@@ -25,7 +25,7 @@ $ git clone https://github.com/WoTTsecurity/examples.git
 ```
 Alternatively, you can use `curl` to download only the relevant files.
 
-The first thing that we need to do is to setup a simple Python WebApp on a Raspberry Pi/Debian machine. The following example is taken from the [WoTT Github](https://github.com/WoTTsecurity/agent).
+The first thing that we need to do is to setup a simple Python WebApp on a Raspberry Pi/Debian machine.
 
 ## Setting up the WebApp
 
