@@ -34,7 +34,7 @@ We will also be asking you to clone our code snippets repository from Github, so
 Before we start, please clone our [repository](https://github.com/WoTTsecurity/examples) with WoTT's example code snippets onto your devices:
 
 ```
-git clone https://github.com/WoTTsecurity/examples.git
+$ git clone https://github.com/WoTTsecurity/examples.git
 ```
 If you navigate inside this folder, you will find a few folders. For this example we are interested in 'mosquitto-client' and 'mosquitto-server.'
 

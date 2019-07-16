@@ -23,7 +23,7 @@ For this example you will need a device with the WoTT agent installed and a brow
 This example contains code snippets. To access these, clone our [examples](https://github.com/WoTTsecurity/examples) repository by doing the following:
 
 ```
-git clone https://github.com/WoTTsecurity/examples.git
+$ git clone https://github.com/WoTTsecurity/examples.git
 ```
 Alternatively, you can use `curl` and download the relevant files. Instructions included for both. 
 

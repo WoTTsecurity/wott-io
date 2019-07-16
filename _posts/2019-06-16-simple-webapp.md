@@ -21,7 +21,7 @@ Before you begin, you need two devices with the [WoTT Agent installed](https://g
 You will also need to have our [examples](https://github.com/WoTTsecurity/examples) repository cloned onto your devices. To do this:
 
 ```
-git clone https://github.com/WoTTsecurity/examples.git
+$ git clone https://github.com/WoTTsecurity/examples.git
 ```
 Alternatively, you can use `curl` to download only the relevant files.
 

@@ -23,7 +23,7 @@ You will need one device (Raspberry Pi or Debian Machine) with the WoTT Agent in
 You will also need to have our [examples](https://github.com/WoTTsecurity/examples) repository cloned. To do so:
 
 ```
-git clone https://github.com/WoTTsecurity/examples.git
+$ git clone https://github.com/WoTTsecurity/examples.git
 ```
 Otherwise you can use `curl` to download the relevant files. We'll include the relevant commands for both.
 
