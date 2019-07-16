@@ -181,6 +181,6 @@ This should stop the process. To confirm, just check the terminal with the publi
 
 ## Finishing Notes
 
-Mosquitto is a very convenient way of managing MQTT messages with inbuilt features that promote security. Hopefully we've shown how easy it is to use WoTT to secure a Mosquitto server and client based off our unique ID that we assign to each WoTT device. 
+Mosquitto is a very convenient way of managing MQTT messages with inbuilt features that promote security. Hopefully we've shown how easy it is to use WoTT to secure a Mosquitto server and client based off our unique ID that we assign to each WoTT device. Ultimately security through identity is the way forward as passwords can still be all too easily intercepted- especially on non TLS connections. ACL files are one of many ways we can use identity over passwords.
 
 Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There's much more to Mosquitto than we have included in this example, so check out the [Mosquitto website](https://mosquitto.org) for more information. 
