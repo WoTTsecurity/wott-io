@@ -18,19 +18,37 @@ In the following example, we'll walk you through how to secure a simple WebApp u
 
 Before you begin, you need two devices with the [WoTT Agent installed](https://github.com/WoTTsecurity/agent). This can be a combination of devices that are either a Raspberry Pi or a desktop running a Debian distribution of Linux.
 
+You will also need to have our [examples](https://github.com/WoTTsecurity/examples) repository cloned onto your devices. To do this:
+
+```
+git clone https://github.com/WoTTsecurity/examples.git
+```
+Alternatively, you can use `curl` to download only the relevant files.
+
 The first thing that we need to do is to setup a simple Python WebApp on a Raspberry Pi/Debian machine. The following example is taken from the [WoTT Github](https://github.com/WoTTsecurity/agent).
 
 ## Setting up the WebApp
+
+Using `curl`, you can do the following:
 
 ```
 $ apt update && apt install -y python3 python3-pip curl
 $ mkdir ~/wott-webapp-example
 $ cd ~/wott-webapp-example
-$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp/app.py
-$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp/requirements.txt
+$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp/app.py
+$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp/requirements.txt
 $ pip3 install -r requirements.txt
 $ python3 app.py
 [...]
+```
+If you have the examples repository cloned, navigate to the directory which it is in and do the following instead:
+
+```
+$ apt update && apt install -y python3 python3-pip curl
+$ cd examples
+$ cd simple-webapp
+$ pip3 install -r requirements.txt
+$ python3 app.py
 ```
 
 You now have a very simple webserver running on your Raspberry Pi. We can test it by running the following in another terminal session:
@@ -62,7 +80,7 @@ This will create a secure reverse proxy that redirects incoming traffic on port 
 By default, the example will allow all clients with a valid certificate signed by WoTT to make connections to the device. If we want to lock down the service further, we can for set a policy such that only a given device can access it using the same ghostunnel command as above but replacing `$ {CONNECTION_POLICY:---allow-all} $@` with :
 
 ```
-$ {CONNECTION_POLICY=--allow-cn=givendevice.d.wott.local} $@
+$ {CONNECTION_POLICY=--allow-cn=GivenDeviceID.d.wott.local} $@
 
 ```
 **Note:**
@@ -74,8 +92,8 @@ With the server up and running, we can now move on to the client. This should be
 
 In order to connect to the server, we need to know the following:
 
- * The IP of the device running the server
- * The WoTT ID of the server (you can get this by running `wott-agent whoami` or by checking your (WoTT Dashboard)[dash.wott.io] if you have it registered)
+* The IP of the device running the server
+* The WoTT ID of the server (you can get this by running `wott-agent whoami` or by checking your (WoTT Dashboard)[dash.wott.io] if you have it registered)
 
 Once we have this information, all we need to do is to start the client by running:
 
@@ -83,13 +101,13 @@ Once we have this information, all we need to do is to start the client by runni
 $ ghostunnel client \
     --listen 127.0.0.1:${LISTEN_PORT:-8080} \
     --target MY_IP:${TARGET_PORT:-8443} \
-    --override-server-name=serverdevice.d.wott.local \
+    --override-server-name=ServerDeviceID.d.wott.local \
     --keystore "/opt/wot/certs/combined.pem" \
     --cacert "/opt/wott/certs/ca.crt"
 ```
 
 Inserting your the IP Address of the server which you can get by running`ip addr show` or `ip route get 8.4.4.3`. 
-Use the server WoTT device ID in place of `serverdevice`.
+Use the server WoTT device ID in place of `ServerDeviceID`.
 
 Assuming you don't get any errors, there should now be an established secure tunnel between the client and server. The client is now proxying any request coming in on 127.0.0.1:8080 securely to the remote server (using mTLS).
 
