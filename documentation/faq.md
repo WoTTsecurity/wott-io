@@ -49,14 +49,14 @@ The most secure firewall configuration is "Deny by default."
 Open connections are network connections (incoming or outgoing) reported by the WoTT Agent during its last run. We monitor this on an ongoing basis in order to determine what the normal behavior of the device is. Contrary to a workstation, an IoT device tends to have very predictable network operations. Hence, by monitoring the network behavior for abnormalities, we are able to find potentially malicious activities.
 
 ## What is a device certificate? <a name="device-certificate"></a>
-A device certificate is the public part of the cryptographic identity of a device (the private part is called a "private key"). Using the device certificate, you are able to perform cryptographic operations that only the device in possession of the private key can decrypt or interact with.
+A device certificate is the public part of the cryptographic identity of a device (the private part is called a "private key"). Using the device certificate, we are able to perform cryptographic operations that only the device in possession of the private key can decrypt or interact with.
 
 An example of how this can be used is found in our [Google Core IoT example]({{site.url}}/tutorials/2019/06/14/google-core-iot), where we upload the device certificate to Google in order to grant the device access to communicate to Google's IoT services. In this example, the device uses its private key to prove its identity.
 
-The URL found in the dashboard is permanent, and you will always be able to download the latest certificate; but it is recommended that you do this programatically due to the short life span of the certificates. An example of this can be found [here](https://github.com/WoTTsecurity/google-core-iot).
+The URL found in the dashboard is permanent, and you will always be able to download the latest certificate; but it is recommended that you do this programatically due to the short life span of the certificates. An example of how to do this can be found [here](https://github.com/WoTTsecurity/google-core-iot).
 
 ## What is Device ID? <a name="device-id"></a>
-The Device ID, also known as the WoTT Device ID, is the unique identifier in WoTT. When creating policies, like in our [Nginx + Appserver example]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx), this is the identity we use for each device. Because this is a cryptographic identity, you are able to issue challenges to the device and be certain that the device is what it claims to be.
+The Device ID, also known as the WoTT Device ID, is the unique identifier in WoTT. When creating policies, like in our [Nginx + Appserver example]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx), this is the identity we use for each device. Because this is a cryptographic identity, is is possible to issue challenges to the device and be certain that the device is what it claims to be.
 
 ## What's an FQDN? <a name="fqdn"></a>
 An FQDN, or Fully Qualified Domain Name, is the hostname that the system itself has been given. This can either be a private name (like my-device.local) or a public name (like my-device.company.com). An FQDN is used to identify the device on a network.
