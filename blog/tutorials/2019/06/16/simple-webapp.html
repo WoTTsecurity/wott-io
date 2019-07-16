@@ -120,18 +120,33 @@
 
 <p>Before you begin, you need two devices with the <a href="https://github.com/WoTTsecurity/agent">WoTT Agent installed</a>. This can be a combination of devices that are either a Raspberry Pi or a desktop running a Debian distribution of Linux.</p>
 
-<p>The first thing that we need to do is to setup a simple Python WebApp on a Raspberry Pi/Debian machine. The following example is taken from the <a href="https://github.com/WoTTsecurity/agent">WoTT Github</a>.</p>
+<p>You will also need to have our <a href="https://github.com/WoTTsecurity/examples">examples</a> repository cloned onto your devices. To do this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/WoTTsecurity/examples.git
+</code></pre></div></div>
+<p>Alternatively, you can use <code class="highlighter-rouge">curl</code> to download only the relevant files.</p>
+
+<p>The first thing that we need to do is to setup a simple Python WebApp on a Raspberry Pi/Debian machine.</p>
 
 <h2 id="setting-up-the-webapp">Setting up the WebApp</h2>
+
+<p>Using <code class="highlighter-rouge">curl</code>, you can do the following:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update &amp;&amp; apt install -y python3 python3-pip curl
 $ mkdir ~/wott-webapp-example
 $ cd ~/wott-webapp-example
-$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp/app.py
-$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp/requirements.txt
+$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp/app.py
+$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp/requirements.txt
 $ pip3 install -r requirements.txt
 $ python3 app.py
-[...]
+</code></pre></div></div>
+<p>If you have the examples repository cloned, navigate to the directory which it is in and do the following instead:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update &amp;&amp; apt install -y python3 python3-pip curl
+$ cd examples
+$ cd simple-webapp
+$ pip3 install -r requirements.txt
+$ python3 app.py
 </code></pre></div></div>
 
 <p>You now have a very simple webserver running on your Raspberry Pi. We can test it by running the following in another terminal session:</p>
@@ -160,7 +175,7 @@ Hello from WoTT!
 
 <p>By default, the example will allow all clients with a valid certificate signed by WoTT to make connections to the device. If we want to lock down the service further, we can for set a policy such that only a given device can access it using the same ghostunnel command as above but replacing <code class="highlighter-rouge">$ {CONNECTION_POLICY:---allow-all} $@</code> with :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ {CONNECTION_POLICY=--allow-cn=givendevice.d.wott.local} $@
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ {CONNECTION_POLICY=--allow-cn=GivenDeviceID.d.wott.local} $@
 
 </code></pre></div></div>
 <p><strong>Note:</strong>
@@ -182,13 +197,13 @@ If you are being denied permissions, use <code class="highlighter-rouge">sudo</c
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ghostunnel client \
     --listen 127.0.0.1:${LISTEN_PORT:-8080} \
     --target MY_IP:${TARGET_PORT:-8443} \
-    --override-server-name=serverdevice.d.wott.local \
+    --override-server-name=ServerDeviceID.d.wott.local \
     --keystore "/opt/wot/certs/combined.pem" \
     --cacert "/opt/wott/certs/ca.crt"
 </code></pre></div></div>
 
 <p>Inserting your the IP Address of the server which you can get by running<code class="highlighter-rouge">ip addr show</code> or <code class="highlighter-rouge">ip route get 8.4.4.3</code>. 
-Use the server WoTT device ID in place of <code class="highlighter-rouge">serverdevice</code>.</p>
+Use the server WoTT device ID in place of <code class="highlighter-rouge">ServerDeviceID</code>.</p>
 
 <p>Assuming you don’t get any errors, there should now be an established secure tunnel between the client and server. The client is now proxying any request coming in on 127.0.0.1:8080 securely to the remote server (using mTLS).</p>
 
@@ -211,10 +226,10 @@ Hello from WoTT!
   <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/fancy-board.jpeg);"></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
   <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
   <span class="description">
-   # Using WoTT to Secure Access to a Mosquitto MQTT Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to... </span>
+   # Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT... </span>
   <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
   </div>
   </div>
@@ -278,7 +293,7 @@ Hello from WoTT!
 <div class="menu news"><ul>
 <li><a href="" title="">latest news</a></li>
 
- <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a></li>
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
 
  <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
 

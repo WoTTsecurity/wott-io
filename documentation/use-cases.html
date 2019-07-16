@@ -136,13 +136,13 @@ WoTT uses mTLS which runs over the TCP layer. In essence, mTLS establishes a han
 
 <p>You will need two WoTT Agent devices: one acting as server, one as client. This example uses the concept of WoTT’s cryptographic identity to verify devices and verify connection. We’ve included a very somple WebApp for the example, but the principle applies to any WebApp that you develop yourself- just ensure you do the correct setup as illustrated in the guide.</p>
 
-<h4 id="configuring-nginx-with-client-certificate-authentication-mtls"><a href="https://wott.io/blog/tutotrials/2019/07/15/mtls-with-nginx">Configuring Nginx with Client Certificate Authentication (mTLS)</a></h4>
+<h4 id="configuring-nginx-with-client-certificate-authentication-mtls"><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Configuring Nginx with Client Certificate Authentication (mTLS)</a></h4>
 
 <p>One of our harder examples. Nginx is a web server with several other useful functions including reverse proxy. For this example, you will need two WoTT Agent devices: one as the server and one as the client. We recommend a Debian and Raspberry Pi. Here we use certificates as a means to verify browser access (note current browser only verify the server) to a server run by Nginx using their reverse proxy capabilitites.</p>
 
-<h4 id="securing-access-to-mosquitto-brokered-mqtt-client-and-server"><a href="https://wott.io/blog/tutotrials/2019/07/15/mosquitto-mqtt">Securing Access to Mosquitto Brokered MQTT Client and Server</a></h4>
+<h4 id="securing-access-to-mosquitto-brokered-mqtt-client-and-server"><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Securing Access to Mosquitto Brokered MQTT Client and Server</a></h4>
 
-<p>Although this example does not technically use certificates, it still relies on cryptographically identifying devices through their unique WoTT ID. Mosquitto is a popular borker for the MQTT protocol with several inbuilt functions that allow for security conifguration to protect the server from fradulent or malicious access. Here you will need two WoTT Agent devices, one acting as server and the other as client. We’ll show you how to use WoTT’s unqiue ID to prevent access to secure access to a server without the need for a username and password.</p>
+<p>Although this example does not technically use certificates, it still relies on cryptographically identifying devices through their unique WoTT ID. Mosquitto is a popular broker for the MQTT protocol with several inbuilt functions that allow for security conifguration to protect the server from fradulent or malicious access. Here you will need two WoTT Agent devices, one acting as server and the other as client. We’ll show you how to use WoTT’s unqiue ID to prevent access to secure access to a server without the need for a username and password.</p>
 
 <h3 id="credential-managed-examples">Credential managed examples</h3>
 

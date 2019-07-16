@@ -151,19 +151,19 @@ Once here, follow the WoTT agent installation as you would on any other device.<
 
 <p>Login to the WoTT Dash and navigate to ‘Claim Device.’ If you have installed the WoTT agent recently, the relevant information should be displayed on your terminal screen. If not, use the following commands:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wott-agent whoami
-$ wott-aget claim-token
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo wott-agent whoami
+$ sudo wott-aget claim-token
 </code></pre></div></div>
 
 <p>This will give you your Device ID and the token value to claim your device.</p>
 
 <p>Your Raspberry Pi should now be registered. Navigate to your Dashboard and select the Pi:</p>
 
-<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-24f20423fa4531ccacd3b1da92955b30ec1286e0e876c0f2d835de9b9231755f.png 2x, https://wott.io/assets/d66040-38d30e94224db4f53b9544db8e68c2488f05a9cb56a78ae86357cda06d66d7bd.png 1x" /></p>
+<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-0d3b9f49356c71cf2bef1189038f3c1d9fbf5dbffc08591a3fb7dcb69c08f439.png 2x, https://wott.io/assets/d66040-cbee8d912291f3411e011841e8e9e1e7bb954346b21668b2b792a6ed1d68f7e7.png 1x" /></p>
 
 <p>On the overview page, add a tag. This will be important for the credentials. This tag can be whatever you want, however we suggest something like <code class="highlighter-rouge">screenly-pi</code> or <code class="highlighter-rouge">pi</code> or a variant of that form:</p>
 
-<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-0c43f4c19b1f2eda27ee7cefbf4a284356f063f8f3e0059f0cc533dc27c2b876.png 2x, https://wott.io/assets/6b3f4b-c75b81e00cb0e0c23050c6a5a7d59328fc4a51e08418e569a66039d65852a087.png 1x" /></p>
+<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-e907233d16412a312273c0614a3c6c076fcd18e782717f6d51aef4779bac90e4.png 2x, https://wott.io/assets/6b3f4b-fac1be37e5bdc88c3e28cbca6a76c0eb93182467204b9a515441e7b7698115f9.png 1x" /></p>
 
 <p>Now navigate to credentials and add a new credential with the following details:</p>
 
@@ -202,15 +202,15 @@ $ sudo service screenly-web restart
 
 <p>Navigate to Settings:</p>
 
-<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-5176a2fe0a125be868b59a289aae1f422710ba183548f2868c63eb69fa152241.png 2x, https://wott.io/assets/c82378-e08553036200979f1a5c2cb3df95b6083f72132c69b020cce6c2b9f6be05244c.png 1x" /></p>
+<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-b7257ed866e5bb83e8096345d7232123c30fc13bfb6671d82009a7d759e60dc7.png 2x, https://wott.io/assets/c82378-781e4b282ff7bf29bf97b4e423a31d54a35a560c4dad365d38ccfbd3de819fee.png 1x" /></p>
 
 <p>Scroll down the page and underneath ‘Authentication’ select ‘WoTT’ and save your settings.</p>
 
-<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-327f092303aa4a89fed4bc4ba822e698f0441e3584d4901aee13bb40978179f7.png 2x, https://wott.io/assets/052172-a4e88e27636dc0571f000fd428918c9065d15707171975802fbd1faa66d4ee55.png 1x" /></p>
+<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-075381aaa3d7e43a4d01dc8a7b6478f6ef45d340f7ff1af1f00534a3acfe184c.png 2x, https://wott.io/assets/052172-089897135b0fc0ceffcc05b665a98fc84094a57ea041a563e2838a1ca45cafb3.png 1x" /></p>
 
 <p>You have now enabled the WoTT credentials on Screenly OSE. Test this out by trying to access the management page from another browser (the image example below is opened in Chrome) and you will be required to login with the credentials you specified above (in this case, <code class="highlighter-rouge">username</code> and <code class="highlighter-rouge">password</code>)</p>
 
-<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-314f4d48333c5aa26097d9fa722ad7c36356fa1aef3447d3067b4a6f3f1e13de.png 2x, https://wott.io/assets/c39b7a-766f1f0fc071717449abc85a62decdc0c25a44b781eaa0ebaf3d15425b8100b9.png 1x" /></p>
+<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-c66359dd0607b40a79ac7af6314b0ea67964952d1b3a95d042cdf17cb3f624fa.png 2x, https://wott.io/assets/c39b7a-523c4e8e244bc97c6b57bd2c62fb723f08e8cb450be9043c88a0df0fe1a28e6a.png 1x" /></p>
 
 <p>If your credentials are correct, you will be successfully logged into the main Screenly management page and greeted by the Schedule Overview.</p>
 
@@ -234,10 +234,10 @@ $ sudo service screenly-web restart
   <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/fancy-board.jpeg);"></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
   <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
   <span class="description">
-   # Using WoTT to Secure Access to a Mosquitto MQTT Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to... </span>
+   # Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT... </span>
   <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
   </div>
   </div>
@@ -301,7 +301,7 @@ $ sudo service screenly-web restart
 <div class="menu news"><ul>
 <li><a href="" title="">latest news</a></li>
 
- <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a></li>
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
 
  <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
 

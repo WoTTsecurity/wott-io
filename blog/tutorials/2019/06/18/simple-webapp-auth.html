@@ -120,7 +120,13 @@
 
 <p>In this example, we’ll be using another simple WebApp that instead uses HTTP Basic Auth to verify login and access.</p>
 
-<p>You will need 1 device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the <a href="https://dash.wott.io">WoTT Dashboard</a> and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.</p>
+<p>You will need one device (Raspberry Pi or Debian Machine) with the WoTT Agent installed and have it registered to the <a href="https://dash.wott.io">WoTT Dashboard</a> and a web browser to access it (either on a different device or the same one) or the terminal of another WoTT agent device.</p>
+
+<p>You will also need to have our <a href="https://github.com/WoTTsecurity/examples">examples</a> repository cloned. To do so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/WoTTsecurity/examples.git
+</code></pre></div></div>
+<p>Otherwise you can use <code class="highlighter-rouge">curl</code> to download the relevant files. We’ll include the relevant commands for both.</p>
 
 <h2 id="using-wott-dashboard">Using WoTT Dashboard</h2>
 
@@ -128,13 +134,13 @@
 
 <p>For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-9cd1701b96a218eb464e942efb8a410423d3f9a8179b276af39f5a0d3f2daac1.png 2x, https://wott.io/assets/656774-dc3c195fe6acec321b216042242a9347143af13d182e7d0c41e6bb8a16b56779.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-2939f61c370b5b75eb5b2fbe1e8d0b23be413907e715a2469d86e76572b0d447.png 2x, https://wott.io/assets/656774-c0ee2e8cf6e5a7c1676ccaefe8841774f6b4617bc3329d6d4788c342eabe5a77.png 1x" /></p>
 
 <p>If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wott-agent claim-url
-$ wott-agent whoami
-$ wott-agent claim-token
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo wott-agent claim-url
+$ sudo wott-agent whoami
+$ sudo wott-agent claim-token
 </code></pre></div></div>
 
 <p>This will give you all the information you need to manually claim your device.</p>
@@ -154,11 +160,11 @@ Tags = home-lab
 
 <p>In place of <code class="highlighter-rouge">username:password</code> you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is <code class="highlighter-rouge">home-lab</code>. If all is successful, the page should now look something like this:</p>
 
-<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-598092bbb1b47aa68b9b618f0ccce84982a8bc1c50eef3e1a7f84af70404b3a3.png 2x, https://wott.io/assets/deedd0-a64c7882414b7ef829d76db24e44f414ce87817f50d771364df9f47564b9bc04.png 1x" /></p>
+<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-46fd97da64734189c9b863da881ad26e3aec37f26d5d519c915d27cefabc4ef5.png 2x, https://wott.io/assets/deedd0-d1467023062b51c096a4156a0bc6645728df0e6bd4265f8197d232f1c514a1a3.png 1x" /></p>
 
 <p>You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:</p>
 
-<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-8fd2ad602982c30ebebdd893b5178f36222a4f5eece3c52b9a97ccab4cb0666f.png 2x, https://wott.io/assets/2ee7eb-c34095ff00ccb389a4d3662b019dda5494e55e26bb32a5833deafcead93bf3e2.png 1x" /></p>
+<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-ac529005b685a3351baf40fa7e09eaeba81c1d8ed1a4722aaa375cdb35b4eb0f.png 2x, https://wott.io/assets/2ee7eb-59992579ebf38b38ae7908c41e48afa27f52a323fc793f179dd5c8f526a04f2a.png 1x" /></p>
 
 <p>Select the device that will be acting as your server, or <code class="highlighter-rouge">home-lab</code>. In the overview tab, you will be able to add tags to your device. Add <code class="highlighter-rouge">home-lab</code> and ensure that it is spelt correctly to match the credentials tag or it <strong>will not</strong> download.</p>
 
@@ -172,15 +178,24 @@ Tags = home-lab
 
 <h2 id="setting-up-the-webapp">Setting up the WebApp</h2>
 
-<p>As with the other example, you will need to download the WebApp files into a new directory. Use <code class="highlighter-rouge">sudo</code> where necessary.</p>
+<p>If you are using <code class="highlighter-rouge">curl</code>, you will need to download these files into a new directory. Use <code class="highlighter-rouge">sudo</code> where necessary.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update &amp;&amp; apt install -y python3 python3-pip curl
 $ mkdir ~/wott-webapp-auth-example
 $ cd ~/wott-webapp-auth-example
-$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/app.py
-$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/agent/master/docs/examples/simple-webapp-auth/requirements.txt
+$ curl -o app.py https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp-auth/app.py
+$ curl -o requirements.txt https://raw.githubusercontent.com/WoTTsecurity/examples/master/simple-webapp-auth/requirements.txt
 $ pip3 install -r requirements.txt
 $ sudo python3 app.py
+</code></pre></div></div>
+
+<p>If you have our examples repository cloned instead (recommended), then navigate to the directory containing it and do the following instead:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update &amp;&amp; apt install -y python3 python3-pip curl
+$ cd examples
+$ cd simple-webapp-auth
+$ pip3 install -r requirements.txt
+$ python3 app.py
 </code></pre></div></div>
 
 <p>This will start your app on the server 127.0.0.1 at port 8080. You should receive a response like so:</p>
@@ -199,7 +214,7 @@ $ sudo python3 app.py
 
 <p>With the correct details, you will be greeted with the following screen message:</p>
 
-<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-68f49a42ad3a0dd20d43b1d56c0fda310b402b73f8fce43240e6850c463ef685.png 2x, https://wott.io/assets/954347-80a9a7d81c908cfcfc1e954efdf7f12632d9831bfc51279c1896478b8cef21f7.png 1x" /></p>
+<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-97d86704640e92c5b2df4dae61bb6903e99c8b17fd55846cfbeec30c3e1db1c9.png 2x, https://wott.io/assets/954347-89dc2b548babf8a7e8667d6be719ade25857f9514aaa6c6c0c8ff7834f2e95df.png 1x" /></p>
 
 <p>And that’s it, you’ve set up basic HTML auth on a WebApp!</p>
 
@@ -246,10 +261,10 @@ ImportError: No module named flask
   <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/fancy-board.jpeg);"></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
   <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
   <span class="description">
-   # Using WoTT to Secure Access to a Mosquitto MQTT Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to... </span>
+   # Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server ## Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT... </span>
   <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
   </div>
   </div>
@@ -313,7 +328,7 @@ ImportError: No module named flask
 <div class="menu news"><ul>
 <li><a href="" title="">latest news</a></li>
 
- <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</a></li>
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
 
  <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
 
