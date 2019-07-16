@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: Image_5.png
+cover: some-coding.jpeg
 title: Using WoTT to secure a simple Python 3 WebApp
 date: 2019-06-16 17:00:00
 category: tutorials

@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: Image_5.png
+cover: tiny-pi.jpeg
 title: Using WoTT credentials to manage access to Adafruit IO feeds
 date: 2019-06-27 17:00:00
 category: tutorials
