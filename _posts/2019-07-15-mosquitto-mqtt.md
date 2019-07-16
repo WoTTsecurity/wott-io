@@ -2,7 +2,7 @@
 layout: post
 current: post
 cover: Image_5.png
-title: Using WoTT to Cryptographically Secure access between a Mosquitto Brokered MQTT Client and Server
+title: Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server
 date: 2019-07-15 17:00:00
 category: tutorials
 author: Fiona McAllister
@@ -17,11 +17,12 @@ class: post-template
 Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices. 
 By default the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure- though most of these options involve a password file.
 
-Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol essentially identifying the devices cryptographically removing the need for usernames and passwords. This example looks at publishing messages to a temperature topic hosted by the Mosquitto server.
+Here we'll look at using WoTT's unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol essentially identifying the devices cryptographically removing the need for usernames and passwords. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach in security. We circumvent this by using identity to secure this instead.
+This example looks at publishing messages to a temperature topic hosted by the Mosquitto server.
 
-You will need 2 WoTT devices with the [WoTT Agent]({site.url}/documentation/getting-started) installed. We reccommend that at least one of these is a Debian machine for the server (although 2 Pis is fine).
+You will need two WoTT devices with the [WoTT Agent]({site.url}/documentation/getting-started) installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).
 
-For this example, you will need Docker CE and therefore a distribution of Raspbian or Debian that supports Docker (a Stretch distribution). Installation instructions for Docker [here](https://docs.docker.com/install/linux/docker-ce/debian/).
+For this example, you will need Docker CE and therefore a distribution of Raspbian or Debian. Installation instructions for Docker [here](https://docs.docker.com/install/linux/docker-ce/debian/).
 Installation of Docker CE is a different on Rasbperry Pis. More information is in the Docker installation link above.
 
 We will also be asking you to clone our code snippets repository from Github, so ensure you have `git` on your system. Otherwise you can opt to use `curl` to manually clone the required files. For this tutorial, we will assume you have cloned our repo.
@@ -116,7 +117,7 @@ $ sudo docker run -ti --rm \
     -v /opt/wott/certs:/opt/wott/certs:ro \
     wott-mqtt-client
 ```
-If you do not know your IP address, you can obtain this through `ip addr show` or `sudo ifconfig` and the value corresponds to the `inet` value of `ens33`. Alternatively, you can get the value for the specific port you are using (in this case port 8883) through `ip route get 8.8.8.3`. Make sure you do this on your *server* device.
+If you do not know your IP address, you can obtain this through `ip addr show` or `sudo ifconfig` and the value corresponds to the `inet` value. Alternatively, you can get the value for the specific port you are using (in this case port 8883) through `ip route get 8.8.8.3`. Make sure you do this on your *server* device.
 
 The subscriber should now be running. As there are no messages being published, you will not see anything on the terminal yet. To end the process use `CTRL + C`.
 
