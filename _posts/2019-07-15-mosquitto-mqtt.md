@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: Image_5.png
+cover: fancy-board.jpeg
 title: Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server
 date: 2019-07-15 17:00:00
 category: tutorials
