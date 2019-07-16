@@ -48,11 +48,11 @@ Google Cloud Platform provides services that developers can use. Here we show yo
 
 You will need two WoTT Agent devices: one acting as server, one as client. This example uses the concept of WoTT's cryptographic identity to verify devices and verify connection. We've included a very somple WebApp for the example, but the principle applies to any WebApp that you develop yourself- just ensure you do the correct setup as illustrated in the guide.
 
-#### [Configuring Nginx with Client Certificate Authentication (mTLS)]({{site.url}}/blog/tutotrials/2019/07/15/mtls-with-nginx)
+#### [Configuring Nginx with Client Certificate Authentication (mTLS)]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx)
 
 One of our harder examples. Nginx is a web server with several other useful functions including reverse proxy. For this example, you will need two WoTT Agent devices: one as the server and one as the client. We recommend a Debian and Raspberry Pi. Here we use certificates as a means to verify browser access (note current browser only verify the server) to a server run by Nginx using their reverse proxy capabilitites.
 
-#### [Securing Access to Mosquitto Brokered MQTT Client and Server]({{site.url}}/blog/tutotrials/2019/07/15/mosquitto-mqtt)
+#### [Securing Access to Mosquitto Brokered MQTT Client and Server]({{site.url}}/blog/tutorials/2019/07/15/mosquitto-mqtt)
 
 Although this example does not technically use certificates, it still relies on cryptographically identifying devices through their unique WoTT ID. Mosquitto is a popular broker for the MQTT protocol with several inbuilt functions that allow for security conifguration to protect the server from fradulent or malicious access. Here you will need two WoTT Agent devices, one acting as server and the other as client. We'll show you how to use WoTT's unqiue ID to prevent access to secure access to a server without the need for a username and password.
 
