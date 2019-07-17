@@ -71,8 +71,8 @@
 
 </head>
 <body>
-<header class="b_header"><div class="head_nav">
-
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
 <a class="logo" href="https://wott.io/" title="Home page"></a>
 
 <ul class="nav_m">
@@ -134,7 +134,7 @@
 
 <p>For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-1fad0da6e33b0821d40344319a62587a1b531c90cfbfa239f258a14b082d582f.png 2x, https://wott.io/assets/656774-292f6c80fd6b142151930273d487caccc8e5737da9149223f06681f258fc873f.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-7d9824014586babcfbcf3efd828a3c207879f9c6554e7db54dfe5f9d6a856066.png 2x, https://wott.io/assets/656774-18cbd147801688472bf5650435d35e35b984aec8e0d108867f9799b8226dd921.png 1x" /></p>
 
 <p>If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:</p>
 
@@ -160,11 +160,11 @@ Tags = home-lab
 
 <p>In place of <code class="highlighter-rouge">username:password</code> you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is <code class="highlighter-rouge">home-lab</code>. If all is successful, the page should now look something like this:</p>
 
-<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-d12021c2a67fec728c776951dcc835554c98b8c070c6ab7b29531004ade183d7.png 2x, https://wott.io/assets/deedd0-3483d3b78677ae267fa768ef7aa5e90c9cf0f1e60e6de05b2fff390cbd45f0ab.png 1x" /></p>
+<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-fe8d936933da048f70164027df373105413b016ab6d0b4f7b5b773ea41504511.png 2x, https://wott.io/assets/deedd0-d046cf89a6d1167f710c86ac0c9335b34fd2ff90199a342414effcadd201fb3c.png 1x" /></p>
 
 <p>You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:</p>
 
-<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-470f16cb5833af15fa470a4fed8dd36ef1e7d08a53944f1cf85b629ca7d10d3d.png 2x, https://wott.io/assets/2ee7eb-c1580b4ba31661846c122c07344b6690bec98fa2cc5479491419cfd528dfa0fd.png 1x" /></p>
+<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-6cdb3f0f4eb30927261c9cc7eb61b7d8cde1f663549426f93a28763ed6648c01.png 2x, https://wott.io/assets/2ee7eb-d445584dfcf4639a09b089a2eb6fedc542eb8d4b2fd07c5760557b86461181d2.png 1x" /></p>
 
 <p>Select the device that will be acting as your server, or <code class="highlighter-rouge">home-lab</code>. In the overview tab, you will be able to add tags to your device. Add <code class="highlighter-rouge">home-lab</code> and ensure that it is spelt correctly to match the credentials tag or it <strong>will not</strong> download.</p>
 
@@ -214,7 +214,7 @@ $ python3 app.py
 
 <p>With the correct details, you will be greeted with the following screen message:</p>
 
-<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-e58e5e07781475183ebc1707fc1460a1c884c1c807652fd6639ef88a41551dab.png 2x, https://wott.io/assets/954347-0804c16d9f8368e48570d1c21436ae743b2474ae88dd076a1bc5066462f300ad.png 1x" /></p>
+<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-ccfbaa32cf7ad53d29c190d1d04bcd84b5e78557f3f16d9289b8bc34e12dd70f.png 2x, https://wott.io/assets/954347-894a5f26e71b35c287b205937a53782819dfd99677e56457f0bd5dd1ed1dbb7a.png 1x" /></p>
 
 <p>And that’s it, you’ve set up basic HTML auth on a WebApp!</p>
 
@@ -347,6 +347,8 @@ ImportError: No module named flask
 </footer>
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
     <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

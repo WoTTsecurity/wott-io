@@ -71,8 +71,8 @@
 
 </head>
 <body>
-<header class="b_header"><div class="head_nav">
-
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
 <a class="logo" href="https://wott.io/" title="Home page"></a>
 
 <ul class="nav_m">
@@ -127,7 +127,7 @@ Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress
 
 <p>Let’s define <a href="https://opensource.com/article/19/1/what-devsecops">DevSecOps</a> a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the <a href="https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336">cost of fixing flaws</a> by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.</p>
 
-<p><img alt="The NIST says so. Prove them wrong if you want" class="img-fluid" src="https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png" integrity="sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=" crossorigin="anonymous" srcset="https://wott.io/assets/5697f2-85486dfadccc8c3cf093ea6c3f12370c284d04f41c116bd5ba3cbf2242f4713c.png 2x, https://wott.io/assets/3bcc4b-325ae960936b35140f5d1054e737d2e051f309df107fe46dade5e484aea90140.png 1x" /></p>
+<p><img alt="The NIST says so. Prove them wrong if you want" class="img-fluid" src="https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png" integrity="sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=" crossorigin="anonymous" srcset="https://wott.io/assets/5697f2-7088c300263d50c0d460120175e05d1ee61f5bf0eea0df13ab27056a140e10b2.png 2x, https://wott.io/assets/3bcc4b-116df31fc86050f0ef455f44b850b7502197f96c499aa96178bdcf7b7d492595.png 1x" /></p>
 
 <p>Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.</p>
 
@@ -236,6 +236,8 @@ Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress
 </footer>
 
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
     <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
