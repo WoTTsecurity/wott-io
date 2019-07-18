@@ -49,9 +49,6 @@ GEM
       sprockets (>= 3.3, < 4.1.beta)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-minimagick (0.0.4)
-      jekyll (>= 0.10.0)
-      mini_magick (>= 3.3)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-redirect-from (0.15.0)
@@ -114,7 +111,6 @@ DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-assets
   jekyll-feed (~> 0.6)
-  jekyll-minimagick
   jekyll-paginate-v2
   jekyll-redirect-from
   jekyll-sitemap

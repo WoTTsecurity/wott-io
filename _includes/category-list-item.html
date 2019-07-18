@@ -1,5 +1,5 @@
   <div class="post {% if forloop.index == 1 %}  first_post {% endif %}">
-  <div class="post_img" style="background-image:url({{ site.url }}{{ site.baseurl }}assets/images/blogcover/{% if forloop.index == 1 %}full{%else%}mini{% endif %}/{{ post.cover }});"></div>
+  <div class="post_img" style='background-image:url({% if forloop.index == 1 %}{% asset blogcover/"{{ post.cover }}" srcset:width="1600 2x" srcset:width="800 1x" @path %}{%else%}{% asset blogcover/"{{ post.cover }}" srcset:width="800 2x" srcset:width="400 1x" @path %}{% endif %});'></div>
   <div class="post_prewinfo">
   <span class="category_name">{{ post.category }}</span>
   <a class="title" href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
