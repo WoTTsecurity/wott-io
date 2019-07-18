@@ -1,5 +1,5 @@
   <div class="post">
-  <div class="post_img" style='background-image:url({% asset blogcover/"{{ post.cover }}" srcset:width="1300 2x" srcset:width="650 1x" @path %});'></div>
+  <div class="post_img" style='background-image:url({% asset blogcover/"{{ post.cover }}" srcset:width="800 2x" srcset:width="400 1x" @path %});'></div>
   <div class="post_prewinfo">
   <span class="category_name">{{ post.category }}</span>
   <a class="title" href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
