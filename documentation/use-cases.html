@@ -66,7 +66,7 @@
 </head>
 <body class="body_docs">
 	<div class="search_block"><form action="" method=""><input type="text" name="string" value="" placeholder="Search for any article or any questions"/><button type="submit">search</button></form></div>
-	<div class="left_block"><div class="inner_block"><a class="logo_version" href="https://wott.io/"><span class="logo"></span><span class="version">Version 1.2</span></a></div>	<div class="inner_block">
+	<div class="left_block" data-open-menu="0" id="docs_menu"><a class="mobile_menu_button"></a><div class="inner_block"><a class="logo_version" href="https://wott.io/"><span class="logo"></span></a></div>	<div class="inner_block">
 	<span class="title">Documentation</span>
 	<ul class="global_nav">
 	<li><a href="https://wott.io/documentation/getting-started">Getting Started</a></li>
@@ -76,6 +76,17 @@
 	</ul>
 	</div>
 	
+	<div class="inner_block" id="mobile_page_site_menu">
+	<span class="title">Site pages</span>
+	<ul class="global_nav">
+	<li><a href="https://wott.io/product" title="">Product</a></li>
+	<li><a href="https://wott.io/about" title="">About us</a></li>
+	<li><a href="https://wott.io/pricing" title="">Pricing</a></li>
+	<li><a href="https://wott.io/documentation" title="">Documentation</a></li>
+	<li><a href="https://wott.io/blog" title="">Blog</a></li>
+	</ul>
+	</div>
+
 	<!--
 	<div class="inner_block">
 	<ul class="slider_nav" data-name-nav="Getting Started" id="getting_started">
@@ -175,6 +186,8 @@ WoTT uses mTLS which runs over the TCP layer. In essence, mTLS establishes a han
 
 	</div>
     <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
     <!-- Google Analytics -->
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
