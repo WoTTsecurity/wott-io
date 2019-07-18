@@ -23,7 +23,6 @@ group :jekyll_plugins do
    gem 'jekyll-paginate-v2'
    gem 'jekyll-sitemap'
    gem 'jekyll-assets'
-   gem 'jekyll-minimagick'
    gem 'jekyll-redirect-from'
 end
 

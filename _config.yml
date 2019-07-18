@@ -32,7 +32,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-assets
-  - jekyll-minimagick
   - jekyll-sitemap
   - jekyll-redirect-from
 
