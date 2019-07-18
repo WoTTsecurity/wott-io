@@ -16,6 +16,8 @@ class: post-template
 
 In my [last blog post]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx), we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step further and integrate this with [Kubernetes](https://kubernetes.io/). If you haven't read the last blog post, that would be a good place to start.
 
+Please note that this article assumes that you are familiar with Kubernetes and understands the fundamentals.
+
 ## Pre-requisites
 
 Before we dive into the actual configuration, we will assume that you have the following already configured:
@@ -106,7 +108,7 @@ spec:
 
 The secret for mTLS lies in the varies 'auth-tls' annotations that we have above. These annotations tell Nginx to configure auth-tls (i.e. mTLS) for this endpoint.
 
-We can now leverage the HTTP headers that Nginx is passing on to the appserver(s) just like we did in our [last blog post]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx).
+We can now leverage the HTTP headers that Nginx is passing on to the appserver(s) just like we did in our [Nginx mTLS blog post]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx).
 
 The two headers that you likely want to use are:
 
