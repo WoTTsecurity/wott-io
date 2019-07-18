@@ -114,7 +114,7 @@
 <div class="blog_content content_info_block">
 <p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
 
-<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-7c9dce8882f4b35ea0cec3ddad0edebe858ac2ea945fe9963b5f6390d2b744b7.png 2x, https://wott.io/assets/1d2430-c28d37b08ca9f7a6ffc3e8fbfe49163809b43508e3cc3ca38526830f083a7d9f.png 1x" /></p>
+<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-9bc9c65a43ade118d6ed2883f51487c253bb39d9ba305442f91d2852eab14cbf.png 2x, https://wott.io/assets/1d2430-74bf024d9c2d4b1ec61b52b4a6e8b2d18d32b9c05ff341daf8113028355afc16.png 1x" /></p>
 
 <p>Figure 1 - If the web can have it, why can’t IoT?</p>
 
@@ -149,7 +149,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
 
-<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-d9fbd171c39fadfcd84ab565e5b0cbc7ac91b9a3871dc34b29528b9dab799069.png 2x, https://wott.io/assets/1fded8-0088a47cc0469b932a1e3b9bcf27259a92ca8d888a41300eb976a241295c3f15.png 1x" /></p>
+<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-00155dc5d12a3ef4c949f5090dfc3052bdd71338edb725afa21edf8694ae4273.png 2x, https://wott.io/assets/1fded8-42d327cad23a2befe1537083bb2d5307f636a91d25b865b248ddf5534466ceae.png 1x" /></p>
 
 <p>Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)</p>
@@ -160,7 +160,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
 
-<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-949b7940eec78ab22f293ba785f936130e874dea9aa93e4e81cbe76b9da868e4.png 2x, https://wott.io/assets/3b95f7-75812a4776d61598b6a230972bdd600ed69f80ddf63cf35d241bc5124b9d06f6.png 1x" /></p>
+<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-b6de6ff630bde25ef810d061bc305890b5bb4cce69117919f181723e1aeed24c.png 2x, https://wott.io/assets/3b95f7-be6be24fb81ad101ecec668d93ad1b82ce1564bca7e0c61120f49e576b66771f.png 1x" /></p>
 
 <p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
 
@@ -176,6 +176,20 @@ The fundamental building block that we use to encrypt communication between two 
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/hacker-in-the-dark.jpg);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Connecting Edge IoT devices with Kubernetes</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 18, 2019</span>
+  <span class="description">
+   # Bridging Edge IoT devices with Kubernetes **Required Skill Level**: Medium to Expert In my [last blog post]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx), we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Continue reading </a>
+  </div>
+  </div>
+
+
 
   <div class="post">
   <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/fancy-board.jpeg);"></div>
@@ -200,20 +214,6 @@ The fundamental building block that we use to encrypt communication between two 
   <span class="description">
    # Configuring Nginx with client certificate authentication (mTLS) **Required Skill Level**: Medium to Expert One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to... </span>
   <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Continue reading </a>
-  </div>
-  </div>
-
-
-
-  <div class="post">
-  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/tiny-pi.jpeg);"></div>
-  <div class="post_prewinfo">
-  <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Using WoTT credentials to manage access to Adafruit IO feeds</a>
-  <span class="author_time">By <a>Fiona McAllister</a> on June 27, 2019</span>
-  <span class="description">
-   # Using Adafruit IO with WoTT Credentials ## Introduction [Adafruit IO](https://io.adafruit.com) is a free cloud service interested in making IoT accessible to everyone through presenting data in a useful and user-friendly way. Services that they provide include linking your IoT devices to Twitter and weather services. You can also use Adafruit IO... </span>
-  <a class="read_full" href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Continue reading </a>
   </div>
   </div>
 
@@ -248,11 +248,11 @@ The fundamental building block that we use to encrypt communication between two 
 <div class="menu news"><ul>
 <li><a href="" title="">latest news</a></li>
 
+ <li><a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" title="Connecting Edge IoT devices with Kubernetes">Connecting Edge IoT devices with Kubernetes</a></li>
+
  <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
 
  <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
-
- <li><a href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io" title="Using WoTT credentials to manage access to Adafruit IO feeds">Using WoTT credentials to manage access to Adafruit IO feeds</a></li>
 
 </ul></div>
 </div>

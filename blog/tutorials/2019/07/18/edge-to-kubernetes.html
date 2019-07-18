@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Connecting Edge IoT devices with Kubernetes</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wott.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Connecting Edge IoT devices with Kubernetes" />
+    <meta property="og:description" content="Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this" />
+    <meta property="og:url" content="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" />
+    <meta property="og:image" content="https://wott.io/hacker-in-the-dark.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="2019-07-18T08:00:00+00:00" />
+    <meta property="article:modified_time" content="2019-07-18T08:00:00+00:00" />
+    <meta property="article:tag" content="Open Source" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Connecting Edge IoT devices with Kubernetes" />
+    <meta name="twitter:description" content="Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this" />
+    <meta name="twitter:url" content="https://wott.io/" />
+    <meta name="twitter:image" content="https://wott.io/hacker-in-the-dark.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Open Source" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/assets/images/blog-icon.png"
+    },
+    "url": "https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/hacker-in-the-dark.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes"
+    },
+    "description": "Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Connecting Edge IoT devices with Kubernetes" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">Connecting Edge IoT devices with Kubernetes</span>
+<span class="t_m2">By Viktor Petersson on July 18, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style="background-image:url(https://wott.io/assets/images/blogcover/full/hacker-in-the-dark.jpg);"></div><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/sn/facebook.png);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/twitter.png);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes&text=Connecting Edge IoT devices with Kubernetes" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/send.png);"><a target="_blank" href="mailto:?subject=Connecting Edge IoT devices with Kubernetes&body=/blog/tutorials/2019/07/18/edge-to-kubernetes" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/pinterest.png);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes&media=https://wott.io/assets/images/blogcover/full/hacker-in-the-dark.jpg&description= Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/sn/linkedin.png);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes&title=Connecting Edge IoT devices with Kubernetes" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+<h1 id="bridging-edge-iot-devices-with-kubernetes">Bridging Edge IoT devices with Kubernetes</h1>
+
+<p><strong>Required Skill Level</strong>: Medium to Expert</p>
+
+<p>In my <a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">last blog post</a>, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step further and integrate this with <a href="https://kubernetes.io/">Kubernetes</a>. If you haven’t read the last blog post, that would be a good place to start.</p>
+
+<p>Please note that this article assumes that you are familiar with Kubernetes and understands the fundamentals.</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<p>Before we dive into the actual configuration, we will assume that you have the following already configured:</p>
+
+<ul>
+  <li>A Kubernetes cluster (d’oh!)</li>
+  <li>A valid SSL certificate for your domain
+    <ul>
+      <li>You can use <a href="https://github.com/jetstack/cert-manager/">cert-manager</a> from our friends at <a href="https://www.jetstack.io/">Jetstack</a> if you want to use Let’s Encrypt</li>
+    </ul>
+  </li>
+  <li>An <a href="https://github.com/kubernetes/ingress-nginx">Nginx Ingress Controller</a> configured with the SSL certificate(s)
+    <ul>
+      <li>It is recommended that you use the <a href="https://github.com/helm/charts/tree/master/stable/nginx-ingress">Nginx Helm Chart</a> for this</li>
+    </ul>
+  </li>
+  <li>Familiarity with <a href="https://helm.sh/">Helm</a></li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>With the cluster and ingress controller up and running, you should be able to route traffic to your services. If you’re not familiar with this part, we recommend that you take a look at this Katacoda’s <a href="https://www.katacoda.com/courses/kubernetes/create-kubernetes-ingress-routes">Kubernetes Ingress training scenario</a>.</p>
+
+<p>Before proceeding further, we will assume that you now have an Nginx Ingress controller deployed, with some kind of service behind it that you can route traffic to in the ‘foobar’ namespace. In the example below, we will call this service ‘foobar,’ and it listens on port 80.</p>
+
+<h2 id="configuring-mtls-for-the-ingress-controller">Configuring mTLS for the Ingress Controller</h2>
+
+<p>Because the Nginx Ingress controller is already configured to support mTLS and subsequently does all the heavy-lifting, all we really need to do is to tell our Ingress object to use the built-in functionalities.</p>
+
+<p>Before we do this however, we first need to download the WoTT CA and upload this to the cluster. Otherwise Nginx will not be able to verify the certificate.</p>
+
+<p>To do this, let’s assume that our application will run in the ‘foobar’ namespace within the cluster.</p>
+
+<p>Create the namespace if it doesn’t already exist:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl create namespace foobar
+</code></pre></div></div>
+
+<p>Download the WoTT CA certificate bundle:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -s https://api.wott.io/v0.2/ca-bundle | \
+  jq -r .ca_bundle &gt; wott-ca.crt
+</code></pre></div></div>
+
+<p>Upload the CA certificate to the cluster:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl create secret generic wott-ca \
+  -n foobar \
+  --from-file=ca.crt=wott-ca.crt
+</code></pre></div></div>
+
+<p>We can verify that we the secret was properly created by running:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get secrets -n foobar
+NAME                  TYPE                                  DATA      AGE
+[...]
+wott-ca               Opaque                                1         4s
+</code></pre></div></div>
+
+<p>With CA in place, we can move on to configuring the <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Ingress object</a>. The Ingress object is responsible for informing the Ingress Controller that it should route traffic addressed to a given hostname to a particular service.</p>
+
+<p>Here’s an example of the YAML file for such configuration (here we are using cert-manager for the SSL configuration):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    certmanager.k8s.io/acme-challenge-type: http01
+    certmanager.k8s.io/issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
+    nginx.ingress.kubernetes.io/auth-tls-secret: foobar/wott-ca
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
+    nginx.ingress.kubernetes.io/auth-tls-verify-depth: "2"
+  name: mtls-test
+  namespace: api
+spec:
+  rules:
+  - host: mtls-test.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: foobar
+          servicePort: 80
+        path: /?(.*)
+  tls:
+  - hosts:
+    - mtls-test.example.com
+    secretName: le-secret-mtls-test
+</code></pre></div></div>
+
+<p>The secret for mTLS lies in the varies ‘auth-tls’ annotations that we have above. These annotations tell Nginx to configure auth-tls (i.e. mTLS) for this endpoint.</p>
+
+<p>We can now leverage the HTTP headers that Nginx is passing on to the appserver(s) just like we did in our <a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Nginx mTLS blog post</a>.</p>
+
+<p>The two headers that you likely want to use are:</p>
+
+<ul>
+  <li>HTTP_SSL_CLIENT_VERIFY</li>
+  <li>HTTP_SSL_CLIENT_SUBJECT_DN</li>
+</ul>
+
+<p>Once you have this all configured, you can now communicate directly from your IoT devices to your Kubernetes cluster using mTLS and the WoTT certificate as your identity:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo curl \
+  --key /opt/wott/certs/client.key \
+  --cert /opt/wott/certs/client.crt \
+  https://mtls-test.example.com
+</code></pre></div></div>
+
+<p>Hopefully this all made sense. If not, feel free to reach out to use on Twitter at <a href="https://twitter.com/wottsecurity">@WoTTSecurity</a>.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/hacker-in-the-dark.jpg);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Connecting Edge IoT devices with Kubernetes</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 18, 2019</span>
+  <span class="description">
+   Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/fancy-board.jpeg);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
+  <span class="description">
+   Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style="background-image:url(https://wott.io/assets/images/blogcover/mini/datacenter.jpg);"></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Configuring Nginx with client certificate authentication (mTLS)</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 15, 2019</span>
+  <span class="description">
+   Configuring Nginx with client certificate authentication (mTLS) Required Skill Level: Medium to Expert One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Continue reading </a>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">latest news</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" title="Connecting Edge IoT devices with Kubernetes">Connecting Edge IoT devices with Kubernetes</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" title="Configuring Nginx with client certificate authentication (mTLS)">Configuring Nginx with client certificate authentication (mTLS)</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; Web Of Secure Things Ltd. All rights reserved</li>
+<li><a href="/tos" title="">Terms of Service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134852372-1', 'auto');
+ga('send', 'pageview');
+
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
+clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>
