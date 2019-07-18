@@ -114,7 +114,7 @@
 <div class="blog_content content_info_block">
 <p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
 
-<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-790ea0a2da76a76334f1a832f3e58cd24549ebf40d4deef4ac6cf190082b85fc.png 2x, https://wott.io/assets/1d2430-c8fd0fd0e394890e7e0bc24448b2f1efba2ae9b8f59841d6d52cdd523ffde8d2.png 1x" /></p>
+<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-7c9dce8882f4b35ea0cec3ddad0edebe858ac2ea945fe9963b5f6390d2b744b7.png 2x, https://wott.io/assets/1d2430-c28d37b08ca9f7a6ffc3e8fbfe49163809b43508e3cc3ca38526830f083a7d9f.png 1x" /></p>
 
 <p>Figure 1 - If the web can have it, why can’t IoT?</p>
 
@@ -149,7 +149,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
 
-<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-819e47d985df5541ba8c882fd07dbbbb53547ab0454fb2d2d4debc663816d421.png 2x, https://wott.io/assets/1fded8-f44d02f86f11e96093d79c3ad1474e65899f29f5e7d41cfa7b2efcb2c47ae213.png 1x" /></p>
+<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-d9fbd171c39fadfcd84ab565e5b0cbc7ac91b9a3871dc34b29528b9dab799069.png 2x, https://wott.io/assets/1fded8-0088a47cc0469b932a1e3b9bcf27259a92ca8d888a41300eb976a241295c3f15.png 1x" /></p>
 
 <p>Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)</p>
@@ -160,7 +160,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
 
-<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-8ac36ce390afbc65b5430c7465d725ad0943530a535f5aabb7b5327ebca7e8e6.png 2x, https://wott.io/assets/3b95f7-12517d8f146edbd0e38ebc22403df0441ca032f8db7ca10844077f36d056d51b.png 1x" /></p>
+<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-949b7940eec78ab22f293ba785f936130e874dea9aa93e4e81cbe76b9da868e4.png 2x, https://wott.io/assets/3b95f7-75812a4776d61598b6a230972bdd600ed69f80ddf63cf35d241bc5124b9d06f6.png 1x" /></p>
 
 <p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
 
