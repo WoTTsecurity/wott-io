@@ -1,3 +1,4 @@
+code.highlighter-rouge{background-color: #49483e; color: #f8f8f2; border-radius: 3px; font-size: 85%; margin:0; padding: 0.2em 0.4em;}
 .highlighter-rouge{word-wrap: break-word; word-break: break-word; overflow-x: auto;  border-radius: 5px;}
 .highlighter-rouge::-webkit-scrollbar {position:absolute; border-radius: 0px 0px 5px 5px; width:10px; background-color:#49483a;} .highlighter-rouge::-webkit-scrollbar-track {border-radius: 0px 0px 5px 5px; } .highlighter-rouge::-webkit-scrollbar-thumb {border-radius:5px; background: rgba(255,255,255,0.5);} .highlighter-rouge::-webkit-scrollbar-thumb:hover{background: #fff;} .highlighter-rouge::-webkit-scrollbar-thumb:active{background: linear-gradient(left, #22ADD4, #1E98BA);}
 .highlight table td { padding: 5px; }
