@@ -7,7 +7,9 @@
 
 
 
-    <title>Getting Started with the WoTT Agent and Dashboard</title>
+
+
+    <title>Web of Trusted Things - Getting Started with the WoTT Agent and Dashboard</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
@@ -20,13 +22,16 @@
      
     <meta property="og:site_name" content="Web of Trusted Things" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Getting Started with the WoTT Agent and Dashboard" />
+    <meta property="og:title" content="Web of Trusted Things - Getting Started with the WoTT Agent and Dashboard" />
     <meta property="og:description" content="Getting started with WoTT" />
     <meta property="og:url" content="https://wott.io/documentation/getting-started" />
     <meta property="og:image" content="https://wott.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="" />
+    <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Getting Started with the WoTT Agent and Dashboard" />
+    <meta name="twitter:title" content="Web of Trusted Things - Getting Started with the WoTT Agent and Dashboard" />
     <meta name="twitter:description" content="Getting started with WoTT" />
     <meta name="twitter:url" content="https://wott.io/" />
     <meta name="twitter:image" content="https://wott.io/assets/images/blog-cover.jpg" />
@@ -34,8 +39,8 @@
     <meta name="twitter:data1" content="Web of Trusted Things" />
     <meta name="twitter:site" content="@wott" />
     <meta name="twitter:creator" content="@wott" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -43,7 +48,7 @@
     "publisher": {
         "@type": "Organization",
         "name": "Web of Trusted Things",
-        "logo": "https://wott.io/assets/images/blog-icon.png"
+        "logo": "https://wott.io/"
     },
     "url": "https://wott.io/documentation/getting-started",
     "image": {
@@ -156,7 +161,7 @@ $ sudo apt install wott-agent
 <p>The terminal will now output your WoTT Device ID, claim token, and a link to claim the device.
 Copy and paste this link into your browser- the fields may already have autofilled. Otherwise fill in the details in the relevant fields.</p>
 
-<p><img alt="Claim device on WoTT Dashboard" class="img-fluid" src="https://wott.io/assets/docs/claim-device-b8dea404ef9e7d75450ebeadbcfdb393453f4de81e9f27644bb3c26652939faa.png" integrity="sha256-uN6kBO+efXVFDr6tvP2zk0U/TegenydkS7PCZlKTn6o=" crossorigin="anonymous" srcset="https://wott.io/assets/8087e4-14bb14fac6cdbbf57999439e18c3272f74040de095822ceccd0210196f8ce4c7.png 2x, https://wott.io/assets/454a75-8dea69e7366f0577b0e0bb618afb8138c077e7b60e09cf1713e8d923be290bdf.png 1x" /></p>
+<p><img alt="Claim device on WoTT Dashboard" class="img-fluid" src="https://wott.io/assets/docs/claim-device-b8dea404ef9e7d75450ebeadbcfdb393453f4de81e9f27644bb3c26652939faa.png" integrity="sha256-uN6kBO+efXVFDr6tvP2zk0U/TegenydkS7PCZlKTn6o=" crossorigin="anonymous" srcset="https://wott.io/assets/8087e4-b0b675bf3ef2309ce32dcabc93171c4224cd8cf943ce578a6fe149c248cb2944.png 2x, https://wott.io/assets/454a75-92d557658512599276ee9e2a766b8a69456d363dddcfd1bb750eb7019bf4ddc4.png 1x" /></p>
 
 <p><strong>Note:</strong> you can view your Device ID and claim token using the following commands as well:</p>
 
@@ -167,17 +172,17 @@ $ wott-agent claim-token
 
 <p>See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user’s personal tags for the Pi’s purpose.</p>
 
-<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-c86bd35898ea5308786854969d0570623e20bb48810b2a74f0d65091e4c696eb.png 2x, https://wott.io/assets/cbc4d6-031913fb95419530be5338df874d9410b9623c4f38e07076766a120ddb5ecdf4.png 1x" /></p>
+<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-2e0a561137a0a3950f30bd5e42251602bfd63202fd09cc5672b764a5545b986b.png 2x, https://wott.io/assets/cbc4d6-aeb67a2972007cfa6aa10b602194220c6307bb990c50434cb48c3c231b900b3b.png 1x" /></p>
 
 <h2 id="managing-your-own-credentials-through-the-wott-dashboard">Managing your own credentials through the WoTT Dashboard</h2>
 
 <p>In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.</p>
 
-<p><img alt="WoTT Dashboard sidebar" class="img-fluid" src="https://wott.io/assets/docs/sidebar-990e2a349f1f2c209e2c0665cafbc5181c4cfbdda747f1da414a9359478d596f.png" integrity="sha256-mQ4qNJ8fLCCeLAZlyvvFGBxM+92nR/HaQUqTWUeNWW8=" crossorigin="anonymous" srcset="https://wott.io/assets/826b17-1629ee913d4ccca4a7adad6b5ac7b6a4113773985c77557fa38ddb097d6f4287.png 2x, https://wott.io/assets/8d71e4-47b22945cd7f2987f5f2ad069052d8d9cc6230c81463d10fef09c8f6faaaa0e4.png 1x" /></p>
+<p><img alt="WoTT Dashboard sidebar" class="img-fluid" src="https://wott.io/assets/docs/sidebar-990e2a349f1f2c209e2c0665cafbc5181c4cfbdda747f1da414a9359478d596f.png" integrity="sha256-mQ4qNJ8fLCCeLAZlyvvFGBxM+92nR/HaQUqTWUeNWW8=" crossorigin="anonymous" srcset="https://wott.io/assets/826b17-a5bce3e0019efe3e7b3594c67b461c7c397c5d5f8c6937ed1c192353e29dc354.png 2x, https://wott.io/assets/8d71e4-0309ff8ba811d8c640fe6a3cb73622602984ad6d0171e08d8a74e0627c478d13.png 1x" /></p>
 
 <p>Navigate to ‘Credentials.’ Select ‘Add a credential’</p>
 
-<p><img alt="WoTT Credentias menu" class="img-fluid" src="https://wott.io/assets/docs/credentials-25ee1479b32fff12d704e02a2c0922537a115a4c501419a5a261595ad6c5aa4c.png" integrity="sha256-Je4UebMv/xLXBOAqLAkiU3oRWkxQFBmlomFZWtbFqkw=" crossorigin="anonymous" srcset="https://wott.io/assets/c97e2d-d4182ab6f45727b6da839c9847c0e177120c9fc202a2fa475050719cd195b5f9.png 2x, https://wott.io/assets/7ba295-910308c8b7cf2e75198d926a9e386b9c290d548c707d74b718daaa0964a407f3.png 1x" /></p>
+<p><img alt="WoTT Credentias menu" class="img-fluid" src="https://wott.io/assets/docs/credentials-25ee1479b32fff12d704e02a2c0922537a115a4c501419a5a261595ad6c5aa4c.png" integrity="sha256-Je4UebMv/xLXBOAqLAkiU3oRWkxQFBmlomFZWtbFqkw=" crossorigin="anonymous" srcset="https://wott.io/assets/c97e2d-57da511cfac85cd87e4d5ea7ca4d4dc72942ed1fe9a2b5d354dc7af4833c21cd.png 2x, https://wott.io/assets/7ba295-a571095d66b95dc207deb30754a18daccb440b0a9a6c5107269e043b44b2c645.png 1x" /></p>
 
 <p>Let’s break down the fields:</p>
 

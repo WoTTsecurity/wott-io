@@ -7,7 +7,9 @@
 
 
 
-    <title>Why shift-left security is relevant for IoT</title>
+
+
+    <title>Web of Trusted Things - Why shift-left security is relevant for IoT</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
@@ -20,18 +22,15 @@
      
     <meta property="og:site_name" content="Web of Trusted Things" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Why shift-left security is relevant for IoT" />
-    <meta property="og:description" content="TL;DR Cyber is best handled by developers with big, bulging…brains. Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress. In our first blog post, I articulated that we are strong proponents of shift-left security. The idea that security should be incorporated as early as possible" />
+    <meta property="og:title" content="Web of Trusted Things - Why shift-left security is relevant for IoT" />
+    <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
     <meta property="og:url" content="https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot" />
     <meta property="og:image" content="https://wott.io/2019-06-23-why-shift-left-security-is-relevant-for-iot.png" />
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
-    <meta property="article:author" content="https://www.facebook.com/wott" />
-    <meta property="article:published_time" content="2019-06-23T10:00:00+00:00" />
-    <meta property="article:modified_time" content="2019-06-23T10:00:00+00:00" />
     <meta property="article:tag" content="Open Source" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Why shift-left security is relevant for IoT" />
-    <meta name="twitter:description" content="TL;DR Cyber is best handled by developers with big, bulging…brains. Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress. In our first blog post, I articulated that we are strong proponents of shift-left security. The idea that security should be incorporated as early as possible" />
+    <meta name="twitter:title" content="Web of Trusted Things - Why shift-left security is relevant for IoT" />
+    <meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
     <meta name="twitter:url" content="https://wott.io/" />
     <meta name="twitter:image" content="https://wott.io/2019-06-23-why-shift-left-security-is-relevant-for-iot.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -40,8 +39,8 @@
     <meta name="twitter:data2" content="Open Source" />
     <meta name="twitter:site" content="@wott" />
     <meta name="twitter:creator" content="@wott" />
-    <meta property="og:image:width" content="1400" />
-    <meta property="og:image:height" content="933" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -49,7 +48,7 @@
     "publisher": {
         "@type": "Organization",
         "name": "Web of Trusted Things",
-        "logo": "https://wott.io/assets/images/blog-icon.png"
+        "logo": "https://wott.io/"
     },
     "url": "https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot",
     "image": {
@@ -62,7 +61,7 @@
         "@type": "WebPage",
         "@id": "https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot"
     },
-    "description": "TL;DR Cyber is best handled by developers with big, bulging…brains. Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress. In our first blog post, I articulated that we are strong proponents of shift-left security. The idea that security should be incorporated as early as possible"
+    "description": "WoTT is a free, automated, open-source public key infrastructure for connected hardware"
 }
     </script>
 
@@ -95,7 +94,7 @@
 <span class="t_i1">Why shift-left security is relevant for IoT</span>
 <span class="t_m2">By Al Esmail on June 23, 2019 | 0 Comments</span>
 </div>
-<div class="blog_image" style='background-image:url(https://wott.io/assets/6b5f68-2a98b567c0e57a8973d111225b01f47e98a2153134d1ac1dcfdeee22493fa8fc.png);'></div><div class="blog_image_bg"></div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/6b5f68-bbe3024605bd810dc92f0f8554acde3b3a7fa76e7750d6718a1cd1e2037bfa05.png);'></div><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="">Open Source</a></div>
 
 <div class="social_network">
@@ -128,7 +127,7 @@ Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress
 
 <p>Let’s define <a href="https://opensource.com/article/19/1/what-devsecops">DevSecOps</a> a little more clearly.  It is the prioritization of security practices by developers and/or incorporating a security team member into product teams.  The current siloed nature of security incentivizes developers to work around it or push accountability to a different team.  Either way, the result is a less efficient, uncollaborative and ultimately less secure system.  The incorporation of security thinking into the earliest stages of design reduces the <a href="https://www.researchgate.net/figure/Cost-to-fix-at-different-phases-of-development_fig1_301789336">cost of fixing flaws</a> by at least 5x, according to NIST.  In effect, shift left security is far cheaper than the alternative - waiting for vulnerabilities to be pointed out after code is committed (hopefully by a whitehat rather than a blackhat).  In a world where you are in an ongoing war with the aforementioned crafty genius adversaries, it would behoove you to be efficient with your resources.</p>
 
-<p><img alt="The NIST says so. Prove them wrong if you want" class="img-fluid" src="https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png" integrity="sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=" crossorigin="anonymous" srcset="https://wott.io/assets/5697f2-ddd434b2cb33132d6cd7f4034711220c6b390f037e8d8b312a1e3c8b8dd9ddca.png 2x, https://wott.io/assets/3bcc4b-6c1967e44c13610b10da6dc4fc88bf3ac3ad5b840c79f00176d87d94eec9811e.png 1x" /></p>
+<p><img alt="The NIST says so. Prove them wrong if you want" class="img-fluid" src="https://wott.io/assets/blog/nist-f971fcc531c0f7d3a08b593d29dde670f2859588e61ccd3ef9ffd333cf486d15.png" integrity="sha256-+XH8xTHA99Ogi1k9Kd3mcPKFlYjmHM0++f/TM89IbRU=" crossorigin="anonymous" srcset="https://wott.io/assets/5697f2-22fec49e79e63668f9377d3ef097d300862f7d3d62b22db8e4887466d7f26898.png 2x, https://wott.io/assets/3bcc4b-747052feb0e3552bd945edbdea99b175f85fbf2ea4985b51a3cc5dbdbd234680.png 1x" /></p>
 
 <p>Figure 4 - The NIST says so. Prove them wrong if you want. I don’t care.</p>
 
