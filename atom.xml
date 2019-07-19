@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Using WoTT to Secure a Paho MQTT Client</title>
+        
+          <description>&lt;h1 id=&quot;using-wott-to-secure-a-connection-from-a-paho-mqtt-client-to-an-mqtt-server-mosquitto-mqtt-example-included&quot;&gt;Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included)&lt;/h1&gt;
+
+</description>
+        
+        <pubDate>Fri, 19 Jul 2019 13:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/tutorials/2019/07/19/paho-mqtt</link>
+        <guid isPermaLink="true">https://wott.io/blog/tutorials/2019/07/19/paho-mqtt</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Connecting Edge IoT devices with Kubernetes</title>
         
           <description>&lt;h1 id=&quot;bridging-edge-iot-devices-with-kubernetes&quot;&gt;Bridging Edge IoT devices with Kubernetes&lt;/h1&gt;

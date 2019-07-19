@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+
+
+    <title>Web of Trusted Things - Using WoTT to Secure a Paho MQTT Client</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <link rel="shortcut icon" href="https://wott.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web of Trusted Things - Using WoTT to Secure a Paho MQTT Client" />
+    <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <meta property="og:url" content="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt" />
+    <meta property="og:image" content="https://wott.io/ethernet-cables.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:tag" content="Open Source" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web of Trusted Things - Using WoTT to Secure a Paho MQTT Client" />
+    <meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <meta name="twitter:url" content="https://wott.io/" />
+    <meta name="twitter:image" content="https://wott.io/ethernet-cables.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Web of Trusted Things" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Open Source" />
+    <meta name="twitter:site" content="@wott" />
+    <meta name="twitter:creator" content="@wott" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/"
+    },
+    "url": "https://wott.io/blog/tutorials/2019/07/19/paho-mqtt",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/ethernet-cables.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/tutorials/2019/07/19/paho-mqtt"
+    },
+    "description": "WoTT is a free, automated, open-source public key infrastructure for connected hardware"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Using WoTT to Secure a Paho MQTT Client" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">Using WoTT to Secure a Paho MQTT Client</span>
+<span class="t_m2">By Fiona McAllister on July 19, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/3aa155-d640e975f274933fc974b5d362260b84bd2b13f80de0a8a5161276f8e93a2a15.jpg);'></div><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/facebook.svg);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/tutorials/2019/07/19/paho-mqtt" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/twitter.svg);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/tutorials/2019/07/19/paho-mqtt&text=Using WoTT to Secure a Paho MQTT Client" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/send.svg);"><a target="_blank" href="mailto:?subject=Using WoTT to Secure a Paho MQTT Client&body=/blog/tutorials/2019/07/19/paho-mqtt" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/07/19/paho-mqtt&media=https://wott.io/assets/images/blogcover/full/ethernet-cables.jpeg&description= Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included) Introduction In a previous example we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/linkedin.svg);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/tutorials/2019/07/19/paho-mqtt&title=Using WoTT to Secure a Paho MQTT Client" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+
+<h1 id="using-wott-to-secure-a-connection-from-a-paho-mqtt-client-to-an-mqtt-server-mosquitto-mqtt-example-included">Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included)</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In a previous <a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">example</a> we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are also several client implementations for the MQTT protocol. There are several libraries available for multiple MQTT clients in various programming languages. This example looks at Paho, a project that was adopted into the Eclipse Foundation much like Mosquitto, that specifically implements a client for MQTT. We will be looking at the Python implementation of Paho. Although you can use any other MQTT server, we already have a Mosquitto server from our previous example that we can use for this tutorial.</p>
+
+<p>Here we will show how simple it is to secure a Mosquitto server and a non-Mosquitto client (Paho) using WoTT. The principles shown here can be applied to any MQTT client accessing a Mosquitto server.</p>
+
+<p>You will need two devices, either a Debian machine or Raspberry Pi. In a set up where you have both, it is preferable to set up the Debian machine as your server device. Both these devices will need to have the <a href="https://wott.io/documentation/getting-started">WoTT Agent</a> installed and <a href="https://docs.docker.com/install/linux/docker-ce/debian/">Docker CE</a> installed. Note installation instructions for Docker on Pi is different so refer to the link above for appropriate instructions.</p>
+
+<p>This example contains code snippets. We recommend you clone our <a href="https://github.com/WoTTsecurity/examples">examples</a> repository by doing the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/WoTTsecurity/examples.git
+</code></pre></div></div>
+<p>Alternatively, you can use <code class="highlighter-rouge">curl</code> to manually install the files that you need. Refer to our other code snippet examples (<a href="https://wott.io/blog/tutorials/2019/06/27/adafruit-io">Adafruit IO</a>, <a href="https://wott.io/blog/tutorials/2019/06/16/simple-webapp">Simple WebApp</a>, etc) for instructions to do this. However, if you are going to be looking at our other tutorials in the future we recommend you have the repository readily available.</p>
+
+<h2 id="setting-up-the-server-mosquitto">Setting up the server (Mosquitto)</h2>
+
+<p>Please refer to our <a href="(https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt)">Mosquitto MQTT example</a> for in depth information on how to set up the server. If you are familiar with this example and want to just quickly ‘set up and go,’ do the following:</p>
+
+<p>Navigate to the directory where you have cloned our ‘examples’ repository:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd examples/mosquitto-server
+</code></pre></div></div>
+
+<p>Alter the ACL file <code class="highlighter-rouge">permissions.acl</code> with your WoTT device details for the relevant permissions (remember we want to grant some access to your client device). To find the WoTT Device ID:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo wott-agent whoami
+</code></pre></div></div>
+
+<p>We are still using the topic <code class="highlighter-rouge">/wott/temperature</code> to publish and subscribe messages to and from.</p>
+
+<h2 id="setting-up-the-client-paho">Setting up the client (Paho)</h2>
+
+<p>This is where our instructions differ from setting up the Mosquitto client. It is not significantly more complicated but Paho has a different set up. First, you will need to have Paho on your system.
+Navigate to the directory containing our <code class="highlighter-rouge">examples</code> respository. Navigate to the <code class="highlighter-rouge">paho-mqtt-client</code> folder like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd examples
+$ cd paho-mqtt-client
+$ pip3 install -r requirements.txt
+</code></pre></div></div>
+
+<p>There are two files in this folder - a <code class="highlighter-rouge">requirements.txt</code> file and the client itself <code class="highlighter-rouge">paho-connect-wott.py</code>. The above command installs the version of the Paho client needed for this example.</p>
+
+<p><strong>Note:</strong> you can use whatever version of the <code class="highlighter-rouge">pip</code> tool you have.</p>
+
+<p>Now that Paho is installed, you need to set your server variables for Paho to connect to. Do the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export MQTT_SERVER=ServerDeviceID.d.wott.local
+$ export MQTT_TOPIC=my/topic
+$ export MQTT_PORT=8333 
+</code></pre></div></div>
+<p>where for this example <code class="highlighter-rouge">my/topic</code> refers to the topic <code class="highlighter-rouge">wott/temperature</code> (<code class="highlighter-rouge">my/topic</code> will default to <code class="highlighter-rouge">wott/temperature</code> if not specified otherwise).</p>
+
+<p>Feel free to try and run the client now using <code class="highlighter-rouge">sudo python3 paho-connect-wott.py</code>. You will notice that this fails. 
+This is because we haven’t established a route for the client to connect to the server device through - we need to alter the <code class="highlighter-rouge">/etc/hosts</code> file on the client to add a route to the server. In the Mosquitto example, we set this up using Docker, but here you will need to manually add the hostname. So, in whatever text editor you prefer:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo $EDITOR /etc/hosts
+</code></pre></div></div>
+
+<p>You will see a file containing something like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1    localhost
+127.0.1.1    your_machine's_name
+[...]
+</code></pre></div></div>
+<p>Add your server device’s IP followed by the ‘domain’ that you will be calling it by- the device’s WoTT ID (do not remove the other ones!) like so:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IP.Of.Docker.Server  ServerDeviceID.d.wott.local
+</code></pre></div></div>
+
+<p>Save and exit. Now you have a route to the server!</p>
+
+<p><strong>Note:</strong> we have discussed finding your IP in previous examples. There are several commands such as <code class="highlighter-rouge">ip addr show</code>, <code class="highlighter-rouge">ifconfig</code>, etc. Take your pick as long as you choose the <code class="highlighter-rouge">inet</code> address for your server IP.</p>
+
+<p>Now we can run the client using Python 3. The output will look like the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo python3 paho-connect-wott.py
+rc: 0
+Subscribed: (1,0)
+</code></pre></div></div>
+
+<p>If you check your server, you will see that it has registered a connection from the Paho client.</p>
+
+<h2 id="finishing-notes">Finishing notes</h2>
+
+<p>You are now securely set up with a Paho MQTT client. The client accesses the server through the server’s CN (common name). This is how the client verifies the server (this is defined in our <code class="highlighter-rouge">mosquitto.conf</code> file for the Mosquitto server if you can recall) unlike a typical browser where there is only one-way verification. You can essentially think of it as the client matching the server name to that which is one the ACL file (permissions).</p>
+
+<p>The example we provided contains a simple subscriber. Please experiment with a Paho publisher yourself and other clients. We want you to feel free to break our code! It’s the best way to develop.</p>
+
+<p>Hopefully you’ve now grasped the basic concepts of setting up at least two different types of MQTT server/client with the cryptographic identity that WoTT provides so you don’t actually need to worry about the details of the security itself.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+
+  <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/d7969e-5bf53eabcf6ea82716b113107838c8affdc25e3b5bfc842410f185e71ae340f3.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Using WoTT to Secure a Paho MQTT Client</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 19, 2019</span>
+  <span class="description">
+   Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included) Introduction In a previous example we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/ac40f5-3f60760d342c928df520318868786df59d351e14c0585baea9cb64b349bce69f.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Connecting Edge IoT devices with Kubernetes</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 18, 2019</span>
+  <span class="description">
+   Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Continue reading </a>
+  </div>
+  </div>
+
+
+
+  <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/ea386b-d5659a9356237a4c0ddcced5d073b458fd35ce331475d7550770ff4150c09925.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
+  <span class="description">
+   Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">latest news</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt" title="Using WoTT to Secure a Paho MQTT Client">Using WoTT to Secure a Paho MQTT Client</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" title="Connecting Edge IoT devices with Kubernetes">Connecting Edge IoT devices with Kubernetes</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" title="Using WoTT to Secure Access to a Mosquitto MQTT Server">Using WoTT to Secure Access to a Mosquitto MQTT Server</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; Web Of Secure Things Ltd. All rights reserved</li>
+<li><a href="/tos" title="">Terms of Service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-134852372-1', 'auto');
+ga('send', 'pageview');
+
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
+clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>
