@@ -29,9 +29,7 @@ Join the discussion and let's move forward together with making IoT more secure.
 
 If you do not have any specific projects in mind; or are downloading WoTT to test our services out, then you can refer to some of our pre-written examples below to give you an idea of scenarios where you can use our Agent. 
 
-Many of these examples include using WoTT to secure connections with popular cloud platforms like Google Cloud or Adafruit IO with more use cases constantly being developed and added.
-
-**Note:** all these examples can be found on our [Github](https://github.com/WoTTsecurity/agent). If you have a platform in mind that we do not have a guide for, please suggest it on the support thread- or request to add it to our repository; we're open-source after all and welcome contributors.
+Many of these examples include using WoTT to secure connections with popular cloud platforms like Google Cloud or Adafruit IO with more use cases constantly being developed and added. If you have a platform in mind that we do not have a guide for, please suggest it on the support thread- or request to add it to our repository yourself; we're open-source after all and welcome contributors.
 
 Our use cases can be divided into certificate managed or credential managed examples as both are required for different functionalities. We'll separate them below for clarity. As a general rule, certificate managed examples tend to be a bit trickier. Once again, please go to our support thread if you need any help.
 
@@ -52,10 +50,17 @@ You will need two WoTT Agent devices: one acting as server, one as client. This 
 
 One of our harder examples. Nginx is a web server with several other useful functions including reverse proxy. For this example, you will need two WoTT Agent devices: one as the server and one as the client. We recommend a Debian and Raspberry Pi. Here we use certificates as a means to verify browser access (note current browser only verify the server) to a server run by Nginx using their reverse proxy capabilitites.
 
-#### [Securing Access to Mosquitto Brokered MQTT Client and Server]({{site.url}}/blog/tutorials/2019/07/15/mosquitto-mqtt)
+#### [Securing Access to Mosquitto Broker]({{site.url}}/blog/tutorials/2019/07/15/mosquitto-mqtt)
 
-Although this example does not technically use certificates, it still relies on cryptographically identifying devices through their unique WoTT ID. Mosquitto is a popular broker for the MQTT protocol with several inbuilt functions that allow for security conifguration to protect the server from fradulent or malicious access. Here you will need two WoTT Agent devices, one acting as server and the other as client. We'll show you how to use WoTT's unqiue ID to prevent access to secure access to a server without the need for a username and password.
+Although this example does not technically use certificates, it still relies on cryptographically identifying devices through their unique WoTT ID. Mosquitto is a popular broker for the MQTT protocol with several inbuilt functions that allow for security conifguration to protect the server from fradulent or malicious access. Here you will need two WoTT Agent devices, one acting as server and the other as client. We'll show you how to use WoTT's unqiue ID to secure access to a server without the need for a username and password.
 
+#### [Connecting Edge IoT Devices to a Kubernetes Cluster]({{site.url}}/blog/tutorials/2019/07/18/edge-to-kubernetes)
+
+[Kubernetes](https://kubernetes.io) can be thought of as a manager for containerised applications (think of things like Docker). This example builds off our [Nginx]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx) example and requires prior knowledge of Kubernetes. Here we're looking at securing a connection from your IoT devices (of which you will likely have many as a developer) to your Kubernetes cluster through mTLS and WoTT. We recommend you do this either after looking at our Nginx example or if you already have a Kubernetes cluster you want to connect to.
+
+#### [Securing Access to Mosquitto Broker from Paho Client]({{site.url}}/blog/tutorials/2019/07/19/paho-mqtt)
+
+We've covered previously how to secure a Mosquitto-Mosquitto client and server. Now we are using the very same trusty Mosquitto broker and connecting to it from a Paho client instead. Paho is part of the Eclipse foundation just like Mosquitto so it's a natural progression from our previous example. Once again, this example uses an MQTT topic to publish and subscribe to. You will need two WoTT Agent enabled devices. 
 
 ### Credential managed examples
 
@@ -63,7 +68,7 @@ There are still many cases where we cannot verify a device's access rights throu
 
 #### [Simple WebApp with Basic HTTP Auth access]({{site.url}}/blog/tutorials/2019/06/18/simple-webapp-auth)
 
-Uses a similar WebApp to the certificate authenticated app but uses HTTP Basic Authentication instead which can be thought of as a typical login. A WoTT Agent device acts as a server and we show you how to use credentials to add login details for browser access.
+Uses a [similar WebApp]({{site.url}}/blog/tutorials/2019/06/16/simple-webapp) to the certificate authenticated app but uses HTTP Basic Authentication instead to secure access. This can be thought of as a typical login with a username and password. A WoTT Agent device acts as a server and we show you how to use credentials to add login details for browser access.
 
 #### [Using WoTT credentials to manage Adafruit IO access through an MQTT Client]({{site.url}}/blog/tutorials/2019/06/27/adafruit-io)
 
