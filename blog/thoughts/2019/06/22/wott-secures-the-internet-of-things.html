@@ -94,7 +94,7 @@
 <span class="t_i1">WoTT secures the Internet of Things</span>
 <span class="t_m2">By Al Esmail on June 22, 2019 | 0 Comments</span>
 </div>
-<div class="blog_image" style='background-image:url(https://wott.io/assets/1ccf7c-f22f0e693d4203b73624b06c284858ecdf3882d3d975de574ebe55cca3c62708.png);'></div><div class="blog_image_bg"></div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/1ccf7c-5a5ef23713e1870abadf5be8b95b92f5d2caa32343c854a961ec98783a9349ad.png);'></div><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="">Open Source</a></div>
 
 <div class="social_network">
@@ -114,7 +114,7 @@
 
 <p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
 
-<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-deda732743278871a86463acf166ce0fcb36250c57ee08e68273579b4fc00d59.png 2x, https://wott.io/assets/1d2430-6057b5ab1d51fa6d0a9343b8b5462bb16558d98298bb4788b06007837eca0313.png 1x" /></p>
+<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-41e1af9a29942b0582a6d65fc7c768830c668bbe4e23d09d78f7b80fee610e91.png 2x, https://wott.io/assets/1d2430-5289a5234f3020a2bb9db5c4d460250309c33f9e34ac9d29f8eb88d6d1726e33.png 1x" /></p>
 
 <p>Figure 1 - If the web can have it, why can’t IoT?</p>
 
@@ -149,7 +149,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
 
-<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-8efc21815f8bb84e593c0be1dfa8ff18296c5f62dac141d4ab6eef54ef79c571.png 2x, https://wott.io/assets/1fded8-b6c8338527af5124bd8bb076a83958fe50dc058d24c71960cf020cd1cb8c4343.png 1x" /></p>
+<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-f28e63ed45f5cf1aa69ca52f4a9c7f1940caffa3aaa221b11c1b3a44d5fa37b4.png 2x, https://wott.io/assets/1fded8-d7b83eeb33721f6aa0cedd1240f16c5feb0a56346dc437817a55b7f01bc8f3cd.png 1x" /></p>
 
 <p>Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)</p>
@@ -160,7 +160,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
 
-<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-d66646e2ce06ee06f482ba33ac09053089f248eb614515f73848e95d1eb7c326.png 2x, https://wott.io/assets/3b95f7-a90f607a554d4671d39ce9b48c79e1e7ed82e47f82527fc938046f246d555213.png 1x" /></p>
+<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-a37f2b2787da1eb87ab0aac0da96544cbf4db7418cd457995c23d4d2ad5abad4.png 2x, https://wott.io/assets/3b95f7-bac745fbba00cf51f7964620e58d5a7b691cec84983bffebd83915966ba1481e.png 1x" /></p>
 
 <p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
 
