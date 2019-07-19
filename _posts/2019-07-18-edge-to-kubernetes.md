@@ -106,7 +106,7 @@ spec:
     secretName: le-secret-mtls-test
 ```
 
-The secret for mTLS lies in the varies 'auth-tls' annotations that we have above. These annotations tell Nginx to configure auth-tls (i.e. mTLS) for this endpoint.
+The secret for mTLS lies in the various 'auth-tls' annotations that we have above. These annotations tell Nginx to configure auth-tls (i.e. mTLS) for this endpoint.
 
 We can now leverage the HTTP headers that Nginx is passing on to the appserver(s) just like we did in our [Nginx mTLS blog post]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx).
 

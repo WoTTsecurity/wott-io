@@ -4,12 +4,13 @@ current: post
 class: post-template
 disqus: false
 ---
+
 <div class="blog_page">
 <div class="blog_info">
 <span class="t_i1">{{ page.title }}</span>
 <span class="t_m2">By {{ page.author }} on {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} | 0 Comments</span>
 </div>
-<div class="blog_image" style='background-image:url({% asset blogcover/"{{ page.cover }}" srcset:width="2000 2x" srcset:width="1000 1x" @path %});'></div><div class="blog_image_bg"></div>
+<div class="blog_image" style='background-image:url({% asset blogcover/"{{ page.cover }}" magick:resize="1000" @path %});'></div><div class="blog_image_bg"></div>
 {% if page.tags %}<div class="blog_tags">{% for tag in page.tags limit:6%}<a href="">{{ tag }}</a>{% endfor %}</div>{% endif %}
 
 <div class="social_network">
@@ -26,6 +27,7 @@ disqus: false
 </div>
 
 <div class="blog_content content_info_block">
+
 {{ content }}
 </div>
 <div class="related_articles">

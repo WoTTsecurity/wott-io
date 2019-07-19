@@ -94,7 +94,8 @@ footer{display:block; width:100%; height:auto;}
 
 .b_content .content_info_block h1,.b_content .content_info_block h2,.b_content .content_info_block h3,.b_content .content_info_block h4,.b_content .content_info_block h5,.b_content .content_info_block p,.b_content .content_info_block ul{display:block; max-width:100%; padding-top: 15px; padding-top: 1rem; padding-top: 1vw; padding-bottom: 15px; padding-bottom: 1rem; padding-bottom: 1vw; word-wrap: break-word; word-break: break-word;} 
 .b_content .content_info_block ul{width: 96%; margin-left: 4%;}
-.b_content .content_info_block ul li{margin-top: 15px; margin-top: 1rem; margin-top: 1vw; margin-bottom: 15px; margin-bottom: 1rem; margin-bottom: 1vw;}
+.b_content .content_info_block ul li{margin-top: 2px; margin-top: 0.1rem; margin-top:0.2vw; margin-bottom: 2px; margin-bottom: 0.1rem; margin-bottom:0.2vw;}
+.b_content .content_info_block ul li ul{padding:0px;}
 .b_content .content_info_block h1{font-family: 'Muli'; font-weight: 800; font-size: 20px; font-size: 2rem; font-size: 2vw; line-height: 30px; line-height: 3rem;line-height: 3vw; color: #272d37; border-bottom: 1px solid #f1f3f7; padding-bottom: 10px; padding-bottom: 0.75rem; padding-bottom: 0.75vw; margin-bottom: 10px; margin-bottom: 0.75rem; margin-bottom: 0.75vw;}
 .b_content .content_info_block h2{font-family: 'Muli'; font-weight: 800; font-size: 18px; font-size: 1.8rem; font-size: 1.8vw; line-height: 28px; line-height: 2.8rem;line-height: 2.8vw; color: #272d37; border-bottom: 1px solid #f1f3f7; padding-bottom: 10px; padding-bottom: 0.75rem; padding-bottom: 0.75vw; margin-bottom: 10px; margin-bottom: 0.75rem; margin-bottom: 0.75vw;}
 .b_content .content_info_block h3{font-family: 'Muli'; font-weight: 800; font-size: 16px; font-size: 1.6rem; font-size: 1.6vw; line-height: 24px; line-height: 2.4rem;line-height: 2.4vw; color: #272d37; border-bottom: 1px solid #f1f3f7; padding-bottom: 10px; padding-bottom: 0.75rem; padding-bottom: 0.75vw; margin-bottom: 10px; margin-bottom: 0.75rem; margin-bottom: 0.75vw;}
@@ -282,10 +283,10 @@ footer{display:block; width:100%; height:auto;}
 .about-template .item_list .item_person .informs .description{display: block; width: 100%; height:80px; height:5.6rem; height:6.4vw; max-height:80px; max-height:5.6rem; max-height:6.4vw; overflow:hidden; color: #9297a1; font-weight: 500; font-size: 14px; font-size: 1rem; font-size: 1vw; line-height: 20px; line-height: 1.4rem; line-height: 1.6vw;  text-align: center; align-content: center;}
 .about-template .item_list .item_person .informs .social_network{display:block; width:100%; height:30px; height:2rem; height:2.4vw; max-height:30px; max-height:2rem; max-height:2.4vw; overflow:hidden; padding-top:10px; padding-top:0.5rem; padding-top:1vw; text-align:center; align-content:center;}
 .about-template .item_list .item_person .informs .social_network a{display: inline-block; height: 30px; height: 2rem; height: 2.4vw; width: 30px; width: 2rem; width:2.4vw; margin:0px 5px; margin:0px 0.25rem; margin:0px 0.5vw; background-image: url(); background-repeat: no-repeat; background-position: center center; background-size: contain;}
-.about-template .item_list .item_person .informs .social_network .facebook{background-image:url(img/sn/facebook.png);}
-.about-template .item_list .item_person .informs .social_network .twitter{background-image:url(img/sn/twitter.png);}
-.about-template .item_list .item_person .informs .social_network .linkedin{background-image:url(img/sn/linkedin.png);}
-.about-template .item_list .item_person .informs .social_network .github{background-image:url(img/sn/github.png);}
+.about-template .item_list .item_person .informs .social_network .facebook{background-image:url(img/facebook.svg);}
+.about-template .item_list .item_person .informs .social_network .twitter{background-image:url(img/twitter.svg);}
+.about-template .item_list .item_person .informs .social_network .linkedin{background-image:url(img/linkedin.svg);}
+.about-template .item_list .item_person .informs .social_network .github{background-image:url(img/github.svg);}
 .about-template .item_list .item_person .informs .social_network a:hover{transition:0.2s linear; filter:contrast(0) brightness(0);}
 
 .blog_posts{display:block; width:80%; max-width:80%; margin-left:10%; margin-right:10%; height:auto; text-align:center; align-content:center; padding-bottom:60px; padding-bottom:4rem; padding-bottom:5vw;}
