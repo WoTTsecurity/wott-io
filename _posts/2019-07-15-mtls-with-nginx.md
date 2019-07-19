@@ -26,7 +26,7 @@ Depending on your implementation, you could either use two Raspberry Pis for thi
 
 Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this [here]({{ site.url }}/documentation/getting-started).
 
-Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose)`). We use these to simplify the installation, as we are able to better pin the requirements.
+Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose`). We use these to simplify the installation, as we are able to better pin the requirements.
 
 ## Setting up the server
 
