@@ -5,8 +5,8 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | remove_first: '/' }}" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-    {% if page.content and page.current == 'post' or page.current == 'about' %}
-        {% assign excerpt = page.content | strip_html | truncatewords: 50, "" %}
+    {% if page.description %}
+        {% assign excerpt = page.description | strip_html | truncatewords: 50, "" %}
      {% endif %} 
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
