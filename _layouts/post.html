@@ -33,9 +33,7 @@ disqus: false
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
-{% for post in site.posts limit:3 %}
-{% include related-list-item.html %}
-{% endfor %}
+{% assign counter = 0 %} {% assign maxPostCount = 3 %} {% for post in site.posts limit:4 %} {% if post.url != page.url and counter < maxPostCount %} {% assign counter=counter | plus:1 %} {% include related-list-item.html %} {% endif %} {% endfor %}
 </div>
 </div>
 </div>
