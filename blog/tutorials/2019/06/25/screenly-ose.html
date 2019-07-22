@@ -12,14 +12,35 @@
     <title>Web of Trusted Things - Using WoTT credentials to manage access to Screenly OSE</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+    	 
+	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
-    <link rel="shortcut icon" href="https://wott.io/assets/images/favicon.png" type="image/png" />
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wott.io/assets/style/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wott.io/assets/style/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wott.io/assets/style/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wott.io/assets/style/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wott.io/assets/style/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wott.io/assets/style/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wott.io/assets/style/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wott.io/assets/style/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Web of Trusted Things"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://wott.io/assets/style/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://wott.io/assets/style/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://wott.io/assets/style/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://wott.io/assets/style/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://wott.io/assets/style/favicon/mstile-310x310.png" />
+
     <link rel="canonical" href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-     
     <meta property="og:site_name" content="Web of Trusted Things" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Web of Trusted Things - Using WoTT credentials to manage access to Screenly OSE" />
@@ -159,11 +180,11 @@ $ sudo wott-aget claim-token
 
 <p>Your Raspberry Pi should now be registered. Navigate to your Dashboard and select the Pi:</p>
 
-<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-03d3f7969e4781827e2caf0313e59559c12527dad30a9a11d8dc383ef3945540.png 2x, https://wott.io/assets/d66040-83a7184ce8b37e1ee5c569e6eba0bd1a47ba935fdb54bfaed80c78ec6dd25c04.png 1x" /></p>
+<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-1578454103fea63c6a97dcd31aec0e2e006e10d6e6f157e61eae02b0f4ba4293.png 2x, https://wott.io/assets/d66040-788a490443cc4e627a62334d97206b6db9a6f151e02ee6caf76e43d98cdbb6a4.png 1x" /></p>
 
 <p>On the overview page, add a tag. This will be important for the credentials. This tag can be whatever you want, however we suggest something like <code class="highlighter-rouge">screenly-pi</code> or <code class="highlighter-rouge">pi</code> or a variant of that form:</p>
 
-<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-7ca0c6d80de824a138a8a7117e573d1d5425930d21c70ee98372d116f61765cc.png 2x, https://wott.io/assets/6b3f4b-425bec60d0f79af946e249fc83beeba499884f54e868fb94977ff33231e8c667.png 1x" /></p>
+<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-6347dcd14fa8857f6ec48115f8f13b64efaef69632f54aa1e0b932ed9afcdc1c.png 2x, https://wott.io/assets/6b3f4b-9cb5d8df16cfc03adc9a07a9e7b0509f399f6d2e104899a2275094a27b378c4f.png 1x" /></p>
 
 <p>Now navigate to credentials and add a new credential with the following details:</p>
 
@@ -202,15 +223,15 @@ $ sudo service screenly-web restart
 
 <p>Navigate to Settings:</p>
 
-<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-c950a6a8527cb69ce9867e3f842551f4d4993bf5a9e5079d7a3f985d3ca57225.png 2x, https://wott.io/assets/c82378-e37b432923bff579a0fa8209771aa040320ba5414e6c166f14da1dd1ebdec5c5.png 1x" /></p>
+<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-d25eeec332fe40f4a6ddbae2d3dd79c1fe54711331bd25871fb9a02c7f22f1f1.png 2x, https://wott.io/assets/c82378-401dafbb922eb5ce1047638f656e0f92fa1813fa048d27063dc7d5230389f80a.png 1x" /></p>
 
 <p>Scroll down the page and underneath ‘Authentication’ select ‘WoTT’ and save your settings.</p>
 
-<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-46961d3695c3405dbfc37365f6d18a8d9adb433d86689775e1390fe7b740441a.png 2x, https://wott.io/assets/052172-6c732a551ab42e01dc63229c5a9df2e9a679ad9a032c9bc99f67ee97f0fcb9ac.png 1x" /></p>
+<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-ad3a28653c6e0f68b22faa3a2d438b6deffdbec4022d76af0fadc3a27f046f1e.png 2x, https://wott.io/assets/052172-ef79e5b596a3a2b591d3fa5c51307b4b2272762ab6446d348e0d1afcb7668b0d.png 1x" /></p>
 
 <p>You have now enabled the WoTT credentials on Screenly OSE. Test this out by trying to access the management page from another browser (the image example below is opened in Chrome) and you will be required to login with the credentials you specified above (in this case, <code class="highlighter-rouge">username</code> and <code class="highlighter-rouge">password</code>)</p>
 
-<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-946a26c4e702f16f4522fdba19eca268cada4424366b785c6690f8f8efe42c87.png 2x, https://wott.io/assets/c39b7a-e38820a0584b816dae082b5a50fc8857ea6ac605a4334efcbff5414d0ebe2416.png 1x" /></p>
+<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-d013e4140dbc69967d7817611df22cc69d82169f9b06415f2a65b589d9d88b1e.png 2x, https://wott.io/assets/c39b7a-fa850cda294de50ffb5891a4d129c54e91dd0a0d944f4968bb8a7793460495a0.png 1x" /></p>
 
 <p>If your credentials are correct, you will be successfully logged into the main Screenly management page and greeted by the Schedule Overview.</p>
 
@@ -229,8 +250,7 @@ $ sudo service screenly-web restart
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
-
-  <div class="post">
+       <div class="post">
   <div class="post_img" style='background-image:url(https://wott.io/assets/d7969e-5bf53eabcf6ea82716b113107838c8affdc25e3b5bfc842410f185e71ae340f3.jpg);'></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
@@ -242,9 +262,7 @@ $ sudo service screenly-web restart
   </div>
   </div>
 
-
-
-  <div class="post">
+       <div class="post">
   <div class="post_img" style='background-image:url(https://wott.io/assets/ac40f5-3f60760d342c928df520318868786df59d351e14c0585baea9cb64b349bce69f.jpg);'></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
@@ -256,9 +274,7 @@ $ sudo service screenly-web restart
   </div>
   </div>
 
-
-
-  <div class="post">
+       <div class="post">
   <div class="post_img" style='background-image:url(https://wott.io/assets/ea386b-d5659a9356237a4c0ddcced5d073b458fd35ce331475d7550770ff4150c09925.jpg);'></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
@@ -270,8 +286,7 @@ $ sudo service screenly-web restart
   </div>
   </div>
 
-
-
+    
 </div>
 </div>
 </div>
