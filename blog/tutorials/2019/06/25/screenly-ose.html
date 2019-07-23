@@ -46,22 +46,18 @@
     <meta property="og:title" content="Web of Trusted Things - Using WoTT credentials to manage access to Screenly OSE" />
     <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
     <meta property="og:url" content="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" />
-    <meta property="og:image" content="https://wott.io/screens.jpeg" />
+	<meta property="og:image" content="https://wott.io/assets/27b4cb-ad9ce5da4dade906c24cbf53ba42e5f7fea1459b9c7fbb9223b8d61f967036ca.jpg">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="Open Source" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Web of Trusted Things - Using WoTT credentials to manage access to Screenly OSE" />
-    <meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
-    <meta name="twitter:url" content="https://wott.io/" />
-    <meta name="twitter:image" content="https://wott.io/screens.jpeg" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Web of Trusted Things" />
-    <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Open Source" />
-    <meta name="twitter:site" content="@wott" />
-    <meta name="twitter:creator" content="@wott" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
+ 
+	<!-- Twitter cards -->
+	<meta name="twitter:site" content="@wottsecurity" />
+	<meta name="twitter:creator" content="@wottsecurity" /> }}">
+	<meta name="twitter:title"   content="Web of Trusted Things - Using WoTT credentials to manage access to Screenly OSE">
+	<meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/27b4cb-ad9ce5da4dade906c24cbf53ba42e5f7fea1459b9c7fbb9223b8d61f967036ca.jpg">
+	<!-- end of Twitter cards -->
+	
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -85,6 +81,8 @@
     "description": "WoTT is a free, automated, open-source public key infrastructure for connected hardware"
 }
     </script>
+
+
 
     <meta name="generator" content="Jekyll 3.6.2" />
     <link rel="alternate" type="application/rss+xml" title="Using WoTT credentials to manage access to Screenly OSE" href="/feed.xml" />
@@ -180,11 +178,11 @@ $ sudo wott-aget claim-token
 
 <p>Your Raspberry Pi should now be registered. Navigate to your Dashboard and select the Pi:</p>
 
-<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-1578454103fea63c6a97dcd31aec0e2e006e10d6e6f157e61eae02b0f4ba4293.png 2x, https://wott.io/assets/d66040-788a490443cc4e627a62334d97206b6db9a6f151e02ee6caf76e43d98cdbb6a4.png 1x" /></p>
+<p><img alt="Pi" src="https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png" integrity="sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=" crossorigin="anonymous" srcset="https://wott.io/assets/e711ef-eba4030f4af333557b47e2c422bf76c9c7b7153d3802fa82c51374f6945c54f5.png 2x, https://wott.io/assets/d66040-536a92e51d51d1068921e338d95cea4d148cf8d6097b0e1a07cee6400c3f370f.png 1x" /></p>
 
 <p>On the overview page, add a tag. This will be important for the credentials. This tag can be whatever you want, however we suggest something like <code class="highlighter-rouge">screenly-pi</code> or <code class="highlighter-rouge">pi</code> or a variant of that form:</p>
 
-<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-6347dcd14fa8857f6ec48115f8f13b64efaef69632f54aa1e0b932ed9afcdc1c.png 2x, https://wott.io/assets/6b3f4b-9cb5d8df16cfc03adc9a07a9e7b0509f399f6d2e104899a2275094a27b378c4f.png 1x" /></p>
+<p><img alt="tag" src="https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png" integrity="sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=" crossorigin="anonymous" srcset="https://wott.io/assets/c5a555-bd2fa4a0d39eae07356c476f667bf2af8f4f4a9fc67db0ce64eb7dfa69c8b56a.png 2x, https://wott.io/assets/6b3f4b-5b2c3628eb024d1c99b4133c8ca6a4dbe363a33222ac02f17e0935ccc01048a2.png 1x" /></p>
 
 <p>Now navigate to credentials and add a new credential with the following details:</p>
 
@@ -223,15 +221,15 @@ $ sudo service screenly-web restart
 
 <p>Navigate to Settings:</p>
 
-<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-d25eeec332fe40f4a6ddbae2d3dd79c1fe54711331bd25871fb9a02c7f22f1f1.png 2x, https://wott.io/assets/c82378-401dafbb922eb5ce1047638f656e0f92fa1813fa048d27063dc7d5230389f80a.png 1x" /></p>
+<p><img alt="Settings" src="https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png" integrity="sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=" crossorigin="anonymous" srcset="https://wott.io/assets/35f1a7-b09f7c1f8ac3f5f82c86f4c7a3f2bf51396204d43c1933a8d7f9afc377ddae0b.png 2x, https://wott.io/assets/c82378-e1eeb7e12599dabe0c478f29bbcb2e6a2607aac8315a129745ba3834a682e9cc.png 1x" /></p>
 
 <p>Scroll down the page and underneath ‘Authentication’ select ‘WoTT’ and save your settings.</p>
 
-<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-ad3a28653c6e0f68b22faa3a2d438b6deffdbec4022d76af0fadc3a27f046f1e.png 2x, https://wott.io/assets/052172-ef79e5b596a3a2b591d3fa5c51307b4b2272762ab6446d348e0d1afcb7668b0d.png 1x" /></p>
+<p><img alt="WoTT" src="https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png" integrity="sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=" crossorigin="anonymous" srcset="https://wott.io/assets/561ae0-e07cd9e863981576b278ef3e14499c6a01227e7bfb607793f714b207f50e2279.png 2x, https://wott.io/assets/052172-156d4532d8a6ae072644868197fec94759a9a880600d83e1a3ac6e9b269a19ec.png 1x" /></p>
 
 <p>You have now enabled the WoTT credentials on Screenly OSE. Test this out by trying to access the management page from another browser (the image example below is opened in Chrome) and you will be required to login with the credentials you specified above (in this case, <code class="highlighter-rouge">username</code> and <code class="highlighter-rouge">password</code>)</p>
 
-<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-d013e4140dbc69967d7817611df22cc69d82169f9b06415f2a65b589d9d88b1e.png 2x, https://wott.io/assets/c39b7a-fa850cda294de50ffb5891a4d129c54e91dd0a0d944f4968bb8a7793460495a0.png 1x" /></p>
+<p><img alt="Chrome" src="https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png" integrity="sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=" crossorigin="anonymous" srcset="https://wott.io/assets/3fdef5-c7e0b2812e1010ce7b5f1cdb7c90414eea4c477810cc20f9fa1c19d1819b9756.png 2x, https://wott.io/assets/c39b7a-91f7ed5addc09a232debe6dd2c25b285ae445444845402ac6166e63cd4683605.png 1x" /></p>
 
 <p>If your credentials are correct, you will be successfully logged into the main Screenly management page and greeted by the Schedule Overview.</p>
 
