@@ -17,7 +17,7 @@ favicon: assets/images/favicon.png
 #Need add your subscribe mailchimp link list
 mailchimp-list: https://wott.us20.list-manage.com/subscribe/post?u=250c99a25b42ad842add5bf41&amp;id=ac12838d30
 
-twitter: wott # replace by your username
+twitter: wottsecurity
 facebook: wott # replace by your username
 google_analytics: UA-134852372-1
 
@@ -49,20 +49,6 @@ assets:
     baseurl: false
     destination: false
     url: 'https://wott.io/assets'
-
-mini_magick:
-  cover_blog_mini:
-    source: assets/images/blogcover
-    destination: assets/images/blogcover/mini
-    resize: "320x320"
-  cover_blog_full:
-    source: assets/images/blogcover
-    destination: assets/images/blogcover/full
-    resize: "1024x1024"
-  images_blog:
-    source: assets/images/blog
-    destination: assets/images/blog
-    resize: "1024x1024"
 
 feed:
   path: feed.xml
