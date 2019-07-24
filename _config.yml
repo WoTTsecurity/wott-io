@@ -54,8 +54,8 @@ autopages:
         title: ':cat'
         permalink: '/blog/:cat'
 
-  # Collection pages, omit to disable
     collections:
+        enabled: false
   
     tags:
         layouts: 
