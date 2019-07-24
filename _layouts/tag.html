@@ -1,0 +1,16 @@
+---
+layout: default
+class: 'category-template'
+---
+{% if page.pagination_info.total_pages > 0 %}
+<div class="blog_posts">
+<span class="t_h1">Posts tagged with: {{ page.autopage.display_name }} ({{ site.tags[page.autopage.display_name].size }})</span>
+{% for post in site.tags[page.autopage.display_name] %}
+{% include category-list-item.html %}
+{% if forloop.index == 1 %}<div class="post_mini-blocks">{% endif %}
+{% endfor %}
+</div>
+{% else %}
+<br>No articles found.<br>
+{% endif %}
+</div>
