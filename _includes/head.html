@@ -41,7 +41,7 @@
  
 	<!-- Twitter cards -->
 	<meta name="twitter:site" content="@{{ site.twitter }}" />
-	<meta name="twitter:creator" content="@{{ site.twitter }}" /> }}">
+	<meta name="twitter:creator" content="@{{ site.twitter }}" />
 	<meta name="twitter:title"   content="{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	{% if page.cover and page.current == 'post' %}<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="{% asset blogcover/'{{ page.cover }}' magick:resize='800' @path %}">{% else %}{% if page.cover %}<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.cover }}">{% else %}<meta name="twitter:card"  content="summary"><meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ site.cover }}">{% endif %}{% endif %}
