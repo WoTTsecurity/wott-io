@@ -114,7 +114,7 @@
 <span class="t_m2">By Fiona McAllister on June 27, 2019 | 0 Comments</span>
 </div>
 <div class="blog_image" style='background-image:url(https://wott.io/assets/d4021c-af810e254d71cd8812e841d98fe027c2ba37e5b46ab8b5be0ede62fb7afca439.jpg);'></div><div class="blog_image_bg"></div>
-<div class="blog_tags"><a href="">Open Source</a></div>
+<div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
 
 <div class="social_network">
 <div class="title_b">share</div>
@@ -162,11 +162,11 @@ $ pip3 install adafruit-io
 
 <p>Login to the Adafruit IO dashboard. Navigate to the ‘Feeds’ page on the left-hand side menu. Hover over actions and select ‘Create a New Feed.’ The feed acts as a channel or datastream through which your device connects to Adafruit IO. We are going to create a feed that is called via MQTT. In other words, the feed becomes the topic from which messages are published/subscribed to.</p>
 
-<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-abd2b8def4873631d1a28d363a65db129fb2f79784ef0394a76e536be25dc2b7.png 2x, https://wott.io/assets/cd12eb-671f2187b53f3543f401fa951106456652f2c408320bc32ea6b3c40faf55a3ab.png 1x" /></p>
+<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-83ea338bcd4a8402ca02be66c0770d8d0741226f91aede8978db883a876a8e1d.png 2x, https://wott.io/assets/cd12eb-1bfe0f096b48a9e803a52ae9bc51915c64af309c4bb376998e11a40baa21c583.png 1x" /></p>
 
 <p>The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed ‘data feed.’ The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.</p>
 
-<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-860d2ee8490674e957ff4e173b429a9258a0be0dbaaba4981b58da8ea0029e55.png 2x, https://wott.io/assets/60856b-021febb63de71e2e0181a91007202bde46c7b4c850acdab0177b3a91ff848a0f.png 1x" /></p>
+<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-88f79de72ee1be6d3b0a98430b2af89277ccab142ad73536994f459eba6235e9.png 2x, https://wott.io/assets/60856b-c7d1bcfbc6608d743cf974bd41a0a10d71f87a98e34aff08a800c6e49655c221.png 1x" /></p>
 
 <p><strong>Note:</strong> it is possible to create the feeds using a simple python application. If you prefer a more codified style of set up, you can follow <a href="https://adafruit-io-python-client.readthedocs.io/en/latest/feeds.html">this</a> guide.</p>
 
@@ -174,11 +174,11 @@ $ pip3 install adafruit-io
 
 <p>In order to call the Adafruit API via HTTP access, it requires a key. You can find this key on the left-hand side of your Adafruit dasboard as you did with ‘Feeds’ under <code class="highlighter-rouge">AIO key</code>. You will be brought to a page akin to this:</p>
 
-<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-6ffe710933e2f141c55a8eb7061d6476fb8e234d2ee4934fdeb9dbb05e604111.png 2x, https://wott.io/assets/953c52-304af6788c58d12314d939d0291e567b849562c83bdbb876ac1f600a2d84c22d.png 1x" /></p>
+<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-1a8b150cfbf54330c7b4f0bdc509c43cccb4fa39cf530812e61031a4f4eba322.png 2x, https://wott.io/assets/953c52-eb36fe9cbd053f218a726cbc41505ed439a71f6b5f7f813f10005814b86801b6.png 1x" /></p>
 
 <p>These are your unique Adafruit details. We can add these to WoTT’s dashboard as a new credential where the value is your personal username followed by the <code class="highlighter-rouge">Active Key</code> value. To do so, you will need to login or create an account for the <a href="https://dash.wott.io">WoTT dash</a>.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-95297d6d87d67091664f8a10bba83a022f2d8e5d5cad1a4abe8541e71ead8a18.png 2x, https://wott.io/assets/deedd0-29ac93808145246292c58fe36331e7df95fca9017a29319ad8be974aab709cd8.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-03ddcf13049f2a6449968a1e4011f6cc4036d9719eea7eba1259af0603ea6791.png 2x, https://wott.io/assets/deedd0-67aea61193133641c5acdfb25125021ebc9f4ce93cb4f75ffbc1366104c3e5ea.png 1x" /></p>
 
 <p>If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:</p>
 
@@ -188,7 +188,7 @@ $ sudo wott-aget claim-token
 
 <p>and pasting the output into the ‘Claim Device’ segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, <code class="highlighter-rouge">adafruit</code> to it. Through these tags, WoTT identifies which devices specific credentials are intended for.</p>
 
-<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-16185f90ff460d364f52e96490249735ac15515b830746abd21d68c3009ac4bf.png 2x, https://wott.io/assets/7d7aaa-536c25e57de1ae597a4b67dd85046494d8316d44d9af07291b71ee40013f202d.png 1x" /></p>
+<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-a1323644c3de2794574c3bce06c4f2def15db93628405141607cd82e2716d901.png 2x, https://wott.io/assets/7d7aaa-f32883ab6e2fd98eae5b3f9d4f69b3fed6701d90a3660cbd2f7031737b7cd8e1.png 1x" /></p>
 
 <p>Now that we are all set up, we need to create the credentials with the Adafruit information. Navigate to the ‘Credentials’ page of the WoTT dash and a new credential. Input the following into the fields:</p>
 
@@ -236,7 +236,7 @@ Feed data feed received new value: 52
 </code></pre></div></div>
 <p>On your Adafruit IO dash, you should see the data being received on your feed:</p>
 
-<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-3a98b6c0e9a20fec6552fbba2809675fd83813a2f05b84741508796f4457dd75.png 2x, https://wott.io/assets/861588-43f55b70e19b939924a989383a2e0fb353d6f33fae09844a047d8b3f91f26a7a.png 1x" /></p>
+<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-33f51b7aa1fc1253b8cf9911cbeaab236dfbd8f5c08e065c6a424a89c0cd0247.png 2x, https://wott.io/assets/861588-8e6756541204c7df8ea9b94bbab2e4a5866942cdf970ea0ca38711c4070a5f58.png 1x" /></p>
 
 <p><strong>Note:</strong> your values will be different to this example as they are randomly generated, use the above as a reference point only.</p>
 
