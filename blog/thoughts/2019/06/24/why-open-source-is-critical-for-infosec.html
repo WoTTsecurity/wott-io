@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - Why open source is critical for InfoSec" />
     <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
     <meta property="og:url" content="https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec" />
-	<meta property="og:image" content="https://wott.io/assets/495265-7804dfae3a325e25380f98cc4307b5811afa56958a15203bc260aaaff5d9ac74.png">
+	<meta property="og:image" content="https://wott.io/assets/495265-f63db5656e9ca67879f256a5fa33e3999392b5aae39ca0529ffe22303a95cd17.png">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="Open Source" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - Why open source is critical for InfoSec">
 	<meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/495265-7804dfae3a325e25380f98cc4307b5811afa56958a15203bc260aaaff5d9ac74.png">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/495265-f63db5656e9ca67879f256a5fa33e3999392b5aae39ca0529ffe22303a95cd17.png">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -113,7 +113,7 @@
 <span class="t_i1">Why open source is critical for InfoSec</span>
 <span class="t_m2">By Al Esmail on June 24, 2019 | 0 Comments</span>
 </div>
-<div class="blog_image" style='background-image:url(https://wott.io/assets/2e7c94-652afc77c7d7e0c7f5dcf538c6fcea7c93a196631f8564d6147fc21b44e661f3.png);'></div><div class="blog_image_bg"></div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/2e7c94-db124290a0a8d430e88a2337ad733fdd6ab443e7fdad8cb10ab5b4c9828970b1.png);'></div><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
 
 <div class="social_network">
@@ -284,12 +284,8 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-134852372-1', 'auto');
-ga('send', 'pageview');
-
-function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
-clickview('[ga-clv="1"]');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 

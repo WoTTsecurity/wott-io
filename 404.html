@@ -122,12 +122,8 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-134852372-1', 'auto');
-ga('send', 'pageview');
-
-function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
-clickview('[ga-clv="1"]');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 

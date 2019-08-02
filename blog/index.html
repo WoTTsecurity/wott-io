@@ -234,7 +234,7 @@
 
 
   <div class="post ">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/ac256e-2ad47d71ebcfaed7f5c68d3bea85e34177b1e4f4eb32ea634e06dc20c74ac084.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/ac256e-0463b2f9a9b5a78a3759e7f66ca120c1182c6917ea0e152ae2f2ec5e866f2cc6.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">Why open source solutions are critical for IoT</a>
@@ -252,7 +252,7 @@
 
 
   <div class="post ">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/49cd83-fda9defd131136190c3044022da0473f782b2880ffb406cafe62cfe9521a88b2.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/49cd83-c51aa0d2579e1e225442b6af408a5a2dc6703668864b38570b355771c5364521.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec">Why open source is critical for InfoSec</a>
@@ -270,7 +270,7 @@
 
 
   <div class="post ">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/763a3a-38d991d0443b65ccd1abedb47d31389700e9d0ca899d0054d8b51b8223d16f48.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/763a3a-a94eef7ad041c78d2b587a93572bcda1cc5e727c1485c0c745799faf4dfc20cb.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">Why shift-left security is relevant for IoT</a>
@@ -288,7 +288,7 @@
 
 
   <div class="post ">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/8e810f-3ec782ea1139a34598a4b1d50c579f4a8c2d751515b8bd5cc21e0f0a607fdc82.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/8e810f-951c927d9f8383d99f331fe87ba0a12159ba2bded338992848e6a4db8a21fa75.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">WoTT secures the Internet of Things</a>
@@ -391,12 +391,8 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-134852372-1', 'auto');
-ga('send', 'pageview');
-
-function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
-clickview('[ga-clv="1"]');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 

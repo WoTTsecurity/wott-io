@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - Why open source solutions are critical for IoT" />
     <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
     <meta property="og:url" content="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT" />
-	<meta property="og:image" content="https://wott.io/assets/09383f-b83b1955e85684746ff00bdaccdec47a5830d6a308711ea74534eb43d756123f.png">
+	<meta property="og:image" content="https://wott.io/assets/09383f-9f5cd4535ee3565264020a428c26da8c40f031c4fded37ee6134cef5a2463bd3.png">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="Open Source" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - Why open source solutions are critical for IoT">
 	<meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/09383f-b83b1955e85684746ff00bdaccdec47a5830d6a308711ea74534eb43d756123f.png">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/09383f-9f5cd4535ee3565264020a428c26da8c40f031c4fded37ee6134cef5a2463bd3.png">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -113,7 +113,7 @@
 <span class="t_i1">Why open source solutions are critical for IoT</span>
 <span class="t_m2">By Al Esmail on June 25, 2019 | 0 Comments</span>
 </div>
-<div class="blog_image" style='background-image:url(https://wott.io/assets/ef0e0c-53017ce3bf96bdbc96130a2fab1f62b48e7e18c40006b32467c56f67e9d1b764.png);'></div><div class="blog_image_bg"></div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/ef0e0c-318c483be0af57f7285c66fd9f9a117935ce53bf2f8776d6bbc7115dc5b8fde4.png);'></div><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
 
 <div class="social_network">
@@ -133,7 +133,7 @@
 
 <p>TL;DR IoT needs one ring to rule them all and it’s not a platform.</p>
 
-<p><img alt="No Image" class="img-fluid" src="https://wott.io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png" integrity="sha256-pQFVzDrKV3v+zZjel0dkpV6x8obZQgzbYWdNpqJ350I=" crossorigin="anonymous" srcset="https://wott.io/assets/bc774b-87b20426de80846960f4a841affa09d446a517cfe02d5b94d77181df0d5484ac.png 2x, https://wott.io/assets/681e0d-5dc2b0a986cc473421316a0ccab5f47d52ff53b5b1f7dc006c3c8981ccc5b4b5.png 1x" /></p>
+<p><img alt="No Image" class="img-fluid" src="https://wott.io/assets/blog/iot-monster-a50155cc3aca577bfecd98de974764a55eb1f286d9420cdb61674da6a277e742.png" integrity="sha256-pQFVzDrKV3v+zZjel0dkpV6x8obZQgzbYWdNpqJ350I=" crossorigin="anonymous" srcset="https://wott.io/assets/bc774b-bb460d7ed2dd0c87d3b0479031b521fbe495009331da733f70c399edd8f3d3cf.png 2x, https://wott.io/assets/681e0d-911cb78f6982eea87e788a96d5e186a6016475a7065f771aea28c504fe7e39e9.png 1x" /></p>
 
 <p>In my last post, I described the relevance of <a href="https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec">open source security</a>. For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software and tooling.  In short, proprietary technology is fragmenting the market, slowing development in an emerging field and killing some really exciting use cases.  Custom hardware, too many operating systems and cloud lock-in are the problem.</p>
 
@@ -263,12 +263,8 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-134852372-1', 'auto');
-ga('send', 'pageview');
-
-function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false; if(b[0].nodeName=='A'){var h_to=b.attr('href');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');}},10); return false;};});};
-clickview('[ga-clv="1"]');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
 </script>
 <!-- End Google Analytics -->
 
