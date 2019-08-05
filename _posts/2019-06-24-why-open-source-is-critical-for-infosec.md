@@ -35,8 +35,7 @@ It is a fair point that STO can indeed increase security if the means of obfusca
 
 I would propose that security systems/methods/software that are used in many places or by many clients should adhere to Kerchoffs’ principle. Consider the following assumptions:
 
-As the number of users of a security system increases, the value of the assets protected by that system increases.
-
+* As the number of users of a security system increases, the value of the assets protected by that system increases.
 * As  the value of assets protected by a system increases, the reward of compromising that system increases.
 * As the reward of compromising a system increases, the number of adversaries attacking the system increases.
 * As the number of adversaries attacking a system increases, the adversaries’ knowledge of that system increases.
@@ -52,7 +51,7 @@ To substantiate theory with practice, there are successful companies doing a gre
 * [Snyk](https://github.com/snyk/snyk): A developer-first solution that automates finding & fixing vulnerabilities in your dependencies
 * [WoTT](https://github.com/WoTTsecurity/agent): Plug and play cyber sec tools for IoT developers ;)
 
-What these companies have in common is that they are building developer tools.  We believe this is the best place to think about security - during development (link to shift left security).
+What these companies have in common is that they are building developer tools.  We believe this is the best place to think about security - during development ([link to shift left security]({{site.url}}blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot)).
 
 To conclude, security through obfuscation is a single piece to consider in building a strong system.  The _plat de resistance_ in your security system should be open source, resilient in enemy hands and supported by crowdsourced audit.
 
