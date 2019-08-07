@@ -408,6 +408,9 @@ footer{display:block; width:100%; height:auto;}
 .body_docs .search_block input{outline: none; width: 80%; padding-left:5%; padding-right:5%; margin-left:5%; margin-right:5%; height: 100%; height:50px; height:3rem; height:3vw; display: inline-block; border:0px; color:#9297a1; font-size: 17px; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; font-size:18px; line-height:50px; font-size: 1.1rem; line-height: 3rem; font-size: 1.1vw; line-height: 3vw; color:#9297a1;  font-weight: 500; box-shadow:0px 0px 15px rgba(0,0,0,0.15);}
 .body_docs .search_block button{border:0px; padding:0px; margin:0px;position:absolute; float:right; right:8.5%; display:inline-block; height: 100%; height:50px; height:3rem; height:3vw;  min-width:15%; width:auto; width:fit-content; width:-moz-fit-content; background-color: #316dc7; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; text-align:center; align-content:center; font-size: 17px; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; font-size:15px; line-height:50px; font-size: 1rem; line-height: 3rem; font-size: 0.9vw; line-height: 3vw; color:#ffffff;  font-weight: 600; text-transform: uppercase;  letter-spacing: 2px;} 
 .body_docs .search_block button:hover{transition:0.2s linear; cursor:pointer; color:#316dc7; background-color:#9297a1;} 
+.body_docs .search_block .list_s_result{position:absolute; top:90px; top:5rem; top:5vw; max-height:100%; max-height:calc(100vh - 6rem); max-height:calc(100vh - 6vw); width:60%; right:25%; background-color:white; border-radius:0px 0px 10px 10px; box-shadow: 0px 15px 15px rgba(0,0,0,0.15); overflow-y:auto;}
+.body_docs .search_block .list_s_result li{display:block; padding:5px; padding:0.5rem; padding:0.5vw; width:90%; width:calc(100% - 10px); width:calc(100% - 1rem); width:calc(100% - 1vw); color: #272d37; font-weight: 700; font-size: 15px; font-size: 1rem; font-size: 1vw; text-align: left; align-content: left;}
+.body_docs .search_block .list_s_result li:hover{cursor:pointer; background-color:rgba(0,0,0,0.2); transition:0.1s linear;}
 
 .body_docs .left_block{display:block; position:absolute; top:0px; left:0px; width:23.5%; min-height: fit-content; min-height:-moz-fit-content; height:100%; background-color:#ffffff; box-shadow:10px 0px 15px rgba(0,0,0,0.15); }
 .body_docs .left_block .mobile_menu_button{display:none;}
@@ -445,6 +448,15 @@ footer{display:block; width:100%; height:auto;}
 .docs_content .docs_icon_menu .icon_info .info_block:hover{transition:0.2s linear;  cursor:pointer;  filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.15));}
 .docs_content .docs_icon_menu .icon_info .info_block .icon{width:100%; height:auto;  background-image:url(); background-repeat:no-repeat; background-position:center center; background-size:auto 100%; background-size:contain; margin-bottom:15px; margin-bottom:1rem;}
 .docs_content .docs_icon_menu .icon_info .info_block .icon::before{content:''; display:block; width:100%; padding-top:23%;}
+
+
+.search_pages{}
+.search_pages .search_block{display:block; position:relative; padding:40px 0px; padding:2rem 0px; padding:2vw 0px; height:50px; height:3rem; height:3vw; width:100%; max-width:100%;}
+.search_pages .search_block form{display:block; width:100%; height:100%;}
+.search_pages .search_block input{outline: none; width: 80%; padding-left:5%; padding-right:5%; margin-left:5%; margin-right:5%; height: 100%; height:50px; height:3rem; height:3vw; display: inline-block; border:0px; color:#9297a1; font-size: 17px; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; font-size:18px; line-height:50px; font-size: 1.1rem; line-height: 3rem; font-size: 1.1vw; line-height: 3vw; color:#9297a1;  font-weight: 500; box-shadow:0px 0px 15px rgba(0,0,0,0.15);}
+.search_pages .search_block button{border:0px; padding:0px; margin:0px;position:absolute; float:right; right:5%; display:inline-block; height: 100%; height:50px; height:3rem; height:3vw;  min-width:15%; width:auto; width:fit-content; width:-moz-fit-content; background-color: #316dc7; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; text-align:center; align-content:center; font-size: 17px; border-radius:20px; border-radius:1.5rem; border-radius:1.5vw; font-size:15px; line-height:50px; font-size: 1rem; line-height: 3rem; font-size: 0.9vw; line-height: 3vw; color:#ffffff;  font-weight: 600; text-transform: uppercase;  letter-spacing: 2px;} 
+.search_pages .search_block button:hover{transition:0.2s linear; cursor:pointer; color:#316dc7; background-color:#9297a1;} 
+.search_pages .no_results{margin-left:5%; margin-right:5%; width:90%; padding:10px; padding:1rem; padding:1.5vw; max-width:calc(90% - 20px); max-width:calc(90% - 2rem); max-width:calc(90% - 3vw); color:#272d37; font-family: 'Muli'; font-weight:800; font-size:18px; font-size:1.5rem; font-size:1.5vw; text-align:center; align-content:center; background-color:rgba(255,255,255,0.3); border-radius:19px; border-radius:1.75rem; border-radius:2.25vw;}
 
 .b_content .no-top{position:initial; top:0px; margin-top:0px;} 
 
@@ -756,11 +768,19 @@ header.b_header{position:initial; left:0px; top:0px; height:70px; height:5rem; z
 .body_docs .search_block{top: 5rem; padding: 1rem 0px; height: 3rem; background-color: #ffffff; width:100%; max-width:100%;}
 .body_docs .search_block input{height: 3rem; border-radius: 1.5rem; font-size: 0.8rem; line-height: 3rem;}
 .body_docs .search_block button{right: 5%; height: 3rem; min-width: 15%; max-width:calc(50% - 3rem); padding-left:1.5rem; padding-right:1.5rem; border-radius: 1.5rem; font-size: 1rem; line-height: 3rem; letter-spacing: 1px;}
+.body_docs .search_block .list_s_result{position:absolute; top:5rem; max-height:calc(100vh - 10.5rem); width:80%; right:10%;}
+.body_docs .search_block .list_s_result li{padding: 0.5rem; font-size: 1rem; width:calc(100% - 1rem); max-width:calc(100% - 1rem);}
 
 .docs_content{padding-top:12rem; padding-left:0px; width:100%; max-width:100%;}
 .docs_content .inner-content {width:100%; max-width:100%;}
 .docs_content .info_docs{width:90%; padding-left:5%; padding-right:5%; margin-left:0px; margin-right:0px;}
 .docs_content .info_docs .t_hm{color:#377eea; font-family:'Source Sans Pro', sans-serif;  font-weight: 800; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px;}
 .docs_content .info_docs .t_m1 {padding-bottom: 0.5rem;}
+
+
+.search_pages .search_block{padding: 1rem 0px; width:100%; max-width:100%; height:3rem;}
+.search_pages .search_block input{height: 3rem; border-radius: 1.5rem; font-size: 0.8rem; line-height: 3rem;}
+.search_pages .search_block button{right: 5%; height: 3rem; min-width: 15%; max-width:calc(50% - 3rem); padding-left:1.5rem; padding-right:1.5rem; border-radius: 1.5rem; font-size: 1rem; line-height: 3rem; letter-spacing: 1px;}
+.search_pages .no_results{padding:1rem; max-width:calc(90% - 2rem); font-size:1.5rem; border-radius:2rem; }
 
 }

@@ -1,0 +1,17 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+	  "cover":"{% asset blogcover/"{{ post.cover }}" magick:resize="400" @path %}",
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ',' }}",
+      "href"      : "{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}",
+      "date"     : "{{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}",
+	  "description":"{% if post.description %}{{ post.description | strip_html | truncatewords: 52 }}{% else %}{{ post.content | strip_html | truncatewords: 52 }}{% endif %}",
+	  "author":"{{ post.author }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
