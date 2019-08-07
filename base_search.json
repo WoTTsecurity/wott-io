@@ -1,0 +1,157 @@
+[
+  
+    {
+	  "cover":"https://wott.io/assets/d7969e-5bf53eabcf6ea82716b113107838c8affdc25e3b5bfc842410f185e71ae340f3.jpg",
+      "title"    : "Using WoTT to Secure a Paho MQTT Client",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/07/19/paho-mqtt",
+      "date"     : "July 19, 2019",
+	  "description":"Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included) Introduction In a previous example we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/ac40f5-3f60760d342c928df520318868786df59d351e14c0585baea9cb64b349bce69f.jpg",
+      "title"    : "Connecting Edge IoT devices with Kubernetes",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes",
+      "date"     : "July 18, 2019",
+	  "description":"Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step...",
+	  "author":"Viktor Petersson"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/ea386b-d5659a9356237a4c0ddcced5d073b458fd35ce331475d7550770ff4150c09925.jpg",
+      "title"    : "Using WoTT to Secure Access to a Mosquitto MQTT Server",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt",
+      "date"     : "July 15, 2019",
+	  "description":"Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/966a3e-e4376cd4482f6e8d565b01559453ec4679a3a4b8d083f854c716986fe7f140b4.jpg",
+      "title"    : "Configuring Nginx with client certificate authentication (mTLS)",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx",
+      "date"     : "July 15, 2019",
+	  "description":"Configuring Nginx with client certificate authentication (mTLS) Required Skill Level: Medium to Expert One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how...",
+	  "author":"Viktor Petersson"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/6243f0-a4a3241f749fcb49c871ddca33766b5e5df742097e015e8bba5049022017a33c.jpg",
+      "title"    : "Using WoTT credentials to manage access to Adafruit IO feeds",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/06/27/adafruit-io",
+      "date"     : "June 27, 2019",
+	  "description":"Using Adafruit IO with WoTT Credentials Introduction Adafruit IO is a free cloud service interested in making IoT accessible to everyone through presenting data in a useful and user-friendly way. Services that they provide include linking your IoT devices to Twitter and weather services. You can also use Adafruit IO to monitor...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/8dc6f5-0157f53e62c9926bc82d30e72969a63c56e678f8fb96e4abedcec5af5701aea0.jpg",
+      "title"    : "Using WoTT credentials to manage access to Screenly OSE",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/06/25/screenly-ose",
+      "date"     : "June 25, 2019",
+	  "description":"Using WoTT to secure access to Screenly Introduction Screenly is a service that provides digital signage and acts as an OS on the host device. Essentially it treats your host device as a streaming service that projects visual media (such as images and webpages) onto a monitor from multiple different sources. Think...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/ac256e-f6f1245d7b209eb727a2758ce952acfff49d70dc6f2d9d646cc12cff90a20015.png",
+      "title"    : "Why open source solutions are critical for IoT",
+      "category" : "thoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT",
+      "date"     : "June 25, 2019",
+	  "description":"TL;DR IoT needs one ring to rule them all and it’s not a platform. In my last post, I described the relevance of open source security. For very different reasons, I will argue here that the internet of things (and cyber-physical systems in general) are in desperate need of open source software...",
+	  "author":"Al Esmail"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/49cd83-e2745ff20d897c8c85f845651a804f115295f254ca11c595f52e375fe68a663a.png",
+      "title"    : "Why open source is critical for InfoSec",
+      "category" : "thoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/thoughts/2019/06/24/why-open-source-is-critical-for-infosec",
+      "date"     : "June 24, 2019",
+	  "description":"TL;DR Proprietary security is a fresh cow pie hiding in the tall grass. Figure 1 - How I imagine decision fatigued CTOs see the world when speaking to proprietary security vendors. Can you spot the cow pie? In a previous post, I advocated for the merits of DevSecOps and shift left security....",
+	  "author":"Al Esmail"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/763a3a-3a3e9eb36eeda0d671cadd7c3e2ec5f439334f7562cfa471ec438ddb36745950.png",
+      "title"    : "Why shift-left security is relevant for IoT",
+      "category" : "thoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot",
+      "date"     : "June 23, 2019",
+	  "description":"TL;DR Cyber is best handled by developers with big, bulging…brains. Figure 1 - Cyber is sexier than a Harvard trained, Academy Award winning actress. In our first blog post, I articulated that we are strong proponents of shift-left security. The idea that security should be incorporated as early as possible during application...",
+	  "author":"Al Esmail"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/8e810f-d83bf2a640026f786604a02def81d48b4e441fa9078f5da93f688047e319f339.png",
+      "title"    : "WoTT secures the Internet of Things",
+      "category" : "thoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things",
+      "date"     : "June 22, 2019",
+	  "description":"TL;DR It’s Let’s Encrypt for IoT - you know you want it. Figure 1 - If the web can have it, why can’t IoT? In my first blog post, I articulated why we do what we do at WoTT. Namely, that security is a necessary condition for a future involving advanced cyber-physical...",
+	  "author":"Al Esmail"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/130908-254167322ece7020543390c592f2051cb341c4628a135f3e39c036f355daed40.png",
+      "title"    : "Why we are doing what we do",
+      "category" : "news",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/news/2019/06/20/why-we-are-doing-what-we-do",
+      "date"     : "June 20, 2019",
+	  "description":"TL;DR the future has flying cars, transformers and low calorie diets. Figure 1 - Best free photo I could find when searching for ‘open source’ In our inaugural blog post, my aim is to introduce how we see the world and what we care about. Regarding what we do, I will simply...",
+	  "author":"Al Esmail"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/a723ed-f597435085dcb20827990fde2e653c08402ad24bd0996def871528a13ec02427.jpg",
+      "title"    : "Using WoTT credentials to manage access to a Python 3 WebApp",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/06/18/simple-webapp-auth",
+      "date"     : "June 18, 2019",
+	  "description":"Another simple WebApp example Introduction In a previous example we introduced you to setting up a Simple WebApp using mTLS to provide security. This is one of a few ways to secure connection between a client and a server. In this example, we’ll be using another simple WebApp that instead uses HTTP...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/e19b7a-fdbcae9cb78cf9e75a3ead648a0e60da05d31fb7db5c9f1d81798111a0f1175d.jpg",
+      "title"    : "Using WoTT to secure a simple Python 3 WebApp",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/06/16/simple-webapp",
+      "date"     : "June 16, 2019",
+	  "description":"A simple WebApp example Introduction In the following example, we’ll walk you through how to secure a simple WebApp using WoTT. Before you begin, you need two devices with the WoTT Agent installed. This can be a combination of devices that are either a Raspberry Pi or a desktop running a Debian...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/47c781-282237feddf1a9ba431500f58d9d12572ed92b637c65c01d25a39c49eb98b5a2.jpg",
+      "title"    : "Using WoTT to secure access to Google Core IoT",
+      "category" : "tutorials",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/tutorials/2019/06/14/google-core-iot",
+      "date"     : "June 14, 2019",
+	  "description":"Using WoTT with Google Core IoT Introduction Before we get started, you will need to install the gcloud tool. This is used to interact with Google’s services. You can find installation instructions here. Follow the instructions for your specific distribution. You will also need to have at least one device with the...",
+	  "author":"Fiona McAllister"
+    } 
+  
+]
