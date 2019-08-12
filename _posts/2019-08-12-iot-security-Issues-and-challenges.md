@@ -5,8 +5,8 @@ cover: iotsecIssues-blog.png
 title: IoT Security Issues and Challenges
 date: 2019-08-12 13:00:00
 category: [news,thoughts]
-author: Fiona McAllister
-tags: [News,Thoughts]
+author: Nikoletta Triantafyllopoulou
+tags: [Open Source]
 class: post-template
 ---
 {% asset blog/IoTSecIssues-Blog.png srcset:width="1300 2x" srcset:width="650 1x" alt="IoTSecurityIssues" %}
