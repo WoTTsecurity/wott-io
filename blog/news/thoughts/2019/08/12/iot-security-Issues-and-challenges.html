@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+
+
+    <title>Web of Trusted Things - IoT Security Issues and Challenges</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	 
+	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wott.io/assets/style/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wott.io/assets/style/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wott.io/assets/style/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wott.io/assets/style/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wott.io/assets/style/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wott.io/assets/style/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wott.io/assets/style/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wott.io/assets/style/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Web of Trusted Things"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://wott.io/assets/style/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://wott.io/assets/style/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://wott.io/assets/style/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://wott.io/assets/style/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://wott.io/assets/style/favicon/mstile-310x310.png" />
+
+    <link rel="canonical" href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web of Trusted Things - IoT Security Issues and Challenges" />
+    <meta property="og:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware" />
+    <meta property="og:url" content="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" />
+	<meta property="og:image" content="https://wott.io/assets/d53144-d36ede1f0eaf11df6c17635df3abe576913da34fe2142067ab705dbb088f8058.png">
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:tag" content="Open Source" />
+ 
+	<!-- Twitter cards -->
+	<meta name="twitter:site" content="@wottsecurity" />
+	<meta name="twitter:creator" content="@wottsecurity" />
+	<meta name="twitter:title"   content="Web of Trusted Things - IoT Security Issues and Challenges">
+	<meta name="twitter:description" content="WoTT is a free, automated, open-source public key infrastructure for connected hardware">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/d53144-d36ede1f0eaf11df6c17635df3abe576913da34fe2142067ab705dbb088f8058.png">
+	<!-- end of Twitter cards -->
+	
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/"
+    },
+    "url": "https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/iotsecIssues-blog.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges"
+    },
+    "description": "WoTT is a free, automated, open-source public key infrastructure for connected hardware"
+}
+    </script>
+
+
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="IoT Security Issues and Challenges" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">IoT Security Issues and Challenges</span>
+<span class="t_m2">By Nikoletta Triantafyllopoulou on August 12, 2019 | 0 Comments</span>
+</div>
+<div class="blog_image" style='background-image:url(https://wott.io/assets/59edda-ce915d2c0e116e1ec0379329bd31f50992b71a6c827a2a8077c44dc48f68b3f6.png);'></div><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/facebook.svg);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/twitter.svg);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges&text=IoT Security Issues and Challenges" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/send.svg);"><a target="_blank" href="mailto:?subject=IoT Security Issues and Challenges&body=/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges&media=https://wott.io/assets/images/blogcover/full/iotsecIssues-blog.png&description= IoT Security Issues and Challenges IoT Security issues are quite a challenge for this burgeoning industry. There is a growing number of devices, applications and systems which turn to IoT. This helps them to upscale their efficiency and their services and to make life easier for users. So let us take a... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/linkedin.svg);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges&title=IoT Security Issues and Challenges" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+
+<p><img alt="IoTSecurityIssues" src="https://wott.io/assets/blog/IoTSecIssues-Blog-d205b55b946e45a78176837a366f236d57bf5c24bec05c34900905fddf41c17e.png" integrity="sha256-0gW1W5RuRaeBdoN6Nm8jbVe/XCS+wFw0kAkF/d9BwX4=" crossorigin="anonymous" srcset="https://wott.io/assets/9bf085-5567306731f47ff38f3340193f6fe583333baefae8a3b111ea58a3404e7ee411.png 2x, https://wott.io/assets/4b94b4-e9093878fd5282196d2d571ee72062be7e2d988adac8900d29d7bcf4cef15f88.png 1x" /></p>
+
+<h2 id="iot-security-issues-and-challenges">IoT Security Issues and Challenges</h2>
+<p>IoT Security issues are quite a challenge for this burgeoning industry. There is a growing number of devices, applications and systems which turn to IoT. This helps them to upscale their efficiency and their services and to make life easier for users. So let us take a closer look at the industry.</p>
+
+<h3 id="the-internet-of-things">The Internet of Things</h3>
+<p>This buzzing, new industry sports cutting-edge technology. It enhances digitisation while at the same time it produces demanding challenges.
+But before we delve into these in more detail, let us have a look at the state of IoT at the moment.</p>
+
+<p>According to a report by [IoT Analytics] (https://iot-analytics.com/state-of-the-iot-update-q1-q2-2018-number-of-iot-devices-now-7b/) there are over 17 Billion devices connected to IoT. As one can understand, this number will only multiply in the coming years. The devices connected to IoT range greatly.  From Smart Home Automation devices, routers, printers to thermostats, refrigerators and cameras. Amazon Alexa and Google Assistant too. Smart locks, smart watches, ATMs, industrial machines, manufacturing processes and applications. Smart clothing items, drones, solar panels, automobile navigation, infotainment systems, advanced medical devices.  The list is long and it is updated as more types of devices, gadgets and applications are added.</p>
+
+<p>Regardless of the technology or the number  of IoT devices, the main challenge remains one: That is <em>Security</em> and everything about it.</p>
+
+<h2 id="iot-security-issues">IoT Security Issues</h2>
+
+<h3 id="unsecured-devices">Unsecured Devices</h3>
+<p>With the number of connected devices on the rise, consumers play an integral part in Security. Manufacturers upon launching a device, should equip it with a strong default password. They should also advise consumers on how to make their lives with smart gadgets more secure. Most consumers are not well-informed about the significance of changing the default password on their devices. Thus, the responsibility falls on the manufacturers to maintain a more secure network and to educate the consumers of the necessary steps they need to take.</p>
+<h3 id="data-privacy">Data Privacy</h3>
+<p>Nowadays, power plants, manufacturing processes and healthcare devices connect to IoT. These critical infrastructures constitute IoT a treasure trove of data. One mistake in security and precious confidential data might end up in the hands of criminals.  One leak in Privacy and hackers can gain access to confidential, private data. Data transmission and reception as well as maintaining the privacy of the users must be a top priority of the IoT industry. With so many applications, gadgets and processes connected, even lives can be at stake. This is one of the reasons why [Security-by-design] (https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT) is a great solution, particularly  for Enterprise IoT.</p>
+
+<h3 id="insufficient--testing-and-updating">Insufficient  Testing and Updating</h3>
+<p>As the number of connected devices is in constant rise, one of the major IoT security issues is keeping the devices updated. Though IoT is a highly-digitised industry, it is amazing to see that the devices used, do not receive many updates.  All the gadgets, applications and devices need to be sufficiently tested before launched. Then, they should be updated frequently, with patches and releases enhancing their security.</p>
+<h3 id="iot-malware-and-ransomware">IoT Malware and Ransomware</h3>
+<p>Some digitised appliances and some gadgets too, have the same computer power as a tablet. This means that they can be compromised, hijacked by hackers. Then, they can become a powerful weapon which hackers can use to compromise the system in many ways. At WoTT, we believe that IoT security is a complicated issue. It can not be achieved by obfuscation; on the contrary, it should be [Open-Source] (https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT) where knowledge of operations is shared and put to good use.</p>
+
+<p>One of the ways IoT devices can be used by hackers is to cause DDoS attacks. Hackers hijack computers and add them to a network of malicious botnets conducting DDoS attacks. DDoS attacks result when multiple compromised systems flood the resources of a targeted system with traffic. Thus, as it is easy for computers to be hijacked and participate in a DDoS attack without the owner knowing, so are smart devices, appliances and gadgets too. They can be compromised and used by a hacker.</p>
+
+<h3 id="so-what-can-go-wrong-with-iot-security-issues">So what can go wrong with IoT Security issues?</h3>
+<p>Assuming that there is a compromise of some sort in an IoT device or gadget many things can go wrong. First, you may no longer have control of it - or <em>lose availability</em>. This has a financial impact, of course. Yet, there are many other parameters and ways in which a hijacked device can affect you, your life and everything around it. Hackers may turn your IoT device into a spam machine sending spam emails to everyone - <em>damaging your reputation</em>.  They can transmit false signals, such as a false battery charging report - <em>disrupting your operation</em>.  Worse yet, hackers can compromise entire networks to interfere with entire manufacturing plants, energy grids or fleets of vehicles. What is truly scary is the potential for loss of life when thinking of medical devices or heavy machinery.</p>
+
+<h3 id="a-solution-to-the-iot-security-issues">A solution to the IoT security issues</h3>
+<p>We at WoTT aim at making the IoT industry a web of trusted devices, applications and gadgets. A place where security is of primary importance. WoTT is the go-to place as the network of connected devices grows.  Security, knowledge and collaboration between devices, manufacturers and developers is our philosophy. So, we bring to you a developer first [Solution] (https://wott.io/) to manage certificates and credentials, and find vulnerabilities in your build.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+         <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/d7969e-5bf53eabcf6ea82716b113107838c8affdc25e3b5bfc842410f185e71ae340f3.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Using WoTT to Secure a Paho MQTT Client</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 19, 2019</span>
+  <span class="description">
+   Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included) Introduction In a previous example we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/ac40f5-3f60760d342c928df520318868786df59d351e14c0585baea9cb64b349bce69f.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Connecting Edge IoT devices with Kubernetes</a>
+  <span class="author_time">By <a>Viktor Petersson</a> on July 18, 2019</span>
+  <span class="description">
+   Bridging Edge IoT devices with Kubernetes Required Skill Level: Medium to Expert In my last blog post, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/ea386b-d5659a9356237a4c0ddcced5d073b458fd35ce331475d7550770ff4150c09925.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Using WoTT to Secure Access to a Mosquitto MQTT Server</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 15, 2019</span>
+  <span class="description">
+   Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server Introduction Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+  
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="" title="">latest news</a></li>
+
+ <li><a href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" title="IoT Security Issues and Challenges">IoT Security Issues and Challenges</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt" title="Using WoTT to Secure a Paho MQTT Client">Using WoTT to Secure a Paho MQTT Client</a></li>
+
+ <li><a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" title="Connecting Edge IoT devices with Kubernetes">Connecting Edge IoT devices with Kubernetes</a></li>
+
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; Web Of Secure Things Ltd. All rights reserved</li>
+<li><a href="/tos" title="">Terms of Service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>

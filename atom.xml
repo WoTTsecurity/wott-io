@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>IoT Security Issues and Challenges</title>
+        
+          <description>&lt;p&gt;&lt;img alt=&quot;IoTSecurityIssues&quot; src=&quot;https://wott.io/assets/blog/IoTSecIssues-Blog-d205b55b946e45a78176837a366f236d57bf5c24bec05c34900905fddf41c17e.png&quot; integrity=&quot;sha256-0gW1W5RuRaeBdoN6Nm8jbVe/XCS+wFw0kAkF/d9BwX4=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/9bf085-5567306731f47ff38f3340193f6fe583333baefae8a3b111ea58a3404e7ee411.png 2x, https://wott.io/assets/4b94b4-e9093878fd5282196d2d571ee72062be7e2d988adac8900d29d7bcf4cef15f88.png 1x&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 12 Aug 2019 13:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges</link>
+        <guid isPermaLink="true">https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Using WoTT to Secure a Paho MQTT Client</title>
         
           <description>&lt;h1 id=&quot;using-wott-to-secure-a-connection-from-a-paho-mqtt-client-to-an-mqtt-server-mosquitto-mqtt-example-included&quot;&gt;Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included)&lt;/h1&gt;
