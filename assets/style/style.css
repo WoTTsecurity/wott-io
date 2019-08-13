@@ -306,7 +306,7 @@ footer{display:block; width:100%; height:auto;}
 .blog_posts .post .post_img{display:inline-table; width:100%; background-image:url(); background-repeat:no-repeat; background-size:100% auto; background-size:cover; background-position:center center; border-radius:20px 20px 0px 0px; border-radius:1.5rem 1.5rem 0px 0px; border-radius:1.2vw 1.2vw 0px 0px;}
 .blog_posts .post .post_img::before{content:''; display:block; width:1px; padding-top:65%;}
 .blog_posts .post .post_prewinfo{display:inline-table; width:85%; padding-left:7.5%; padding-right:7.5%; height:300px; height:20rem; height:15vw; padding-top:40px; padding-bottom:40px; padding-top:3rem; padding-bottom:3rem; padding-top:3vw; padding-bottom:3vw; text-align:left;  word-wrap: break-word; word-break: break-word;}
-.blog_posts .post .post_prewinfo .category_name{display:none; overflow:hidden; text-overflow: ellipsis;}
+.blog_posts .post .post_prewinfo .tags_list{display:none; overflow:hidden; text-overflow: ellipsis;}
 .blog_posts .post .post_prewinfo .title{display:block; width:100%; height:30%; max-height:30%; height: 4vw; max-height: 4vw; overflow:hidden; text-overflow: ellipsis; font-weight: 700; font-size: 23px; line-height: 23px; font-size: 1.4rem; line-height: 1.4rem; font-size: 1.3vw; line-height: 1.4vw; color:#377eea;}
 .blog_posts .post .post_prewinfo .author_time{display:block; width:100%; height:auto; height:2vw; max-height:2vw; padding-top:3%; padding-bottom:3%; padding-top:0vw; padding-bottom:0vw; overflow:hidden; text-overflow: ellipsis; font-size:15px; line-height:15px; font-size: 1rem; line-height: 1rem; font-size: 0.9vw; line-height: 2vw; color:#9297a1; font-weight: 500;}
 .blog_posts .post .post_prewinfo .author_time a{color:#377eea; font-weight: 700;}
@@ -321,7 +321,8 @@ footer{display:block; width:100%; height:auto;}
 .blog_posts .post.first_post .post_img{width:50%; vertical-align:top; float:left; height:100%; min-height:100%; max-height:100%; border-radius:20px 0px 0px 20px; border-radius:1.5rem 0px 0px 1.5rem; border-radius:1.2vw 0px 0px 1.2vw; }
 .blog_posts .post.first_post .post_img::before{display:none;}
 .blog_posts .post.first_post .post_prewinfo{width:36%; vertical-align:top;  float:left;  padding-left:7%; padding-right:7%;  padding-top: 4vw; padding-bottom: 4vw; height:100%; min-height:100%; max-height:100%; height:calc(100% - 8vw); min-height:calc(100% - 8vw); max-height:calc(100% - 8vw);}
-.blog_posts .post.first_post .post_prewinfo .category_name{display:block; width:auto; width:fit-content; width:-moz-fit-content; padding:1%; border-radius:5px; color:#ffffff; background-color:rgb(76, 215, 237); overflow:hidden; text-overflow: ellipsis; font-size:15px; line-height:15px; font-size: 1rem; line-height: 1rem; font-size: 0.7vw; line-height:0.7vw; text-transform:uppercase; letter-spacing:1px; font-weight: 700;}
+.blog_posts .post.first_post .post_prewinfo .tags_list{display:block; width:100%; white-space:nowrap; overflow:hidden; max-width:100%;}
+.blog_posts .post.first_post .post_prewinfo .tags_list a{display:inline-block; vertical-align:top; width:auto; width:fit-content; width:-moz-fit-content; padding:1%; border-radius:5px; color:#ffffff; background-color:rgb(76, 215, 237); overflow:hidden; text-overflow: ellipsis; font-size:15px; line-height:15px; font-size: 1rem; line-height: 1rem; font-size: 0.7vw; line-height:0.7vw; text-transform:uppercase; letter-spacing:1px; font-weight: 700;}
 .blog_posts .post.first_post .post_prewinfo .title{height:45%; max-height:45%; padding-top:5%; font-size: 38px; line-height: 38px; font-size: 2.6rem; line-height: 2.6rem; font-size: 2.5vw; line-height: 2.5vw;}
 .blog_posts .post.first_post .post_prewinfo .description{height:30%; max-height:30%;}
 
@@ -701,7 +702,7 @@ header.b_header{position:initial; left:0px; top:0px; height:70px; height:5rem; z
 .blog_posts .post.first_post .post_img{width:100%; height:auto; min-height:0px; max-height:100%; border-radius: 1.5rem 1.5rem 0px 0px; float:none;}
 .blog_posts .post.first_post .post_img::before{display:block;}
 .blog_posts .post.first_post .post_prewinfo{float:none; width:100%; height: 15.7rem; padding-top: 3rem; padding-bottom: 3rem;     width: 85%;     padding-left: 7.5%;     padding-right: 7.5%;}
-.blog_posts .post.first_post .post_prewinfo .category_name{display:none;}
+.blog_posts .post.first_post .post_prewinfo .tags_list{display:none;}
 .blog_posts .post.first_post .post_prewinfo .title{height:4.2rem; max-height:4.2rem; font-size: 1.4rem; line-height: 1.4rem;}
 .blog_posts .post.first_post .post_prewinfo .description{height:7.5rem; max-height:7.5rem; font-size: 1rem; line-height: 1.5rem;}
 .blog_posts .page_navigation{position:relative; z-index:3; width:90%; max-width:90%; margin-left:5%; margin-right:5%; width: calc(90% - 0.1rem); padding: 0.5rem 0.1rem; border-radius: 1.5rem;}
