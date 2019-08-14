@@ -18,10 +18,8 @@
 <li><a href="{{ site.url }}{{ site.baseurl }}blog" title="">blog</a></li>
 </ul></div>
 <div class="menu news"><ul>
-<li><a href="" title="">latest news</a></li>
-{% for post in site.posts limit:3 %}
- <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></li>
-{% endfor %}
+<li><a href="{{ site.url }}{{ site.baseurl }}blog" title="">latest news</a></li>
+{% for post in site.posts limit:3 %}<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></li>{% endfor %}
 </ul></div>
 </div>
 
