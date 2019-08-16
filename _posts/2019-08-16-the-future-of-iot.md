@@ -9,8 +9,6 @@ author: Nikoletta Triantafyllopoulou
 tags: [Open Source]
 class: post-template
 ---
-{% asset blog/2019-08-16-the-future-of-iot.png srcset:width="1300 2x" srcset:width="650 1x" alt="IoTSecurityIssues" %}
-
 # The Future of IoT
 
 ## Introduction
