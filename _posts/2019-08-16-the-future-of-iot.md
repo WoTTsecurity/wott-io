@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: 2019-08-16-the-future-of-iot.png
 title: The Future of IoT
-date: 2019-08-16 19:00:00
+date: 2019-08-16 13:00:00
 category: [news,thoughts]
 author: Nikoletta Triantafyllopoulou
 tags: [Open Source]
@@ -13,7 +13,7 @@ class: post-template
 
 # The Future of IoT
 
-##Introduction
+## Introduction
 
 The Future of IoT is both fascinating and challenging. As the number of connected devices is expected to triple by 2025, there are many significant questions and issues rising. Such as what does this mean for the Industry? What implications does this create?
 
@@ -24,7 +24,7 @@ But let us take a closer look at what the future of IoT will bring about, its as
 
 ## The Future of IoT and the different Industries: Achievements and Challenges
 
-###Smart Transport
+### Smart Transport
 The Future of IoT is all about connected airports, seaports, train stations and roads, which will allow for seamless movement of goods and jetsetters alike. Freight will be shipped across countries and borders with more efficiency and greater visibility. 
 
 This means that high-quality infrastructure and updated systems will keep all devices, vehicles and terminals continuously connected and informed about the latest data and conditions. This also means that the amount of data transmitted and received will be monumental. 
