@@ -34,7 +34,8 @@ Naturally, we have a lovely feature set that extends beyond this core to simplif
 * Vulnerability warnings (CVE)
 * Credential management
 * Certification/Compliance (future)
-​
+
+
 Coming back to the _main_ goal of establishing device trust. Let’s unpack the _main_ functionality.
 ​
 The fundamental building block that we use to encrypt communication between two peers is cryptographic identity.  We are not reinventing the wheel here.  We are leveraging existing standards and technology by using x509 certificates.  It works great for web and DevOps applications, so we are porting it to device communication.  (Spoiler: there is absolutely no blockchain needed to do this - find a different site for token investment tips. It ain’t me you’re looking for, babe.)
