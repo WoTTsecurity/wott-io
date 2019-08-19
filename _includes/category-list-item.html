@@ -1,13 +1,11 @@
   <div class="post {% if forloop.index == 1 %}  first_post {% endif %}">
   <div class="post_img" style='background-image:url({% if forloop.index == 1 %}{% asset blogcover/"{{ post.cover }}" magick:resize="800" @path %}{%else%}{% asset blogcover/"{{ post.cover }}" magick:resize="400" @path %}{% endif %});'></div>
   <div class="post_prewinfo">
-  <span class="tags_list">{% if forloop.index == 1 %}{% for tag in post.tags%}<a href="{{ site.url }}{{ site.baseurl }}/tag/{{ tag  | downcase }}">{{ tag }}</a>{% endfor %}{% endif %}</span>
+  <span class="tags_list">{% if forloop.index == 1 %}{% for tag in post.tags%}<a href="{{ site.url }}{{ site.baseurl }}tag/{{ tag  | downcase }}">{{ tag }}</a>{% endfor %}{% endif %}</span>
   <a class="title" href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a>
-  <span class="author_time">By <a>{{ post.author }}</a> on {{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}</span>
+  <span class="author_time">By <a href="{{ site.url }}{{ site.baseurl }}search?s={{ post.author | replace: " ", "+" | downcase }}">{{ post.author }}</a> on {{ post.date | date: '%B' }} {{ post.date | date: '%d' }}, {{ post.date | date: '%Y' }}</span>
   <span class="description">
   {% if post.description %} {{ post.description | strip_html | truncatewords: 52 }} {% else %} {{ post.content | strip_html | truncatewords: 52 }} {% endif %}</span>
   <a class="read_full" href="{{ site.url }}{{ site.baseurl }}{{ post.url | remove_first: '/' }}">Continue reading </a>
   </div>
   </div>
-  
-  
