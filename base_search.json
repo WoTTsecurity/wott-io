@@ -1,7 +1,18 @@
 [
   
     {
-	  "cover":"https://wott.io/assets/88cc26-5727b2628870916494b8cb6a7d38242c581b2491b8ffc0c6e9cab0e18bde7ca3.png",
+	  "cover":"https://wott.io/assets/16af4e-901d80289148662aee99415341b1f0768c38f870bfa9c1b541ed712202a3c522.png",
+      "title"    : "The Future of IoT",
+      "category" : "newsthoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot",
+      "date"     : "August 16, 2019",
+	  "description":"The Future of IoT Introduction The Future of IoT is both fascinating and challenging. As the number of connected devices is expected to triple by 2025, there are many significant questions and issues rising. Such as what does this mean for the Industry? What implications does this create? To start with, security...",
+	  "author":"Nikoletta Triantafyllopoulou"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/88cc26-c7599bbe2510460a19c7c8e07a654ce9f1754fc3e06b97061002516255121dfa.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -78,7 +89,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-8813544cb5f5000d8d25c73593e9a08c4f02399bea7a0dba3136d31422a8d001.png",
+	  "cover":"https://wott.io/assets/ac256e-2adedc5236e04998805acdef2d8291e3ae64f9edafd2757bbb07fd848009176c.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -89,7 +100,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-a1bcc4a3c0ac7f780b6561b7636e8c69614367bee40ce1d876bf895e0c5a0f2a.png",
+	  "cover":"https://wott.io/assets/49cd83-c792137d8b69fb9723974c98eaa64433efe7375173ea24aa9f1bee9cb1a238c2.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -100,7 +111,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-112a5e60535791a4098b4d31ced837f9cab4609b85aa53b3437340156b0505a3.png",
+	  "cover":"https://wott.io/assets/763a3a-011279065e0de881cc6004e4dd2c5ce11fb012de925d75c824f01f68887f8580.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -111,7 +122,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-5f46dc1b9e732994ba1e9a94e930745a719795dfbe7e5c54c19fae3554908b45.png",
+	  "cover":"https://wott.io/assets/8e810f-49ac76ccd8f4a7868ab4780fdc075a5201518faae6a7c54a4ed347039a4e70a4.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -122,7 +133,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-6e6afaa0a3fb94f970e5cb54133ae67d8bc9ff8f4d12cfc0d1d132da2deaced4.png",
+	  "cover":"https://wott.io/assets/130908-9967e8fad8b010ed99ae6561982e4ef92c68501a4b9ce9c3ef55f69ef1632253.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "Open Source",
