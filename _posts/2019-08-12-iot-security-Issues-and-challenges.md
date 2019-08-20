@@ -9,8 +9,6 @@ author: Nikoletta Triantafyllopoulou
 tags: [Open Source]
 class: post-template
 ---
-{% asset blog/IoTSecIssues-Blog.png srcset:width="1300 2x" srcset:width="650 1x" alt="IoTSecurityIssues" %}
-
 ## IoT Security Issues and Challenges
 IoT Security issues are quite a challenge for this burgeoning industry. There is a growing number of devices, applications and systems which turn to IoT. This helps them to upscale their efficiency and their services and to make life easier for users. So let us take a closer look at the industry.
 
