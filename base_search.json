@@ -1,7 +1,7 @@
 [
   
     {
-	  "cover":"https://wott.io/assets/16af4e-9e6207fac91ede301dd00d294234c5e3c04929d51803a1acc3078f9e6880ef66.png",
+	  "cover":"https://wott.io/assets/16af4e-21d736f128c798845abc5936336296bd3627323d0c41d0112e547e491cfff6e6.png",
       "title"    : "The Future of IoT",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -12,7 +12,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/88cc26-86ce9ab2c064fe708b6f14b35edc8599e39c79d7e65b9a1817d7f824b5f90799.png",
+	  "cover":"https://wott.io/assets/88cc26-584982f6256701e8cb8612371d766221dc367045e0191497431f0ae743aa01d6.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -89,7 +89,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-5e90c629e50656d347e113b48f05162da152303e3021748ca026015064c25004.png",
+	  "cover":"https://wott.io/assets/ac256e-618bd12d087a05d31f9a42762133ec4a857ee6a837361f536be6eafae561fa8f.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -100,7 +100,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-3d09ce3af1abf0c4ca4e6f24bf7f5e4d346b5f02d17e127faad06c09fb153cfb.png",
+	  "cover":"https://wott.io/assets/49cd83-4970dc1f813db0c1c3a62892c2c6a43ae13ad1e51e99713ec0ae31ff034efd7b.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -111,7 +111,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-8579394935fadf54fd86e5212ec89902577b45feb8bddaa8bc0f3cf9b993dd54.png",
+	  "cover":"https://wott.io/assets/763a3a-d45894c727ed21a89b476753cf721d58b23592c547ab285364f023b4b3f672ad.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -122,7 +122,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-e2a9612665c93df18749458a9c753a2374012adcc32193d1aa5675fa6e68a62b.png",
+	  "cover":"https://wott.io/assets/8e810f-9539487c0a28f5f5a921ab2c2aebde926557d21af053d7fd59ebbb21f5555c9d.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -133,7 +133,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-ad4b22f3b9fe7537f7f46b2032076bed9af3dd1ba9d7a167bd5d343d5afe196c.png",
+	  "cover":"https://wott.io/assets/130908-219e3bb88836ed4cbaa06881010d742a583679f8d987ea81a3425c71c367f64a.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "Open Source",
