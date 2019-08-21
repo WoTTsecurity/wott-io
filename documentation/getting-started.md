@@ -84,4 +84,5 @@ Credentials are downloaded either when WoTT fetches data or when restarted. You 
 ## What's next?
 
 * [Manage credentials with WoTT]({{site.url}}/documentation/manage-credentials)
+* [Learn more about the WoTT Trust Score]({{site.url}}/documentation/trust-score)
 * [Learn more about our use cases]({{site.url}}/documentation/use-cases)
