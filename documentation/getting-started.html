@@ -131,27 +131,28 @@
 </div>
 <div class="info_docs content_info_block">
 <span class="t_m1">Getting Started</span>
-<p>Welcome to WoTT - the first step to securing your IoT devices.</p>
+<p>Welcome to WoTT - the first step to securing your IoT and edge devices.</p>
 
 <h2 id="a-brief-overview-of-wotts-services">A brief overview of WoTT’s services</h2>
 
-<p>WoTT’s primary goal is to simplify and manage end-to-end security for IoT developers.
-We provide this in a number of ways:</p>
+<p>WoTT’s primary goal is to simplify and manage end-to-end security for developers.</p>
+
+<p>We provide this in a number of ways:</p>
 
 <ul>
   <li>Simplified encryption of device communication</li>
-  <li>Cryptographic identity (verification of access)</li>
+  <li>Cryptographic identity (x509 certificate issued from our CA)</li>
   <li>Enabling the removal of hard coded credentials from web applications and firmware</li>
 </ul>
 
-<p>You can access all these features by installing the <a href="https://github.com/WoTTsecurity/agent">WoTT Agent</a> and using the <a href="https://dash.wott.io">WoTT Dashboard</a> to manage your devices through a simple and user-friendly interface. We’ll walk you through step-by-step in setting up and installing the WoTT agent so you can start to implement hassle-free security on your IoT devices.</p>
+<p>You can access all these features by installing the <a href="https://github.com/WoTTsecurity/agent">WoTT Agent</a> and using the <a href="https://dash.wott.io">WoTT Dashboard</a> to manage your devices through a simple and user-friendly interface. We’ll walk you through step-by-step in setting up and installing the WoTT agent so you can start to implement hassle-free security on your IoT or edge devices.</p>
 
-<p>Ultimately we want to give you the developers the safety of secure devices on the internet so you can integrate your projects on a multitude of platforms without the complexity of managing individual certificates or authenitication. WoTT secures your projects so that you don’t have to.</p>
+<p>Ultimately we want to give you the developers the safety of secure devices on the internet so you can integrate your projects on a multitude of platforms without the complexity of managing individual certificates or authentication. WoTT secures your projects so that you don’t have to.</p>
 
 <h2 id="a-little-more-on-cryptographic-identity">A little more on ‘cryptographic’ identity</h2>
 
 <p>Our lightweight agent handles identifying your device as well as verifying inter-device communication cryptographically [1]. What this essentially means is that the agent assigns a certificate from WoTT’s own certificate authority (CA) to your device to secure it [2].
-The agent does this based on a unique value assigned to your device which acts as an identifier to other devices. The purpose of this is to restrict access to trusted devices preventing fraudlent access and attacks.</p>
+The agent does this based on a unique value assigned to your device which acts as an identifier to other devices. The purpose of this is to restrict access to trusted devices preventing fraudulent access and attacks.</p>
 
 <ul>
   <li>[1] Done through mutual TLS (mTLS)</li>
@@ -166,63 +167,40 @@ The agent does this based on a unique value assigned to your device which acts a
 
 <p>As a developer, you will likely be accessing a large range of internet/cloud services that require basic HTTP authentication or an API key. In most instances, such credentials are hard coded into applications and can be easily read with access to said applications. WoTT introduces credential management so that you can remotely download the necessary credentials onto your device as a JSON file. This removes the need for hard coded keys and logins from your application.</p>
 
-<p>We do this via our Dasboard which you can use to monitor your devices. The Dashboard gives your device a trust score (based on how secure it is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.</p>
+<p>We do this via our Dashboard which you can use to monitor your devices. The Dashboard gives your device a trust score (based on how secure it is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.</p>
 
 <h2 id="installing-the-wott-agent-and-claiming-your-device">Installing the WoTT agent and claiming your device</h2>
 
-<p>First, create an account for the <a href="https://dash.wott.io">WoTT Dashboard</a> and login - you will need this to claim your device later.</p>
+<p>First, create an account for the <a href="https://dash.wott.io">WoTT Dashboard</a> and login.</p>
 
-<p>Currently, the Agent is only available to Debian package distributions such as Raspbian (for Pi) or Debian. You will also need to have <code class="highlighter-rouge">curl</code> installed.</p>
+<p>Currently, the Agent is only available to Debian package distributions such as Debian (including Raspbian) and Ubuntu.</p>
 
-<p>To install the agent, run the following in terminal:</p>
+<p>To install the agent, simply go to the WoTT dashboard, and press the ‘Add Device’ button. Next, either copy each line one-by-one or use the copy icon to get the entire block as a one-liner.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -s https://packagecloud.io/install/repositories/wott/agent/script.deb.sh | sudo bash
-$ sudo apt install wott-agent
+<p><img alt="Add device from the dashboard" class="img-fluid" src="https://wott.io/assets/docs/add-device-def20f7ab7f1f118568b74c35c60c3f5b4eb5c9d41a71f9b3552c3ac7c1fe299.png" integrity="sha256-3vIPerfx8RhWi3TDXGDD9bTrXJ1Bpx+bNVLDrHwf4pk=" crossorigin="anonymous" srcset="https://wott.io/assets/2739f4-6439a29adb183b9e19d048e3646f5b9fe52f8b17508e7c1084ba1ac6b5550ae7.png 2x, https://wott.io/assets/5ea0bf-1ec1ca290d73ac91a617230fc2c84987860d2b4c1cdc539c30a461c6b36de119.png 1x" /></p>
+
+<p>With this in your clip board/buffer, SSH into your device and paste in the command. Assuming things went well, you should see something similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[...]
+$ sudo apt install -y wott-agent
+[...]
+Good job installing the wott-agent and welcome to the community of security conscious hardware devs!
+
+Your device has already been claimed in the WoTT dashboard (https://dash.wott.io).
+
+Your device's unique ID is: x.d.wott.local
+
+For more information, visit wott.io/getting-started or drop us a line at hey@wott.io.
+
+Regards,
+The WoTT Team
 </code></pre></div></div>
-<p>The terminal will now output your WoTT Device ID, claim token, and a link to claim the device.
-Copy and paste this link into your browser- the fields may already have autofilled. Otherwise fill in the details in the relevant fields.</p>
 
-<p><img alt="Claim device on WoTT Dashboard" class="img-fluid" src="https://wott.io/assets/docs/claim-device-b8dea404ef9e7d75450ebeadbcfdb393453f4de81e9f27644bb3c26652939faa.png" integrity="sha256-uN6kBO+efXVFDr6tvP2zk0U/TegenydkS7PCZlKTn6o=" crossorigin="anonymous" srcset="https://wott.io/assets/8087e4-7a27641be6a68f111526fe458d01335d452b7273f54e6163582b66f33279d1e4.png 2x, https://wott.io/assets/454a75-acaa7cbd98e449a6e829d8441119634759acf88065c3d9ff2213a84e0d76b57d.png 1x" /></p>
-
-<p><strong>Note:</strong> you can view your Device ID and claim token using the following commands as well:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wott-agent whoami
-$ wott-agent claim-token
-</code></pre></div></div>
 <p>Your device will now be registered and viewable on the WoTT Dashboard. You can now see the relative trust scores of your devices. To see device specific information, select it and add appropriate tags to these devices (this is relevant for credential management).</p>
 
 <p>See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user’s personal tags for the Pi’s purpose.</p>
 
-<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-7b6b45479afba5119e5b34a3984e641296f7ddc40b0943501bcc7dd630de9696.png 2x, https://wott.io/assets/cbc4d6-82b7230f9d818f76b910dde15b0b7b2f468a5c949c2c5eb28aabbdee77d35570.png 1x" /></p>
-
-<h2 id="managing-your-own-credentials-through-the-wott-dashboard">Managing your own credentials through the WoTT Dashboard</h2>
-
-<p>In scenarios where you might require API keys or logins for your applications, you can add and manage these credentials to the WoTT Dashboard. On the left of WoTT Dashboard is a sidebar.</p>
-
-<p><img alt="WoTT Dashboard sidebar" class="img-fluid" src="https://wott.io/assets/docs/sidebar-990e2a349f1f2c209e2c0665cafbc5181c4cfbdda747f1da414a9359478d596f.png" integrity="sha256-mQ4qNJ8fLCCeLAZlyvvFGBxM+92nR/HaQUqTWUeNWW8=" crossorigin="anonymous" srcset="https://wott.io/assets/826b17-31a26e0f88f00e68b4c563e151ca85e4974357c9c3c5ed62f0d20630237099bb.png 2x, https://wott.io/assets/8d71e4-61e6e0e992212790570a334a476bf8f584ac132328ec26884260151d8f4a3c97.png 1x" /></p>
-
-<p>Navigate to ‘Credentials.’ Select ‘Add a credential’</p>
-
-<p><img alt="WoTT Credentias menu" class="img-fluid" src="https://wott.io/assets/docs/credentials-25ee1479b32fff12d704e02a2c0922537a115a4c501419a5a261595ad6c5aa4c.png" integrity="sha256-Je4UebMv/xLXBOAqLAkiU3oRWkxQFBmlomFZWtbFqkw=" crossorigin="anonymous" srcset="https://wott.io/assets/c97e2d-8f2f2a3e6931d28f024dfeb6a1d9a2db2c4cb15b4f8c84f388937ed62d2ac245.png 2x, https://wott.io/assets/7ba295-61f917a9a2dc1702925b8eadaa44235040153a625f861c2061be1d357b63cb24.png 1x" /></p>
-
-<p>Let’s break down the fields:</p>
-
-<ul>
-  <li><strong>Name:</strong> name of credential file, for example <code class="highlighter-rouge">my_app</code>.</li>
-  <li><strong>Key:</strong> contents of credential, for example: <code class="highlighter-rouge">api_key</code>, <code class="highlighter-rouge">login_details</code>, or simply <code class="highlighter-rouge">credentials</code>.</li>
-  <li><strong>Value:</strong> actual value of the login/key required for access (the bit that should be hidden). This should be done in <code class="highlighter-rouge">username:password</code> format for a login.</li>
-  <li><strong>Owner:</strong> optional field, reccommended for Raspberry Pis. The owner is the Linux user that will own the file on the system. On Raspberry Pi, the default user is <code class="highlighter-rouge">pi</code>.</li>
-  <li><strong>Tags:</strong> must match the tags on the device that you are downloading to.</li>
-</ul>
-
-<p>Once you’ve added a credential, you can check for it on your device by running:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat /opt/wott/credentials/NAME.json
-</code></pre></div></div>
-<p>Note that you will either have to wait 15 minutes for the WoTT agent to refresh or restart it immediately with:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service wott-agent restart
-</code></pre></div></div>
-<p>Additionally, older Pi hardware may take longer to load these certificates, so do wait a few minutes if the file has not downloaded yet.</p>
+<p><img alt="Raspberry Pi example profile" class="img-fluid" src="https://wott.io/assets/docs/rasbpi-profile-d0d247da32b378d5b6ea0bdc91af566b79e3c9c6a829b5e903dafc2ff9888519.png" integrity="sha256-0NJH2jKzeNW26gvcka9Wa3njycaoKbXpA9r8L/mIhRk=" crossorigin="anonymous" srcset="https://wott.io/assets/e4d1f3-90c989551ab0ae082ba7c3b43b0c546039a1c7707fc7486472adcba49e197490.png 2x, https://wott.io/assets/cbc4d6-ff86b17d9c15429da72afaf340663348f61fcf509831a7188f8e02c47e580d1b.png 1x" /></p>
 
 <h2 id="finishing-notes">Finishing notes</h2>
 
@@ -231,7 +209,12 @@ $ wott-agent claim-token
 <p>WoTT certificates refresh every 7 days, so you will need to account for that in your applications.
 Credentials are downloaded either when WoTT fetches data or when restarted. You may also find yourself being denied permissions for some of the commands we’ve shown you, use <code class="highlighter-rouge">sudo</code> where necessary to circumvent this.</p>
 
-<p>These certificates and credentials can now be used to secure end-to-end device communication and web applications, check out some of the use cases and examples on the <a href="https://github.com/WoTTsecurity/agent">WoTT Agent Github</a> for inspiration and ideas on how to use WoTT for your own projects.</p>
+<h2 id="whats-next">What’s next?</h2>
+
+<ul>
+  <li><a href="https://wott.io/documentation/manage-credentials">Manage credentials with WoTT</a></li>
+  <li><a href="https://wott.io/documentation/use-cases">Learn more about our use cases</a></li>
+</ul>
 
 </div>
 
