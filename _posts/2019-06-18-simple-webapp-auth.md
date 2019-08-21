@@ -29,7 +29,7 @@ Otherwise you can use `curl` to download the relevant files. We'll include the r
 
 ## Using WoTT Dashboard
 
-WoTT provides an online client that you can interface with to register your WoTT Agent enabled devices. We strongly encourage you to do so in the interests of protecting your IoT devices. 
+WoTT provides an online client that you can interface with to register your WoTT Agent enabled devices. We strongly encourage you to do so in the interests of protecting your IoT devices.
 
 For this example, you will need to have the WoTT Dash set up, so if you haven't done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.
 
@@ -47,7 +47,7 @@ This will give you all the information you need to manually claim your device.
 
 ## Adding Credentials
 
-Once you have your devices enrolled, you need to navigate to the Credentials page in the Dashboard. You will need to add a credential to use to access the WebApp later. 
+Once you have your devices enrolled, you need to navigate to the Credentials page in the Dashboard. You will need to add a credential to use to access the WebApp later.
 The credential subheaders may seem a little confusing. In essence, `Name` refers to the name of the application you need credentials for. In our case, it's the simple WebApp. The `Key` is how the application then queries its credentials with `Value` referring to the actual contents of the key (the secure bit). `Tags` is to match the tags of your chosen device to the credential so you can manage which credentials are downloaded to each device.
 
 For our example, add the following credential:
@@ -69,19 +69,19 @@ You will then need to add the correct tags to your device. Navigate to your dash
 
 Select the device that will be acting as your server, or `home-lab`. In the overview tab, you will be able to add tags to your device. Add `home-lab` and ensure that it is spelt correctly to match the credentials tag or it **will not** download.
 
-The credentials are now ready to be used on your specified WoTT enabled device provided they are tagged correctly. On this device, you will now need to relaunch the WoTT Agent to download the new credentials:
+The credentials are now ready to be used on your specified WoTT enabled device provided they are tagged correctly. The credentials will automatically be populated on the device. However, to speed things up, we can run:
 
-``` 
-$ sudo service wott-agent restart
 ```
-There will now be a JSON file in your WoTT agent's credentials with your information which the app will parse and process. 
+$ sudo wott-agent credetials
+```
+There will now be a JSON file in your WoTT agent's credentials with your information which the app will parse and process.
 
 **Note:** If you change the Name of the new credentials, you will need to edit the name of the JSON file being read within the app as it currently assumes you have named it `my_simple_web_app` as per instructions.
 
 
 ## Setting up the WebApp
 
-If you are using `curl`, you will need to download these files into a new directory. Use `sudo` where necessary. 
+If you are using `curl`, you will need to download these files into a new directory. Use `sudo` where necessary.
 
 ```
 $ apt update && apt install -y python3 python3-pip curl
@@ -116,9 +116,9 @@ This will start your app on the server 127.0.0.1 at port 8080. You should receiv
 
 ## Accessing the WebApp
 
-Launch http://127.0.0.1:8080/ on your device's browser. Here, provided you have encountered no errors, you'll be prompted to enter a username and password. If you have followed the steps so far the username should be `username` and the password `password`. 
+Launch http://127.0.0.1:8080/ on your device's browser. Here, provided you have encountered no errors, you'll be prompted to enter a username and password. If you have followed the steps so far the username should be `username` and the password `password`.
 
-With the correct details, you will be greeted with the following screen message: 
+With the correct details, you will be greeted with the following screen message:
 
 {% asset blog/hello.png srcset:width="1300 2x" srcset:width="650 1x" alt="login successful" %}
 
@@ -145,12 +145,12 @@ When using curl commands to download the files from Github, make sure you use th
 
 While making sure the server device is still running:
 
-Obtain your server device IP using `ip addr show` in a separate terminal if you do not know what it is already. The port we are calling is 8080. 
+Obtain your server device IP using `ip addr show` in a separate terminal if you do not know what it is already. The port we are calling is 8080.
 
 You can either enter the IP address followed by `:8080` and enter the username and password through the WebApp and receive the same screen as before; or you can use a curl command in your client device's terminal in the following format:
 
 ```
-curl http://username:password@SERVER_IP:8080
+$ curl http://username:password@SERVER_IP:8080
 ```
 Once again, if succussful you will receive the following message:
 
@@ -161,4 +161,3 @@ Login successful. Hello from WoTT!
 ## Closing Notes
 
 We have now seen how we can use WoTT to generate secure credentials to access a WebApp via HTTP Basic auth. This can be done from any device to the server on the WoTT agent enabled device provided you have access to the credentials and the server's IP. Once again, make sure to bind your WebApp to your localhost for security.
-
