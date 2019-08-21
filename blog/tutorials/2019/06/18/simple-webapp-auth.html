@@ -153,7 +153,7 @@
 
 <p>For this example, you will need to have the WoTT Dash set up, so if you haven’t done so already, register with the link above and enrol your devices (done during the initial installation of the WoTT agent). If you already have done this, just log into the dashboard with your username and password.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-64619a399d96b8ccb07766bc93f439d81f7a8c89b3fb0cc8adc5bc18effa8e72.png 2x, https://wott.io/assets/656774-5bcbab20f5cb3a9f2560aabcca322b8b899a9833925149a6c300bdd72f30b7e1.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-login-96a87420b4d877c7cb3674e7c3214298f23f271074a298e87306efef5d036b25.png" integrity="sha256-lqh0ILTYd8fLNnTnwyFCmPI/JxB0opjocwbv710DayU=" crossorigin="anonymous" srcset="https://wott.io/assets/61021b-f1fb86b2da87a68baf56cda615573f56fd9ccf320e2dc224c7cff333dde13124.png 2x, https://wott.io/assets/656774-0b3db1a22d55396b1ba8c5e86ea5464e3bdd99741570709500cf4a01da39e61e.png 1x" /></p>
 
 <p>If you have already got the WoTT Agent installed but haven’t got the dash and the claim information, don’t worry. Follow these commands to get the information you need to set it up:</p>
 
@@ -166,7 +166,7 @@ $ sudo wott-agent claim-token
 
 <h2 id="adding-credentials">Adding Credentials</h2>
 
-<p>Once you have your devices enrolled, you need to navigate to the Credentials page in the Dashboard. You will need to add a credential to use to access the WebApp later. 
+<p>Once you have your devices enrolled, you need to navigate to the Credentials page in the Dashboard. You will need to add a credential to use to access the WebApp later.
 The credential subheaders may seem a little confusing. In essence, <code class="highlighter-rouge">Name</code> refers to the name of the application you need credentials for. In our case, it’s the simple WebApp. The <code class="highlighter-rouge">Key</code> is how the application then queries its credentials with <code class="highlighter-rouge">Value</code> referring to the actual contents of the key (the secure bit). <code class="highlighter-rouge">Tags</code> is to match the tags of your chosen device to the credential so you can manage which credentials are downloaded to each device.</p>
 
 <p>For our example, add the following credential:</p>
@@ -179,17 +179,17 @@ Tags = home-lab
 
 <p>In place of <code class="highlighter-rouge">username:password</code> you can enter your own username and password but it is sufficient for this demonstration to leave it as is. This is also assuming the tag of the device you will be downloading the credential on is <code class="highlighter-rouge">home-lab</code>. If all is successful, the page should now look something like this:</p>
 
-<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-e5d568279edcbb1de3f5f998e3bc5d1968dd7c7c2fa32ea93b60cbe56918e224.png 2x, https://wott.io/assets/deedd0-425a5510c9810c71538628184c576908ff7ea1bad2396da59e387e9837251f1b.png 1x" /></p>
+<p><img alt="WoTT Credentials" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-1bc1e3202a072e76db4184e614a78b780fcc463bb612d9b2a3e8108ecf58c5c3.png 2x, https://wott.io/assets/deedd0-8e96e8e6f024a9a36f53fd3e82faf4781cae3edb1ca0dc18aa468f64493ad19f.png 1x" /></p>
 
 <p>You will then need to add the correct tags to your device. Navigate to your dashboard. It will have a list of your registered WoTT devices and look something like this:</p>
 
-<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-ce0d8d8d6250c23449c6c44b020338116659ee5f9bbf4c45155e8c9c1e9c98e3.png 2x, https://wott.io/assets/2ee7eb-94e5e8f4dedaa2997dfcff6b30d943d06d6a27c52e181fe6c380098e7bc0a6f0.png 1x" /></p>
+<p><img alt="device list" src="https://wott.io/assets/blog/device-list-4acd1e5998b2b0146f8b6cd19d94460e36242ff508c7592fc4416ec7e18995d2.png" integrity="sha256-Ss0eWZiysBRvi2zRnZRGDjYkL/UIx1kvxEFux+GJldI=" crossorigin="anonymous" srcset="https://wott.io/assets/cc4cb7-cbf368249ebccd67887b788b1a398ca93f098224d3085894e90a681bf1c37226.png 2x, https://wott.io/assets/2ee7eb-20fe70a6daeb04913ff679cfacc3ac78600f3f0628277e9b9c0ce7bc270e7dc6.png 1x" /></p>
 
 <p>Select the device that will be acting as your server, or <code class="highlighter-rouge">home-lab</code>. In the overview tab, you will be able to add tags to your device. Add <code class="highlighter-rouge">home-lab</code> and ensure that it is spelt correctly to match the credentials tag or it <strong>will not</strong> download.</p>
 
-<p>The credentials are now ready to be used on your specified WoTT enabled device provided they are tagged correctly. On this device, you will now need to relaunch the WoTT Agent to download the new credentials:</p>
+<p>The credentials are now ready to be used on your specified WoTT enabled device provided they are tagged correctly. The credentials will automatically be populated on the device. However, to speed things up, we can run:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service wott-agent restart
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo wott-agent credetials
 </code></pre></div></div>
 <p>There will now be a JSON file in your WoTT agent’s credentials with your information which the app will parse and process.</p>
 
@@ -233,7 +233,7 @@ $ python3 app.py
 
 <p>With the correct details, you will be greeted with the following screen message:</p>
 
-<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-16dfd6ec1e6c225d3c676e8405a68c71252967336e4d236376ee791574ea2a8f.png 2x, https://wott.io/assets/954347-d1ff0674e89d4527a9a45b2966844eaed0c28d61c7a88334c51e99d3ce06ca2f.png 1x" /></p>
+<p><img alt="login successful" src="https://wott.io/assets/blog/hello-03dd9b5e2191e72c4a2fb7131637fa82aa21089685126c9448a4fa83f4d0320c.png" integrity="sha256-A92bXiGR5yxKL7cTFjf6gqohCJaFEmyUSKT6g/TQMgw=" crossorigin="anonymous" srcset="https://wott.io/assets/e39f54-2d9a75becf3188d8521100c7116a3009a6f961799d22c4ce78185ae7ba3253a1.png 2x, https://wott.io/assets/954347-a0053ff6c2483aad5155d692da2a24e4f9fe8ae0378c3ac71663c2a3592bdf31.png 1x" /></p>
 
 <p>And that’s it, you’ve set up basic HTML auth on a WebApp!</p>
 
@@ -259,7 +259,7 @@ ImportError: No module named flask
 
 <p>You can either enter the IP address followed by <code class="highlighter-rouge">:8080</code> and enter the username and password through the WebApp and receive the same screen as before; or you can use a curl command in your client device’s terminal in the following format:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://username:password@SERVER_IP:8080
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl http://username:password@SERVER_IP:8080
 </code></pre></div></div>
 <p>Once again, if succussful you will receive the following message:</p>
 
@@ -270,13 +270,12 @@ ImportError: No module named flask
 
 <p>We have now seen how we can use WoTT to generate secure credentials to access a WebApp via HTTP Basic auth. This can be done from any device to the server on the WoTT agent enabled device provided you have access to the credentials and the server’s IP. Once again, make sure to bind your WebApp to your localhost for security.</p>
 
-
 </div>
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-ab0a4cddcd1247e7ca201cc3d78ddd729de455545279e0d67cd1acb8ad4b9aa8.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-6c6b796b7afd691e3bf43696967ae06a1cff3fcc50d40482714f7408601154b6.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">newsthoughts</span>
   <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">The Future of IoT</a>
@@ -288,7 +287,7 @@ ImportError: No module named flask
   </div>
 
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/88cc26-725172e25209fd2b7d609a16407628f775edfc252b5f2399cbe6e385b16fe6c7.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/88cc26-4f3736d0793904846cecd4c630669b0403ee7daed68847d1de084242c4b989ca.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">newsthoughts</span>
   <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges">IoT Security Issues and Challenges</a>
