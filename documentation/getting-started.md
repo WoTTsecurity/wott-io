@@ -10,10 +10,6 @@ redirect_from:
   - /blog/categories/getting-started
 ---
 
-Welcome to WoTT - the first step to securing your IoT and edge devices.
-
-## A brief overview of WoTT's services
-
 WoTT's primary goal is to simplify and manage end-to-end security for developers.
 
 We provide this in a number of ways:

@@ -6,8 +6,6 @@ full_description: We'll show you how to manage credentials, and how to easily ro
 title_content: 'Manage credentials with WoTT'
 ---
 
-## Managing your credentials through the WoTT Dashboard
-
 It is unfortunately common that developers "bake in" credentials to both 3rd party services as well as credentials to the actual device into the firmware or software. This is commonly done out of convenience, despite it contradicting best practices. The downside with this however is that it both makes it very easy for an attacker or malicious user to extract this data. What makes matters worse is that these credentials are often shared across the entire fleet of devices. Depending on what type of credentials these are, the attacker could do things such as:
 
  * Perform a simple rate limiting attack, meaning that they perform enough requests per minute or hour until the 3rd party service cuts off the access, which then means that none of your other devices can interact with the 3rd party service.
@@ -69,6 +67,6 @@ $ sudo cat /opt/wott/device_metadata.json
 }
 ```
 
-As you can see above, we automatically populate this file with some handy meta data that you might want want to use as part of your application logic.
+As you can see above, we automatically populate this file with some handy meta data that you might want want to use as part of your application logic. It is however worth noting that the device metadata does not have the same granularity of permission access control, as it is locked down to "root" in order to avoid accidental leakage.
 
 Please do note that if you want to speed up a sync, you need to use the command `sudo wott-agent device-metadata`.
