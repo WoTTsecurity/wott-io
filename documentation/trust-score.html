@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+
+
+    <title>Web of Trusted Things - What is the WoTT Trust Score?</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	 
+	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Trust Score" />
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wott.io/assets/style/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wott.io/assets/style/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wott.io/assets/style/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wott.io/assets/style/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wott.io/assets/style/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wott.io/assets/style/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wott.io/assets/style/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wott.io/assets/style/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Web of Trusted Things"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://wott.io/assets/style/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://wott.io/assets/style/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://wott.io/assets/style/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://wott.io/assets/style/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://wott.io/assets/style/favicon/mstile-310x310.png" />
+
+    <link rel="canonical" href="https://wott.io/documentation/trust-score" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web of Trusted Things - What is the WoTT Trust Score?" />
+    <meta property="og:description" content="Trust Score" />
+    <meta property="og:url" content="https://wott.io/documentation/trust-score" />
+	<meta property="og:image" content="https://wott.io/assets/images/blog-cover.jpg">
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:author" content="https://www.facebook.com/wott" />
+    <meta property="article:published_time" content="" />
+    <meta property="article:modified_time" content="" />
+ 
+	<!-- Twitter cards -->
+	<meta name="twitter:site" content="@wottsecurity" />
+	<meta name="twitter:creator" content="@wottsecurity" />
+	<meta name="twitter:title"   content="Web of Trusted Things - What is the WoTT Trust Score?">
+	<meta name="twitter:description" content="Trust Score">
+	<meta name="twitter:card"  content="summary"><meta name="twitter:image" content="https://wott.io/assets/images/blog-cover.jpg">
+	<!-- end of Twitter cards -->
+	
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/"
+    },
+    "url": "https://wott.io/documentation/trust-score",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/assets/images/blog-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/documentation/trust-score"
+    },
+    "description": "Trust Score"
+}
+    </script>
+
+
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="What is the WoTT Trust Score?" href="/feed.xml" />
+
+</head>
+<body class="body_docs">
+	<div class="search_block"><form action="https://wott.io/search" method="GET"><input id="search_input_mini" type="text" name="s" value="" placeholder="Search for any article or any questions"/><button type="submit">search</button></form><div class="list_s_result" id="search_result_mini"></div></div>
+	<div class="left_block" data-open-menu="0" id="docs_menu"><a class="mobile_menu_button"></a><div class="inner_block"><a class="logo_version" href="https://wott.io/"><span class="logo"></span></a></div>	<div class="inner_block">
+	<span class="title">Documentation</span>
+	<ul class="global_nav">
+	<li><a href="https://wott.io/documentation/getting-started">Getting Started</a></li>
+	<li><a href="https://wott.io/documentation/manage-credentials">Manage Credentials</a></li>
+	<li><a href="https://wott.io/documentation/trust-score">Trust Score</a></li>	
+	<li><a href="https://wott.io/documentation/use-cases">Use Cases</a></li>
+	<li><a href="https://wott.io/documentation/faq">Frequently Asked Questions</a></li>
+	<li><a href="https://www.raspberrypi.org/forums/viewtopic.php?f=41&t=243538" target="_blank">Get Support</a></li>
+	</ul>
+	</div>
+
+	<div class="inner_block" id="mobile_page_site_menu">
+	<span class="title">Site pages</span>
+	<ul class="global_nav">
+	<li><a href="https://wott.io/product" title="">Product</a></li>
+	<li><a href="https://wott.io/about" title="">About us</a></li>
+	<li><a href="https://wott.io/pricing" title="">Pricing</a></li>
+	<li><a href="https://wott.io/documentation" title="">Documentation</a></li>
+	<li><a href="https://wott.io/blog" title="">Blog</a></li>
+	</ul>
+	</div>
+
+	<!--
+	<div class="inner_block">
+	<ul class="slider_nav" data-name-nav="Getting Started" id="getting_started">
+	<li class="name"><a href="#getting_started" >Getting Started</a></li>
+	<li><a href="https://wott.io/documentation/getting_started/test">Sections and outlines in HTML5</a></li>
+	</ul>
+	</div>
+	-->
+</div>
+    <div class="b_content docs_content">
+    <div class="inner-content">
+<div class="info_docs">
+<span class="t_hm">introduction</span>
+<span class="t_i1">What is the WoTT Trust Score?</span>
+<span class="t_m2">What is the WoTT Trust Score, what it is used for and what does it say about the security posture of my devices?</span>
+</div>
+<div class="info_docs content_info_block">
+<span class="t_m1"></span>
+<p>After enrolling your first device into WoTT, you have likely noticed the big percentage meter on top of each device. This is what we call a Trust Score, and it’s a corner stone of <a href="https://www.oreilly.com/library/view/zero-trust-networks/9781491962183/">Zero Trust Networking</a>. In real simple terms, a Trust Score is a score ranging from 0-1 for how much a given device can be trusted.</p>
+
+<p><img alt="WoTT Trust Score" class="img-fluid" src="https://wott.io/assets/docs/trust-score-414818663fd3068092f95360e581f43de897d0f8668003e7a5df2efce9b3f53d.png" integrity="sha256-QUgYZj/TBoCS+VNg5YH0PeiX0PhmgAPnpd8u/Omz9T0=" crossorigin="anonymous" srcset="https://wott.io/assets/e5ce9b-fb9a00cf633fcc296441ab6f52813dd5dbcef921f8c8b5c0460b6422a3b748af.png 2x, https://wott.io/assets/1edda9-74572f1bef7836d9f427abc3a64ebbae2073cc8f6ccefc745bea6e72ea819366.png 1x" /></p>
+
+<p>To make this real, let’s create a scenario where an edge devices are sending data to two different services: an ERP system and a logging service. These two systems have very different threat models and we want our policies to reflect this. Assuming we’ve setup our logging policies properly (with write-only), there is little we can do with this access (other than perhaps flood the system until we reach our rate limiting). Because we require both read and write access to the ERP system in this scenario, this is a much more sensitive. Not only can we do more things, but the data in the ERP system is arguably much more sensitive.</p>
+
+<p>In a Zero Trust Networking model, you would use Mutual TLS (see <a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">Connecting Edge IoT devices with Kubernetes</a> and <a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Configuring Nginx with client certificate authentication</a>) to grant each device access to these systems individually. This by itself is a major improvement over regular access control due to the cryptographic nature of Mutual TLS. However, to properly implement Zero Trust Networking, we take this one step further. This is where the Trust Scores comes into play.</p>
+
+<p>Let’s say we have five edge devices. Four of them have been patched with all the latest security updates, but for some reason, the fifth devices have not applied the latest security updates and is vulnerable to a known security issue (available in the CVE databases). As part of our access control, we can factor this in. Because this device has a known security issue, this will automatically be reflected in the Trust Score (e.g. the first four devices might have a Trust Score of 0.93, whereas the fifth would have a Trust Score of 0.76).</p>
+
+<p>Tying this back to our scenario above, we might determine that for a device to talk to the logging service, we require a Trust Score above 0.5, but for the ERP system, the Trust Score needs to exceed 0.9. As such, because this fifth device’s Trust Score is lower than the threshold, it will be prevented to talk to the ERP system before the issue has been rectified.</p>
+
+<p>This is much how Google’s implementation of Zero Trust Networking (called BeyondCorp) works. If a remote worker tries to access the various internal services, the patch level of the given device is one of the many variables as part of the Trust Score, which subsequently determines what a given worker can access (along with job responsibilities etc).</p>
+
+<h2 id="trust-score-and-wott">Trust Score and WoTT</h2>
+
+<p>When you install the WoTT agent on one of your devices, one of the things it does is to collect information about the system. The data we check for includes (but not limited to):</p>
+
+<ul>
+  <li>Default credentials found</li>
+  <li>The kernel hardening features (such as AppArmor and SELinux)</li>
+  <li>Firewall configuration</li>
+  <li>Installed packages (which are then checked against known vulnerabilities)</li>
+  <li>Network behavior</li>
+  <li>Insecure running services (such as Telnet)</li>
+</ul>
+
+<p>This data is submitted to our back-end, which is then sent to our Machine Learning models, which then returns a Trust Score for a given device.</p>
+
+<h2 id="how-do-i-improve-my-trust-score">How do I improve my Trust Score?</h2>
+
+<p>If you navigate to a device, you should see “Recommended Actions” in the upper right-hand corner. This should give you one or more things that you do in order to bump up your Trust Score.</p>
+
+</div>
+
+</div>
+
+
+	</div>
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+</body>
+</html>
