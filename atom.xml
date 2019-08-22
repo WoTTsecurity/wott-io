@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>WoTT is a free, automated, open-source public key infrastructure for connected hardware</description>
+    <description>WoTT is an automated, open-source public key infrastructure for connected hardware</description>
     <link>
     https://wott.io</link>
     
