@@ -10,7 +10,7 @@ url: 'https://wott.io'
 
 # Website info
 title: Web of Trusted Things
-description: WoTT is a free, automated, open-source public key infrastructure for connected hardware
+description: WoTT is an automated, open-source public key infrastructure for connected hardware
 cover: assets/images/blog-cover.jpg
 favicon: assets/images/favicon.png
 
