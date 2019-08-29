@@ -625,11 +625,11 @@ header.b_header{position:initial; left:0px; top:0px; height:70px; height:5rem; z
 .pricing-template .plans .blocks .inner_top .t_h0 {overflow: hidden;     white-space: nowrap;     text-overflow: ellipsis;}
 .pricing-template .plans .blocks .inner_top .t_h2{font-size: 1.2rem; line-height: 1.8rem; padding-bottom: 1rem;     overflow: hidden;     white-space: nowrap;     text-overflow: ellipsis;}
 .pricing-template .plans .blocks .inner_top .t_h2_after{padding-top: 0.5rem;}
-.pricing-template .plans .blocks .inner_middle{height: 18rem; padding-top: 3rem;}
+.pricing-template .plans .blocks .inner_middle{height: 22rem; padding-top: 3rem;}
 .pricing-template .plans .blocks .inner_middle .descs{margin-bottom:0px; border-bottom:0px solid transparent;}
 .pricing-template .plans .blocks .inner_middle .descs .t_h2{padding-bottom: 1.25rem;}
 .pricing-template .plans .blocks .inner_middle ul li{margin-bottom: 1.25rem; font-size: 1rem; color: #272d37;}
-.pricing-template .plans .blocks .inner_bottom{position: absolute; margin-top: -24.6rem; padding:0px;}
+.pricing-template .plans .blocks .inner_bottom{position: absolute; margin-top: -28.2rem; padding:0px;}
 .pricing-template .plans .blocks .inner_bottom .button_white_b{width:70%; max-width:70%; padding: 1rem 0px; font-size: 1rem; border-radius:3.2rem; letter-spacing: 1.5px;}
 .pricing-template .plans .blocks:hover  .inner_bottom .button_white_b{color:#ffffff; background-color:#377eea;}
 .pricing-template .centred_data{width:90%; padding:4rem 5%; padding-top:0px;}
