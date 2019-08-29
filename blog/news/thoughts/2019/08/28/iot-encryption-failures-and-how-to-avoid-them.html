@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+
+
+    <title>Web of Trusted Things - IoT Encryption Failures and how to avoid them</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	 
+	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="WoTT is an automated, open-source public key infrastructure for connected hardware" />
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wott.io/assets/style/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wott.io/assets/style/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wott.io/assets/style/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wott.io/assets/style/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wott.io/assets/style/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wott.io/assets/style/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wott.io/assets/style/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wott.io/assets/style/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Web of Trusted Things"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://wott.io/assets/style/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://wott.io/assets/style/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://wott.io/assets/style/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://wott.io/assets/style/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://wott.io/assets/style/favicon/mstile-310x310.png" />
+
+    <link rel="canonical" href="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web of Trusted Things - IoT Encryption Failures and how to avoid them" />
+    <meta property="og:description" content="WoTT is an automated, open-source public key infrastructure for connected hardware" />
+    <meta property="og:url" content="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" />
+	<meta property="og:image" content="https://wott.io/assets/baa3de-371eb8016d502dba3051c9ec05f75c0e80d61c95abdc5e9283141ffbf61b1bf8.png">
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:tag" content="Open Source" />
+ 
+	<!-- Twitter cards -->
+	<meta name="twitter:site" content="@wottsecurity" />
+	<meta name="twitter:creator" content="@wottsecurity" />
+	<meta name="twitter:title"   content="Web of Trusted Things - IoT Encryption Failures and how to avoid them">
+	<meta name="twitter:description" content="WoTT is an automated, open-source public key infrastructure for connected hardware">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/baa3de-371eb8016d502dba3051c9ec05f75c0e80d61c95abdc5e9283141ffbf61b1bf8.png">
+	<!-- end of Twitter cards -->
+	
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/"
+    },
+    "url": "https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/2019-08-28-iot-encryption-failures-and-how-to-avoid-them.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them"
+    },
+    "description": "WoTT is an automated, open-source public key infrastructure for connected hardware"
+}
+    </script>
+
+
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="IoT Encryption Failures and how to avoid them" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
+</div>
+
+</div></header>
+    <div class="b_content post-template ">
+        <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">IoT Encryption Failures and how to avoid them</span>
+<span class="t_m2">By <a href="https://wott.io/search?s=nikoletta+triantafyllopoulou">Nikoletta Triantafyllopoulou</a> on August 28, 2019 | 0 Comments</span>
+</div>
+<img class="blog_image" src="https://wott.io/assets/432cf9-09eaa26ad8aceb437e3cab58fcee65d5688040642fc5bb6832ca106668cecc4b.png" alt="Main image for post - IoT Encryption Failures and how to avoid them"></img><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/facebook.svg);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/twitter.svg);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them&text=IoT Encryption Failures and how to avoid them" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/send.svg);"><a target="_blank" href="mailto:?subject=IoT Encryption Failures and how to avoid them&body=/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them&media=https://wott.io/assets/images/blogcover/full/2019-08-28-iot-encryption-failures-and-how-to-avoid-them.png&description= IoT encryption failures and how to avoid them Introduction The stories of misconfigured security systems leading to leaks of client data are common. Take for example the Equifax data breach back in 2017. The vulnerability was detected with a great delay due to expired certificates. According to Venafi The device inspecting encrypted... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/linkedin.svg);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them&title=IoT Encryption Failures and how to avoid them" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+
+<h1 id="iot-encryption-failures-and-how-to-avoid-them">IoT encryption failures and how to avoid them</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The stories of misconfigured security systems leading to leaks of client data are common. Take for example the Equifax data breach back in 2017. The vulnerability was detected with a great delay due to expired certificates. According to <a href="https://www.venafi.com/blog/7-data-breaches-caused-human-error-did-encryption-play-role">Venafi</a> <em>The device inspecting encrypted traffic was misconfigured because of a digital certificate that had expired ten months earlier. This along with other oversights enabled a digital attacker to crack into Equifax’s system in mid-May and maintain their access until the end of July</em>. Another example of how certificates can have a massive impact is the case of <a href="https://www.zdnet.com/article/ericsson-expired-certificate-caused-o2-and-softbank-outages/">Ericsson</a>. An expired certificate of the Swedish Telecommunications Company caused a major outage in 11 countries in December 2018 with over 32 million users affected by it.</p>
+
+<p>The reality of the situation for IoT or any stack, is that there is no single solution, button or line of code to protect it in its whole. Devices use different platforms, servers, connectivity domains, and protocols. There is potential for failure which can lead to serious data-breaching issues. In the case of encryption, developers may be unwittingly more susceptible or prone to error than they realize.</p>
+
+<h2 id="iot-encryption-failures">IoT Encryption Failures</h2>
+
+<p>The problem with devices and networks does not always lie in not having encryption but in the way encryption is applied. Following security guidelines is a good step but like many security systems, the devil is in the details and being overzealous is a good thing in this case. Let’s take a closer look:<br />
+<strong>Misconfigured IoT encryption</strong>. The added layers and the diversity of protocols in IoT create additional failure points where encryption can be incorrectly implemented (e.g. sensor to IoT device via SCADA &gt; IoT device to IoT gateway via LPWAN &gt; IoT gateway to MQTT broker via TCP/IP). A single hole caused by a configuration mistake on the platform, on the network, on the cloud or on the device may compromise the entire tech stack. A slight mistake could have tremendous consequences and land your company some unsavoury headlines in the press.  <br />
+<strong>Regulatory compliance alone does not protect devices</strong>. Never assume that implementing a basic set of guidelines is enough. In fact, it is merely the beginning. Regulatory compliance for the sake of abiding to a set of standard rules is not security. What should be done is use those rules as a base and enhance them with IoT specific security solutions that suit your deployment. This way, security and IoT encryption are maximised on all layers and at all points. 
+<strong>Not keeping track of machine identity protection</strong>. Consider the scale of managing a fleet of thousands of devices (millions are possible, but let’s not break our minds). Managing SSL/TLS certificates at IoT scale is a daunting task, particularly if you issue the certificates manually (which is why most fail to use it altogether). Imagine the workload and the time wasted on a process which could and should be automated. TLS protocols grant secure communication over a network (assuming properly implemented). Security best practice dictates that certificates should have a lifespan of a days or hours to mitigate the impact of a leak. This is where <a href="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">automating TLS certificate and key-issuing</a> comes handy. By automating the certificate-issuing process, we reduce the burden that developers would face and eliminate human error.<br />
+<strong>Poor Key Management</strong>. Encryption keys are like passwords. Storing your keys on disk is not ideal.The only way to efficiently handle this situation is to have a Trusted Platform Module (TPM). TPM is a cryptographic Module which enhances computer security and boosts privacy. It is designed to ward off software compromising. Unfortunately this is still relatively rare outside of high-compliance devices largely due to the added complexity and added hardware components.    <br />
+<strong>Using weak, vulnerable, unknown or untested cryptographic algorithms</strong>. Encryption is performed based on ciphers, complex algorithms and best developed by mathematical sophisticates. Some companies or developers choose to build and use their own encryption algorithms. This is a risky practice, particularly if it is not updated or reviewed for a prolonged period. Moreover, encryption protocols should undergo rigorous peer review and audit as is done in <a href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">open source</a> security tools. It is better and more secure to use the already-tested and secure algorithms which are available out there. Some of the most popular encryption algorithms are: RSA, Advanced Encryption Standard (AES) and ECDSA. These are updated and they evolve so that they can help fend off cyber-attacks. 
+<strong>Relying solely on cloud providers for securing your data</strong>. Securing data on the cloud and opting for a trustworthy provider is essential yet, this is only one piece of the security puzzle. Admittedly, cloud providers are all doing a good job towards securing the data we all store in the cloud. This, however, does not mean that a data leak is not possible. The cloud only covers one area of your architecture and even on the cloud, there are settings that must be configured correctly by the customer. Do you really believe that a 3rd party service, even AWS is taking full responsibility for your entire stack? Will it matter when -your- client data is leaked? IoT encryption is not only about securing a certain layer or point in the architecture. It needs to be holistic and cover database to customer data, to identity and access management, and of course, down to the IoT device itself. In cases of organisations and enterprises, this is where <a href="https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">DevSecOps</a> can be of great help.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The complexity of the IoT ecosystem and the uniqueness of every deployment creates many potential IoT encryption failures and security failures in general. These mistakes are avoided only with the provision of easy-to-integrate IoT security solutions. We at <a href="https://wott.io/">Wott</a> offer tools for developers to help harden the security of IoT devices and to fix vulnerabilities during the development process. We offer a seamless and easy-to-use solution which is open source, cloud-agnostic and integrates easily with most  common hardware and operating system providers so that your IoT infrastructure remains secure.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+         <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-25bd09040387fad785a2a7964b7dc389c23f5ba8c19e5e4b67a64996062e6542.png);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">newsthoughts</span>
+  <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">The Future of IoT</a>
+  <span class="author_time">By <a>Nikoletta Triantafyllopoulou</a> on August 16, 2019</span>
+  <span class="description">
+   The Future of IoT Introduction The Future of IoT is both fascinating and challenging. As the number of connected devices is expected to triple by 2025, there are many significant questions and issues rising. Such as what does this mean for the Industry? What implications does this create? To start with, security... </span>
+  <a class="read_full" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/88cc26-39553fc3a9e8a37467b1f9dc5e6bf30f09b3ff72943e58a8ce8fc254190885f3.png);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">newsthoughts</span>
+  <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges">IoT Security Issues and Challenges</a>
+  <span class="author_time">By <a>Nikoletta Triantafyllopoulou</a> on August 12, 2019</span>
+  <span class="description">
+   IoT Security Issues and Challenges IoT Security issues are quite a challenge for this burgeoning industry. There is a growing number of devices, applications and systems which turn to IoT. This helps them to upscale their efficiency and their services and to make life easier for users. So let us take a... </span>
+  <a class="read_full" href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/d7969e-5bf53eabcf6ea82716b113107838c8affdc25e3b5bfc842410f185e71ae340f3.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Using WoTT to Secure a Paho MQTT Client</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on July 19, 2019</span>
+  <span class="description">
+   Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included) Introduction In a previous example we discussed how to secure connections between an Mosquitto MQTT broker and the Mosquitto client. In that there are several different brokers for an MQTT brokers, there are... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/07/19/paho-mqtt">Continue reading </a>
+  </div>
+  </div>
+
+  
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="https://wott.io/blog" title="">latest news</a></li>
+<li><a href="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" title="IoT Encryption Failures and how to avoid them">IoT Encryption Failures and how to avoid them</a></li><li><a href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot" title="The Future of IoT">The Future of IoT</a></li><li><a href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges" title="IoT Security Issues and Challenges">IoT Security Issues and Challenges</a></li>
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; Web Of Secure Things Ltd. All rights reserved</li>
+<li><a href="/tos" title="">Terms of Service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script  src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script  src="https://wott.io/assets/js/main.js"></script>
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+
+</body>
+</html>

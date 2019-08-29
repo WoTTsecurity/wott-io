@@ -1,7 +1,18 @@
 [
   
     {
-	  "cover":"https://wott.io/assets/16af4e-adf6be5101b37634a5eeb9621b321f42baed6d3a30328104843e2d8d37ce9356.png",
+	  "cover":"https://wott.io/assets/e7ee84-61b626264a9f8e4d64271b188896bbd47a277ecb094aff0fde96347e0daf52f0.png",
+      "title"    : "IoT Encryption Failures and how to avoid them",
+      "category" : "newsthoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them",
+      "date"     : "August 28, 2019",
+	  "description":"IoT encryption failures and how to avoid them Introduction The stories of misconfigured security systems leading to leaks of client data are common. Take for example the Equifax data breach back in 2017. The vulnerability was detected with a great delay due to expired certificates. According to Venafi The device inspecting encrypted...",
+	  "author":"Nikoletta Triantafyllopoulou"
+    } ,
+  
+    {
+	  "cover":"https://wott.io/assets/16af4e-25bd09040387fad785a2a7964b7dc389c23f5ba8c19e5e4b67a64996062e6542.png",
       "title"    : "The Future of IoT",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -12,7 +23,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/88cc26-7d0fd6cb9ca89e0a7fe9c8be76369accc8baa9d4a27d4d4c825e65144f711149.png",
+	  "cover":"https://wott.io/assets/88cc26-39553fc3a9e8a37467b1f9dc5e6bf30f09b3ff72943e58a8ce8fc254190885f3.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -89,7 +100,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-2b5aee7a42bea32f321c1caba2f3b681d252e73e0b12902260497c6e18051ae7.png",
+	  "cover":"https://wott.io/assets/ac256e-451fed2ffca6f1aba85c2d6392c14c2663ce2e6da31ffc3dd8ce3969522c8491.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -100,7 +111,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-29ad8c67c100dc1f98f89d6bfa19d44cefe40d10be1ee6e218f75edf703ccddd.png",
+	  "cover":"https://wott.io/assets/49cd83-bd46cc96eff611ad3d15f7facb8b7fc94f81c5fccf79bbf69d17923c5901f340.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -111,7 +122,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-c1abbbee6d37ea70c4a92ced57b07732b00e140e8c7c562a193832f01456b660.png",
+	  "cover":"https://wott.io/assets/763a3a-453f8fad8a82e5ac54561e3fa3e8e7f5b12fbc47957f3a97436b9a6f4767b352.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -122,7 +133,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-18f5a68facb33bb60367fb58924e875cf7c5f24bcae8caa27687da41283fc800.png",
+	  "cover":"https://wott.io/assets/8e810f-5f0180a87572178e82a331968733521ef5192c8847a0483d780a1d23782569b2.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -133,7 +144,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-970769fb8a1f83c15946bbaebbf2d4feedfff44a5fca93f8ade8f72da8c4bb53.png",
+	  "cover":"https://wott.io/assets/130908-876e0a9d4a3e4a0eac5b4a49b4907a4280b82d7f24cac3c1a2097aa0026ca576.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "Open Source",
