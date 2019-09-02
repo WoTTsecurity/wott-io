@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - IoT Encryption Failures and how to avoid them" />
     <meta property="og:description" content="WoTT is an automated, open-source public key infrastructure for connected hardware" />
     <meta property="og:url" content="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" />
-	<meta property="og:image" content="https://wott.io/assets/baa3de-371eb8016d502dba3051c9ec05f75c0e80d61c95abdc5e9283141ffbf61b1bf8.png">
+	<meta property="og:image" content="https://wott.io/assets/baa3de-c45c7d0dce841ebe02a6b52a104b65b142d7b2749b6741b630b2cca0d34b2143.png">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="Open Source" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - IoT Encryption Failures and how to avoid them">
 	<meta name="twitter:description" content="WoTT is an automated, open-source public key infrastructure for connected hardware">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/baa3de-371eb8016d502dba3051c9ec05f75c0e80d61c95abdc5e9283141ffbf61b1bf8.png">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/baa3de-c45c7d0dce841ebe02a6b52a104b65b142d7b2749b6741b630b2cca0d34b2143.png">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -113,7 +113,7 @@
 <span class="t_i1">IoT Encryption Failures and how to avoid them</span>
 <span class="t_m2">By <a href="https://wott.io/search?s=nikoletta+triantafyllopoulou">Nikoletta Triantafyllopoulou</a> on August 28, 2019 | 0 Comments</span>
 </div>
-<img class="blog_image" src="https://wott.io/assets/432cf9-09eaa26ad8aceb437e3cab58fcee65d5688040642fc5bb6832ca106668cecc4b.png" alt="Main image for post - IoT Encryption Failures and how to avoid them"></img><div class="blog_image_bg"></div>
+<img class="blog_image" src="https://wott.io/assets/432cf9-fce33aafea9ff196c974d52154b4902dec1a9170f0da48864bf876bfc7feff26.png" alt="Main image for post - IoT Encryption Failures and how to avoid them"></img><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
 
 <div class="social_network">
@@ -141,13 +141,19 @@
 
 <h2 id="iot-encryption-failures">IoT Encryption Failures</h2>
 
-<p>The problem with devices and networks does not always lie in not having encryption but in the way encryption is applied. Following security guidelines is a good step but like many security systems, the devil is in the details and being overzealous is a good thing in this case. Let’s take a closer look:<br />
-<strong>Misconfigured IoT encryption</strong>. The added layers and the diversity of protocols in IoT create additional failure points where encryption can be incorrectly implemented (e.g. sensor to IoT device via SCADA &gt; IoT device to IoT gateway via LPWAN &gt; IoT gateway to MQTT broker via TCP/IP). A single hole caused by a configuration mistake on the platform, on the network, on the cloud or on the device may compromise the entire tech stack. A slight mistake could have tremendous consequences and land your company some unsavoury headlines in the press.  <br />
-<strong>Regulatory compliance alone does not protect devices</strong>. Never assume that implementing a basic set of guidelines is enough. In fact, it is merely the beginning. Regulatory compliance for the sake of abiding to a set of standard rules is not security. What should be done is use those rules as a base and enhance them with IoT specific security solutions that suit your deployment. This way, security and IoT encryption are maximised on all layers and at all points. 
-<strong>Not keeping track of machine identity protection</strong>. Consider the scale of managing a fleet of thousands of devices (millions are possible, but let’s not break our minds). Managing SSL/TLS certificates at IoT scale is a daunting task, particularly if you issue the certificates manually (which is why most fail to use it altogether). Imagine the workload and the time wasted on a process which could and should be automated. TLS protocols grant secure communication over a network (assuming properly implemented). Security best practice dictates that certificates should have a lifespan of a days or hours to mitigate the impact of a leak. This is where <a href="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">automating TLS certificate and key-issuing</a> comes handy. By automating the certificate-issuing process, we reduce the burden that developers would face and eliminate human error.<br />
-<strong>Poor Key Management</strong>. Encryption keys are like passwords. Storing your keys on disk is not ideal.The only way to efficiently handle this situation is to have a Trusted Platform Module (TPM). TPM is a cryptographic Module which enhances computer security and boosts privacy. It is designed to ward off software compromising. Unfortunately this is still relatively rare outside of high-compliance devices largely due to the added complexity and added hardware components.    <br />
-<strong>Using weak, vulnerable, unknown or untested cryptographic algorithms</strong>. Encryption is performed based on ciphers, complex algorithms and best developed by mathematical sophisticates. Some companies or developers choose to build and use their own encryption algorithms. This is a risky practice, particularly if it is not updated or reviewed for a prolonged period. Moreover, encryption protocols should undergo rigorous peer review and audit as is done in <a href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">open source</a> security tools. It is better and more secure to use the already-tested and secure algorithms which are available out there. Some of the most popular encryption algorithms are: RSA, Advanced Encryption Standard (AES) and ECDSA. These are updated and they evolve so that they can help fend off cyber-attacks. 
-<strong>Relying solely on cloud providers for securing your data</strong>. Securing data on the cloud and opting for a trustworthy provider is essential yet, this is only one piece of the security puzzle. Admittedly, cloud providers are all doing a good job towards securing the data we all store in the cloud. This, however, does not mean that a data leak is not possible. The cloud only covers one area of your architecture and even on the cloud, there are settings that must be configured correctly by the customer. Do you really believe that a 3rd party service, even AWS is taking full responsibility for your entire stack? Will it matter when -your- client data is leaked? IoT encryption is not only about securing a certain layer or point in the architecture. It needs to be holistic and cover database to customer data, to identity and access management, and of course, down to the IoT device itself. In cases of organisations and enterprises, this is where <a href="https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">DevSecOps</a> can be of great help.</p>
+<p>The problem with devices and networks does not always lie in not having encryption but in the way encryption is applied. Following security guidelines is a good step but like many security systems, the devil is in the details and being overzealous is a good thing in this case. Let’s take a closer look:</p>
+
+<p><strong>Misconfigured IoT encryption</strong>. The added layers and the diversity of protocols in IoT create additional failure points where encryption can be incorrectly implemented (e.g. sensor to IoT device via SCADA &gt; IoT device to IoT gateway via LPWAN &gt; IoT gateway to MQTT broker via TCP/IP). A single hole caused by a configuration mistake on the platform, on the network, on the cloud or on the device may compromise the entire tech stack. A slight mistake could have tremendous consequences and land your company some unsavoury headlines in the press.</p>
+
+<p><strong>Regulatory compliance alone does not protect devices</strong>. Never assume that implementing a basic set of guidelines is enough. In fact, it is merely the beginning. Regulatory compliance for the sake of abiding to a set of standard rules is not security. What should be done is use those rules as a base and enhance them with IoT specific security solutions that suit your deployment. This way, security and IoT encryption are maximised on all layers and at all points.</p>
+
+<p><strong>Not keeping track of machine identity protection</strong>. Consider the scale of managing a fleet of thousands of devices (millions are possible, but let’s not break our minds). Managing SSL/TLS certificates at IoT scale is a daunting task, particularly if you issue the certificates manually (which is why most fail to use it altogether). Imagine the workload and the time wasted on a process which could and should be automated. TLS protocols grant secure communication over a network (assuming properly implemented). Security best practice dictates that certificates should have a lifespan of a days or hours to mitigate the impact of a leak. This is where <a href="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things">automating TLS certificate and key-issuing</a> comes handy. By automating the certificate-issuing process, we reduce the burden that developers would face and eliminate human error.</p>
+
+<p><strong>Poor Key Management</strong>. Encryption keys are like passwords. Storing your keys on disk is not ideal.The only way to efficiently handle this situation is to have a Trusted Platform Module (TPM). TPM is a cryptographic Module which enhances computer security and boosts privacy. It is designed to ward off software compromising. Unfortunately this is still relatively rare outside of high-compliance devices largely due to the added complexity and added hardware components.</p>
+
+<p><strong>Using weak, vulnerable, unknown or untested cryptographic algorithms</strong>. Encryption is performed based on ciphers, complex algorithms and best developed by mathematical sophisticates. Some companies or developers choose to build and use their own encryption algorithms. This is a risky practice, particularly if it is not updated or reviewed for a prolonged period. Moreover, encryption protocols should undergo rigorous peer review and audit as is done in <a href="https://wott.io/blog/thoughts/2019/06/25/why-open-source-solutions-are-critical-for-IoT">open source</a> security tools. It is better and more secure to use the already-tested and secure algorithms which are available out there. Some of the most popular encryption algorithms are: RSA, Advanced Encryption Standard (AES) and ECDSA. These are updated and they evolve so that they can help fend off cyber-attacks.</p>
+
+<p><strong>Relying solely on cloud providers for securing your data</strong>. Securing data on the cloud and opting for a trustworthy provider is essential yet, this is only one piece of the security puzzle. Admittedly, cloud providers are all doing a good job towards securing the data we all store in the cloud. This, however, does not mean that a data leak is not possible. The cloud only covers one area of your architecture and even on the cloud, there are settings that must be configured correctly by the customer. Do you really believe that a 3rd party service, even AWS is taking full responsibility for your entire stack? Will it matter when -your- client data is leaked? IoT encryption is not only about securing a certain layer or point in the architecture. It needs to be holistic and cover database to customer data, to identity and access management, and of course, down to the IoT device itself. In cases of organisations and enterprises, this is where <a href="https://wott.io/blog/thoughts/2019/06/23/why-shift-left-security-is-relevant-for-iot">DevSecOps</a> can be of great help.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -158,7 +164,7 @@
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
          <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-25bd09040387fad785a2a7964b7dc389c23f5ba8c19e5e4b67a64996062e6542.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-26f503a6c184ff032c0ce67a8e925f0d459e0e5977860f180c1e351465cedf22.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">newsthoughts</span>
   <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">The Future of IoT</a>
@@ -170,7 +176,7 @@
   </div>
 
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/88cc26-39553fc3a9e8a37467b1f9dc5e6bf30f09b3ff72943e58a8ce8fc254190885f3.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/88cc26-555becbd199b69327aedf7a08aaad7d92ec06352ef0a5a71e4e41708377136be.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">newsthoughts</span>
   <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/12/iot-security-Issues-and-challenges">IoT Security Issues and Challenges</a>
