@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    {% include dynamic_title.html %}
-    <title>{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% include head.html %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {% include dynamic_title.html %}
+  <title>{% if title %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include head.html %}
 </head>
 <body>
 <header class="b_header">{% include header.html %}</header>
-    <div class="b_content {{ page.class }} ">
-        {{ content }}
+  <div class="b_content {{ page.class }} ">
+  {{ content }}
 	</div>
 	{% include footer.html %}
-    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-	<script  src="{{ site.url }}{{ site.baseurl }}assets/js/jquery.touchSwipe.min.js"></script>
-	<script  src="{{ site.url }}{{ site.baseurl }}assets/js/main.js"></script>
-    {% include analytics.html %}
-
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}assets/js/jquery.touchSwipe.min.js"></script>
+	<script src="{{ site.url }}{{ site.baseurl }}assets/js/main.js"></script>
+  {% include analytics.html %}
 </body>
 </html>
