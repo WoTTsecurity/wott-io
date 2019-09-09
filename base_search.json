@@ -2,7 +2,7 @@
   
     {
 	  "cover":"https://wott.io/assets/403643-15096b7a4c4893e27ceeabd977f3b9a8f0d29414f41e26c8e933465068a381ac.jpg",
-      "title"    : "The significance of mTLS and why should you care about it?",
+      "title"    : "The significance of mTLS and why you should care about it",
       "category" : "thoughts",
       "tags"     : "Open Source",
       "href"      : "https://wott.io/blog/thoughts/2019/09/09/what-is-mtls",
@@ -12,7 +12,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/e7ee84-d4686be777723ed33164dc3b524e9484d816815a85cd0968a874957fe379c852.png",
+	  "cover":"https://wott.io/assets/e7ee84-ff823a0faad0d5857a1bd99838db0c08f7aec5fc9db972002a9f804d3d8974e0.png",
       "title"    : "IoT Encryption Failures and how to avoid them",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -23,7 +23,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/16af4e-8c6ff7f39a01054fdd5c7a8c7936909d0be6aabc38a63e019f17e298297e700d.png",
+	  "cover":"https://wott.io/assets/16af4e-e6307541ca23bb14418cd24f74e65dd0aa92adf4740bbdda86f58f43a8ecd5bf.png",
       "title"    : "The Future of IoT",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -34,7 +34,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/88cc26-e1657c5ab8e61431eee2f8d31565013177197dd55eaa5f2ae9c696f7e27e9a7c.png",
+	  "cover":"https://wott.io/assets/88cc26-87e2c93b7082fac41ffc3efadd50ace79193f33d0374ce92a5c2e829b91817cf.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -111,7 +111,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-acc2452e71a60b7c8620da1c92e01d82b007d7f028abd4ee45c20cb69d43f225.png",
+	  "cover":"https://wott.io/assets/ac256e-118414d0e9a9951e990277ac6a74d7356bad2fa018421187c29d3314eaa62b45.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -122,7 +122,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-855c9c0b6221b82e24df471fe99b01028cd110b6ff838b11c52deee402962d02.png",
+	  "cover":"https://wott.io/assets/49cd83-b4e8175a914494889ea409a55b3405b4ce804120da02afa62d73740d45225dfd.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -133,7 +133,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-a8b9f5c07539889b88e7af875a7685bb3432e952bb51399bb8a38359788b32e8.png",
+	  "cover":"https://wott.io/assets/763a3a-92d4c67d703938dbef314ce942fc5464ef8c5c83837ea83a4eb9e882687117c4.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -144,7 +144,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-93f6eef3385b099d2b99ffab670b283853344604ce000ec553de8191c19dcb30.png",
+	  "cover":"https://wott.io/assets/8e810f-a0b2abeec8dfface35133bd4887671b62676ec77da44c5242b24e2a11dc24a3d.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -155,7 +155,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-305b9500bbbb31454b91b7db5abacdbafe683412b219a4aafa0085afafefe952.png",
+	  "cover":"https://wott.io/assets/130908-8a9c636ce5b4e1f88563eb8f98bc046dabd116e9ee2789803908094d2233a362.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "Open Source",

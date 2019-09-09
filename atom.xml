@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>The significance of mTLS and why should you care about it?</title>
+        <title>The significance of mTLS and why you should care about it</title>
         
           <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Security in the IoT industry should also include the devices and not only the network or the cloud. Secure device management is all about machine identities and mTLS. Let us have a closer look at what mTLS does and why it is an essential parameter of IoT security.&lt;/p&gt;
