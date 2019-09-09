@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>The significance of mTLS and why should you care about it?</title>
+        
+          <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Security in the IoT industry should also include the devices and not only the network or the cloud. Secure device management is all about machine identities and mTLS. Let us have a closer look at what mTLS does and why it is an essential parameter of IoT security.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 09 Sep 2019 08:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/thoughts/2019/09/09/what-is-mtls</link>
+        <guid isPermaLink="true">https://wott.io/blog/thoughts/2019/09/09/what-is-mtls</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>IoT Encryption Failures and how to avoid them</title>
         
           <description>&lt;h1 id=&quot;iot-encryption-failures-and-how-to-avoid-them&quot;&gt;IoT encryption failures and how to avoid them&lt;/h1&gt;
