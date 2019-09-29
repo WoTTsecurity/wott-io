@@ -34,7 +34,7 @@ To install the agent, access your WoTT dashboard and press the 'Add Device' butt
 
 {% asset docs/add-device.png srcset:width="1300 2x" srcset:width="650 1x" alt="Add device from the dashboard" class="img-fluid" %}
 
-With this in your clip board/buffer, SSH into your device and paste in the command. Assuming things went well, you should see something similar to this:
+With this in your clip board/buffer, SSH into your device and paste the command in terminal. Assuming things went well, you should see something similar to this:
 
 ```
 [...]
