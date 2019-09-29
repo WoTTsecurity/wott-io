@@ -26,7 +26,7 @@ First, let's get the WoTT agent set up.
 
 ## Installing the WoTT agent and claiming your device
 
-You will need to register for an account on the [WoTT Dashboard](https://dash.wott.io) and login. You can manage the credentials of up to 20 devices for free. For additional features, we offer more comprehensive packages. See our [prices]({{site.url}}/pricing) for more information.
+You will need to register for an account on the [WoTT Dashboard](https://dash.wott.io) and login. You can manage the credentials for your first 5 devices for free. For additional features, we offer more comprehensive packages. See our [prices]({{site.url}}/pricing) for more information.
 
 {% asset docs/Register.png srcset:width="1300 2x" srcset:width="650 1x" alt="Register for WoTT Dash" class="img-fluid" %}
 
@@ -56,7 +56,7 @@ The WoTT Team
 
 Your device will now be registered and viewable on the WoTT Dashboard. You can now see the relative trust scores of your devices. To see device specific information, select it and add appropriate tags to these devices (this is relevant for credential management).
 
-See below for an example of a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) and the user's personal tags for the Pi's purpose.
+Here's an example of what a Raspberry Pi with its WoTT meta tags (automatically assigned based on hardware) might look like on the Dashboard.
 
 {% asset docs/rasbpi-profile.png srcset:width="1300 2x" srcset:width="650 1x" alt="Raspberry Pi example profile" class="img-fluid" %}
 
