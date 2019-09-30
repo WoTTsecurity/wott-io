@@ -18,13 +18,13 @@ How do we do this? We offer you:
 * Cryptographic identity (x509 certificate issued from our CA)
 * Enabling the removal of hard coded credentials from web applications and firmware
 
-To access all these features, you will need to install our [WoTT Agent](https://github.com/WoTTsecurity/agent) and use the [WoTT Dashboard](https://dash.wott.io) to manage your Edge/IoT devices through a simple and user-friendly interface. 
+To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your Edge/IoT devices through a simple and user-friendly interface. 
 
 We'll provide a step-by-step walkthrough of set-up and installation of the WoTT agent. It's hassle-free and simple to implement.
 
 ## Installing the WoTT agent and claiming your device
 
-First, register for a [WoTT Dashboard](https://dash.wott.io) account and login. You can manage the credentials for your first 5 devices for free. For additional features, we offer more comprehensive packages. See our [prices]({{site.url}}/pricing) for more information.
+First, register for a [WoTT Dashboard](https://dash.wott.io) account and login. We have several packages available for your convenience. See our [prices]({{site.url}}/pricing) for more information.
 
 {% asset docs/Register.png srcset:width="1300 2x" srcset:width="650 1x" alt="Register for WoTT Dash" class="img-fluid" %}
 
