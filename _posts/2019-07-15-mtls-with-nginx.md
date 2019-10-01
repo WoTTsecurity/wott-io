@@ -10,7 +10,7 @@ tags: [Open Source]
 class: post-template
 ---
 
-#  Configuring Nginx for mutual TLS (mTLS) with client certificate authentication
+#  Configuring Nginx with client certificate authentication (mTLS)
 
 **Required Skill Level**: Medium to Expert 
 
@@ -29,11 +29,8 @@ In this article we will make this all more concrete by creating a sample impleme
 ## Requirements
 
 - Server (Debian VM, Ubuntu VM, etc.)
-
-- Edge device (running on Ubuntu, Debian, Raspbian)
-
-- [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 endpoints)
-
+- Client node (running on Ubuntu, Debian, Raspbian)
+- [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 instances)
 - Docker and Docker Compose
 
 ## Preparation
