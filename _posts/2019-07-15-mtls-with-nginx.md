@@ -14,23 +14,34 @@ class: post-template
 
 **Required Skill Level**: Medium to Expert
 
-One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how your client (e.g. your web browser) only verifies the identity of the server. The client itself does not need to present any identity. The identity piece is normally solved using some kind of credential (such as a username/password or API token).
+**Time to complete**: 15-20 min
 
-By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
+In this post we will walk through how to configure Nginx to support mutual TLS to authenticate a client request in 3 steps:
+
+1. Install certificate on client
+2. Set up a server
+3. Whitelist client
+
+One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
 In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
 
-Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use [Let's Encrypt](https://letsencrypt.org/) as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.
+## Requirements
+
+* A server (Debian VM, Ubuntu VM, etc.)
+* A client node (running on Ubuntu, Debian, Raspbian)
+* The WoTT Agent installed on both the client and server
+* Docker and Docker Compose installed on the server
 
 ## Preparation
 
-Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this [here]({{ site.url }}/documentation/getting-started).
+Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/) and find instruction in our <a href="{{ site.url }}/documentation/getting-started" target="_blank">Getting Started guide</a>.
 
 Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose`). We use these to simplify the installation, as we are able to better pin the requirements.
 
 ## Setting up the server
 
-Let's start by setting up the server. To save you the time (and potential typos), we have create a sample repo for this, so all you need to do is to clone the repository:
+Let's start by setting up the server. To save you the time (and potential typos), we have created a sample repo for this, so all you need to do is to clone the repository:
 
 ```
 $ git clone https://github.com/WoTTsecurity/examples.git
@@ -156,11 +167,9 @@ When a request hits the appserver, it will check the HTTP header `Ssl-Client-Ver
 
 Assuming the above condition is correct, the appserver will parse the Client ID (from the 'Ssl-Client' header) and compare it to a whitelist (`whitelist.txt` from above). The whitelist is a simple text file with one Device ID per line. Only if the Client ID (i.e. the WoTT Device ID) matches a record in the whitelist, the appserver will return "Access Granted!".
 
-While the appserver is far from ready for production usage, it should help illustrate the setup such that it could be adopted into most languages and frameworks.
-
 
 ## Conclusion
 
-Hopefully you found this tutorial useful and that it helped bring the concept of Zero Trust Networking and mTLS to life with a real-world example of how it can be implemented with a relatively small amount of code.
+Hopefully you found this tutorial useful in illustrating a cornerstone of Zero Trust Networking - mTLS. With a relatively small amount of code we can implement better security in a real-world setting. For more mTLS use cases or for a better understanding of Trust Scoring in Zero Trust Networking checkout [wott.io](https://twitter.com/wottsecurity).
 
 If you have any questions, please get in touch with us on [Twitter](https://twitter.com/wottsecurity) or open a Github Issue if you found any issues.
