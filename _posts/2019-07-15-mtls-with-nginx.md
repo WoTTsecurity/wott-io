@@ -13,6 +13,7 @@ class: post-template
 #  Configuring Nginx with client certificate authentication (mTLS)
 
 **Required Skill Level**: Medium to Expert 
+
 **Time to complete**: 15-20 min
 
 One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
@@ -21,14 +22,17 @@ In this article we will make this all more concrete by creating a sample impleme
 
 ## Requirements
 
--server (Debian VM, Ubuntu VM, etc.)
--client (Raspberry Pi, hopefully VM?)
--[wott agent](https://dash.wott.io/accounts/register/" target="_blank) isntalled on client (free for 5 endpoints)
--Docker and Docker Compose
+1. Server (Debian VM, Ubuntu VM, etc.)
+
+2. Client (Raspberry Pi, hopefully VM?)
+
+3. [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 endpoints)
+
+4. Docker and Docker Compose
 
 ## Preparation
 
-Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/" target="_blank) and find instruction on getting started [here]({{ site.url }}/documentation/getting-started).
+Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/) and find instruction on getting started [here]({{ site.url }}/documentation/getting-started).
 
 Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose`). We use these to simplify the installation, as we are able to better pin the requirements.
 
@@ -165,6 +169,6 @@ While the appserver is far from ready for production usage, it should help illus
 
 ## Conclusion
 
-Hopefully you found this tutorial useful and that it helped bring the concept of Zero Trust Networking and mTLS to life with a real-world example of how it can be implemented with a relatively small amount of code.
+Hopefully you found this tutorial useful in illustrating a cornerstone of Zero Trust Networking - mTLS. With a relatively small amount of code we can implement better security in a real-world setting. For more mTLS use cases or for a better understanding of Trust Scoring in Zero Trust Networking checkout [wott.io](https://twitter.com/wottsecurity).
 
 If you have any questions, please get in touch with us on [Twitter](https://twitter.com/wottsecurity) or open a Github Issue if you found any issues.
