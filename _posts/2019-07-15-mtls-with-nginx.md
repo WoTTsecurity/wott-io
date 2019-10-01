@@ -14,11 +14,13 @@ class: post-template
 
 **Required Skill Level**: Medium to Expert
 
-One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. This is different compared to how your client (e.g. your web browser) only verifies the identity of the server. The client itself does not need to present any identity. The identity piece is normally solved using some kind of credential (such as a username/password or API token).
+One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
-By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
+In this article we will:
 
-In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
+1. 
+
+make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
 
 Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use [Let's Encrypt](https://letsencrypt.org/) as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.
 
