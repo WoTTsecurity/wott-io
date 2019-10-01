@@ -20,7 +20,7 @@ In this post we will walk through how to configure Nginx to support mutual TLS t
 
 1. Install certificate on client
 2. Set up a server
-3. Whitelist client in Nginx access control
+3. Whitelist client
 
 One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
