@@ -10,7 +10,7 @@ tags: [Open Source]
 class: post-template
 ---
 
-#  Configuring Nginx with client certificate authentication (mTLS)
+#  Configuring Nginx with client certificate authentication (mTLS) in X steps
 
 **Required Skill Level**: Medium to Expert 
 
