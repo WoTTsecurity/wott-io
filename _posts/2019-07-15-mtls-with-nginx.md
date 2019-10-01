@@ -12,7 +12,7 @@ class: post-template
 
 #  Configuring Nginx with client certificate authentication (mTLS)
 
-**Required Skill Level**: Medium to Expert 
+**Required Skill Level**: Medium to Expert
 
 **Time to complete**: 15-20 min
 
@@ -28,14 +28,14 @@ In this article we will make this all more concrete by creating a sample impleme
 
 ## Requirements
 
-- Server (Debian VM, Ubuntu VM, etc.)
-- Client node (running on Ubuntu, Debian, Raspbian)
-- [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 instances)
-- Docker and Docker Compose
+* A server (Debian VM, Ubuntu VM, etc.)
+* A client node (running on Ubuntu, Debian, Raspbian)
+* The WoTT Agent installed on both the client and server
+* Docker and Docker Compose installed on the server
 
 ## Preparation
 
-Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/) and find instruction on getting started [here]({{ site.url }}/documentation/getting-started).
+Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/) and find instruction in our <a href="{{ site.url }}/documentation/getting-started" target="_blank">Getting Started guide</a>.
 
 Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose`). We use these to simplify the installation, as we are able to better pin the requirements.
 
