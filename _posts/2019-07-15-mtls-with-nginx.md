@@ -10,11 +10,17 @@ tags: [Open Source]
 class: post-template
 ---
 
-#  Configuring Nginx with client certificate authentication (mTLS) in X steps
+#  Configuring Nginx for mutual TLS (mTLS) with client certificate authentication
 
 **Required Skill Level**: Medium to Expert 
 
 **Time to complete**: 15-20 min
+
+In this post we will walk through how to configure NGINX to support mutual TLS to authenticate a client request in 3 steps:
+
+1. Install certificate on client
+2. Set up a server
+3. Whitelist client in NGINX access control
 
 One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
@@ -22,13 +28,13 @@ In this article we will make this all more concrete by creating a sample impleme
 
 ## Requirements
 
-1. Server (Debian VM, Ubuntu VM, etc.)
+- Server (Debian VM, Ubuntu VM, etc.)
 
-2. Client (Raspberry Pi, hopefully VM?)
+- Edge device (running on Ubuntu, Debian, Raspbian)
 
-3. [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 endpoints)
+- [Wott Agent](https://dash.wott.io/accounts/register/) installed on client (free for 5 endpoints)
 
-4. Docker and Docker Compose
+- Docker and Docker Compose
 
 ## Preparation
 
@@ -163,8 +169,6 @@ Assuming the client passed all validations, the request will be passed on to the
 When a request hits the appserver, it will check the HTTP header `Ssl-Client-Verify` is set to 'SUCCESS'. If it isn't, the request will be rejected with an error message. In theory, this shouldn't be possible, since Nginx should never forward such request, but when it comes to security it's better to be safe than sorry.
 
 Assuming the above condition is correct, the appserver will parse the Client ID (from the 'Ssl-Client' header) and compare it to a whitelist (`whitelist.txt` from above). The whitelist is a simple text file with one Device ID per line. Only if the Client ID (i.e. the WoTT Device ID) matches a record in the whitelist, the appserver will return "Access Granted!".
-
-While the appserver is far from ready for production usage, it should help illustrate the setup such that it could be adopted into most languages and frameworks.
 
 
 ## Conclusion
