@@ -12,27 +12,29 @@ class: post-template
 
 #  Configuring Nginx with client certificate authentication (mTLS)
 
-**Required Skill Level**: Medium to Expert
+**Required Skill Level**: Medium to Expert 
+**Time to complete**: 15-20 min
 
 One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation *easier* (as it removes the need for API key/credential management).
 
-In this article we will:
+In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
 
-1. 
+## Requirements
 
-make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.
-
-Depending on your implementation, you could either use two Raspberry Pis for this, or you could use a Debian virtual machine as the server, and a Raspberry Pi as the client. The latter would be a more realistic setup for a live installation. Moreover, in the latter example, you can for instance use [Let's Encrypt](https://letsencrypt.org/) as the public SSL certificate. This is useful if you use the same Nginx server to serve content for other clients, and not just for mTLS.
+-server (Debian VM, Ubuntu VM, etc.)
+-client (Raspberry Pi, hopefully VM?)
+-[wott agent](https://dash.wott.io/accounts/register/" target="_blank) isntalled on client (free for 5 endpoints)
+-Docker and Docker Compose
 
 ## Preparation
 
-Before we begin, we first need to install the WoTT agent on both the server and client(s). You can find instruction on how to do this [here]({{ site.url }}/documentation/getting-started).
+Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account [here](https://dash.wott.io/accounts/register/" target="_blank) and find instruction on getting started [here]({{ site.url }}/documentation/getting-started).
 
 Once you have the WoTT agent installed, we need to install both [Docker CE](https://docs.docker.com/install/linux/docker-ce/debian/) and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running `apt update && apt install docker-compose`). We use these to simplify the installation, as we are able to better pin the requirements.
 
 ## Setting up the server
 
-Let's start by setting up the server. To save you the time (and potential typos), we have create a sample repo for this, so all you need to do is to clone the repository:
+Let's start by setting up the server. To save you the time (and potential typos), we have created a sample repo for this, so all you need to do is to clone the repository:
 
 ```
 $ git clone https://github.com/WoTTsecurity/examples.git
