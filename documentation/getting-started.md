@@ -2,7 +2,7 @@
 layout: docs-cat
 description: 'Getting started with WoTT'
 title: 'Getting Started with the WoTT Agent and Dashboard'
-full_description: We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security into your IoT devices.
+full_description: We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security for your needs.
 title_content: 'Getting Started'
 redirect_from:
   - /getting-started-1
@@ -10,15 +10,15 @@ redirect_from:
   - /blog/categories/getting-started
 ---
 
-WoTT's primary goal is to simplify and manage end-to-end security for developers across a multitude of internet platforms. We manage the credentials and authentication for your Edge/IoT devices- WoTT secures your projects so that you don't have to.
+WoTT's primary goal is to simplify and manage end-to-end security for developers across a multitude of internet platforms. We manage the credentials and authentication for your Edge/IoT devices and servers- WoTT secures your projects so that you don't have to.
 
 How do we do this? We offer you:
 
-* Simplified encryption of device communication
+* Simplified encryption of point-to-point communication
 * Cryptographic identity (x509 certificate issued from our CA)
 * Enabling the removal of hard coded credentials from web applications and firmware
 
-To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your Edge/IoT devices through a simple and user-friendly interface. 
+To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your various nodes through a simple and user-friendly interface. 
 
 We'll provide a step-by-step walkthrough of set-up and installation of the WoTT agent. It's hassle-free and simple to implement.
 
@@ -34,7 +34,7 @@ To install the agent, access your WoTT dashboard and press the 'Add Device' butt
 
 {% asset docs/add-device.png srcset:width="1300 2x" srcset:width="650 1x" alt="Add device from the dashboard" class="img-fluid" %}
 
-With this in your clip board/buffer, SSH into your device and paste the command in terminal. Assuming things went well, you should see something similar to this:
+With this in your clip board/buffer, SSH into your device (be it a server, raspberry pi, etc;) and paste the command in terminal. Assuming things went well, you should see something similar to this:
 
 ```
 [...]
@@ -52,8 +52,8 @@ Regards,
 The WoTT Team
 ```
 
-Your device will now be registered and viewable on the WoTT Dashboard. You can now see the relative trust scores of your devices. 
-You can view device specific information and change it. Select a device and add some appropriate tags to differentiate them (this is relevant for credential management).
+Your node will now be registered and viewable on the WoTT Dashboard where you can now see the relative trust scores of your services. 
+You can view device-specific information and change it. Select one and add some appropriate tags to differentiate it from your other nodes (this is relevant for credential management).
 
 Here's an example of what a Raspberry Pi with its WoTT meta tags(automatically assigned based on hardware) and user-added tags might look like on the Dashboard.
 
@@ -74,21 +74,21 @@ With that, you're good to go. If you're interested in how WoTT works, feel free 
 
 In an ideal world, we would do away with the usernames and passwords entirely and rely only on cryptographic identity. However, we can't because servers aren't able to verify who you are (yet!) from browsers via cryptographic identity. This is why you need to login with a password (which in theory only you know) to access, for example, your email; or Google cloud services. The same applies to Web Applications that you as an IoT developer create which can be accessed from any browser.
 
-As a developer, you're likely going to be accessing a huge range of internet/cloud services that require basic HTTP authentication or an API key. In most instances, these credentials are hard coded into applications and can be easily read with access to said applications. WoTT introduces credential management so that you can remotely download the necessary credentials onto your device (we do this as a JSON file). This removes the need for you to hard code your keys and logins into your applications.
+As a developer, you're likely going to be accessing a huge range of internet/cloud services that require basic HTTP authentication or an API key. In most instances, these credentials are hard coded into applications and can be easily read with access to said applications. WoTT introduces credential management so that you can remotely download the necessary credentials onto your chosen endpoint (we do this as a JSON file). This removes the need for you to hard code your keys and logins into your applications.
 
-We do this via our Dashboard which you can use to monitor your devices. The Dashboard gives your device a trust score (based on how secure it is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.
+We do this via our Dashboard which you can use to monitor your projects. The Dashboard gives you a trust score (based on how secure your device or server is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.
 
 ## A little more on 'cryptographic' identity
 
 We've spoken a lot about cryptographic identity so far without going into it in much depth. For the everyday user, it's enough to know that we secure you and you can develop your apps free from password nightmares; however if you've made it this far, you're interested to know how WoTT works.
 
-Our lightweight agent handles identifying your device as well as verifying inter-device communication cryptographically [1]. What this essentially means is that the agent assigns a certificate from WoTT's own certificate authority (CA) to your device to secure it [2].
-The agent does this based on a unique value assigned to your device which acts as an identifier to other devices. The purpose of this is to restrict access to trusted devices preventing fraudulent access and attacks.
+Our lightweight agent handles identifying your node as well as verifying point-to-point communication cryptographically [1]. What this essentially means is that the agent assigns a certificate from WoTT's own certificate authority (CA) to your node to secure it [2].
+The agent does this based on a unique value assigned to your node which acts as an identifier to other potential endpoints. The purpose of this is to restrict access to trusted nodes preventing fraudulent access and attacks.
 
 * [1] Done through mutual TLS (mTLS)
 * [2] WoTT does this using an x509 security certificate. These certificates refresh every 7 days.
 
-The certificates are managed entirely by WoTT - the only thing you need to do to begin securing your device is install the WoTT Agent.
+The certificates are managed entirely by WoTT - the only thing you need to do to begin securing your services is install the WoTT Agent.
 
 ## Finishing notes
 
