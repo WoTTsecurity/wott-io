@@ -2,7 +2,7 @@
 layout: post
 current: post
 cover:  fence.jpg
-title: Security audit checklist for linux systems
+title: Security audit checklist for Linux systems
 date: 2019-10-04 10:00:00
 category: thoughts
 author: Al Esmail
