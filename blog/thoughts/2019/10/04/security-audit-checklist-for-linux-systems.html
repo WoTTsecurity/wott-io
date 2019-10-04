@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+
+
+  <title>Web of Trusted Things - Why open source is critical for InfoSec</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	 
+	<link rel="stylesheet" type="text/css" href="https://wott.io/assets/style/style.css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Seamless security audit of linux systems for DevOps teams." />
+	
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wott.io/assets/style/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wott.io/assets/style/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wott.io/assets/style/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wott.io/assets/style/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wott.io/assets/style/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wott.io/assets/style/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wott.io/assets/style/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wott.io/assets/style/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="https://wott.io/assets/style/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="Web of Trusted Things"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="https://wott.io/assets/style/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="https://wott.io/assets/style/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="https://wott.io/assets/style/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="https://wott.io/assets/style/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="https://wott.io/assets/style/favicon/mstile-310x310.png" />
+
+    <link rel="canonical" href="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Web of Trusted Things" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web of Trusted Things - Why open source is critical for InfoSec" />
+    <meta property="og:description" content="Seamless security audit of linux systems for DevOps teams." />
+    <meta property="og:url" content="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" />
+	<meta property="og:image" content="https://wott.io/assets/495265-df82305290fbec02753cbeaf471b0a9b497dcf3f64951bb03320b9dc7a8ef923.png">
+    <meta property="article:publisher" content="https://www.facebook.com/wott" />
+    <meta property="article:tag" content="Open Source" />
+ 
+	<!-- Twitter cards -->
+	<meta name="twitter:site" content="@wottsecurity" />
+	<meta name="twitter:creator" content="@wottsecurity" />
+	<meta name="twitter:title"   content="Web of Trusted Things - Why open source is critical for InfoSec">
+	<meta name="twitter:description" content="Seamless security audit of linux systems for DevOps teams.">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/495265-df82305290fbec02753cbeaf471b0a9b497dcf3f64951bb03320b9dc7a8ef923.png">
+	<!-- end of Twitter cards -->
+	
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Web of Trusted Things",
+        "logo": "https://wott.io/"
+    },
+    "url": "https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://wott.io/2019-06-24-why-open-source-is-critical-for-infosec.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems"
+    },
+    "description": "Seamless security audit of linux systems for DevOps teams."
+}
+    </script>
+
+
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Why open source is critical for InfoSec" href="/feed.xml" />
+
+</head>
+<body>
+<header class="b_header"><div class="head_nav" data-open-menu="0">
+<a class="mobile_menu_button"></a>
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+
+<ul class="nav_m">
+<li><a href="https://wott.io/product" title="">product</a></li>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul>
+
+<div class="ls_button">
+<a class="log_in" href="https://dash.wott.io/accounts/login" ga-clv="1" ga-track-name="Log In">log in</a>
+<a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
+</div>
+
+</div></header>
+  <div class="b_content post-template ">
+  <div class="blog_page">
+<div class="blog_info">
+<span class="t_i1">Why open source is critical for InfoSec</span>
+<span class="t_m2">By <a href="https://wott.io/search?s=al+esmail">Al Esmail</a> on October 04, 2019 | 0 Comments</span>
+</div>
+<img class="blog_image" src="https://wott.io/assets/2e7c94-b496186b935c26f2fcfda1e7bd5bfb4c5d2d4bbd24ccf6b40da496f805d4516f.png" alt="Main image for post - Why open source is critical for InfoSec"></img><div class="blog_image_bg"></div>
+<div class="blog_tags"><a href="https://wott.io//tag/open source">Open Source</a></div>
+
+<div class="social_network">
+<div class="title_b">share</div>
+<ul>
+
+<li style="background-image:url(https://wott.io/assets/style/img/facebook.svg);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/twitter.svg);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems&text=Why open source is critical for InfoSec" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/send.svg);"><a target="_blank" href="mailto:?subject=Why open source is critical for InfoSec&body=/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems&media=https://wott.io/assets/images/blogcover/full/2019-06-24-why-open-source-is-critical-for-infosec.png&description= We so often hear from developers that they don’t need to worry about cyber security because they’re too small to be targeted or because they trust their service providers to take care of it for them. Sound like someone you know? Well, let’s start with a quick synopsis of recent cloud failures... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/linkedin.svg);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems&title=Why open source is critical for InfoSec" title=""></a></li>
+</ul>
+<div class="arrow_b"></div>
+</div>
+
+<div class="blog_content content_info_block">
+
+<p>We so often hear from developers that they don’t need to worry about cyber security because they’re too small to be targeted or because they trust their service providers to take care of it for them. Sound like someone you know? Well, let’s start with a quick synopsis of recent cloud failures that were not targeted attacks and where service providers weren’t a silver bullet.  Each of these examples were simply failures in security hygiene.</p>
+
+<h2 id="security-fails">Security Fails</h2>
+
+<h3 id="facebook">Facebook</h3>
+
+<ul>
+  <li><strong>Year:</strong> 2019</li>
+  <li><strong>Security Fail:</strong> Cultura Colectiva (a 3rd party user of Facebook data) exposed 500 million customer phone numbers</li>
+  <li><strong>Cause:</strong> AWS server was configured to be public facing</li>
+  <li><strong>Source:</strong> <a href="https://www.cbsnews.com/news/millions-facebook-user-records-exposed-amazon-cloud-server/">CBS News</a></li>
+</ul>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<ul>
+  <li><strong>Year:</strong> Ongoing</li>
+  <li><strong>Security Fail:</strong> 52,000 databases searchable through <a href="shodan.io">Shodan</a></li>
+  <li><strong>Cause:</strong> If MongoDB is installed with default server settings, it allows anyone to browse, download, edit or delete data</li>
+  <li><strong>Source:</strong> <a href="https://krebsonsecurity.com/tag/mongodb/">KrebsOnSecurity</a></li>
+</ul>
+
+<h3 id="capital-one">Capital One</h3>
+
+<ul>
+  <li><strong>Year:</strong> 2019</li>
+  <li><strong>Security Fail:</strong> 100 million records including bank details and social security</li>
+  <li><strong>Cause:</strong> Misconfigured web application firewall (WAF) in AWS</li>
+  <li><strong>Source:</strong> <a href="https://krebsonsecurity.com/tag/capital-one-breach/">KrebsOnSecurity</a></li>
+</ul>
+
+<h3 id="medical-facilities">Medical facilities</h3>
+
+<ul>
+  <li><strong>Year:</strong> Ongoing</li>
+  <li><strong>Fail:</strong> 187 servers with x-ray and medical data open to public. &gt;1m records with medical procedures, etc.</li>
+  <li><strong>Cause:</strong> Medical data exposed to the public internet without requiring authentication</li>
+  <li><strong>Source:</strong> <a href="https://www.propublica.org/article/millions-of-americans-medical-images-and-data-are-available-on-the-internet">ProPublica</a></li>
+</ul>
+
+<h2 id="linux-security-audit-checklist">Linux security audit checklist</h2>
+
+<p>Still think you’re above the fray? Well maybe you are, so the checklist below will just be reassurance that you and your team have already done everything you need to do. Let’s dig in  with this set of 5 security practices that can get you going in the right direction.</p>
+
+<h3 id="1-cve-scanner">1. CVE scanner</h3>
+
+<p>The CVE databases are great but, but are you monitoring your system for known vulnerable packages? Most developers will setup a server and then perhaps just periodically update it a few times a year, leaving the server(s) vulnerable for an extended period of time.</p>
+
+<p>CVE scanners solve this problem by checking the system packages in your operating system against the database and flagging packages that need an update.</p>
+
+<h3 id="2-services-audit">2. Services audit</h3>
+
+<p>SSH is meant to be secure and is secure when it is configured correctly. Unfortunately, an error configuring SSH can mean that an attacker can apply a brute-force attack against your node(s). Root access, passwordless login, timeout intervals and updates are all points that need to be managed correctly.</p>
+
+<p>The same is true for any service accessing your server. It’s important to regularly audit your services for threats and vulnerabilities.</p>
+
+<h3 id="3-mtls-mutual-tls-for-authentication">3. mTLS (mutual TLS) for authentication</h3>
+
+<p>mTLS solves two problems: password management and client side authentication. There are great tools out there for secrets  management like <a href="https://www.vaultproject.io/">Vault by Hashicorp</a>]. However, even more sophisticated than passwords and API keys is using TLS certificates for both client and server authentication.</p>
+
+<p>The difficulty here is in setting up your own CA. <a href="https://letsencrypt.org/">Let’s Encrypt</a> can be used but it is generally not advisable to use a public CA for your internal infrastructure. There are some reliable private CAs as a service like <a href="https://www.wott.io">WoTT</a> that can support your needs.</p>
+
+<h3 id="4-firewall-configuration">4. Firewall configuration</h3>
+
+<p>Firewall configurations seem fairly trivial, yet so often this is the source of massive breaches at large companies (see above Facebook fail). Tracking and managing the appropriate access to servers can be incredibly difficult at scale.</p>
+
+<h3 id="5-selinux-and-apparmor">5. SELinux and AppArmor</h3>
+
+<p>Security Enhanced Linux (SELinux) and AppArmor are Linux kernel security modules that support access control policies and include mandatory access controls. Enabling these tools is a rigorous process but provides hardening at the application level.</p>
+
+<p>SELinux is more sophisticated in its settings but consequently presents more pitfalls to the developer since more decisions need to be made. AppArmor provides similar functionality but requires less customization.</p>
+
+<h2 id="automate-cyber-security-checks">Automate cyber security checks</h2>
+
+<p>So you know what you need to do but that’s only part of the problem. The bigger part of the problem seems to be making sure these things actually get prioritized and handled consistently. We have a few tips for making that happen.</p>
+
+<h3 id="behavior">Behavior</h3>
+
+<p>Agile development is too dynamic for retroactive security audits. Build security practice into your team processes and make it part of your DNA. Security does not belong in the hands of a single team, it should be part of a mindset and a culture at the organization level.</p>
+
+<h3 id="measure-it-to-manage-it">Measure it to manage it</h3>
+
+<p>Create metrics to measure the security dimension and manage performance accordingly. Behavior is nurtured through culture, metrics and rewards. Find ways to attribute numbers to security posture of the individual, the team, the asset and reward your people for making improvements.</p>
+
+<h3 id="devsecops-is-taking-over">DevSecOps is taking over.</h3>
+
+<p>Integrate security tools into your tool chain. Companies like <a href="snyk.io">Snyk </a> have done an excellent job of auditing dependencies and providing developers with real time feedback.  The <a href="https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf">NIST</a> states that it is at least 10x cheaper to implement security before code is committed. It’s also faster to get things right the first time than to use up product and developer time on bug fixes that are retroactively identified by a security team.</p>
+
+<p>Consider a tool like <a href="www.wott.io">WoTT</a> to monitor, measure and provide actions to improve security.</p>
+
+</div>
+<div class="related_articles">
+<span class="t_i1">Related articles</span>
+<div class="blog_posts"><div class="post_mini-blocks">
+         <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/403643-15096b7a4c4893e27ceeabd977f3b9a8f0d29414f41e26c8e933465068a381ac.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">thoughts</span>
+  <a class="title" href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls">The significance of mTLS and why you should care about it</a>
+  <span class="author_time">By <a>Nikoletta Triantafyllopoulou</a> on September 09, 2019</span>
+  <span class="description">
+   Introduction Security in the IoT industry should also include the devices and not only the network or the cloud. Secure device management is all about machine identities and mTLS. Let us have a closer look at what mTLS does and why it is an essential parameter of IoT security. What is mTLS?... </span>
+  <a class="read_full" href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/e7ee84-c6b07f384d328a6983c5f22a93e10a2d221b36d94ee64d0f709822027844f026.png);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">newsthoughts</span>
+  <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them">IoT Encryption Failures and how to avoid them</a>
+  <span class="author_time">By <a>Nikoletta Triantafyllopoulou</a> on August 28, 2019</span>
+  <span class="description">
+   IoT encryption failures and how to avoid them Introduction The stories of misconfigured security systems leading to leaks of client data are common. Take for example the Equifax data breach back in 2017. The vulnerability was detected with a great delay due to expired certificates. According to Venafi The device inspecting encrypted... </span>
+  <a class="read_full" href="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/16af4e-5b307fc356052da6441e5ca3facb2b5db26d91f0ff4c46731ff2db2f9376dc62.png);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">newsthoughts</span>
+  <a class="title" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">The Future of IoT</a>
+  <span class="author_time">By <a>Nikoletta Triantafyllopoulou</a> on August 16, 2019</span>
+  <span class="description">
+   The Future of IoT Introduction The Future of IoT is both fascinating and challenging. As the number of connected devices is expected to triple by 2025, there are many significant questions and issues rising. Such as what does this mean for the Industry? What implications does this create? To start with, security... </span>
+  <a class="read_full" href="https://wott.io/blog/news/thoughts/2019/08/16/the-future-of-iot">Continue reading </a>
+  </div>
+  </div>
+
+  
+</div>
+</div>
+</div>
+
+</div>
+
+	</div>
+	<footer class="b_footer">
+<div class="top">
+<div class="logo_sn">
+<a class="logo" href="https://wott.io/" title="Home page"></a>
+<ul class="nw">
+<li style="background-image:url(https://wott.io//assets/style/img/github.svg);"><a href="https://github.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/twitter.svg);"><a href="https://twitter.com/wottsecurity" title="" target="_blank"></a></li>
+<li style="background-image:url(https://wott.io//assets/style/img/linkedin.svg);"><a href="https://www.linkedin.com/company/wottsecurity" title="" target="_blank"></a></li>
+</ul>
+</div>
+<div class="menu products"><ul>
+<li><a href="https://wott.io/product" title="">products</a></li>
+</ul></div>
+<div class="menu about_us"><ul>
+<li><a href="https://wott.io/about" title="">about us</a></li>
+<li><a href="https://wott.io/pricing" title="">pricing</a></li>
+<li><a href="https://wott.io/documentation" title="">documentation</a></li>
+<li><a href="https://wott.io/blog" title="">blog</a></li>
+</ul></div>
+<div class="menu news"><ul>
+<li><a href="https://wott.io/blog" title="">latest news</a></li>
+<li><a href="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" title="Why open source is critical for InfoSec">Why open source is critical for InfoSec</a></li><li><a href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls" title="The significance of mTLS and why you should care about it">The significance of mTLS and why you should care about it</a></li><li><a href="https://wott.io/blog/news/thoughts/2019/08/28/iot-encryption-failures-and-how-to-avoid-them" title="IoT Encryption Failures and how to avoid them">IoT Encryption Failures and how to avoid them</a></li>
+</ul></div>
+</div>
+
+<div class="bottom">
+<ul>
+<li>&copy; Web Of Secure Things Ltd. All rights reserved</li>
+<li><a href="/tos" title="">Terms of Service</a></li>
+<li><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://wott.io/assets/js/jquery.touchSwipe.min.js"></script>
+	<script src="https://wott.io/assets/js/main.js"></script>
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+function clickview(idview){$(idview).bind('click',function(e){var b=$(this), name=b.text(), h_from=window.location.href, h_to=false, prt=b.parent(); if(b[0].nodeName=='A'){if(b.attr('href')!==undefined){var h_to=b.attr('href');}; if(b.attr('ga-track-href')!==undefined){var h_to=b.attr('ga-track-href');};}; if(prt[0].nodeName=='FORM'){function insertinform(o){var dt=[]; o.each(function(index){var inp=$(this).children(index); if(inp.attr('name')!==undefined && inp.val()!==undefined){dt.push(inp.attr('name')+'='+inp.val());}}); return dt;}; var h_to=prt.attr('action')+'?'+insertinform(prt).join('&');}; if(b.attr('ga-track-name')!==undefined){var name=b.attr('ga-track-name');}; ga('send', 'event', 'clickbutton',name, 'click_from:'+h_from+', click_to:'+h_to); if(h_to!==false){setTimeout(function(){if(b[0].nodeName=='A'){if(b.attr('target')!==undefined){if(b.attr('target')!=='_blank'){window.open(h_to,'_self');}else{window.open(h_to);}}else{window.open(h_to,'_self');};}; if(b[0].nodeName=='BUTTON'){if(prt[0].nodeName=='FORM'){prt.submit();};};},10); return false;};});};
+ga('create', 'UA-134852372-1', 'auto'); ga('send', 'pageview'); clickview('[ga-clv="1"]');
+</script>
+<!-- End Google Analytics -->
+
+</body>
+</html>

@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Why open source is critical for InfoSec</title>
+        
+          <description>&lt;p&gt;We so often hear from developers that they don’t need to worry about cyber security because they’re too small to be targeted or because they trust their service providers to take care of it for them. Sound like someone you know? Well, let’s start with a quick synopsis of recent cloud failures that were not targeted attacks and where service providers weren’t a silver bullet.  Each of these examples were simply failures in security hygiene.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 04 Oct 2019 10:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems</link>
+        <guid isPermaLink="true">https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>The significance of mTLS and why you should care about it</title>
         
           <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;

@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-10-03T13:25:30+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of linux systems for DevOps teams.</subtitle><entry><title type="html">The significance of mTLS and why you should care about it</title><link href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls" rel="alternate" type="text/html" title="The significance of mTLS and why you should care about it" /><published>2019-09-09T08:00:00+00:00</published><updated>2019-09-09T08:00:00+00:00</updated><id>https://wott.io/blog/thoughts/2019/09/09/what-is-mtls</id><content type="html" xml:base="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-10-04T14:12:16+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of linux systems for DevOps teams.</subtitle><entry><title type="html">Why open source is critical for InfoSec</title><link href="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" rel="alternate" type="text/html" title="Why open source is critical for InfoSec" /><published>2019-10-04T10:00:00+00:00</published><updated>2019-10-04T10:00:00+00:00</updated><id>https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems</id><content type="html" xml:base="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems">&lt;p&gt;We so often hear from developers that they don’t need to worry about cyber security because they’re too small to be targeted or because they trust their service providers to take care of it for them. Sound like someone you know? Well, let’s start with a quick synopsis of recent cloud failures that were not targeted attacks and where service providers weren’t a silver bullet.  Each of these examples were simply failures in security hygiene.&lt;/p&gt;
+
+&lt;h2 id=&quot;security-fails&quot;&gt;Security Fails&lt;/h2&gt;
+
+&lt;h3 id=&quot;facebook&quot;&gt;Facebook&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2019&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Security Fail:&lt;/strong&gt; Cultura Colectiva (a 3rd party user of Facebook data) exposed 500 million customer phone numbers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cause:&lt;/strong&gt; AWS server was configured to be public facing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&quot;https://www.cbsnews.com/news/millions-facebook-user-records-exposed-amazon-cloud-server/&quot;&gt;CBS News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; Ongoing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Security Fail:&lt;/strong&gt; 52,000 databases searchable through &lt;a href=&quot;shodan.io&quot;&gt;Shodan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cause:&lt;/strong&gt; If MongoDB is installed with default server settings, it allows anyone to browse, download, edit or delete data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&quot;https://krebsonsecurity.com/tag/mongodb/&quot;&gt;KrebsOnSecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;capital-one&quot;&gt;Capital One&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2019&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Security Fail:&lt;/strong&gt; 100 million records including bank details and social security&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cause:&lt;/strong&gt; Misconfigured web application firewall (WAF) in AWS&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&quot;https://krebsonsecurity.com/tag/capital-one-breach/&quot;&gt;KrebsOnSecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;medical-facilities&quot;&gt;Medical facilities&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; Ongoing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fail:&lt;/strong&gt; 187 servers with x-ray and medical data open to public. &amp;gt;1m records with medical procedures, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cause:&lt;/strong&gt; Medical data exposed to the public internet without requiring authentication&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&quot;https://www.propublica.org/article/millions-of-americans-medical-images-and-data-are-available-on-the-internet&quot;&gt;ProPublica&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linux-security-audit-checklist&quot;&gt;Linux security audit checklist&lt;/h2&gt;
+
+&lt;p&gt;Still think you’re above the fray? Well maybe you are, so the checklist below will just be reassurance that you and your team have already done everything you need to do. Let’s dig in  with this set of 5 security practices that can get you going in the right direction.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-cve-scanner&quot;&gt;1. CVE scanner&lt;/h3&gt;
+
+&lt;p&gt;The CVE databases are great but, but are you monitoring your system for known vulnerable packages? Most developers will setup a server and then perhaps just periodically update it a few times a year, leaving the server(s) vulnerable for an extended period of time.&lt;/p&gt;
+
+&lt;p&gt;CVE scanners solve this problem by checking the system packages in your operating system against the database and flagging packages that need an update.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-services-audit&quot;&gt;2. Services audit&lt;/h3&gt;
+
+&lt;p&gt;SSH is meant to be secure and is secure when it is configured correctly. Unfortunately, an error configuring SSH can mean that an attacker can apply a brute-force attack against your node(s). Root access, passwordless login, timeout intervals and updates are all points that need to be managed correctly.&lt;/p&gt;
+
+&lt;p&gt;The same is true for any service accessing your server. It’s important to regularly audit your services for threats and vulnerabilities.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-mtls-mutual-tls-for-authentication&quot;&gt;3. mTLS (mutual TLS) for authentication&lt;/h3&gt;
+
+&lt;p&gt;mTLS solves two problems: password management and client side authentication. There are great tools out there for secrets  management like &lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Vault by Hashicorp&lt;/a&gt;]. However, even more sophisticated than passwords and API keys is using TLS certificates for both client and server authentication.&lt;/p&gt;
+
+&lt;p&gt;The difficulty here is in setting up your own CA. &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; can be used but it is generally not advisable to use a public CA for your internal infrastructure. There are some reliable private CAs as a service like &lt;a href=&quot;https://www.wott.io&quot;&gt;WoTT&lt;/a&gt; that can support your needs.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-firewall-configuration&quot;&gt;4. Firewall configuration&lt;/h3&gt;
+
+&lt;p&gt;Firewall configurations seem fairly trivial, yet so often this is the source of massive breaches at large companies (see above Facebook fail). Tracking and managing the appropriate access to servers can be incredibly difficult at scale.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-selinux-and-apparmor&quot;&gt;5. SELinux and AppArmor&lt;/h3&gt;
+
+&lt;p&gt;Security Enhanced Linux (SELinux) and AppArmor are Linux kernel security modules that support access control policies and include mandatory access controls. Enabling these tools is a rigorous process but provides hardening at the application level.&lt;/p&gt;
+
+&lt;p&gt;SELinux is more sophisticated in its settings but consequently presents more pitfalls to the developer since more decisions need to be made. AppArmor provides similar functionality but requires less customization.&lt;/p&gt;
+
+&lt;h2 id=&quot;automate-cyber-security-checks&quot;&gt;Automate cyber security checks&lt;/h2&gt;
+
+&lt;p&gt;So you know what you need to do but that’s only part of the problem. The bigger part of the problem seems to be making sure these things actually get prioritized and handled consistently. We have a few tips for making that happen.&lt;/p&gt;
+
+&lt;h3 id=&quot;behavior&quot;&gt;Behavior&lt;/h3&gt;
+
+&lt;p&gt;Agile development is too dynamic for retroactive security audits. Build security practice into your team processes and make it part of your DNA. Security does not belong in the hands of a single team, it should be part of a mindset and a culture at the organization level.&lt;/p&gt;
+
+&lt;h3 id=&quot;measure-it-to-manage-it&quot;&gt;Measure it to manage it&lt;/h3&gt;
+
+&lt;p&gt;Create metrics to measure the security dimension and manage performance accordingly. Behavior is nurtured through culture, metrics and rewards. Find ways to attribute numbers to security posture of the individual, the team, the asset and reward your people for making improvements.&lt;/p&gt;
+
+&lt;h3 id=&quot;devsecops-is-taking-over&quot;&gt;DevSecOps is taking over.&lt;/h3&gt;
+
+&lt;p&gt;Integrate security tools into your tool chain. Companies like &lt;a href=&quot;snyk.io&quot;&gt;Snyk &lt;/a&gt; have done an excellent job of auditing dependencies and providing developers with real time feedback.  The &lt;a href=&quot;https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf&quot;&gt;NIST&lt;/a&gt; states that it is at least 10x cheaper to implement security before code is committed. It’s also faster to get things right the first time than to use up product and developer time on bug fixes that are retroactively identified by a security team.&lt;/p&gt;
+
+&lt;p&gt;Consider a tool like &lt;a href=&quot;www.wott.io&quot;&gt;WoTT&lt;/a&gt; to monitor, measure and provide actions to improve security.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="thoughts" /><category term="Open Source" /><summary type="html">We so often hear from developers that they don’t need to worry about cyber security because they’re too small to be targeted or because they trust their service providers to take care of it for them. Sound like someone you know? Well, let’s start with a quick synopsis of recent cloud failures that were not targeted attacks and where service providers weren’t a silver bullet. Each of these examples were simply failures in security hygiene.</summary></entry><entry><title type="html">The significance of mTLS and why you should care about it</title><link href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls" rel="alternate" type="text/html" title="The significance of mTLS and why you should care about it" /><published>2019-09-09T08:00:00+00:00</published><updated>2019-09-09T08:00:00+00:00</updated><id>https://wott.io/blog/thoughts/2019/09/09/what-is-mtls</id><content type="html" xml:base="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Security in the IoT industry should also include the devices and not only the network or the cloud. Secure device management is all about machine identities and mTLS. Let us have a closer look at what mTLS does and why it is an essential parameter of IoT security.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-mtls&quot;&gt;What is mTLS?&lt;/h2&gt;
@@ -663,11 +751,11 @@ $ pip3 install adafruit-io
 
 &lt;p&gt;Login to the Adafruit IO dashboard. Navigate to the ‘Feeds’ page on the left-hand side menu. Hover over actions and select ‘Create a New Feed.’ The feed acts as a channel or datastream through which your device connects to Adafruit IO. We are going to create a feed that is called via MQTT. In other words, the feed becomes the topic from which messages are published/subscribed to.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;create feed&quot; src=&quot;https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png&quot; integrity=&quot;sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/25fd86-0178e3741606970b4c9f491949f49bd658e85b2459bea1b0cccad37cb1706125.png 2x, https://wott.io/assets/cd12eb-6a41e8bd319368ac536faaa3ae5955578a45d39796be791744bd5e2898a2dda9.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;create feed&quot; src=&quot;https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png&quot; integrity=&quot;sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/25fd86-b9181fe7214e75ffb934f47c99c8a8fa82e6dd82ee83d302ae39f57a6c14e05d.png 2x, https://wott.io/assets/cd12eb-e983076647e4eb5fe61f067c47075583e6f67cb13f28a7b8cca575000d0bd7d1.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed ‘data feed.’ The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;name feed&quot; src=&quot;https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png&quot; integrity=&quot;sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/de0189-19f5f1fadba4d7d519887fb8871a1791129fd6e7ce57b8145e46e28756799fd9.png 2x, https://wott.io/assets/60856b-525d867634b9e58aa94ef48b62e2f692d7dd5cf94712874c91bf496d6c78d60a.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;name feed&quot; src=&quot;https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png&quot; integrity=&quot;sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/de0189-e431fcc9d1791f3f4e93452ac2111a27e748343b6e600f90d7f1f0066996de33.png 2x, https://wott.io/assets/60856b-a8fe1499e02f06bff9017ecfc5a444895754504e6b74a93f3694e972acb918cc.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; it is possible to create the feeds using a simple python application. If you prefer a more codified style of set up, you can follow &lt;a href=&quot;https://adafruit-io-python-client.readthedocs.io/en/latest/feeds.html&quot;&gt;this&lt;/a&gt; guide.&lt;/p&gt;
 
@@ -675,11 +763,11 @@ $ pip3 install adafruit-io
 
 &lt;p&gt;In order to call the Adafruit API via HTTP access, it requires a key. You can find this key on the left-hand side of your Adafruit dasboard as you did with ‘Feeds’ under &lt;code class=&quot;highlighter-rouge&quot;&gt;AIO key&lt;/code&gt;. You will be brought to a page akin to this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;AIO key&quot; src=&quot;https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png&quot; integrity=&quot;sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/9d26f5-55e482d366f4d3e64fffeb74c89e7332210c9fe889b62481699f3dd6a6c928c1.png 2x, https://wott.io/assets/953c52-55ef6632553c32f55bb70a2d4b04354a7767061d70286e1fd657d40c94985cdc.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;AIO key&quot; src=&quot;https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png&quot; integrity=&quot;sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/9d26f5-d022af9da5dfcc091a9387d405462d2cf7f1099fcf5ee177e43746d90fb5cf01.png 2x, https://wott.io/assets/953c52-2ac35de83267d6036d6ac3e38582c2124a234fa011777e07a30e7f237c6c8717.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;These are your unique Adafruit details. We can add these to WoTT’s dashboard as a new credential where the value is your personal username followed by the &lt;code class=&quot;highlighter-rouge&quot;&gt;Active Key&lt;/code&gt; value. To do so, you will need to login or create an account for the &lt;a href=&quot;https://dash.wott.io&quot;&gt;WoTT dash&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-7ff1f4a4dd4314b586731e01ad87d3d9d818e641ed07abe42023f379ee3e76a3.png 2x, https://wott.io/assets/deedd0-a39586414540079e1732c57228c3b27b53df24a7ee54c9b9f0820c55ec155ba4.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;WoTT login&quot; src=&quot;https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png&quot; integrity=&quot;sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/03bed4-ee99d9cde0ceb25ec6182b7ddaadd0bf0b26e8b4d01a504c671fef685f6b022a.png 2x, https://wott.io/assets/deedd0-ef52b244918ba02f5064d69110f9c3b54d15670b460121b5124d2b47d3f28cfe.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:&lt;/p&gt;
 
@@ -689,7 +777,7 @@ $ sudo wott-aget claim-token
 
 &lt;p&gt;and pasting the output into the ‘Claim Device’ segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, &lt;code class=&quot;highlighter-rouge&quot;&gt;adafruit&lt;/code&gt; to it. Through these tags, WoTT identifies which devices specific credentials are intended for.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Adafruit tags&quot; src=&quot;https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png&quot; integrity=&quot;sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/378d39-cf86cca32e2e099715647475665471444217965a2a1122fdcc2c5e5bddfd132d.png 2x, https://wott.io/assets/7d7aaa-e42ce1f40a01360c39ba9a14b5d169d747d229d414fbda0658c7df0a98ae72b7.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Adafruit tags&quot; src=&quot;https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png&quot; integrity=&quot;sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/378d39-d149380cf6b46893863eda0b3eeb0a900818f9b996195574da900ff4df41245c.png 2x, https://wott.io/assets/7d7aaa-814e2858c8b1aa5d6a01192819369a529a4631b0e316cdd60d1db80f3a08b5c2.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now that we are all set up, we need to create the credentials with the Adafruit information. Navigate to the ‘Credentials’ page of the WoTT dash and a new credential. Input the following into the fields:&lt;/p&gt;
 
@@ -737,7 +825,7 @@ Feed data feed received new value: 52
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;On your Adafruit IO dash, you should see the data being received on your feed:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;feed data&quot; src=&quot;https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png&quot; integrity=&quot;sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/13d874-20c547a097474daccbd2e3519492938d9a066652b2472b15652fcbc8411d29a0.png 2x, https://wott.io/assets/861588-7bdcd0d7b160a3ac9271ae864556d59cae887da44c999bb71720af102d8a6306.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;feed data&quot; src=&quot;https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png&quot; integrity=&quot;sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/13d874-ac4c93b8ab52f3e7b971d590bda8e76b382e9be83ace84bea1a14d69f6a38b40.png 2x, https://wott.io/assets/861588-aef44dbef19de2ab802b6f6ec7c0c98cdab81a0227c3763559426a15a1d9908d.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; your values will be different to this example as they are randomly generated, use the above as a reference point only.&lt;/p&gt;
 
@@ -759,115 +847,4 @@ ImportError: No module named Adafruit_IO
 
 &lt;p&gt;The Python application contained in this example is a modified version of Adafruit IO’s own MQTT feed sharing example. Feel free to edit, play with, and modify the app as you choose. Note that if you make changes to feed names, feed owners, etc; you will have to change this within the app (or within WoTT credentials to be more secure).&lt;/p&gt;
 
-&lt;p&gt;Ensure that if you do add additional credentials to WoTT dashboard that you restart the WoTT agent to download the credentials immediately- otherwise WoTT will fetch the information every 15 minutes.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using Adafruit IO with WoTT Credentials</summary></entry><entry><title type="html">Using WoTT credentials to manage access to Screenly OSE</title><link href="https://wott.io/blog/tutorials/2019/06/25/screenly-ose" rel="alternate" type="text/html" title="Using WoTT credentials to manage access to Screenly OSE" /><published>2019-06-25T17:00:00+00:00</published><updated>2019-06-25T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/06/25/screenly-ose</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/06/25/screenly-ose">&lt;h1 id=&quot;using-wott-to-secure-access-to-screenly&quot;&gt;Using WoTT to secure access to Screenly&lt;/h1&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;Screenly is a service that provides digital signage and acts as an OS on the host device. Essentially it treats your host device as a streaming service that projects visual media (such as images and webpages) onto a monitor from multiple different sources. Think of it as a manager for your visual media- you send the content via a browser on the Screenly management page, and the host device projects that content onto a monitor.&lt;/p&gt;
-
-&lt;p&gt;Screenly by default allows anyone within the network with the management page IP address to access it and send content. However, it does also provide HTTP authentication- and we can use WoTT’s credentials to secure our Screenly device so that we can restrict and verify those who have access to it.&lt;/p&gt;
-
-&lt;p&gt;Screenly offers a free OSE version that you can use. For this example you will need a Raspberry Pi, a monitor for Screenly to project onto; and at least one browser device. You will also need to have an account for the &lt;a href=&quot;https://dash.wott.io&quot;&gt;WoTT Dashboard&lt;/a&gt; in order to manage WoTT credentials.&lt;/p&gt;
-
-&lt;h2 id=&quot;installing-wott-agent-on-screenly-ose&quot;&gt;Installing WoTT agent on Screenly OSE&lt;/h2&gt;
-
-&lt;p&gt;First you will need a Screenly OSE (the free version) device if you do not already.
-Follow the instructions to install Screenly OSE on your Raspberry Pi &lt;a href=&quot;https://www.screenly.io/ose/&quot;&gt;here&lt;/a&gt;. We reccommend you follow the first option and use something like Etcher to flash the SD card with the Screenly OSE disk image. 
-&lt;strong&gt;Note:&lt;/strong&gt; Screenly OSE will overwrite your OS.&lt;/p&gt;
-
-&lt;p&gt;When the Raspberry Pi reboots, it will take you to the Screenly OSE network configuration. You will need to access the SSID as you would a wifi network and enter the password shown.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Screenly&quot; src=&quot;https://wott.io/assets/blog/screenly-setup-520903a934667ee4f2dfedbe9568ea6c39d43f746b7b3348cde4ba924e11044f.jpg&quot; integrity=&quot;sha256-UgkDqTRmfuTy3+2+lWjqbDnUP3RrezNIzeS6kk4RBE8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/1629a1-fa3f27f61fb7671c9866eb3cb85bc2ae27884052fe23a7f56e968916ab44f2ff.jpg 2x, https://wott.io/assets/c8eb7f-c1f3af339c3ab5b9027e6d4a043ffb6f1a022fc8e049a8496547beb17c2a7c4c.jpg 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Then navigate to the Address shown and login with your network details. This will grant you access to the Screenly management page.&lt;/p&gt;
-
-&lt;p&gt;Now we need to secure access to your Screenly OSE device. If you haven’t installed the WoTT Agent already, you can install it via the Screenly OSE installer. Just run:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ./screenly/bin/run-upgrade.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;and select the WoTT agent from the installation options.&lt;/p&gt;
-
-&lt;p&gt;To do this on the Screenly OSE device, you need to access the terminal through &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;ALT&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt;. To return back to the GUI, it is &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;ALT&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;F2&lt;/code&gt;. 
-Once here, follow the WoTT agent installation as you would on any other device.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Optional:&lt;/strong&gt; If you want to avoid using the terminal directly on your Screenly OSE device in the future, enable SSH through the &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo raspi-config&lt;/code&gt; command. It is also reccommended that you change your Password from the default &lt;code class=&quot;highlighter-rouge&quot;&gt;raspberry&lt;/code&gt; (this will also improve your WoTT security score!) if you are going to do this.&lt;/p&gt;
-
-&lt;p&gt;You will now need to register the Pi on the WoTT dashboard.&lt;/p&gt;
-
-&lt;h2 id=&quot;downloading-wott-credentials-on-screenly-ose&quot;&gt;Downloading WoTT credentials on Screenly OSE&lt;/h2&gt;
-
-&lt;p&gt;Login to the WoTT Dash and navigate to ‘Claim Device.’ If you have installed the WoTT agent recently, the relevant information should be displayed on your terminal screen. If not, use the following commands:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo wott-agent whoami
-$ sudo wott-aget claim-token
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This will give you your Device ID and the token value to claim your device.&lt;/p&gt;
-
-&lt;p&gt;Your Raspberry Pi should now be registered. Navigate to your Dashboard and select the Pi:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Pi&quot; src=&quot;https://wott.io/assets/blog/rasbpi-a8999635cf9b0dc73388bffed4197bb2b0d92fb778198160c6f6e01d674e02dc.png&quot; integrity=&quot;sha256-qJmWNc+bDccziL/+1Bl7srDZL7d4GYFgxvbgHWdOAtw=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/e711ef-817fad71af382e98c152fe36cc1de8d453da1d7d64fba6d36e0d008d235536fa.png 2x, https://wott.io/assets/d66040-6fc112f8ed9934bf23e2e203f52fb25284e9dfd77ef3a5677591211c3795956a.png 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On the overview page, add a tag. This will be important for the credentials. This tag can be whatever you want, however we suggest something like &lt;code class=&quot;highlighter-rouge&quot;&gt;screenly-pi&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt; or a variant of that form:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;tag&quot; src=&quot;https://wott.io/assets/blog/tag-0174bc7f6a95922cc4554c994d2bf6f313661bd5d9ee7913a4a36ce883db0a10.png&quot; integrity=&quot;sha256-AXS8f2qVkizEVUyZTSv28xNmG9XZ7nkTpKNs6IPbChA=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/c5a555-895bba57c34c42c8723247b2856f022a38cf83ab2eb08ad7117f1e795f146219.png 2x, https://wott.io/assets/6b3f4b-14cfa151b6c269aa5012cd0570907e92d6ca6391908229ad0eb09090070e76b9.png 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now navigate to credentials and add a new credential with the following details:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Name = screenly
-Key = login
-Value = username:password
-Owner = pi
-Tags = screenly-pi
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Where the Owner must be the Linux user running Screenly (so by default on a Raspberry Pi, &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt;) and Key must be &lt;code class=&quot;highlighter-rouge&quot;&gt;login&lt;/code&gt; (or the credentials won’t be read). Value is the actual username and password of the login denoted by the single field &lt;code class=&quot;highlighter-rouge&quot;&gt;username:password&lt;/code&gt;. You can change this value to match your own criteria, but it’s fine for this example to leave it as is. Make sure as well that the Tags match whatever Tags you assigned the Pi earlier. The Name should be left as &lt;code class=&quot;highlighter-rouge&quot;&gt;screenly&lt;/code&gt; as this is how the config calls the credentials.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the config is automatically edited with the WoTT authentication details. You can change the Name value of &lt;code class=&quot;highlighter-rouge&quot;&gt;screenly&lt;/code&gt; if you wish, but note that this is how Screenly OSE will call WoTT’s credential information. So if you do change this name, then you will have to manually change the config file &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.screenly/screenly.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Your credentials are now all set up. To download them onto the device, you will need to restart the WoTT Agent and the Screenly OSE server:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo service wott-agent restart
-$ sudo service screenly-web restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;There will now be a file on your Pi &lt;code class=&quot;highlighter-rouge&quot;&gt;screenly.json&lt;/code&gt;. 
-&lt;strong&gt;Note:&lt;/strong&gt; it may take a few minutes for this to appear- especially on older Pi models,&lt;/p&gt;
-
-&lt;p&gt;You can check the file exists by running the following command (if your user is &lt;code class=&quot;highlighter-rouge&quot;&gt;pi&lt;/code&gt;):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat /opt/wott/credentials/pi/screenly.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If the certificate is downloaded, you should receive a response like so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{&quot;screenly&quot;: &quot;username:password&quot;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;securing-screenly-ose-management-page-access-with-wott-credentials&quot;&gt;Securing Screenly OSE management page access with WoTT credentials&lt;/h2&gt;
-
-&lt;p&gt;You will now need to navigate to the Screenly OSE management page. This is the IP address displayed on the front of the Screenly OSE device (or is the &lt;code class=&quot;highlighter-rouge&quot;&gt;inet&lt;/code&gt; address when running the command &lt;code class=&quot;highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; in the device’s terminal).&lt;/p&gt;
-
-&lt;p&gt;Navigate to Settings:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Settings&quot; src=&quot;https://wott.io/assets/blog/screenly-schedule-939edcd959981451d7d13e85f3a6e8ba754fb03e94e68add5ece158b26a44297.png&quot; integrity=&quot;sha256-k57c2VmYFFHX0T6F86bounVPsD6U5ordXs4ViyakQpc=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/35f1a7-21ad988034e56ecd657238c050a4f909f0bf94b7f7ccd68842bc7ba7f6b8d942.png 2x, https://wott.io/assets/c82378-c70303fb332dbadb842ae7674e9f54963f73c70bf0e913f5163bae0dc605ea49.png 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Scroll down the page and underneath ‘Authentication’ select ‘WoTT’ and save your settings.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;WoTT&quot; src=&quot;https://wott.io/assets/blog/screenly-wott-290945dab512182479adf0eaf98e858557e109489005924fcb60c6460d7b0488.png&quot; integrity=&quot;sha256-KQlF2rUSGCR5rfDq+Y6FhVfhCUiQBZJPy2DGRg17BIg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/561ae0-b0d28cae38cac593bb9dd4b0fd93af6f7d157d9e669beb12b2a7333f075170bc.png 2x, https://wott.io/assets/052172-3ca5ab010beca15aa001b2c6d39968a1380e52e66bcea6c06be92562e6a962d1.png 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You have now enabled the WoTT credentials on Screenly OSE. Test this out by trying to access the management page from another browser (the image example below is opened in Chrome) and you will be required to login with the credentials you specified above (in this case, &lt;code class=&quot;highlighter-rouge&quot;&gt;username&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;password&lt;/code&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Chrome&quot; src=&quot;https://wott.io/assets/blog/screenly-chrome-6dc710c2193e7bfe0387c3ba3c5ac842c3ca7c90766529757f93ab034afed64f.png&quot; integrity=&quot;sha256-bccQwhk+e/4Dh8O6PFrIQsPKfJB2ZSl1f5OrA0r+1k8=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/3fdef5-fbaccccd6388ebc566a9d7d6e9b09810c5e26e1916c61bf9720bb52cec81afdc.png 2x, https://wott.io/assets/c39b7a-5bd5d6e47a640274d5252317e76feff339bcf1fce9830bf7a3ad59319d2af3f8.png 1x&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If your credentials are correct, you will be successfully logged into the main Screenly management page and greeted by the Schedule Overview.&lt;/p&gt;
-
-&lt;h2 id=&quot;closing-notes&quot;&gt;Closing Notes&lt;/h2&gt;
-
-&lt;p&gt;You may be denied access in some of the terminal instances- to resolve this, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt; command where necessary.&lt;/p&gt;
-
-&lt;p&gt;You can change the WoTT credentials as you wish, but note that data is fetched by &lt;code class=&quot;highlighter-rouge&quot;&gt;wott-agent service&lt;/code&gt; every 15 minutes, so for access to any immediate changes you implement you will need to restart the WoTT agent and server as before using&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo service wott-agent restart
-$ sudo service screenly-web restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And that’s it, you have successfully used WoTT credentials to set up authentication for Screenly OSE.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to secure access to Screenly</summary></entry></feed>
+&lt;p&gt;Ensure that if you do add additional credentials to WoTT dashboard that you restart the WoTT agent to download the credentials immediately- otherwise WoTT will fetch the information every 15 minutes.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using Adafruit IO with WoTT Credentials</summary></entry></feed>
