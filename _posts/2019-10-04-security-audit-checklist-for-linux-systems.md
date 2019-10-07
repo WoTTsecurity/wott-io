@@ -61,7 +61,7 @@ The same is true for any service accessing your server. It’s important to regu
 
 ### 3. mTLS (mutual TLS) for authentication
 
-mTLS solves two problems: password management and client side authentication. There are great tools out there for secrets  management like [Vault by Hashicorp](https://www.vaultproject.io/)]. However, even more sophisticated than passwords and API keys is using TLS certificates for both client and server authentication.
+mTLS solves two problems: password management and client side authentication. There are great tools out there for secrets  management like [Vault by Hashicorp](https://www.vaultproject.io/). However, even more sophisticated than passwords and API keys is using TLS certificates for both client and server authentication.
 
 The difficulty here is in setting up your own CA. [Let’s Encrypt](https://letsencrypt.org/) can be used but it is generally not advisable to use a public CA for your internal infrastructure. There are some reliable private CAs as a service like [WoTT](https://www.wott.io) that can support your needs.
 
