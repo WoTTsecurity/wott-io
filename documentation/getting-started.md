@@ -2,7 +2,7 @@
 layout: docs-cat
 description: 'Getting started with WoTT'
 title: 'Getting Started with the WoTT Agent and Dashboard'
-full_description: We'll take you from startup to installation of the WoTT Agent and registering for the Dashboard so you can begin integrating security for your needs.
+full_description: We'll take you from startup to installation of the WoTT Agent so you can begin integrating security for your needs.
 title_content: 'Getting Started'
 redirect_from:
   - /getting-started-1
@@ -10,21 +10,32 @@ redirect_from:
   - /blog/categories/getting-started
 ---
 
-WoTT's primary goal is to simplify and manage end-to-end security for developers across a multitude of internet platforms. We manage the credentials and authentication for your Edge/IoT devices and servers- WoTT secures your projects so that you don't have to.
+WoTT's primary goal is to help developers manage and resolve security risks for linux instances by identifying vulnerabilities and providing clear instructions to resolve them. We also manage the credentials and authentication for your servers. WoTT secures your projects so that you don't have to. WoTT works on any linux system including edge devices.
 
-How do we do this? We offer you:
+How do we do this?
 
-* Simplified encryption of point-to-point communication
-* Cryptographic identity (x509 certificate issued from our CA)
-* Enabling the removal of hard coded credentials from web applications and firmware
+1. Recommended actions and developer guides to fix vulnerabilities
+2. Insights on vulnerabilities and metrics to manage the risk of your linux instances
+3. Simplified encryption of point-to-point communication and cryptographic identity (x509 certificate issued from our CA)
+4. Enabling the removal of hard coded credentials from web applications and firmware
 
 To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your various nodes through a simple and user-friendly interface. 
 
 We'll provide a step-by-step walkthrough of set-up and installation of the WoTT agent. It's hassle-free and simple to implement.
 
-## Installing the WoTT agent and claiming your device
+## Why you should consider DevSecOps:
 
-First, register for a [WoTT Dashboard](https://dash.wott.io) account and login. We have several packages available for your convenience. See our [prices]({{site.url}}/pricing) for more information.
+1. Most data breaches are caused by poor security hygiene (known CVEs, poor configuration, weak authentication).
+2. Script kiddies exploit common vulnerabilities affecting large and small firms in untargeted ransomware attacks.
+3. Developers can fix problems faster than anyone else. Save them time with clear instructions and developer guides.
+
+## Installing the WoTT agent in 3 steps 
+
+**Required Skill Level: Beginner to intermediate**
+
+**Time to complete: 5 min**
+
+First, register for a [WoTT account](https://dash.wott.io) and login. It's free and fully featured to start, so you know what you're getting. We have several paid plans available for larger deployments. See our [prices]({{site.url}}/pricing) for more information.
 
 {% asset docs/Register.png srcset:width="1300 2x" srcset:width="650 1x" alt="Register for WoTT Dash" class="img-fluid" %}
 
@@ -34,7 +45,7 @@ To install the agent, access your WoTT dashboard and press the 'Add Device' butt
 
 {% asset docs/add-device.png srcset:width="1300 2x" srcset:width="650 1x" alt="Add device from the dashboard" class="img-fluid" %}
 
-With this in your clip board/buffer, SSH into your device (be it a server, raspberry pi, etc;) and paste the command in terminal. Assuming things went well, you should see something similar to this:
+With this in your clip board/buffer, SSH into your instance (be it an EC2 instance, server, raspberry pi, etc;) and paste the command in terminal. Assuming things went well, you should see something similar to this:
 
 ```
 [...]
@@ -53,7 +64,7 @@ The WoTT Team
 ```
 
 Your node will now be registered and viewable on the WoTT Dashboard where you can now see the relative trust scores of your services. 
-You can view device-specific information and change it. Select one and add some appropriate tags to differentiate it from your other nodes (this is relevant for credential management).
+You can view node-specific information and change it. Select one and add some appropriate tags to differentiate it from your other nodes (this is relevant for credential management).
 
 Here's an example of what a Raspberry Pi with its WoTT meta tags(automatically assigned based on hardware) and user-added tags might look like on the Dashboard.
 
@@ -76,7 +87,7 @@ In an ideal world, we would do away with the usernames and passwords entirely an
 
 As a developer, you're likely going to be accessing a huge range of internet/cloud services that require basic HTTP authentication or an API key. In most instances, these credentials are hard coded into applications and can be easily read with access to said applications. WoTT introduces credential management so that you can remotely download the necessary credentials onto your chosen endpoint (we do this as a JSON file). This removes the need for you to hard code your keys and logins into your applications.
 
-We do this via our Dashboard which you can use to monitor your projects. The Dashboard gives you a trust score (based on how secure your device or server is) as well as giving you the means to add and manage credentials for whatever purpose you need them for.
+We do this via our Dashboard which you can use to monitor your projects. The Dashboard gives you a trust score (based on the security posture of your node) as well as giving you the means to add and manage credentials for whatever purpose you need them for.
 
 ## A little more on 'cryptographic' identity
 
