@@ -30,7 +30,9 @@ But what if you're dealing with extremely sensitive data like military data? Wit
 
 Think of it this way: let's say you work for a hospital; you want to manage records of patients. Typically there are a few trusted individuals who have explicit access to these records (to update them, or manage them), but it is the governing board of regulations or the company itself that dictates how this information is shared. Of course, in a hospital, patient records should be confidential and strictly between patient and doctor.
 But let's say you see a different doctor, that doctor needs to be able to access your records; or a nurse refills a prescription, they can write a new prescription but can't necessarily read your file. You wouldn't want the janitor to see your medical records- but you do want them to have access to the cleaning inventory!
-In other words, there is a hierarchy that defines who has access to certain resources and information. At an organisation level, this is set by regulations.
+In other words, there is a hierarchy that defines who has access to certain resources and information. At an organisation level, this is set by regulations. These regulations dictate MAC access.
+
+## Setting up SELinux for yourself
 
 Selinux vs Apparmor
 Selinux not default on Ubuntu (Apparmor is)
