@@ -26,7 +26,7 @@ We'll provide a step-by-step walkthrough of set-up and installation of the WoTT 
 ## Why you should consider DevSecOps:
 
 1. Most data breaches are caused by poor security hygiene (known CVEs, poor configuration, weak authentication).
-2. Script kiddies exploit common vulnerabilities affecting large and small firms in untargeted ransomware attacks.
+2. Cyber criminals exploit common vulnerabilities affecting large and small firms in untargeted ransomware attacks.
 3. Developers can fix problems faster than anyone else. Save them time with clear instructions and developer guides.
 
 ## Installing the WoTT agent in 3 steps 
