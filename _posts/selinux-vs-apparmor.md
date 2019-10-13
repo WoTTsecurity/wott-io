@@ -15,7 +15,7 @@ class: post-template
 
 Today we're going to talk about SELinux- Security Enhanced Linux. For the everyday layman SELinux is well above what most people or companies require, but is a good introduction into different ways to manage access control to your systems. More and more we give companies our precious data and the onus should be placed on developers to protect this data with growing cybersecurity threats. So we're going to show you how to implement SELinux for the security-conscious developer (and talk a little on AppArmor).
 
-Proceed with caution though- SELinux and AppArmor are MAC protocols (more on that later) and you run the risk of locking yourself out of your own system. If you're interested in learning a bit more about SELinux and MAC protocols, read on below. If you just want to jump straight into the bare-bones edition, skip straight ahead to the [tutorial] itself.
+Proceed with caution though- SELinux and AppArmor are MAC protocols (more on that later) and you run the risk of locking yourself out of your own system. If you're interested in learning a bit more about SELinux and MAC protocols, read on below. If you just want to jump straight into the bare-bones edition, skip straight ahead to the [tutorial](#tutorial) itself.
 
 **Required Skill Level**: Beginner to Medium
 **Useful Prerequesite Knowledge**: an understanding on MAC protocols (will make the tutorial easier)
@@ -35,7 +35,7 @@ Think of it this way: let's say you work for a hospital; you want to manage reco
 
 In other words, there is a hierarchy that defines who has access to certain resources and information. At an organisation level, this is set by regulations. These regulations dictate MAC access.
 
-## Setting up SELinux for yourself
+## <a name = "tutorial"> </a>A Setting up SELinux for yourself
 
 SELinux is milder than most MAC models and a good introduction into implementing MAC for your own security. In SELinux, the system administrator is the security officer.
 
