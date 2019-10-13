@@ -35,7 +35,7 @@ Think of it this way: let's say you work for a hospital; you want to manage reco
 
 In other words, there is a hierarchy that defines who has access to certain resources and information. At an organisation level, this is set by regulations. These regulations dictate MAC access.
 
-## <a name = "tutorial"> </a>A Setting up SELinux for yourself
+## <a name = "tutorial"> </a> Setting up SELinux for yourself
 
 SELinux is milder than most MAC models and a good introduction into implementing MAC for your own security. In SELinux, the system administrator is the security officer.
 
