@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: chain.jpg
+cover: server-room.jpg
 title: What is SELinux and Why You Might Want it
 date: 2019-09-09 08:00:00
 category: tutorials
@@ -29,8 +29,6 @@ an understanding on MAC protocols (will make the tutorial easier) we give a brie
 ## So what is SELinux and what is a MAC Model?
 
 SELinux is a US National Security Agency project aimed at improving security in the Linux kernel (more specifically, kernel 2.6.x). You will already be familiar with Discretionary Access Control as it is the system employed by most consumer Operating Systems. File permissions are determined by the creator/user, in Linux this is the 'Access Control List' - think about times where you have used `chmod` or `sudo` to assign read or write permissions.
-
-INSERT IMAGE
 
 Mandatory Access Control, or MAC (not to be confused with Media Access Control) is different. Basically, the *operating system* determines access based on a security label (rules for access can be managed by a security officer- usually a single system administrator), not the user that created the file. For Linux, this system exists as SELinux. 
 
@@ -66,11 +64,60 @@ First, you'll need to be logged in as your system adminstrator - the root user (
 
 to copy: `apt-get install selinux-basics selinux-policy-default auditd`
 
+If you're using Ubuntu, download [this](https://wiki.debian.org/SELinux/Setup?action=AttachFile&do=view&target=_load_selinux_policy) taken from the Debian Wiki. Copy it into: `/usr/share/initramfs-tools/scripts/init-bottom/` and run `update-initramfs -u ` in your terminal session.
 
+Check SELinux is installed/running:
 
+```
+$ getenforce
+Disabled
+```
 
+SELinux is installed but not running, you will need to activate and reboot:
 
+```
+$ selinux-activate
+$ reboot
+```
 
-Selinux vs Apparmor
-Selinux not default on Ubuntu (Apparmor is)
-Debian has Selinux
+This should put SELinux into Permissive mode. To check, run `sestatus` and you should get the following:
+
+```
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             default
+Current mode:                   permissive
+Mode from config file:          permissive
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Max kernel policy version:      30
+```
+
+## Setting Modes
+
+Run: 
+
+```
+$ audit2why -al
+[...]
+```
+This will return would-be blocked operations since your last boot. It is tedious but worth going through as SELinux has many reported bugs. We would suggest going through each bug one-by-one and follow [this Red Hat guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-fixing_problems-allowing_access_audit2allow) for changing access using the `audit2allow` command.
+
+If you are not confident, **we strongly suggest testing this on a virtual machine**.
+
+You can now change the mode to enforcing:
+ * to test, run: `setenforce = 1` in your terminal
+ * or if you are confident, add `enforcing = 1` to the kernel command line in your `/etc/default/grub` file
+
+and then reboot as earlier. You will now be running SELinux's default policy. To change this, simply manoeuvre back to the root user and set it back to permissive via `setenforce = 0`. 
+
+Provided you have access to the root user, you can feel free to play around with SELinux's [other policies](https://docs.fedoraproject.org/en-US/quick-docs/changing-selinux-states-and-modes/) until you are comfortable.
+
+## Finishing Up
+
+And that concludes our intro to SELinux. Play around with policies until you are comfortable, then you can ship SELinux to your own servers with confidence. SELinux essentially acts as a sandbox protecting your information from fradulent or corrupted access by external programs or daemons. As for AppArmor, it's just another MAC protocol that's used particularly for Ubuntu. It's easier to use as it deals with pathing rules; but SELinux is widely considered the more secure of the two. SELinux is better for those who are very familiar with Unix based systems, but AppArmor is another great introduction to MAC. 
+
+SELinux is a great way to implement security, but it is known for its bugs and disruptive mechanisms. Actual sandboxing is another alternative to protecting your kernel.
+
+Another way you can look to secure your devices- particularly if they are edge-based or use the net; is our very own agent here at WoTT. It's simple to set up and flexible, so why not head on over to our [getting started]({{site.url}}/documentation/getting-started) page
