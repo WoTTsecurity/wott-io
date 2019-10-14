@@ -17,8 +17,14 @@ Today we're going to talk about SELinux- Security Enhanced Linux. For the everyd
 
 Proceed with caution though- SELinux and AppArmor are MAC protocols (more on that later) and you run the risk of locking yourself out of your own system. If you're interested in learning a bit more about SELinux and MAC protocols, read on below. If you just want to jump straight into the bare-bones edition, skip straight ahead to the [tutorial](#tutorial) itself.
 
-**Required Skill Level**: Beginner to Medium
-**Useful Prerequesite Knowledge**: an understanding on MAC protocols (will make the tutorial easier)
+**Required Skill Level**: Medium
+**Prerequisites**: 
+Either:
+ * have SELinux installed
+ * use a Red Hat distribution of Linux
+ * follow guide to install SELinux for Debian based Linux (Debian, Ubuntu, etc) using `apt` package
+
+an understanding on MAC protocols (will make the tutorial easier) we give a brief introduction if you are not familiar
 
 ## So what is SELinux and what is a MAC Model?
 
@@ -38,6 +44,30 @@ In other words, there is a hierarchy that defines who has access to certain reso
 ## <a name = "tutorial"> </a> Setting up SELinux for yourself
 
 SELinux is milder than most MAC models and a good introduction into implementing MAC for your own security. In SELinux, the system administrator is the security officer.
+
+**Note**: There are Linux distributions that have SELinux preinstalled- these are the Red Hat distributions
+
+It's useful to have SELinux on your servers as it protects your server from malicious or flawed programs. The 'strength' of SELinux is at the discretion of the system administrator. It comes in 3 modes:
+
+ * Disabled
+ * Permissive
+ * Enforcing
+
+Permissive prints system warnings but does not enforce the protocol (useful for testing).
+
+## Setting Up
+
+First, you'll need to be logged in as your system adminstrator - the root user (su) and install SELinux if you do not have it already. There are two ways to do this:
+
+ * Log in as the root 
+ * Switch to root in terminal
+
+{% asset blog/selinux-install.png srcset:width="1300 2x" srcset:width="650 1x" alt="Install SELinux" %}
+
+to copy: `apt-get install selinux-basics selinux-policy-default auditd`
+
+
+
 
 
 
