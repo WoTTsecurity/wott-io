@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: server-room.jpg
 title: What is SELinux and Why You Might Want it
-date: 2019-10-15 17:00:00
+date: 2019-10-15 17:00:00
 category: tutorials
 author: Fiona McAllister
 tags: [tutorial]
