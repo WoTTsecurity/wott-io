@@ -18,8 +18,11 @@ Today we're going to talk about SELinux- Security Enhanced Linux. For the everyd
 Proceed with caution though- SELinux and AppArmor are MAC protocols (more on that later) and you run the risk of locking yourself out of your own system. If you're interested in learning a bit more about SELinux and MAC protocols, read on below. If you just want to jump straight into the bare-bones edition, skip straight ahead to the [tutorial](#tutorial) itself.
 
 **Required Skill Level**: Medium
+
 **Time to Complete**: 30 minutes - 1 hour
+
 **Prerequisites**: 
+
  * Either:
     * have SELinux installed
     * use a Red Hat distribution of Linux
@@ -124,4 +127,4 @@ And that concludes our intro to SELinux. Play around with policies until you are
 
 SELinux is a great way to implement security, but it is known for its bugs and disruptive mechanisms. Actual sandboxing is another alternative to protecting your kernel.
 
-Good work getting to the end of this tutorial. You have taken a big step in securing your Linux environment. There are additional steps you can take to improve security posture like CVE scanning, firewall management and service configuration. WoTT can help you do that with a lightweight agent that scans for vulnerabilities and provides clear recommended actions to fix those issues. Get started [here]({{site.url}}/documentation/getting-started)
+Good work getting to the end of this tutorial. You have taken a big step in securing your Linux environment. There are additional steps you can take to improve security posture like CVE scanning, firewall management and service configuration. WoTT can help you do that with a lightweight agent that scans for vulnerabilities and provides clear recommended actions to fix those issues. Get started [here]({{site.url}}/documentation/getting-started).
