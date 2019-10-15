@@ -18,6 +18,7 @@ Today we're going to talk about SELinux- Security Enhanced Linux. For the everyd
 Proceed with caution though- SELinux and AppArmor are MAC protocols (more on that later) and you run the risk of locking yourself out of your own system. If you're interested in learning a bit more about SELinux and MAC protocols, read on below. If you just want to jump straight into the bare-bones edition, skip straight ahead to the [tutorial](#tutorial) itself.
 
 **Required Skill Level**: Medium
+**Time to Complete**: 30 minutes - 1 hour
 **Prerequisites**: 
  * Either:
     * have SELinux installed
@@ -34,7 +35,7 @@ SELinux is a US National Security Agency project aimed at improving security in 
 
 Mandatory Access Control, or MAC (not to be confused with Media Access Control) is different. Basically, the *operating system* determines access based on a security label (rules for access can be managed by a security officer- usually a single system administrator), not the user that created the file. For Linux, this system exists as SELinux. 
 
-The control is taken away from the user?! Why on Earth would you want that?! Many organisations deal with extremely sensitive data like military or governmen. Within a military organisation, some information is reserved for specific individuals with associated security labels (need to know, top secret, etc;). 
+The control is taken away from the user?! Why on Earth would you want that?! Many organisations deal with extremely sensitive data like military or government. Within a military organisation, some information is reserved for specific individuals with associated security labels (need to know, top secret, etc;). 
 
 But beyond that, we tend to entrust our data to many corporations which we don't want everyone seeing. As a result many commercially bought Linux servers are Red Hat distributions which automatically have SELinux pre-installed. Familiarising yourself with it is absolutely the way to go.
 
@@ -123,4 +124,4 @@ And that concludes our intro to SELinux. Play around with policies until you are
 
 SELinux is a great way to implement security, but it is known for its bugs and disruptive mechanisms. Actual sandboxing is another alternative to protecting your kernel.
 
-Another way you can look to secure your devices- particularly if they are edge-based or use the net; is our very own agent here at WoTT. It's simple to set up and flexible, so why not head on over to our [getting started]({{site.url}}/documentation/getting-started) page and give it a go?
+Good work getting to the end of this tutorial. You have taken a big step in securing your Linux environment. There are additional steps you can take to improve security posture like CVE scanning, firewall management and service configuration. WoTT can help you do that with a lightweight agent that scans for vulnerabilities and provides clear recommended actions to fix those issues. Get started [here]({{site.url}}/documentation/getting-started)
