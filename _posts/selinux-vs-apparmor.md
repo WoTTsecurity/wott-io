@@ -34,8 +34,9 @@ SELinux is a US National Security Agency project aimed at improving security in 
 
 Mandatory Access Control, or MAC (not to be confused with Media Access Control) is different. Basically, the *operating system* determines access based on a security label (rules for access can be managed by a security officer- usually a single system administrator), not the user that created the file. For Linux, this system exists as SELinux. 
 
-The control is taken away from the user?! Why on Earth would you want that?! Well, as a commercial user you might not (and commercially bought machines won't have MAC protocols pre-installed). 
-But what if you're dealing with extremely sensitive data like military or government data? Within a military organisation, some information is reserved for specific individuals with associated security labels (need to know, top secret, etc;).
+The control is taken away from the user?! Why on Earth would you want that?! Many organisations deal with extremely sensitive data like military or governmen. Within a military organisation, some information is reserved for specific individuals with associated security labels (need to know, top secret, etc;). 
+
+But beyond that, we tend to entrust our data to many corporations which we don't want everyone seeing. As a result many commercially bought Linux servers are Red Hat distributions which automatically have SELinux pre-installed. Familiarising yourself with it is absolutely the way to go.
 
 Think of it this way: let's say you work for a hospital; you want to manage records of patients. Typically there are a few trusted individuals who have explicit access to these records (to update them, or manage them), but it is the governing board of regulations or the company itself that dictates how this information is shared. Of course, in a hospital, patient records should be confidential and strictly between patient and doctor. You may want another doctor to access your records, but you wouldn't want your employer or other hospital admin to.
 
