@@ -19,12 +19,14 @@ Proceed with caution though- SELinux and AppArmor are MAC protocols (more on tha
 
 **Required Skill Level**: Medium
 **Prerequisites**: 
-Either:
- * have SELinux installed
- * use a Red Hat distribution of Linux
+ * Either:
+    * have SELinux installed
+    * use a Red Hat distribution of Linux
  * follow guide to install SELinux for Debian based Linux (Debian, Ubuntu, etc) using `apt` package
-
-an understanding on MAC protocols (will make the tutorial easier) we give a brief introduction if you are not familiar
+ * **have a virtual machine with your Linux distribution installed**
+ * an understanding on MAC protocols (will make the tutorial easier) we give a brief introduction if you are not familiar. 
+ 
+But *please* test this out first on a VM to get familiar with MAC protocols as we do not want you locked out of your system.
 
 ## So what is SELinux and what is a MAC Model?
 
@@ -120,4 +122,4 @@ And that concludes our intro to SELinux. Play around with policies until you are
 
 SELinux is a great way to implement security, but it is known for its bugs and disruptive mechanisms. Actual sandboxing is another alternative to protecting your kernel.
 
-Another way you can look to secure your devices- particularly if they are edge-based or use the net; is our very own agent here at WoTT. It's simple to set up and flexible, so why not head on over to our [getting started]({{site.url}}/documentation/getting-started) page
+Another way you can look to secure your devices- particularly if they are edge-based or use the net; is our very own agent here at WoTT. It's simple to set up and flexible, so why not head on over to our [getting started]({{site.url}}/documentation/getting-started) page and give it a go?
