@@ -3,7 +3,7 @@ layout: post
 current: post
 cover: server-room.jpg
 title: What is SELinux and Why You Might Want it
-date: 2019-09-09 08:00:00
+date: 2019-10-16 08:00:00
 category: tutorials
 author: Fiona McAllister
 tags: [tutorial]
@@ -73,15 +73,15 @@ If you're using Ubuntu, download [this](https://wiki.debian.org/SELinux/Setup?ac
 Check SELinux is installed/running:
 
 ```
-$ getenforce
+# getenforce
 Disabled
 ```
 
 SELinux is installed but not running, you will need to activate and reboot:
 
 ```
-$ selinux-activate
-$ reboot
+# selinux-activate
+# reboot
 ```
 
 This should put SELinux into Permissive mode. To check, run `sestatus` and you should get the following:
@@ -103,7 +103,7 @@ Max kernel policy version:      30
 Run: 
 
 ```
-$ audit2why -al
+# audit2why -al
 [...]
 ```
 This will return would-be blocked operations since your last boot. It is tedious but worth going through as SELinux has many reported bugs. We would suggest going through each bug one-by-one and follow [this Red Hat guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-fixing_problems-allowing_access_audit2allow) for changing access using the `audit2allow` command.
