@@ -162,11 +162,11 @@ $ pip3 install adafruit-io
 
 <p>Login to the Adafruit IO dashboard. Navigate to the ‘Feeds’ page on the left-hand side menu. Hover over actions and select ‘Create a New Feed.’ The feed acts as a channel or datastream through which your device connects to Adafruit IO. We are going to create a feed that is called via MQTT. In other words, the feed becomes the topic from which messages are published/subscribed to.</p>
 
-<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-4cfdda3100b391ace37fba715fa3d4a5ead11e99b02308c049754f404667794e.png 2x, https://wott.io/assets/cd12eb-26218c63ade31d1fbcc9be0039a75e6997f10df1cff9ef7302307c9b37a6a287.png 1x" /></p>
+<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-e5cc6185cd9cb59c084a9548f0479446385857283d949f48c65936354d90e3a7.png 2x, https://wott.io/assets/cd12eb-e8faec7fbec62b670327cc5cf0d054ac1d2405cefc34904ad43478469a8c5bea.png 1x" /></p>
 
 <p>The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed ‘data feed.’ The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.</p>
 
-<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-5041e6b7b3245c38ddec0f556df2bcdd107bb2d50fd20420f225235562c91eaa.png 2x, https://wott.io/assets/60856b-6edb619edfee4687d5fd332a408eabb8e57cd46aa803af7f1db00a6a7d0ad249.png 1x" /></p>
+<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-6b063b798f89fef0714d455c63d7ef256e4cf328da51fada5cfdc637e0cc12f6.png 2x, https://wott.io/assets/60856b-86124f287ef5309d5bdfb5f40dd424f771f8a4c2294f193d8cffd8410c156cfb.png 1x" /></p>
 
 <p><strong>Note:</strong> it is possible to create the feeds using a simple python application. If you prefer a more codified style of set up, you can follow <a href="https://adafruit-io-python-client.readthedocs.io/en/latest/feeds.html">this</a> guide.</p>
 
@@ -174,11 +174,11 @@ $ pip3 install adafruit-io
 
 <p>In order to call the Adafruit API via HTTP access, it requires a key. You can find this key on the left-hand side of your Adafruit dasboard as you did with ‘Feeds’ under <code class="highlighter-rouge">AIO key</code>. You will be brought to a page akin to this:</p>
 
-<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-6fbce445868cd480432cfced50596bdb6ae4a4799d920392e7c2b296a1645a13.png 2x, https://wott.io/assets/953c52-076b51ee59fb582066f294a807c6b68e2207cbd8ce5739228c0fc1af3f8356ff.png 1x" /></p>
+<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-40be72474da1ba8313afa62b268af6868e68975ab4e878a84ff0eb8db3cedde6.png 2x, https://wott.io/assets/953c52-3f76b804883513d009900030b7346074b7a8c98d19d6ddef19ac30b2b0f44479.png 1x" /></p>
 
 <p>These are your unique Adafruit details. We can add these to WoTT’s dashboard as a new credential where the value is your personal username followed by the <code class="highlighter-rouge">Active Key</code> value. To do so, you will need to login or create an account for the <a href="https://dash.wott.io">WoTT dash</a>.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-b6efc069d478ae415e500c8cb6f4e2fc5237a84391f114bb485d377cff686d9e.png 2x, https://wott.io/assets/deedd0-46dded850d4e71fbdccec930c51581a01b1be9464a30ee0bc366e03d1055a0fd.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-727c9695c6d5a2a78367eeb7e1d15e3402a0b841506f7c4d179ae44818e01bee.png 2x, https://wott.io/assets/deedd0-c2fd78282e7a925241f60435b7d6c817034b0fded7ad479e266b78ce5b345e22.png 1x" /></p>
 
 <p>If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:</p>
 
@@ -188,7 +188,7 @@ $ sudo wott-aget claim-token
 
 <p>and pasting the output into the ‘Claim Device’ segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, <code class="highlighter-rouge">adafruit</code> to it. Through these tags, WoTT identifies which devices specific credentials are intended for.</p>
 
-<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-a5ff1139f0663c0c272c7924809cd3ed86e2f2b042d6b1e98ba33c0db342eff6.png 2x, https://wott.io/assets/7d7aaa-3f9aed8fb286a0ee90276653635e28ea94dc0484daab96cecb3c1c9f48bf14e1.png 1x" /></p>
+<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-bd04daacb4d250757e69ddd63abedf85a5b2951cbc8138c0bf39afdce7b8d4d7.png 2x, https://wott.io/assets/7d7aaa-09dd5867952cc76c545786161facc147a7e37d2c95ccc3b149869b250dcf2d92.png 1x" /></p>
 
 <p>Now that we are all set up, we need to create the credentials with the Adafruit information. Navigate to the ‘Credentials’ page of the WoTT dash and a new credential. Input the following into the fields:</p>
 
@@ -236,7 +236,7 @@ Feed data feed received new value: 52
 </code></pre></div></div>
 <p>On your Adafruit IO dash, you should see the data being received on your feed:</p>
 
-<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-999e82f2b3fd3ac06060e20b016b0b46b2b2975865da29a2c5157a86e45bf59d.png 2x, https://wott.io/assets/861588-f738e9ebbed3a09535a59abecb2f4260de46abb6112aa1cd6a5bcde824fbd450.png 1x" /></p>
+<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-c7efaa846731bec142de4a67534fbe3991bf3c90e0c3619dbe89f933cae2e139.png 2x, https://wott.io/assets/861588-8c8448ff8d75006096b6812b808fcdf4cadf9757b698dbac5f7cb17572f5b630.png 1x" /></p>
 
 <p><strong>Note:</strong> your values will be different to this example as they are randomly generated, use the above as a reference point only.</p>
 
@@ -269,11 +269,11 @@ ImportError: No module named Adafruit_IO
   <div class="post_img" style='background-image:url(https://wott.io/assets/d767dc-52619cb2275bdb9d7dc89774d2f7c51461e83c6f7dbfa5dbeb62cdd449b9582d.jpg);'></div>
   <div class="post_prewinfo">
   <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/10/15/selinux-vs-apparmor">What is SELinux and Why You Might Want It</a>
+  <a class="title" href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">What is SELinux and Why You Might Want It</a>
   <span class="author_time">By <a>Fiona McAllister</a> on October 15, 2019</span>
   <span class="description">
-   # What is SELinux? Who is it for? How do I Use it? ## Introduction Today we're going to talk about SELinux- Security Enhanced Linux. For the everyday layman SELinux is well above what most people or companies require, but is a good introduction into different ways to manage access control to your systems.... </span>
-  <a class="read_full" href="https://wott.io/blog/tutorials/2019/10/15/selinux-vs-apparmor">Continue reading </a>
+   ## Introduction Today we're going to talk about SELinux - Security Enhanced Linux. For the everyday layman SELinux maybe daunting to setup, but is a good introduction into different ways to manage access control to your systems. More and more we give companies our precious data and the onus should be placed... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">Continue reading </a>
   </div>
   </div>
 
@@ -330,7 +330,7 @@ ImportError: No module named Adafruit_IO
 </ul></div>
 <div class="menu news"><ul>
 <li><a href="https://wott.io/blog" title="">latest news</a></li>
-<li><a href="https://wott.io/blog/tutorials/2019/10/15/selinux-vs-apparmor" title="What is SELinux and Why You Might Want It">What is SELinux and Why You Might Want It</a></li><li><a href="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" title="Security audit checklist for linux systems">Security audit checklist for linux systems</a></li><li><a href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls" title="The significance of mTLS and why you should care about it">The significance of mTLS and why you should care about it</a></li>
+<li><a href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux" title="What is SELinux and Why You Might Want It">What is SELinux and Why You Might Want It</a></li><li><a href="https://wott.io/blog/thoughts/2019/10/04/security-audit-checklist-for-linux-systems" title="Security audit checklist for linux systems">Security audit checklist for linux systems</a></li><li><a href="https://wott.io/blog/thoughts/2019/09/09/what-is-mtls" title="The significance of mTLS and why you should care about it">The significance of mTLS and why you should care about it</a></li>
 </ul></div>
 </div>
 
