@@ -1,4 +1,4 @@
-mixpanel.init("d13e45987defd1ead46d7153e5aac6bc");
+mixpanel.init("d5aa9d0a7cf866c574ff900b2a01a6dc");
 mixpanel.track('Page View');
 
 $('[mp-track]').click((e) => {
