@@ -19,7 +19,7 @@ How do we do this?
 3. Simplified encryption of point-to-point communication and cryptographic identity (x509 certificate issued from our CA)
 4. Enabling the removal of hard coded credentials from web applications and firmware
 
-To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your various nodes through a simple and user-friendly interface. 
+To access all these features, you will need to install the [WoTT Agent and Dashboard](https://dash.wott.io) to manage your various nodes through a simple and user-friendly interface.
 
 We'll provide a step-by-step walkthrough of set-up and installation of the WoTT agent. It's hassle-free and simple to implement.
 
@@ -29,7 +29,7 @@ We'll provide a step-by-step walkthrough of set-up and installation of the WoTT 
 - Cyber criminals exploit common vulnerabilities affecting large and small firms in untargeted ransomware attacks.
 - Developers can fix problems faster than anyone else. Save them time with clear instructions and developer guides.
 
-## Installing the WoTT agent in 3 steps 
+## Installing the WoTT agent in 3 steps
 
 **Required Skill Level: Beginner to intermediate**
 
@@ -41,7 +41,7 @@ First, register for a [WoTT account](https://dash.wott.io) and login. It's free 
 
 **Note:** Currently, the Agent is only available to Debian package distributions such as Debian (including Raspbian) and Ubuntu.
 
-To install the agent, access your WoTT dashboard and press the 'Add Device' button. Next, copy the following block line-by-line; or use the copy icon to get the entire block as a one-liner.
+To install the agent, access your WoTT dashboard and press the 'Add Node' button. Next, copy the following block line-by-line; or use the copy icon to get the entire block as a one-liner.
 
 {% asset docs/add-device.png srcset:width="1300 2x" srcset:width="650 1x" alt="Add device from the dashboard" class="img-fluid" %}
 
@@ -63,7 +63,7 @@ Regards,
 The WoTT Team
 ```
 
-Your node will now be registered and viewable on the WoTT Dashboard where you can now see the relative trust scores of your services. 
+Your node will now be registered and viewable on the WoTT Dashboard where you can now see the relative trust scores of your services.
 You can view node-specific information and change it. Select one and add some appropriate tags to differentiate it from your other nodes (this is relevant for credential management).
 
 Here's an example of what a Raspberry Pi with its WoTT meta tags(automatically assigned based on hardware) and user-added tags might look like on the Dashboard.
@@ -72,7 +72,7 @@ Here's an example of what a Raspberry Pi with its WoTT meta tags(automatically a
 
 ## What's next?
 
-And that's it! You're now set up with WoTT. 
+And that's it! You're now set up with WoTT.
 With that, you're good to go. If you're interested in how WoTT works, feel free to continue reading on, otherwise we have some handy links here for you to begin using WoTT for your projects:
 
 * [Manage credentials with WoTT]({{site.url}}/documentation/manage-credentials)
@@ -107,4 +107,3 @@ With the WoTT Agent and Dashboard set up, you have now taken the first steps in 
 
 WoTT certificates refresh every 7 days, so you will need to account for that in your applications.
 Credentials are downloaded either when WoTT fetches data or when restarted. You may also find yourself being denied permissions for some of the commands we've shown you, use `sudo` where necessary to circumvent this.
-
