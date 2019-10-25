@@ -10,7 +10,7 @@ url: 'https://wott.io'
 
 # Website info
 title: Web of Trusted Things
-description: Seamless security audit of linux systems for DevOps teams.
+description: Seamless security audit of Linux systems for DevOps teams.
 cover: assets/images/blog-cover.jpg
 favicon: assets/images/favicon.png
 
@@ -43,22 +43,22 @@ pagination:
   trail:
     before: 2
     after: 2
-    
-    
+
+
 autopages:
     enabled: true
 
     categories:
-        layouts: 
+        layouts:
         - 'category.html'
         title: ':cat'
         permalink: '/blog/:cat'
 
     collections:
         enabled: false
-  
+
     tags:
-        layouts: 
+        layouts:
         - 'tag.html'
         title: 'Tag [:tag]'
         permalink: '/tag/:tag'
