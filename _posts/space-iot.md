@@ -21,6 +21,15 @@ key points:
 * invest in security for New Space - be a front runner in a growing field
 * Use WoTT to familiarise yourself with security for IoT
 
+Some keywords:
+ 
+ * ISS
+ * New Space
+ * Space wifi
+ * IoT
+ * ISU/ International Space University 
+ * IoT Security
+
 
 
 ## Introduction
@@ -35,8 +44,14 @@ And it’s not as if the space sector is an ‘alien’ endeavour for developers
 
 Manned spaceflight is a fairly localised phenomenon- sure it makes the headlines, but in the grand scheme of things most experiments have been done remotely. Many of the experiments present on the most ‘popular’ space endeavour, the ISS, contain data that need to be broadcasted to Earth. In short, many of these experiments, which also need to be relatively low power, can be considered IoT problems. The parallels have always been there. 
 
+## The Now
 
-The Now
+We've since moved on from the days of the Space Race and the military era to where we are currently- a more exciting commerical branch of the sector: New Space. It's here where prospective developers can really shine with many commercial start ups looking to outsource several components(think security).
+
+Right now, we have the opportunity to interface with projects in space- and not all of them are scientific (remember how space is becoming more commercial?). There are currently [3 projects](https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Research/ICE_Cubes_space_research_service_open_for_business) onboard the ISS done in collaboration with ESA and the International Space University (ISU); one of which is an art project. Users on Earth can interface and interact with this in near real-time. These projects are set up by the onboard astronauts and essentially left to their own devices. Their data gets broadcast to Earth via- you guessed it, the internet - much like an IoT device. It's natural to assume more projects like the ICE cubes will become more prominent in the future. As this sector increases, so does its vulnerability; and as we know IoT on Earth is already a poorly secured domain (fridge hacks - add links here).
+
+
+
 
 Several ways to interface with space from satellites to interacting directly with the ISS - how does the ISS secure this connection?
 Ice cube experiments on the ISS relay information back to Earth through internet
