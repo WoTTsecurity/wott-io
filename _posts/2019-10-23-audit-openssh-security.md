@@ -23,14 +23,13 @@ We will look at the basics of auditing and securing your OpenSSH configuration f
 
 **Requirements:**
 * A Linux Distribution (this guide should be good for most Distro's)
-* A server
 * The config file (usually located at /etc/ssh/ssh_config)
 
 you can open this file from the terminal using the command:
 
-~~~
-$ sudo nano /etc/ssh/ssh_config
-~~~
+```
+$ sudo $EDITOR /etc/ssh/ssh_config
+```
 
 *We also want to quickly mention that our service [WoTT](https://wott.io/) audits the security of your linux machine/s including your OpenSSH configuration. It is free for up to 5 nodes and contains many guides and documentation to make sure setting up is simple and painless whilst easing your mind on the strenuous work that is securing your system.*
 
@@ -50,9 +49,9 @@ Once you have the config file open, locate the line that says Port 22, and chang
 
 *You can check to see which ports are not in use by running the following command on another terminal:*
 
-~~~
+```
 $ netstat -ntap
-~~~
+```
 
 *This command will show you a long list of ports and connections that are open.*
 
@@ -68,9 +67,9 @@ This one is interesting because it is a use-by-case recommendation. We highly re
 
 To disable root login, navigate to the config file, locate the "PermitRootLogin" and change that to "no". This will make it so that you cannot login with the root user anymore.
 
-~~~
+```
 PermitRootLogin no
-~~~
+```
 
 
 ## 5. Use Key-based Authentication
@@ -79,10 +78,10 @@ Key-based Authentication (aka Public key authentication), are a much more secure
 
 Look for these settings and apply the following changes:
 
-~~~
+```
 PubkeyAuthentication yes
 PasswordAuthentication no
-~~~
+```
 
 For more information on key-based authentication and a more detailed guide on setting up keys, please refer to [this](https://linux-audit.com/using-ssh-keys-instead-of-passwords/) article.
 
@@ -97,9 +96,9 @@ This is another example of something that is a use-by-case scenario. We do recom
 
 To disable agent portforwarding, navigate to the following setting in the config file and apply the changes:
 
-~~~
+```
 AllowAgentForwarding no
-~~~
+```
 
 ## 8. Use of a Bastion Host
 
@@ -111,9 +110,9 @@ Having a bastion host can act as a second line of defense against attackers on y
 
 Limiting which users can login over SSH can save you from worrying who's able to login and who isn't. This point is bouncing off of point 6. To allow certain users, we will assume you want only users "Gecko" and "Marko" to login over SSH. Navigate to the SSH config file and add the following line:
 
-~~~
+```
 AllowUsers Gecko Marko
-~~~
+```
 
 ## Conclusion
 
