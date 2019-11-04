@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-10-22T08:31:43+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">What is SELinux and Why You Might Want It</title><link href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux" rel="alternate" type="text/html" title="What is SELinux and Why You Might Want It" /><published>2019-10-15T17:00:00+00:00</published><updated>2019-10-15T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/15/what-is-selinux</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-04T14:45:13+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Do a CVE Scan of Your Linux System</title><link href="https://wott.io/blog/tutorials/2019/10/25/cve" rel="alternate" type="text/html" title="How to Do a CVE Scan of Your Linux System" /><published>2019-10-25T17:00:00+00:00</published><updated>2019-10-25T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/25/cve</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/25/cve">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Common vulnerabilities and exposures &lt;a href=&quot;https://cve.mitre.org/cve/&quot;&gt;(CVE)&lt;/a&gt; is a list of publicly known cybersecurity vulnerabilities. Each vulnerability is given a unique CVE number by which it can be identified and referenced. The list can be easily accessed for free online, but wouldn’t it be nice to be automatically notified when you are affected by a newly reported vulnerability without having to check the list every day?&lt;/p&gt;
+
+&lt;p&gt;WoTT can help you do this by scanning your system packages and checking them against the CVE list.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: None/Beginner&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time to Complete&lt;/strong&gt;: 15 - 45 minutes (depending on whether you are already set up with WoTT)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prerequisite&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have the WoTT agent installed (or &lt;a href=&quot;#wott&quot;&gt;install it&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Have a profile with WoTT (instructions included in set up)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In a few simple steps, you can determine your vulnerability score. Follow the instructions below.&lt;/p&gt;
+
+&lt;h2 id=&quot;--1-install-the-wott-agent&quot;&gt;&lt;a name=&quot;wott&quot;&gt; &lt;/a&gt; 1. Install the WoTT agent&lt;/h2&gt;
+
+&lt;p&gt;You’ll need to install our lightweight agent if you haven’t done so already. See our &lt;a href=&quot;https://wott.io/documentation/getting-started&quot;&gt;getting started&lt;/a&gt; page and follow the instructions.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-review-cve-scan-results&quot;&gt;2. Review CVE scan results&lt;/h2&gt;
+
+&lt;p&gt;If you’re already set up with WoTT, you’ll need to navigate and log in to the &lt;a href=&quot;https://dash.wott.io&quot;&gt;WoTT Dash&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now click on the ‘Device Name’ to see device details. It should look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-8553f0877db9f832377640623e3099feddf28892a1b4cd2449ea77f41d9e853d.png 2x, https://wott.io/assets/cb07c6-2900ecfb7076ded520c59383596edb42e63d5f27e4b87953f95cd0881e77b59a.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To see your vulnerabilities, navigate to the security tab at the top of the page where a scan of your device will be performed.
+Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-ca7eabaf24b79efe65765f2c2389e07e3e9c56ae6be6d85c8a60e389d4642daf.png 2x, https://wott.io/assets/e84a38-9e485e5881cfba5261ffbba63d245f7c6871408166005de4ad287d1262aacdf3.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this particular example, you can see that the scan has detected default login credentials (such as those on a raspberry pi). The results will of course vary depending on your device, but this should give you a better understanding on the common vulnerabilities present on your device that can be easily exploited.&lt;/p&gt;
+
+&lt;h2 id=&quot;additional-information-and-closing-notes&quot;&gt;Additional Information and Closing Notes&lt;/h2&gt;
+
+&lt;p&gt;WoTT also provides a more holistic security audit and set of developers tools to capture and correct other common failure points such as &lt;a href=&quot;https://wott.io/documentation/faq#firewall-policy&quot;&gt;firewall policy&lt;/a&gt;, openSSH audits and the presence of app hardening tools like &lt;a href=&quot;https://wott.io/documentation/faq#apparmor&quot;&gt;AppArmor&lt;/a&gt; and &lt;a href=&quot;https://wott.io/documentation/faq#selinux&quot;&gt;SELinux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To understand each check in the security audit visit the WoTT &lt;a href=&quot;https://wott.io/documentation/faq&quot;&gt;FAQ&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="tutorials" /><category term="tutorials" /><category term="Open Source" /><summary type="html">Introduction</summary></entry><entry><title type="html">What is SELinux and Why You Might Want It</title><link href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux" rel="alternate" type="text/html" title="What is SELinux and Why You Might Want It" /><published>2019-10-15T17:00:00+00:00</published><updated>2019-10-15T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/15/what-is-selinux</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Today we’re going to talk about SELinux - Security Enhanced Linux. For the everyday layman SELinux maybe daunting to setup, but is a good introduction into different ways to manage access control to your systems. More and more we give companies our precious data and the onus should be placed on developers to protect this data with growing cybersecurity threats. So we’re going to show you how to implement SELinux for the security-conscious developer (and talk a little on AppArmor).&lt;/p&gt;
 
@@ -56,7 +98,7 @@
 
 &lt;h2 id=&quot;setting-up-on-ubuntudebian&quot;&gt;Setting Up on Ubuntu/Debian&lt;/h2&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-25e27ae287835d176abe47e1dd6462d6ac173eee99e4aeba3ac67ae089cee9a2.png 2x, https://wott.io/assets/be60c1-db136f44dcda25b35baf5993123b8b9bea553052db618da6910210b45a3d9e84.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-c2d601d060bf2acf90a560bdd4d7ba04fca190297d43bcaf0a3e67ea9dbb259c.png 2x, https://wott.io/assets/be60c1-255f9aee4bc8cba2429bbac6c815984e5a114aec74dbab93b1632703d1122326.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On Ubuntu or Debian, you need to install the required packages by running:&lt;/p&gt;
 
@@ -684,159 +726,4 @@ CONTAINER ID        IMAGE               COMMAND                  [...]
 
 &lt;p&gt;Mosquitto is a very convenient way of managing MQTT messages with inbuilt features that promote security. Hopefully we’ve shown how easy it is to use WoTT to secure a Mosquitto server and client based off our unique ID that we assign to each WoTT device. Ultimately security through identity is the way forward as passwords can still be all too easily intercepted- especially on non TLS connections. ACL files are one of many ways we can use identity over passwords.&lt;/p&gt;
 
-&lt;p&gt;Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There’s much more to Mosquitto than we have included in this example, so check out the &lt;a href=&quot;https://mosquitto.org&quot;&gt;Mosquitto website&lt;/a&gt; for more information.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</summary></entry><entry><title type="html">Configuring Nginx with client certificate authentication (mTLS)</title><link href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx" rel="alternate" type="text/html" title="Configuring Nginx with client certificate authentication (mTLS)" /><published>2019-07-15T08:00:00+00:00</published><updated>2019-07-15T08:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">&lt;h1 id=&quot;configuring-nginx-with-client-certificate-authentication-mtls&quot;&gt;Configuring Nginx with client certificate authentication (mTLS)&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Medium to Expert&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Time to complete&lt;/strong&gt;: 15-20 min&lt;/p&gt;
-
-&lt;p&gt;In this post we will walk through how to configure Nginx to support mutual TLS to authenticate a client request in 3 steps:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Install certificate on client&lt;/li&gt;
-  &lt;li&gt;Set up a server&lt;/li&gt;
-  &lt;li&gt;Whitelist client&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;One of the cornerstones of Zero Trust Networking is Mutual TLS (known as mTLS). In simple terms, this means that each client is required to present a certificate to talk to the server. By replacing credentials with certificates, we are able to significantly improve the security (in particular with short-lived certificates, like the ones we offer), while also making the implementation &lt;em&gt;easier&lt;/em&gt; (as it removes the need for API key/credential management).&lt;/p&gt;
-
-&lt;p&gt;In this article we will make this all more concrete by creating a sample implementation. The sample implementation will consist of a simple Python appserver, with an Nginx reverse proxy in front of it. Nginx will reject all connections without a valid certificate, and the appserver will then compare the certificate to a whitelist of devices that are allowed to talk to the server.&lt;/p&gt;
-
-&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A server (Debian VM, Ubuntu VM, etc.)&lt;/li&gt;
-  &lt;li&gt;A client node (running on Ubuntu, Debian, Raspbian)&lt;/li&gt;
-  &lt;li&gt;The WoTT Agent installed on both the client and server&lt;/li&gt;
-  &lt;li&gt;Docker and Docker Compose installed on the server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;preparation&quot;&gt;Preparation&lt;/h2&gt;
-
-&lt;p&gt;Before we begin, we first need to install the WoTT agent on both the server and client(s). You can register for a free account &lt;a href=&quot;https://dash.wott.io/accounts/register/&quot;&gt;here&lt;/a&gt; and find instruction in our &lt;a href=&quot;https://wott.io/documentation/getting-started&quot; target=&quot;_blank&quot;&gt;Getting Started guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you have the WoTT agent installed, we need to install both &lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/debian/&quot;&gt;Docker CE&lt;/a&gt; and Docker Compose (you can install Docker Compose on a Raspberry Pi by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;apt update &amp;amp;&amp;amp; apt install docker-compose&lt;/code&gt;). We use these to simplify the installation, as we are able to better pin the requirements.&lt;/p&gt;
-
-&lt;h2 id=&quot;setting-up-the-server&quot;&gt;Setting up the server&lt;/h2&gt;
-
-&lt;p&gt;Let’s start by setting up the server. To save you the time (and potential typos), we have created a sample repo for this, so all you need to do is to clone the repository:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/WoTTsecurity/examples.git
-$ cd examples/nginx-with-mtls-and-appserver
-$ docker-compose build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Thanks to Docker and Docker Compose, this is all we need to kick off the demo. The only final thing we need to do is to add the device that we will be connecting &lt;em&gt;from&lt;/em&gt; to the whitelist. You can find out the WoTT Device ID by running &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo wott-agent whoami&lt;/code&gt; on the device you’re connecting from.&lt;/p&gt;
-
-&lt;p&gt;With the Device ID at hand, simply run the following commands on the server:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo &quot;MyDeviceId.d.wott.local&quot; &amp;gt;&amp;gt; appserver/whitelist.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can now fire up the server by simply running:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker-compose up
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To test the connection from your client, we need to find out two things:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The IP of the server&lt;/li&gt;
-  &lt;li&gt;The WoTT Device ID of the server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;lets-test-the-client&quot;&gt;Let’s test the client&lt;/h2&gt;
-
-&lt;p&gt;Armed with the above information, we can now turn to our trusty old friend &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;First, let’s try connecting without passing on our certificate:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo curl \
-  --cacert /opt/wott/certs/ca.crt \
-  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
-  https://MyServerId.d.wott.local
-
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&lt;/span&gt;400 No required SSL certificate was sent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&amp;lt;h1&amp;gt;&lt;/span&gt;400 Bad Request&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;center&amp;gt;&lt;/span&gt;No required SSL certificate was sent&lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&amp;lt;center&amp;gt;&lt;/span&gt;nginx/1.16.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/center&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Because we have configured Nginx to require an SSL certificate, the server will reject the connection, and you won’t even be able to reach the appserver that we reverse proxy to.&lt;/p&gt;
-
-&lt;p&gt;If we however pass on our certificate (and key), we are able to successfully access the appserver:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo curl \
-  --key /opt/wott/certs/client.key \
-  --cert /opt/wott/certs/client.crt \
-  --cacert /opt/wott/certs/ca.crt \
-  --resolve 'MyServerID.d.wott.local:443:a.b.c.d' \
-  https://MyServerId.d.wott.local
-
-Access Granted!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;thats-really-cool-but-what-happened-here&quot;&gt;That’s really cool, but what happened here?&lt;/h2&gt;
-
-&lt;p&gt;There’s a lot to unpack in what we did above, so let’s start with the client and work our way forward.&lt;/p&gt;
-
-&lt;h3 id=&quot;client&quot;&gt;Client&lt;/h3&gt;
-
-&lt;p&gt;Let’s break down the &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; command we used to successfully connect to the server.&lt;/p&gt;
-
-&lt;p&gt;These two lines tell &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to send the client certificate and key.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --key /opt/wott/certs/client.key
-  --cert /opt/wott/certs/client.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This is our cryptographic identity provided by WoTT. In short, this replaces the need for a username and pasword. It should however be said that the key is not sent to the server (unlike a password), but rather it is used for a cryptographic challenge (vastly simplified).&lt;/p&gt;
-
-&lt;p&gt;Next, we need to tell &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to use the WoTT CA certificate to verify the remote server against (since WoTT is not a public CA):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --cacert /opt/wott/certs/ca.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Lastly, we use a neat little feature in &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to tell it to map ‘MyServerID.d.wott.local’ to an IP address. We could instead have added this to our &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/hosts&lt;/code&gt; file, but this is a quicker workaround when testing.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  --resolve 'MyServerID.d.wott.local:443:192.168.X.Y'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;nginx&quot;&gt;Nginx&lt;/h3&gt;
-
-&lt;p&gt;Let’s move on to Nginx. We use Nginx as a reverse proxy for the appserver that we will cover below. We do this for a few reasons. The first reason is simply because Nginx is battle tested and does the first level of screening. If for instance, the client fails to present a valid certificate, the request will not be forwarded to the appserver. Hence this is a nice safety net from possible bugs in the appserver code.&lt;/p&gt;
-
-&lt;p&gt;In this particular example, we also terminate the TLS connection in Nginx. Should we want to improve security further (and adopt proper Zero Trust Networking), we could encrypt the traffic Nginx and the appserver too (even if they are on the same host in this case).&lt;/p&gt;
-
-&lt;p&gt;If the certificate is valid, Nginx will then reverse proxy the connection to the appserver.&lt;/p&gt;
-
-&lt;p&gt;The Nginx configuration is fairly straight forward and can be found &lt;a href=&quot;https://github.com/WoTTsecurity/examples/blob/master/nginx-with-mtls-and-appserver/nginx/reverse-proxy.conf&quot;&gt;here&lt;/a&gt;. The most noteworthy lines in the configuration are these:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This will return a 403 to all clients without a proper certificate
-if ($ssl_client_verify != &quot;SUCCESS&quot;) { return 403; }
-
-# This tells Nginx what CA to verify against
-ssl_client_certificate /opt/wott/certs/ca.crt;
-
-# This tells Nginx to verify clients
-ssl_verify_client on;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In theory, we could extend this further and write a &lt;a href=&quot;https://github.com/openresty/lua-nginx-module#readme&quot;&gt;LUA script&lt;/a&gt; to do further validation, and even incorporate the whitelisting that we will get to in the appserver section, but that’s something for another day.&lt;/p&gt;
-
-&lt;h3 id=&quot;appserver&quot;&gt;Appserver&lt;/h3&gt;
-
-&lt;p&gt;Assuming the client passed all validations, the request will be passed on to the appsever. The &lt;a href=&quot;https://github.com/WoTTsecurity/examples/blob/master/nginx-with-mtls-and-appserver/appserver/app.py&quot;&gt;appserver&lt;/a&gt; is a simple Flask app. In essence, all it does is to provide some validations on the headers. Since Nginx will pass on various HTTP Headers to the appserver, we can use them to implement access control.&lt;/p&gt;
-
-&lt;p&gt;When a request hits the appserver, it will check the HTTP header &lt;code class=&quot;highlighter-rouge&quot;&gt;Ssl-Client-Verify&lt;/code&gt; is set to ‘SUCCESS’. If it isn’t, the request will be rejected with an error message. In theory, this shouldn’t be possible, since Nginx should never forward such request, but when it comes to security it’s better to be safe than sorry.&lt;/p&gt;
-
-&lt;p&gt;Assuming the above condition is correct, the appserver will parse the Client ID (from the ‘Ssl-Client’ header) and compare it to a whitelist (&lt;code class=&quot;highlighter-rouge&quot;&gt;whitelist.txt&lt;/code&gt; from above). The whitelist is a simple text file with one Device ID per line. Only if the Client ID (i.e. the WoTT Device ID) matches a record in the whitelist, the appserver will return “Access Granted!”.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Hopefully you found this tutorial useful in illustrating a cornerstone of Zero Trust Networking - mTLS. With a relatively small amount of code we can implement better security in a real-world setting. For more mTLS use cases or for a better understanding of Trust Scoring in Zero Trust Networking checkout &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;wott.io&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you have any questions, please get in touch with us on &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;Twitter&lt;/a&gt; or open a Github Issue if you found any issues.&lt;/p&gt;</content><author><name>Viktor Petersson</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Configuring Nginx with client certificate authentication (mTLS)</summary></entry></feed>
+&lt;p&gt;Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There’s much more to Mosquitto than we have included in this example, so check out the &lt;a href=&quot;https://mosquitto.org&quot;&gt;Mosquitto website&lt;/a&gt; for more information.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</summary></entry></feed>
