@@ -1,4 +1,4 @@
----
+--
 layout: docs-cat
 description: 'Frequently asked questions regarding WoTT'
 title: 'Frequently Asked Questions'
@@ -61,6 +61,33 @@ The (WoTT) Node ID (formerly known as "Device ID"), is the unique identifier in 
 ## What's an FQDN? <a name="fqdn"></a>
 An FQDN, or Fully Qualified Domain Name, is the hostname that the system itself has been given. This can either be a private name (like my-device.local) or a public name (like my-device.company.com). An FQDN is used to identify the device on a network.
 
+# Recommended Actions FAQ
+
+## OpenSSH: PerminRootLogin <a name="openssh-permitrootlogin"></a>
+
+It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn't login as root remotely, and instead utilize something like `sudo` to escalate privileges whenever needed (i.e. don't use root as your day-to-day user account).
+
+By changing "PermitRootLogin" to "no", you disable root login over SSH.
+
+For more details, please see the [sshd_config man page](https://linux.die.net/man/5/sshd_config).
+
+## OpenSSH: AllowAgentForwarding <a name="openssh-allowagentforwardng"></a>
+
+AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastian/Jump server).
+
+However, there is a known attack vector where another user on the jump box could intercept your key(s), which is why it is recommended to disable this feature unless you explicitly need it.
+
+By changing "AllowAgentForwarding" to "no", you improve the security.
+
+For more details, please see the [sshd_config man page](https://linux.die.net/man/5/sshd_config).
+
+## OpenSSH: PasswordAuthentication <a name="openssh-passwordauthentication"></a>
+
+PasswordAuthentication, as the name implies, allows you to authenticate using passwords. This should be avoided whenever possible, as it exposes your servers to brute-force attacks (i.e. if there is a user with a weak password on the system, the system is likely to be breached eventually).
+
+To mitigate this, we recommend disabling password logins entirely. **Do however note** that before you do this, you need to generate and install your SSH key(s) on the remote system. If not, you will lock yourself out. For more information on how to get started with OpenSSH keys, please see [this article](https://help.ubuntu.com/community/SSH/OpenSSH/Keys).
+
+For more details, please see the [sshd_config man page](https://linux.die.net/man/5/sshd_config).
 
 # Agent FAQ
 
