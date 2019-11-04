@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-04T14:56:35+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Do a CVE Scan of Your Linux System</title><link href="https://wott.io/blog/tutorials/2019/11/04/cve" rel="alternate" type="text/html" title="How to Do a CVE Scan of Your Linux System" /><published>2019-11-04T14:00:00+00:00</published><updated>2019-11-04T14:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/04/cve</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/04/cve">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-04T15:09:47+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Do a CVE Scan of Your Linux System</title><link href="https://wott.io/blog/tutorials/2019/11/04/cve" rel="alternate" type="text/html" title="How to Do a CVE Scan of Your Linux System" /><published>2019-11-04T14:00:00+00:00</published><updated>2019-11-04T14:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/04/cve</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/04/cve">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Common Vulnerabilities and Exposures (&lt;a href=&quot;https://cve.mitre.org/cve/&quot;&gt;CVE&lt;/a&gt;) is a list of publicly known cybersecurity vulnerabilities. Each vulnerability is given a unique CVE number by which it can be identified and referenced. The list can be easily accessed for free online, but wouldn’t it be nice to be automatically notified when you are affected by a newly reported vulnerability without having to check the list every day?&lt;/p&gt;
 
@@ -27,12 +27,12 @@
 
 &lt;p&gt;Now click on the ‘Device Name’ to see device details. It should look something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-489b977a291db177a1b612fd0fe0081594a16cf9816baebb5d5976165c5b0ac4.png 2x, https://wott.io/assets/cb07c6-f4b56ee7180a1ad2deab72b495d451f7348eed48fab2ae7824b2692437a36ff0.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-b03836758604596bfa16b9cff3ae8633982d451fb8dd8f528f2c98c34bfe7871.png 2x, https://wott.io/assets/cb07c6-08f4cf14a90ee25bb1eb66b80d8a057741edc57e71975d05eabad8c98c6e719f.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To see your vulnerabilities, navigate to the security tab at the top of the page where a scan of your device will be performed.
 Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-04548d4ed08764f89d0c8454c4f47c541d76c7b72d1016a8deba2a6c2fb60323.png 2x, https://wott.io/assets/e84a38-6ed1c6deeebd5c746933e487859632f1cd4812676a708871f7ecff39125fc830.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-4d6dd6e7d1aaacdf1f3a40ad773b25afe29a57f26c768df52c27df5488fb9563.png 2x, https://wott.io/assets/e84a38-ee0fdbb0134bfc4b6a52e046a7f1c6369c6c8abbfc13d1827bd479a185608c57.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this particular example, you can see that the scan has detected default login credentials (such as those on a raspberry pi). The results will of course vary depending on your device, but this should give you a better understanding on the common vulnerabilities present on your device that can be easily exploited.&lt;/p&gt;
 
@@ -40,7 +40,108 @@ Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
 
 &lt;p&gt;WoTT also provides a more holistic security audit and set of developers tools to capture and correct other common failure points such as &lt;a href=&quot;https://wott.io/documentation/faq#firewall-policy&quot;&gt;firewall policy&lt;/a&gt;, OpenSSH audits and the presence of app hardening tools like &lt;a href=&quot;https://wott.io/documentation/faq#apparmor&quot;&gt;AppArmor&lt;/a&gt; and &lt;a href=&quot;https://wott.io/documentation/faq#selinux&quot;&gt;SELinux&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;To understand each check in the security audit visit the WoTT &lt;a href=&quot;https://wott.io/documentation/faq&quot;&gt;FAQ&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Introduction</summary></entry><entry><title type="html">What is SELinux and Why You Might Want It</title><link href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux" rel="alternate" type="text/html" title="What is SELinux and Why You Might Want It" /><published>2019-10-15T17:00:00+00:00</published><updated>2019-10-15T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/15/what-is-selinux</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;To understand each check in the security audit visit the WoTT &lt;a href=&quot;https://wott.io/documentation/faq&quot;&gt;FAQ&lt;/a&gt;.&lt;/p&gt;</content><author><name>Al Esmail</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Introduction</summary></entry><entry><title type="html">How to Audit OpenSSH Configuration and Secure It</title><link href="https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security" rel="alternate" type="text/html" title="How to Audit OpenSSH Configuration and Secure It" /><published>2019-10-25T17:00:00+00:00</published><updated>2019-10-25T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Beginner to Medium&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reading Time&lt;/strong&gt;: 15-20 Minutes&lt;/p&gt;
+
+&lt;p&gt;In this post, we will review the fundamentals of a secure OpenSSH server. As you probably know the SSH (Secure Shell) is a method to remote login to a server. SSH is usually secure however if used with the default settings, can be vulnerable to attacks from unwanted parties.&lt;/p&gt;
+
+&lt;p&gt;We will look at the basics of auditing and securing your OpenSSH configuration file, to make sure that only trusted users can remote login to your server, and are privy to the information they are permitted to.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Linux Distribution (this guide should be good for most Distro’s)&lt;/li&gt;
+  &lt;li&gt;The config file (usually located at /etc/ssh/ssh_config)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;you can open this file from the terminal using the command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo $EDITOR /etc/ssh/ssh_config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;We also want to quickly mention that our service &lt;a href=&quot;https://wott.io/&quot;&gt;WoTT&lt;/a&gt; audits the security of your linux machine/s including your OpenSSH configuration. It is free for up to 5 nodes and contains many guides and documentation to make sure setting up is simple and painless whilst easing your mind on the strenuous work that is securing your system.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are a few key features to check if your OpenSSH server is secure:&lt;/p&gt;
+
+&lt;h2 id=&quot;1-use-a-strong-password&quot;&gt;1. Use a Strong Password&lt;/h2&gt;
+
+&lt;p&gt;This might seem like an obvious one, but a lot of systems are vulnerable to brute force attacks or simple guesswork due to having easy to guess passwords or generic passwords. By ensuring that your password/s is complex and long, it makes it a lot more difficult and more time consuming to brute force (can result in you noticing the attack) if the password has capital letters, special characters and numbers. Also make sure to use a non-conspicuous word or phrase as your base. Something like idontlikemeltedicecream rather than your first car or the name of your pet.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Side note: we strongly recommend you don’t use passwords to begin with (see point 5). But we understand that some people would like to keep using passwords so we’ll keep this up here.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-change-the-default-ssh-port&quot;&gt;2. Change the Default SSH Port&lt;/h2&gt;
+
+&lt;p&gt;By default, any SSH port is 22. This makes it so that anyone connecting to your SSH server can find it simply by connecting to the default port. Changing the port makes it more difficult to find and slows down the attacker’s process significantly. To change it, navigate to the config file as shown above and open it in your terminal (you can also edit it through a text editor although this guide will show you how to do so in a terminal).&lt;/p&gt;
+
+&lt;p&gt;Once you have the config file open, locate the line that says Port 22, and change the number to a port that is not in use on your server yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You can check to see which ports are not in use by running the following command on another terminal:&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ netstat -ntap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;This command will show you a long list of ports and connections that are open.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-use-protocol-2&quot;&gt;3. Use Protocol 2&lt;/h2&gt;
+
+&lt;p&gt;Again this is a simple one but can be overlooked. There are two protocol versions SSH uses, by default it should be set to 2, but be sure to check that version 2 is being used. For more information on why protocol 2 should be used instead of 1, &lt;a href=&quot;http://www.snailbook.com/faq/ssh-1-vs-2.auto.html&quot;&gt;please refer to this webpage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-disable-root-login&quot;&gt;4. Disable Root Login&lt;/h2&gt;
+
+&lt;p&gt;This one is interesting because it is a use-by-case recommendation. We highly recommend disabiling root login, because a common attack is to brute force against the name of the root superuser.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Please Note&lt;/strong&gt;: If you do plan on disabling Root Login, please test the SSH login with your non-root user that you plan to use for SSH logins &lt;strong&gt;before&lt;/strong&gt; you disable the root account. If you don’t, you may be stuck without a way to access your server through SSH.&lt;/p&gt;
+
+&lt;p&gt;To disable root login, navigate to the config file, locate the “PermitRootLogin” and change that to “no”. This will make it so that you cannot login with the root user anymore.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PermitRootLogin no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-use-key-based-authentication&quot;&gt;5. Use Key-based Authentication&lt;/h2&gt;
+
+&lt;p&gt;Key-based Authentication (aka Public key authentication), are a much more secure way of authenticating users as they are much less prone to brute force attacks. To enable key-based authentication, you must disable password authentication, this will leave your users with no choice but to use keys.&lt;/p&gt;
+
+&lt;p&gt;Look for these settings and apply the following changes:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PubkeyAuthentication yes
+PasswordAuthentication no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For more information on key-based authentication and a more detailed guide on setting up keys, please refer to &lt;a href=&quot;https://linux-audit.com/using-ssh-keys-instead-of-passwords/&quot;&gt;this&lt;/a&gt; article.&lt;/p&gt;
+
+&lt;h2 id=&quot;6-check-integrity-of-user-database&quot;&gt;6. Check Integrity of User Database&lt;/h2&gt;
+
+&lt;p&gt;You’ve probably added users to the config file to allow trusted people to access your server. Make sure that there are no old users that have access to your server if they shouldn’t. Again, maybe a bit obvious but can be overlooked.&lt;/p&gt;
+
+&lt;h2 id=&quot;7-disable-agent-portforwarding&quot;&gt;7. Disable Agent Portforwarding&lt;/h2&gt;
+
+&lt;p&gt;This is another example of something that is a use-by-case scenario. We do recommend disabling agent portforwarding if there is no legitimate use for it. Since it allows connections outside of your server whilst leaving a socket open on the local machine, anyone with sufficient permissions can connect to and use your local ssh-agent. This is a very unlikely scenario, however, is it worth the risk of having a compromised machine connected to your server with Agent Portforwarding enabled? For more information, please refer to this article &lt;a href=&quot;https://heipei.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To disable agent portforwarding, navigate to the following setting in the config file and apply the changes:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AllowAgentForwarding no
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;8-use-of-a-bastion-host&quot;&gt;8. Use of a Bastion Host&lt;/h2&gt;
+
+&lt;p&gt;A bastion host is a special purpose computer on a network with the purpose of withstanding attacks. They usually host a single application (for example a proxy server) and all other services are removed or limited to reduce the threats on the network through the computer.&lt;/p&gt;
+
+&lt;p&gt;Having a bastion host can act as a second line of defense against attackers on your network. To set one up, we recommend going through &lt;a href=&quot;https://blog.scottlowe.org/2015/11/21/using-ssh-bastion-host/&quot;&gt;this extensive guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;9-limit-users-logging-in-over-ssh&quot;&gt;9. Limit Users Logging in over SSH&lt;/h2&gt;
+
+&lt;p&gt;Limiting which users can login over SSH can save you from worrying who’s able to login and who isn’t. This point is bouncing off of point 6. To allow certain users, we will assume you want only users “Gecko” and “Marko” to login over SSH. Navigate to the SSH config file and add the following line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AllowUsers Gecko Marko
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;There are many other ways you can secure your OpenSSH configuration, we have outlined the glaring flaws that quite a few developers and admins overlook. We do recommend reading through the config file and checking what can be changed thoroughly as even the small mistakes can result in an attack on your server.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wott.io/&quot;&gt;WoTT&lt;/a&gt; is a developer tool to automatically run CVE scans, audit service configurations, manage your firewalls, simplify mTLS, and more. By using this tool to scan your OpenSSH config, you can cut throught the hassle of looking for similar guides online or reading through your config files to make sure everything is as secure as it can be.&lt;/p&gt;</content><author><name>Mahmoud Fahmy</name></author><category term="tutorials" /><category term="tutorials" /><summary type="html">Introduction</summary></entry><entry><title type="html">What is SELinux and Why You Might Want It</title><link href="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux" rel="alternate" type="text/html" title="What is SELinux and Why You Might Want It" /><published>2019-10-15T17:00:00+00:00</published><updated>2019-10-15T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/10/15/what-is-selinux</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/10/15/what-is-selinux">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Today we’re going to talk about SELinux - Security Enhanced Linux. For the everyday layman SELinux maybe daunting to setup, but is a good introduction into different ways to manage access control to your systems. More and more we give companies our precious data and the onus should be placed on developers to protect this data with growing cybersecurity threats. So we’re going to show you how to implement SELinux for the security-conscious developer (and talk a little on AppArmor).&lt;/p&gt;
 
@@ -98,7 +199,7 @@ Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
 
 &lt;h2 id=&quot;setting-up-on-ubuntudebian&quot;&gt;Setting Up on Ubuntu/Debian&lt;/h2&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-549513c31757a236a8b0f0a15f8cf0c11972f40c6418d9b26fa53a539ec11bc1.png 2x, https://wott.io/assets/be60c1-996b84943a7c34701091b1a3c6161bc6f41a2352fe5c6090166841c71bf181d2.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-eb65c93064bb834b14bd77cb50eb36ad58be9b5b3e74bac6dae7a84732cd5011.png 2x, https://wott.io/assets/be60c1-09aa1489bc12851dfcfcc82935ac19bfff6285e618f49e1af3eb7cedf2f6b4ac.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On Ubuntu or Debian, you need to install the required packages by running:&lt;/p&gt;
 
@@ -567,163 +668,4 @@ spec:
   https://mtls-test.example.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Hopefully this all made sense. If not, feel free to reach out to use on Twitter at &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;@WoTTSecurity&lt;/a&gt;.&lt;/p&gt;</content><author><name>Viktor Petersson</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Bridging Edge IoT devices with Kubernetes</summary></entry><entry><title type="html">Using WoTT to Secure Access to a Mosquitto MQTT Server</title><link href="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt" rel="alternate" type="text/html" title="Using WoTT to Secure Access to a Mosquitto MQTT Server" /><published>2019-07-15T17:00:00+00:00</published><updated>2019-07-15T17:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/07/15/mosquitto-mqtt">&lt;h1 id=&quot;using-wott-to-cryptographically-secure-access-between-a-mosquitto-brokered-mqtt-client-and-server&quot;&gt;Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server&lt;/h1&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices.&lt;/p&gt;
-
-&lt;p&gt;By default, the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure, although most of these options involve a password file. There is a second option you can use (and the one we will be using in this example) through an ACL file - or Access Control List. The ACL is essentially a list of permissions that are granted to particular users or processes. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach of security. We circumvent this by using WoTT’s unique device ID to secure the connection instead through the ACL file.&lt;/p&gt;
-
-&lt;p&gt;Here we’ll look at using WoTT’s unique device ID to authenticate and secure access for a Mosquitto brokered MQTT protocol. Essentially we are identifying the devices cryptographically thus removing the need for usernames and passwords. This is done by assigning specific permissions to allowed users (or devices) according to their WoTT device ID which is recorded in the ACL file. In this example, we are securing messages to an MQTT temperature topic hosted by the Mosquitto server.&lt;/p&gt;
-
-&lt;p&gt;You will need two WoTT devices with the &lt;a href=&quot;https://wott.io/documentation/getting-started&quot;&gt;WoTT Agent&lt;/a&gt; installed. We recommend that at least one of these is a Debian machine for the server (although two Pis is fine).&lt;/p&gt;
-
-&lt;p&gt;For this example, you will need Docker CE and therefore a distribution of Raspbian or Debian. Installation instructions for Docker &lt;a href=&quot;https://docs.docker.com/install/linux/docker-ce/debian/&quot;&gt;here&lt;/a&gt;.
-Installation of Docker CE is a different on Rasbperry Pis. More information is in the Docker installation link above.&lt;/p&gt;
-
-&lt;p&gt;We will also be asking you to clone our code snippets repository from Github, so ensure you have &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; on your system. Otherwise you can opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; to manually clone the required files (see previous code snippet examples on how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; for installation). For this tutorial, we will assume you have cloned our repo.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; while not required, familiarity with Mosquitto config files may also be helpful. If not, don’t worry; but we encourage you to play around with our included files.&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-set-up&quot;&gt;Getting set up&lt;/h2&gt;
-
-&lt;p&gt;Before we start, please clone our &lt;a href=&quot;https://github.com/WoTTsecurity/examples&quot;&gt;repository&lt;/a&gt; with WoTT’s example code snippets onto your devices:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/WoTTsecurity/examples.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;If you navigate inside this folder, you will find a few folders. For this example we are interested in ‘mosquitto-client’ and ‘mosquitto-server.’&lt;/p&gt;
-
-&lt;p&gt;Alternatively, you can download the files needed using &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; followed by the raw output of the files if you prefer. In this case download the client files on the client device and server files on the server device.&lt;/p&gt;
-
-&lt;p&gt;If you are using a Debian machine and a Rasberry Pi, we reccommend setting up your server on the Debian machine with the Pi acting as the client as this will be the most common form of setup.&lt;/p&gt;
-
-&lt;p&gt;We will now break down the tutorial into client and server.&lt;/p&gt;
-
-&lt;h2 id=&quot;setting-up-the-server&quot;&gt;Setting up the server&lt;/h2&gt;
-
-&lt;p&gt;First, we need to set up and establish our server with Mosquitto. For this we will need a Mosquitto configuration file. Information regarding set up of the &lt;a href=&quot;https://mosquitto.org/man/mosquitto-conf-5.html&quot;&gt;configuaration files&lt;/a&gt; is readily available if you wish to peruse through this yourself. Assuming you have the repository cloned, navigate to the directory on your server device (if you have a Debian machine and a Pi, the Debian machine):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd examples
-$ cd mosquitto-server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;running &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt; you will notice there are 3 files including a &lt;code class=&quot;highlighter-rouge&quot;&gt;mosquitto.conf&lt;/code&gt; file. This contains the information we need to set up our Mosquitto server. By default we have the &lt;code class=&quot;highlighter-rouge&quot;&gt;acl_file&lt;/code&gt; enabled. This is to secure access to the server later, however if you want to test this without the ACL configured, just find and comment out this line in the config:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;acl_file /mosquitto/config/permission.acl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This means that &lt;em&gt;all&lt;/em&gt; messages to the server are now accepted. This may be useful to you for testing when establishing connection between your devices although we reccommend keeping the file as is.&lt;/p&gt;
-
-&lt;p&gt;In this example, we provide the ACL file for you to configure with WoTT Device details to secure this. This file is in the same directory as &lt;code class=&quot;highlighter-rouge&quot;&gt;permissions.acl.&lt;/code&gt;
-Open this in your favourite text editor. You will notice it is filled with comments. Each block refers to a type of permissions you can associate with a device followed by the topic that you are giving permissions for. For this example, our messaging topic is &lt;code class=&quot;highlighter-rouge&quot;&gt;wott/temperature&lt;/code&gt; and can receive messages of temperature.&lt;/p&gt;
-
-&lt;p&gt;Replace the relevant fields with the details of your specific WoTT device. If you do not know the Device ID of your devices, simply run the following command:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo wott-agent whoami
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This will print the unique ID of your device. Remember to use the correct subscribing/publishing device for your purposes. For this example, feel free to use the first block to give read and write permissions to your publishing device (the device &lt;em&gt;sending&lt;/em&gt; messages); or assign it write only permissions (this is technically the most secure option). Give permissions to the subscribing device as well. With the ACL set up, you can now start up your server with the third file in the directory, a simple bash script &lt;code class=&quot;highlighter-rouge&quot;&gt;run.sh&lt;/code&gt;. In the same directory:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ./run.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;You should get an output similar to this :&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1563214210: mosquitto version 1.6.3 starting
-1563214210: Config loaded from /mosquitto/config/mosquitto.conf.
-1563214210: Opening ipv4 listen socket on port 8883.
-1563214210: Opening ipv6 listen socket on port 8883.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; you may need to prefix with &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt; if your permissions are denied. If it still does not work, ensure the file is executable.&lt;/p&gt;
-
-&lt;p&gt;The server is now up and running. We can now move onto the client.&lt;/p&gt;
-
-&lt;h2 id=&quot;connecting-the-client&quot;&gt;Connecting the client&lt;/h2&gt;
-
-&lt;p&gt;On your client device, assuming you have our examples repository downloaded, navigate to the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd examples
-$ cd mosquitto-client
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;There are 3 files of note in this directory, &lt;code class=&quot;highlighter-rouge&quot;&gt;pub.sh&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sub.sh&lt;/code&gt;, and, &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;. You do not need to alter any of these files for this example. There is an additional &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt; file containing client set up instructions although these are also contained in this document. If you choose to use these files in the future, you can refer to the &lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt; instead of this tutorial for quick reference.&lt;/p&gt;
-
-&lt;p&gt;We will familiarise you with the files in the meantime.&lt;/p&gt;
-
-&lt;h3 id=&quot;subscribing&quot;&gt;Subscribing&lt;/h3&gt;
-
-&lt;p&gt;First, we need to set up the Docker container with the Dockerfile. The file contains installation instructions for the Mosquitto client so you do not have to install it manually. Ensure you are in the correct directory &lt;code class=&quot;highlighter-rouge&quot;&gt;mosquitto-client&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo docker build . -t wott-mqtt-client
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The key thing this has done is created the topic &lt;code class=&quot;highlighter-rouge&quot;&gt;wott/temperature&lt;/code&gt; which we will be publishing/subscribing to.&lt;/p&gt;
-
-&lt;p&gt;Now, to set up the subscriber in the same terminal instance:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export MQTT_SERVER_WOTT_ID=ServerDeviceID.d.wott.local
-$ export MQTT_SERVER_IP=Server_inet_IP
-$ sudo docker run -ti --rm \
-    -e MQTT_SERVER=$MQTT_SERVER_WOTT_ID \
-    --add-host $MQTT_SERVER_WOTT_ID:$MQTT_SERVER_IP \
-    -v /opt/wott/certs:/opt/wott/certs:ro \
-    wott-mqtt-client
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;If you do not know your IP address, you can obtain this through &lt;code class=&quot;highlighter-rouge&quot;&gt;ip addr show&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ifconfig&lt;/code&gt; and the value corresponds to the &lt;code class=&quot;highlighter-rouge&quot;&gt;inet&lt;/code&gt; value. Alternatively, you can get the value for the specific port you are using (in this case port 8883) through &lt;code class=&quot;highlighter-rouge&quot;&gt;ip route get 8.8.8.3&lt;/code&gt;. Make sure you do this on your &lt;em&gt;server&lt;/em&gt; device.&lt;/p&gt;
-
-&lt;p&gt;The subscriber should now be running. As there are no messages being published, you will not see anything on the terminal yet. To end the process use &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL + C&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;publishing&quot;&gt;Publishing&lt;/h3&gt;
-
-&lt;p&gt;With the subscriber running, in a new instance of terminal; run the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ export MQTT_SERVER_WOTT_ID=ServerDeviceID.d.wott.local
-$ export MQTT_SERVER_IP=Server_inet_IP
-$ sudo docker run -ti --rm \
-    -e MQTT_SERVER=$MQTT_SERVER_WOTT_ID \
-    --add-host $MQTT_SERVER_WOTT_ID:$MQTT_SERVER_IP \
-    -v /opt/wott/certs:/opt/wott/certs:ro \
-    wott-mqtt-client /pub.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You will get an output that looks something like this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Sending temperature 40
-Sending temperature 18
-Sending temperature 42
-Sending temperature 33
-Sending temperature 3
-[...]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This instance is publishing temperature data to the &lt;code class=&quot;highlighter-rouge&quot;&gt;wott/temperature&lt;/code&gt; topic. To confirm this, check the subscriber terminal window now. If the ACL has been configured correctly, you will see the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wott/temperature 40
-wott/temperature 18
-wott/temperature 42
-wott/temperature 33
-wott/temperature 3
-[...]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You can also check the terminal running the server on the server device to see the connections from the client.
-And that’s it. You have successfully set up a Mosquitto brokered MQTT server and client.&lt;/p&gt;
-
-&lt;p&gt;To stop the publisher, you will need to stop the Docker container itself, &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL + C&lt;/code&gt; will not work. To do so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo docker container ps
-
-CONTAINER ID        IMAGE               COMMAND                  [...]
-8bfe61edb3bd        wott-mqtt-client    &quot;/pub.sh&quot;                [...]
-
-[...]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;You’re looking for the Docker container that has the same &lt;code class=&quot;highlighter-rouge&quot;&gt;IMAGE&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;COMMAND&lt;/code&gt; details as the above as it corresponds to the process containing the publisher. There may also be other containers running such as the subscriber.&lt;/p&gt;
-
-&lt;p&gt;Copy the Container ID of the publisher and run:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo docker stop Container_ID_of_publisher
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This should stop the process. To confirm, just check the terminal with the publisher and it will no longer be publishing data. It may take up to a few seconds.&lt;/p&gt;
-
-&lt;h2 id=&quot;finishing-notes&quot;&gt;Finishing Notes&lt;/h2&gt;
-
-&lt;p&gt;Mosquitto is a very convenient way of managing MQTT messages with inbuilt features that promote security. Hopefully we’ve shown how easy it is to use WoTT to secure a Mosquitto server and client based off our unique ID that we assign to each WoTT device. Ultimately security through identity is the way forward as passwords can still be all too easily intercepted- especially on non TLS connections. ACL files are one of many ways we can use identity over passwords.&lt;/p&gt;
-
-&lt;p&gt;Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There’s much more to Mosquitto than we have included in this example, so check out the &lt;a href=&quot;https://mosquitto.org&quot;&gt;Mosquitto website&lt;/a&gt; for more information.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server</summary></entry></feed>
+&lt;p&gt;Hopefully this all made sense. If not, feel free to reach out to use on Twitter at &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;@WoTTSecurity&lt;/a&gt;.&lt;/p&gt;</content><author><name>Viktor Petersson</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Bridging Edge IoT devices with Kubernetes</summary></entry></feed>
