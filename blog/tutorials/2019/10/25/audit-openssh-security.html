@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - How to Audit OpenSSH Configuration and Secure It" />
     <meta property="og:description" content="Seamless security audit of Linux systems for DevOps teams." />
     <meta property="og:url" content="https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security" />
-	<meta property="og:image" content="https://wott.io/assets/5b4cef">
+	<meta property="og:image" content="https://wott.io/assets/b5a146-4c117fb7230b963d6b8c8640cfbe4a0648385cdce80584bd3889dd2d7545cf72.jpg">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="tutorials" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - How to Audit OpenSSH Configuration and Secure It">
 	<meta name="twitter:description" content="Seamless security audit of Linux systems for DevOps teams.">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/5b4cef">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/b5a146-4c117fb7230b963d6b8c8640cfbe4a0648385cdce80584bd3889dd2d7545cf72.jpg">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -70,7 +70,7 @@
     "url": "https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security",
     "image": {
         "@type": "ImageObject",
-        "url": "https://wott.io/openssh_article_cover",
+        "url": "https://wott.io/openssh_article_cover.jpg",
         "width": 2000,
         "height": 666
     },
@@ -113,7 +113,7 @@
 <span class="t_i1">How to Audit OpenSSH Configuration and Secure It</span>
 <span class="t_m2">By <a href="https://wott.io/search?s=mahmoud+fahmy">Mahmoud Fahmy</a> on October 25, 2019 | 0 Comments</span>
 </div>
-<img class="blog_image" src="https://wott.io/assets/e373ee" alt="Main image for post - How to Audit OpenSSH Configuration and Secure It"></img><div class="blog_image_bg"></div>
+<img class="blog_image" src="https://wott.io/assets/6ceebd-df96b27b8f49b7d319bcbe414647dafdb72abd80c1665bd0d136400084b22b42.jpg" alt="Main image for post - How to Audit OpenSSH Configuration and Secure It"></img><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/tutorials">tutorials</a></div>
 
 <div class="social_network">
@@ -123,7 +123,7 @@
 <li style="background-image:url(https://wott.io/assets/style/img/facebook.svg);"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security" title=""></a></li>
 <li style="background-image:url(https://wott.io/assets/style/img/twitter.svg);"><a target="_blank" href="https://twitter.com/share?url=https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security&text=How to Audit OpenSSH Configuration and Secure It" title=""></a></li>
 <li style="background-image:url(https://wott.io/assets/style/img/send.svg);"><a target="_blank" href="mailto:?subject=How to Audit OpenSSH Configuration and Secure It&body=/blog/tutorials/2019/10/25/audit-openssh-security" title=""></a></li>
-<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security&media=https://wott.io/assets/images/blogcover/full/openssh_article_cover&description= Introduction Required Skill Level: Beginner to Medium Reading Time: 15-20 Minutes In this post, we will review the fundamentals of a secure OpenSSH server. As you probably know the SSH (Secure Shell) is a method to remote login to a server. SSH is usually secure however if used with the default settings,... " title=""></a></li>
+<li style="background-image:url(https://wott.io/assets/style/img/pinterest.svg);"><a target="_blank" href="http://pinterest.com/pin/create/button/?url=https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security&media=https://wott.io/assets/images/blogcover/full/openssh_article_cover.jpg&description= Introduction Required Skill Level: Beginner to Medium Reading Time: 15-20 Minutes In this post, we will review the fundamentals of a secure OpenSSH server. As you probably know the SSH (Secure Shell) is a method to remote login to a server. SSH is usually secure however if used with the default settings,... " title=""></a></li>
 <li style="background-image:url(https://wott.io/assets/style/img/linkedin.svg);"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://wott.io/blog/tutorials/2019/10/25/audit-openssh-security&title=How to Audit OpenSSH Configuration and Secure It" title=""></a></li>
 </ul>
 <div class="arrow_b"></div>
@@ -143,7 +143,7 @@
 
 <p><strong>Requirements:</strong></p>
 <ul>
-  <li>A Linux Distribution (this guide should be good for most Distro’s)</li>
+  <li>A Linux distribution (this guide should be good for most distro’s)</li>
   <li>The config file (usually located at /etc/ssh/ssh_config)</li>
 </ul>
 
@@ -156,7 +156,9 @@
 
 <p>Here are a few key features to check if your OpenSSH server is secure:</p>
 
-<h2 id="1-use-a-strong-password">1. Use a Strong Password</h2>
+<h2 id="1-use-strong-passwords">1. Use Strong Passwords</h2>
+
+<p><img src="https://imgs.xkcd.com/comics/password_strength.png" alt="" /></p>
 
 <p>This might seem like an obvious one, but a lot of systems are vulnerable to brute force attacks or simple guesswork due to having easy to guess passwords or generic passwords. By ensuring that your password/s is complex and long, it makes it a lot more difficult and more time consuming to brute force (can result in you noticing the attack) if the password has capital letters, special characters and numbers. Also make sure to use a non-conspicuous word or phrase as your base. Something like idontlikemeltedicecream rather than your first car or the name of your pet.</p>
 
@@ -206,20 +208,20 @@ PasswordAuthentication no
 
 <p>You’ve probably added users to the config file to allow trusted people to access your server. Make sure that there are no old users that have access to your server if they shouldn’t. Again, maybe a bit obvious but can be overlooked.</p>
 
-<h2 id="7-disable-agent-portforwarding">7. Disable Agent Portforwarding</h2>
+<h2 id="7-disable-agent-agentforwarding">7. Disable Agent AgentForwarding</h2>
 
-<p>This is another example of something that is a use-by-case scenario. We do recommend disabling agent portforwarding if there is no legitimate use for it. Since it allows connections outside of your server whilst leaving a socket open on the local machine, anyone with sufficient permissions can connect to and use your local ssh-agent. This is a very unlikely scenario, however, is it worth the risk of having a compromised machine connected to your server with Agent Portforwarding enabled? For more information, please refer to this article <a href="https://heipei.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/">here</a>.</p>
+<p>This is another example of something that is a use-by-case scenario. Since it allows connections outside of your server whilst leaving a socket open on the local machine, anyone with sufficient permissions can connect to and use your local ssh-agent. Unless you’re using something like a jump/bastion server, it is unlikely that you need this. For more information, please refer to this article <a href="https://heipei.io/2015/02/26/SSH-Agent-Forwarding-considered-harmful/">here</a>.</p>
 
-<p>To disable agent portforwarding, navigate to the following setting in the config file and apply the changes:</p>
+<p>To disable agent AgentForwarding, navigate to the following setting in the config file and apply the changes:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AllowAgentForwarding no
 </code></pre></div></div>
 
 <h2 id="8-use-of-a-bastion-host">8. Use of a Bastion Host</h2>
 
-<p>A bastion host is a special purpose computer on a network with the purpose of withstanding attacks. They usually host a single application (for example a proxy server) and all other services are removed or limited to reduce the threats on the network through the computer.</p>
+<p>A bastion host is a special purpose computer on a network with the purpose of withstanding attacks. They usually host a single application (for example a proxy server) and all other services are removed or limited to reduce the threats on the network through the computer. This means that you can disable public SSH access to all other nodes, and you would have to go through the bastion host to access any other node.</p>
 
-<p>Having a bastion host can act as a second line of defense against attackers on your network. To set one up, we recommend going through <a href="https://blog.scottlowe.org/2015/11/21/using-ssh-bastion-host/">this extensive guide</a>.</p>
+<p>Having a bastion host can act as perimeter to reduce the attack surface of your network. To set one up, we recommend going through <a href="https://blog.scottlowe.org/2015/11/21/using-ssh-bastion-host/">this extensive guide</a>.</p>
 
 <h2 id="9-limit-users-logging-in-over-ssh">9. Limit Users Logging in over SSH</h2>
 
@@ -232,7 +234,7 @@ PasswordAuthentication no
 
 <p>There are many other ways you can secure your OpenSSH configuration, we have outlined the glaring flaws that quite a few developers and admins overlook. We do recommend reading through the config file and checking what can be changed thoroughly as even the small mistakes can result in an attack on your server.</p>
 
-<p><a href="https://wott.io/">WoTT</a> is a developer tool to automatically run CVE scans, audit service configurations, manage your firewalls, simplify mTLS, and more. By using this tool to scan your OpenSSH config, you can cut throught the hassle of looking for similar guides online or reading through your config files to make sure everything is as secure as it can be.</p>
+<p><a href="https://wott.io/">WoTT</a> is a developer tool to automatically run CVE scans, audit service configurations, manage your firewalls, simplify mTLS, and more. By using this tool to scan your OpenSSH config, you can cut through the hassle of looking for similar guides online or reading through your config files to make sure everything is as secure as it can be.</p>
 
 </div>
 <div class="related_articles">
