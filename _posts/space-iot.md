@@ -73,4 +73,4 @@ So not only are we in a position where IoT is relevant, we are in an era where i
 
 IoT started at a 'mere' 15.4 billion devices in 2015 and is [expected to grow](https://news.ihsmarkit.com/press-release/technology/tech-companies-creating-strategic-platforms-support-internet-things-ihs-say) to 75.4 billion by 2025. 
 
-As this industry grows, so does its risks; and it's prudent for the savvy developer to forsee problems before they happen. The ease of access to IoT will only increase, and security should be on the forefront of every developer's mind entering this industry.
+Space IoT is a blue ocean market, as it expands so does its risks; and it's prudent for the savvy developer to forsee problems before they happen. The ease of access to IoT will only increase, and security should be on the forefront of every developer's mind entering this industry.
