@@ -10,29 +10,6 @@ tags: [thoughts]
 class: post-template
 ---
 
-key points:
-
-* Space as a sector of IoT interest (past future present)
-* New Space (keyword) as new commercial player in the 'space era' (space tourism, down stream etc)
-* down stream applications (keyword)
-* need for security in this domain as its mostly new and unexplored
-* plans for more IoT specific stuff in space (setting up satellite constellation for IoT devices to connect with)
-* investment in New Space is a good idea
-* invest in security for New Space - be a front runner in a growing field
-* Use WoTT to familiarise yourself with security for IoT
-
-Some keywords:
- 
- * ISS
- * New Space
- * Space wifi
- * IoT
- * ISU/ International Space University 
- * IoT Security
- * CVE 
-
-
-
 ## Introduction
 
 In a world full of buzzwords, you’ve probably already come across the term ‘New Space.’ But, what exactly is it and why should you as developers care about it? 
