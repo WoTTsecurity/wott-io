@@ -12,9 +12,9 @@ class: post-template
 
 ## Introduction
 
-In a world full of buzzwords, you’ve probably already come across the term ‘New Space.’ But, what exactly is it and why should you as developers care about it? 
+In a world full of buzzwords, you’ve probably already come across the term ‘New Space.’ But, what exactly is it and why should you as developers care about it? WoTT is a security company aimed at Linux distros to secure server to receiver connections in an easy, flexible way. So where do we fit?
 In simple terms, because developers are needed in all aspects of commerce- but more so, the opportunity to capitalise early on a sector that is estimated to be worth [1.1 trillion dollars]((https://www.nato-pa.int/download-file?filename=sites/default/files/2018-12/2018%20-%20THE%20FUTURE%20OF%20SPACE%20INDUSTRY%20-%20BOCKEL%20REPORT%20-%20173%20ESC%2018%20E%20fin.pdf) 
-) by 2040 (and sitting on a comfortable 360 billion now).
+) by 2040 (and sitting on a comfortable 360 billion now). So much of the focus in the space sector up til now has been setting up infrastructure.
 
 And it’s not as if the space sector is an ‘alien’ endeavour for developers - in fact in many ways space and IoT have always gone hand in hand.
 
@@ -25,7 +25,7 @@ Manned spaceflight accounts for a very small portion of the space sector as a wh
 {% asset blog/space-economy.png srcset:width="1300 2x" srcset:width="650 1x" alt="Global Space Sector" %}
 *in this image, you can consider manned spaceflight as a part of 'launch', graph found [here](https://www.sia.org/wp-content/uploads/2019/05/2019-SSIR-2-Page-20190507.pdf)*
 
-Generally, most experiments related to space are done remotely. Many of the experiments present on the ISS contain data that needs to be broadcasted to Earth. In short, many of these experiments- which also need to be relatively low power- can be considered analagous to IoT problems. The parallels have always been there. 
+Generally, most experiments related to space are done remotely. Many of the experiments present on the ISS contain data that needs to be broadcasted to Earth. In short, many of these experiments- which also need to be relatively low power- can be considered analagous to IoT problems. The parallels have always been there. As the use of internet as a medium for transferring data in the space domain grows, so to will the need for security. Companies like WoTT can help broach that gap.
 
 ## The Now
 
