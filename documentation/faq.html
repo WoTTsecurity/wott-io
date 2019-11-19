@@ -135,7 +135,7 @@
 <span class="t_m1">FAQ</span>
 <h1 id="dashboard-faq">Dashboard FAQ</h1>
 
-<h2 id="what-are-default-credentials-">What are default credentials? <a id="default-credentials"></a></h2>
+<h2 id="what-are-default-credentials">What are default credentials?</h2>
 <p>Default credentials are credentials (usually username/password combinations), such as admin/admin that device producers put in during manufacturing. These are intended to be temporary and changed by the user as soon as possible. In reality however, many users fail to change this, leaving the device(s) vulnerable to attackers.</p>
 
 <p>Default credentials are usually attributed to one of the biggest problems in IoT, and enabled malware like <a href="https://en.wikipedia.org/wiki/Mirai_(malware)">Mirai</a> to spread like wildfire.</p>
@@ -146,7 +146,7 @@
 
 <p>Default credentials will lower your device’s Trust Score.</p>
 
-<h2 id="what-is-selinux-">What is SELinux? <a id="selinux"></a></h2>
+<h2 id="what-is-selinux">What is SELinux?</h2>
 <p><a href="https://selinuxproject.org/page/Main_Page">SELinux</a>, short for Security Enhanced Linux, provides more granular access control to Linux. You can use this to limit what your applications can and cannot do. Therefore if the application were to get compromised, the attacker is restricted in the damage they can inflict. For instance, you can configure what network resources and interprocess communication (IPC) the application can use.</p>
 
 <p>The possible modes in WoTT’s dashboard are:</p>
@@ -159,12 +159,12 @@
 
 <p>(Where Enforcing will give you the best Trust Score).</p>
 
-<h2 id="what-is-apparmor-">What is AppArmor? <a id="apparmor"></a></h2>
+<h2 id="what-is-apparmor">What is AppArmor?</h2>
 <p><a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> is similar to SELinux, and also provides more granular access control for processes. It is for instance heavily leverage in <a href="https://ubuntu.com/core">Ubuntu Core</a> to confine what a particular application can and cannot do.</p>
 
 <p>It is recommended that you either use AppArmor <em>or</em> SELinux (not both) for the best security posture of your device.</p>
 
-<h2 id="what-is-firewall-policy-">What is Firewall Policy? <a id="firewall-policy"></a></h2>
+<h2 id="what-is-firewall-policy">What is Firewall Policy?</h2>
 <p>A firewall can be configured with two default policies:</p>
 
 <ul>
@@ -176,25 +176,25 @@
 
 <p>The most secure firewall configuration is “Deny by default.”</p>
 
-<h2 id="what-are-open-connections-">What are open connections? <a id="open-connections"></a></h2>
+<h2 id="what-are-open-connections">What are open connections?</h2>
 <p>Open connections are network connections (incoming or outgoing) reported by the WoTT Agent during its last run. We monitor this on an ongoing basis in order to determine what the normal behavior of the device is. Contrary to a workstation, an IoT device tends to have very predictable network operations. Hence, by monitoring the network behavior for abnormalities, we are able to find potentially malicious activities.</p>
 
-<h2 id="what-is-a-device-certificate-">What is a device certificate? <a id="device-certificate"></a></h2>
+<h2 id="what-is-a-device-certificate">What is a device certificate?</h2>
 <p>A device certificate is the public part of the cryptographic identity of a device (the private part is called a “private key”). Using the device certificate, we are able to perform cryptographic operations that only the device in possession of the private key can decrypt or interact with.</p>
 
 <p>An example of how this can be used is found in our <a href="https://wott.io/tutorials/2019/06/14/google-core-iot">Google Core IoT example</a>, where we upload the device certificate to Google in order to grant the device access to communicate to Google’s IoT services. In this example, the device uses its private key to prove its identity.</p>
 
 <p>The URL found in the dashboard is permanent, and you will always be able to download the latest certificate; but it is recommended that you do this programatically due to the short life span of the certificates. An example of how to do this can be found <a href="https://github.com/WoTTsecurity/google-core-iot">here</a>.</p>
 
-<h2 id="what-is-devicenode-id-">What is Device/Node ID? <a id="device-id"></a></h2>
+<h2 id="what-is-devicenode-id">What is Device/Node ID?</h2>
 <p>The (WoTT) Node ID (formerly known as “Device ID”), is the unique identifier in WoTT. When creating policies, like in our <a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">Nginx + Appserver example</a>, this is the identity we use for each node. Because this is a cryptographic identity, is is possible to issue challenges to the node and be certain that the node is what it claims to be.</p>
 
-<h2 id="whats-an-fqdn-">What’s an FQDN? <a id="fqdn"></a></h2>
+<h2 id="whats-an-fqdn">What’s an FQDN?</h2>
 <p>An FQDN, or Fully Qualified Domain Name, is the hostname that the system itself has been given. This can either be a private name (like my-device.local) or a public name (like my-device.company.com). An FQDN is used to identify the device on a network.</p>
 
 <h1 id="recommended-actions-faq">Recommended Actions FAQ</h1>
 
-<h2 id="openssh-perminrootlogin-">OpenSSH: PerminRootLogin <a id="openssh-permit-root-login"></a></h2>
+<h2 id="openssh-perminrootlogin">OpenSSH: PerminRootLogin</h2>
 
 <p>It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn’t login as root remotely, and instead utilize something like <code class="highlighter-rouge">sudo</code> or <code class="highlighter-rouge">su</code> to escalate privileges whenever needed (i.e. don’t use root as your day-to-day user account).</p>
 
@@ -202,7 +202,7 @@
 
 <p>For more details, please see the <a href="https://linux.die.net/man/5/sshd_config">sshd_config man page</a>.</p>
 
-<h2 id="openssh-allowagentforwarding-">OpenSSH: AllowAgentForwarding <a id="openssh-allow-agent-forwarding"></a></h2>
+<h2 id="openssh-allowagentforwarding">OpenSSH: AllowAgentForwarding</h2>
 
 <p>AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastion/jump server).</p>
 
@@ -212,7 +212,7 @@
 
 <p>For more details, please see the <a href="https://linux.die.net/man/5/sshd_config">sshd_config man page</a>.</p>
 
-<h2 id="openssh-passwordauthentication-">OpenSSH: PasswordAuthentication <a id="openssh-password-authentication"></a></h2>
+<h2 id="openssh-passwordauthentication">OpenSSH: PasswordAuthentication</h2>
 
 <p>PasswordAuthentication, as the name implies, allows you to authenticate using passwords. This should be avoided whenever possible, as it exposes your servers to brute-force attacks (i.e. if there is a user with a weak password on the system, the system is likely to be breached eventually).</p>
 
@@ -222,20 +222,20 @@
 
 <h1 id="agent-faq">Agent FAQ</h1>
 
-<h2 id="what-operating-systems-does-the-wott-agent-support-">What Operating Systems does the WoTT Agent support? <a id="wott-operating-system"></a></h2>
+<h2 id="what-operating-systems-does-the-wott-agent-support">What Operating Systems does the WoTT Agent support?</h2>
 <p>See <a href="https://github.com/WoTTsecurity/agent#supported-operating-systems">this page</a> for an up to date list.</p>
 
-<h2 id="do-i-need-a-wott-dashboard-account-to-use-the-wott-agent-">Do I need a WoTT Dashboard account to use the WoTT Agent? <a id="do-i-need-dashboard"></a></h2>
+<h2 id="do-i-need-a-wott-dashboard-account-to-use-the-wott-agent">Do I need a WoTT Dashboard account to use the WoTT Agent?</h2>
 <p>Strictly speaking, no; you will still have access to the certificates. However, we <em>highly</em> recommend registering and using the Dashboard. The Dashboard provides a user friendly interface where you can easily visualize and monitor your nodes as well as seeing what security risks your nodes have and how to fix them. Additionally, the WoTT Dashboard is free to use, you just need to register with your email.</p>
 
-<h2 id="ive-installed-the-wott-agent-now-what-">I’ve installed the WoTT Agent, now what? <a id="steps-after-installation"></a></h2>
+<h2 id="ive-installed-the-wott-agent-now-what">I’ve installed the WoTT Agent, now what?</h2>
 <p>Firstly, thank you for installing the Agent and welcome to the world of security conscious IoT developers! If you need some inspiration, head to our Use Cases page. You’ll find a list of use cases and examples utilizing both our CA provided certificates and Dashboard managed credentials. We’ve included examples of some popular cloud services which you may already have projects on and how to secure them.</p>
 
-<h2 id="is-wott-open-source-">Is WoTT Open Source? <a id="wott-open-source"></a></h2>
+<h2 id="is-wott-open-source">Is WoTT Open Source?</h2>
 
 <p>Yes, the WoTT Agent is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
 
-<h2 id="im-a-developer-and-want-to-modify-your-codecant-run-virtualenv-">I’m a developer and want to modify your code/can’t run virtualenv <a id="developing-for-wott-language)"></a></h2>
+<h2 id="im-a-developer-and-want-to-modify-your-codecant-run-virtualenv">I’m a developer and want to modify your code/can’t run virtualenv</h2>
 
 <p>The WoTT Agent is written in Python 3. You will need the relevant libraries to create virtual environments, in this case <code class="highlighter-rouge">venv</code> not <code class="highlighter-rouge">virtualenv</code>. Linux by default comes with Python 2.7 installed- install <code class="highlighter-rouge">pip3</code> using <code class="highlighter-rouge">apt-get</code> to get access to <code class="highlighter-rouge">venv</code> to create your own virtual environments; and when running applications that use WoTT Agent, use <code class="highlighter-rouge">python3</code>. Additionally any modifications you wish to make must also be in Python 3.</p>
 
