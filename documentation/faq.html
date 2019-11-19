@@ -194,7 +194,7 @@
 
 <h1 id="recommended-actions-faq">Recommended Actions FAQ</h1>
 
-<h2 id="openssh-perminrootlogin-">OpenSSH: PerminRootLogin <a name="openssh-permitrootlogin"></a></h2>
+<h2 id="openssh-perminrootlogin-">OpenSSH: PerminRootLogin <a name="openssh-permit-root-login"></a></h2>
 
 <p>It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn’t login as root remotely, and instead utilize something like <code class="highlighter-rouge">sudo</code> or <code class="highlighter-rouge">su</code> to escalate privileges whenever needed (i.e. don’t use root as your day-to-day user account).</p>
 
@@ -202,7 +202,7 @@
 
 <p>For more details, please see the <a href="https://linux.die.net/man/5/sshd_config">sshd_config man page</a>.</p>
 
-<h2 id="openssh-allowagentforwarding-">OpenSSH: AllowAgentForwarding <a name="openssh-allowagentforwardng"></a></h2>
+<h2 id="openssh-allowagentforwarding-">OpenSSH: AllowAgentForwarding <a name="openssh-allow-agent-forwarding"></a></h2>
 
 <p>AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastion/jump server).</p>
 
@@ -212,7 +212,7 @@
 
 <p>For more details, please see the <a href="https://linux.die.net/man/5/sshd_config">sshd_config man page</a>.</p>
 
-<h2 id="openssh-passwordauthentication-">OpenSSH: PasswordAuthentication <a name="openssh-passwordauthentication"></a></h2>
+<h2 id="openssh-passwordauthentication-">OpenSSH: PasswordAuthentication <a name="openssh-password-authentication"></a></h2>
 
 <p>PasswordAuthentication, as the name implies, allows you to authenticate using passwords. This should be avoided whenever possible, as it exposes your servers to brute-force attacks (i.e. if there is a user with a weak password on the system, the system is likely to be breached eventually).</p>
 
