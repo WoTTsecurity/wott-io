@@ -63,7 +63,7 @@ An FQDN, or Fully Qualified Domain Name, is the hostname that the system itself 
 
 # Recommended Actions FAQ
 
-## OpenSSH: PerminRootLogin <a name="openssh-permitrootlogin"></a>
+## OpenSSH: PerminRootLogin <a name="openssh-permit-root-login"></a>
 
 It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn't login as root remotely, and instead utilize something like `sudo` or `su` to escalate privileges whenever needed (i.e. don't use root as your day-to-day user account).
 
@@ -71,7 +71,7 @@ By changing "PermitRootLogin" to "no", you disable root login over SSH.
 
 For more details, please see the [sshd_config man page](https://linux.die.net/man/5/sshd_config).
 
-## OpenSSH: AllowAgentForwarding <a name="openssh-allowagentforwardng"></a>
+## OpenSSH: AllowAgentForwarding <a name="openssh-allow-agent-forwarding"></a>
 
 AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastion/jump server).
 
@@ -81,7 +81,7 @@ By changing "AllowAgentForwarding" to "no", you improve the security.
 
 For more details, please see the [sshd_config man page](https://linux.die.net/man/5/sshd_config).
 
-## OpenSSH: PasswordAuthentication <a name="openssh-passwordauthentication"></a>
+## OpenSSH: PasswordAuthentication <a name="openssh-password-authentication"></a>
 
 PasswordAuthentication, as the name implies, allows you to authenticate using passwords. This should be avoided whenever possible, as it exposes your servers to brute-force attacks (i.e. if there is a user with a weak password on the system, the system is likely to be breached eventually).
 
