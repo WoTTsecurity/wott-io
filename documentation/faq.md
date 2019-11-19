@@ -45,6 +45,13 @@ If you select "Accept by default," all inbound communication is allowed unless e
 
 The most secure firewall configuration is "Deny by default."
 
+## What is a global policy?
+
+A group policy is a set of configurations that can apply to one or more nodes. These policies can include things like firewall configurations for a fleet of servers.
+
+By using group policies, you are able to easily manage configuration at scale and avoid duplicate work.
+
+
 ## What are open connections?
 Open connections are network connections (incoming or outgoing) reported by the WoTT Agent during its last run. We monitor this on an ongoing basis in order to determine what the normal behavior of the device is. Contrary to a workstation, an IoT device tends to have very predictable network operations. Hence, by monitoring the network behavior for abnormalities, we are able to find potentially malicious activities.
 
