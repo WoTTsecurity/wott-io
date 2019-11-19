@@ -1,4 +1,4 @@
---
+---
 layout: docs-cat
 description: 'Frequently asked questions regarding WoTT'
 title: 'Frequently Asked Questions'
@@ -65,7 +65,7 @@ An FQDN, or Fully Qualified Domain Name, is the hostname that the system itself 
 
 ## OpenSSH: PerminRootLogin <a name="openssh-permitrootlogin"></a>
 
-It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn't login as root remotely, and instead utilize something like `sudo` to escalate privileges whenever needed (i.e. don't use root as your day-to-day user account).
+It is strongly recommended that you disable root login over SSH. The reason for this is that you shouldn't login as root remotely, and instead utilize something like `sudo` or `su` to escalate privileges whenever needed (i.e. don't use root as your day-to-day user account).
 
 By changing "PermitRootLogin" to "no", you disable root login over SSH.
 
@@ -73,7 +73,7 @@ For more details, please see the [sshd_config man page](https://linux.die.net/ma
 
 ## OpenSSH: AllowAgentForwarding <a name="openssh-allowagentforwardng"></a>
 
-AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastian/Jump server).
+AllowedAgentForwarding is convenient, as it allows you to use your local SSH keys on a remote host. This is useful when you want to use a host to jump to another host (e.g. a bastion/jump server).
 
 However, there is a known attack vector where another user on the jump box could intercept your key(s), which is why it is recommended to disable this feature unless you explicitly need it.
 
