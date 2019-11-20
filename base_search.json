@@ -1,6 +1,17 @@
 [
   
     {
+	  "cover":"https://wott.io/assets/f4bcd7-05dc8e259ae14d7d5ab5bf2f1e1e2cb05654ba2b682913030e14362d8f3213d1.jpg",
+      "title"    : "New Space and the Future (as well as the past) of IoT",
+      "category" : "newsthoughts",
+      "tags"     : "Open Source",
+      "href"      : "https://wott.io/blog/news/thoughts/2019/11/20/space-iot",
+      "date"     : "November 20, 2019",
+	  "description":"Introduction In a world full of buzzwords, you’ve probably already come across the term ‘New Space.’ But, what exactly is it and why should you as developers care about it? WoTT is a security company aimed at Linux distros to secure server to receiver connections in an easy, flexible way. So where...",
+	  "author":"Fiona McAllister"
+    } ,
+  
+    {
 	  "cover":"https://wott.io/assets/54bf49-0dcfebb876b5065651dc60ddec7b024c32c68f26c2904203ef5a605fcabada2a.jpg",
       "title"    : "How to Do a CVE Scan of Your Linux System",
       "category" : "tutorials",
@@ -56,7 +67,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/e7ee84-c37b599efbab3fe265122813c0ce63ee0a74504b6566e9c5eb2c97976791988b.png",
+	  "cover":"https://wott.io/assets/e7ee84-7041d000c2be2622743230f9f588e3b32b2e7ed8022f709b2906a9b4e88cf1ed.png",
       "title"    : "IoT Encryption Failures and how to avoid them",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -67,7 +78,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/16af4e-dca7d95ebefdd1086d5449e3e524742d0a847edde7514bc274de08582bbe1bff.png",
+	  "cover":"https://wott.io/assets/16af4e-5a5183c624079c820f8cf2d88f0723b805d3440e193bc6edf2686cf335e335a3.png",
       "title"    : "The Future of IoT",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -78,7 +89,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/88cc26-3463824b49b76d80c9aac12e71f42f7557864313789635eb3a64d2abbf07436b.png",
+	  "cover":"https://wott.io/assets/88cc26-85bd3eb2edf1fdaab07905c08f8b9ce6099ce0c0cb727833c196d7cc331490ee.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "Open Source",
@@ -155,7 +166,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-9cc1d419063aa6558fb92a48f8d8263fea833c5603d20c2eb93414cb0c142252.png",
+	  "cover":"https://wott.io/assets/ac256e-1123c316241868c110803dd7fa644ac0380e613bd6cbdedad3127a2fccaad24d.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -166,7 +177,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-551cb422aa1446406bc15bde198698bf6a101eaf52fe087d0599d95e366d8c2c.png",
+	  "cover":"https://wott.io/assets/49cd83-00aeb2055bb5221bcb61b50d207d1a979b4f2eb5b9be383c116d33fdf280184d.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -177,7 +188,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-d8a0227d1c531a591f817b1b1840dd558652f9987be963c6a26ef22d195676b9.png",
+	  "cover":"https://wott.io/assets/763a3a-132b0c17d693bfba79985834d2e6bf8958bb66e6ed4fa9b79020f8b0259c7c19.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -188,7 +199,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-3ed52118e9a5143d18ed0ef389a1732085dfd06f3d0c542358147cf94c7ed573.png",
+	  "cover":"https://wott.io/assets/8e810f-3f05a64e28ba9c0db3e2943c06ac09d9798c42348c261fe42aa8a98053248b37.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "Open Source",
@@ -199,7 +210,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-c4342e7e5a1c796459bdba544d9056453bbcd5b5f8a12c2997d3a7a76965603e.png",
+	  "cover":"https://wott.io/assets/130908-f72da39030a1edea4aa6ba1ab53438f5c040baee7841bf5ecc311eb612858cfc.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "Open Source",

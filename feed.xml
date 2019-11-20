@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-19T16:32:32+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Do a CVE Scan of Your Linux System</title><link href="https://wott.io/blog/tutorials/2019/11/04/cve" rel="alternate" type="text/html" title="How to Do a CVE Scan of Your Linux System" /><published>2019-11-04T14:00:00+00:00</published><updated>2019-11-04T14:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/04/cve</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/04/cve">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-20T10:16:58+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">New Space and the Future (as well as the past) of IoT</title><link href="https://wott.io/blog/news/thoughts/2019/11/20/space-iot" rel="alternate" type="text/html" title="New Space and the Future (as well as the past) of IoT" /><published>2019-11-20T10:00:00+00:00</published><updated>2019-11-20T10:00:00+00:00</updated><id>https://wott.io/blog/news/thoughts/2019/11/20/space-iot</id><content type="html" xml:base="https://wott.io/blog/news/thoughts/2019/11/20/space-iot">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;In a world full of buzzwords, you’ve probably already come across the term ‘New Space.’ But, what exactly is it and why should you as developers care about it? WoTT is a security company aimed at Linux distros to secure server to receiver connections in an easy, flexible way. So where do we fit?
+In simple terms, because developers are needed in all aspects of commerce; but more so, the opportunity to capitalise early on a sector that is estimated to be worth &lt;a href=&quot;https://www.nato-pa.int/download-file?filename=sites/default/files/2018-12/2018%20-%20THE%20FUTURE%20OF%20SPACE%20INDUSTRY%20-%20BOCKEL%20REPORT%20-%20173%20ESC%2018%20E%20fin.pdf&quot;&gt;1.1 trillion dollars&lt;/a&gt; by 2040 (and sitting on a comfortable 360 billion now). So much of the focus in the space sector up til now has been setting up infrastructure.&lt;/p&gt;
+
+&lt;p&gt;And it’s not as if the space sector is an ‘alien’ endeavour for developers. In fact, in many ways space and IoT have always gone hand in hand.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-past&quot;&gt;The Past&lt;/h2&gt;
+
+&lt;p&gt;Manned spaceflight accounts for a very small portion of the space sector as a whole and has typically been motivated by military pursuit. The most ‘popular’ space endeavour, the ISS, has only been manned by crew since 2000 (assembly beginning in 1998).&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Global Space Sector&quot; src=&quot;https://wott.io/assets/blog/space-economy-d427c5e1c42ef919ce60e875aaae6a2cfa92e058ccaa625cf3b9e021c99bf526.png&quot; integrity=&quot;sha256-1CfF4cQu+RnOYOh1qq5qLPqS4FjMqmJc87ngIcmb9SY=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/765996-427f5607a1e0b5d7db2aee3b91bd40ab79da1b83e257944e65bf8e15a3a7cd39.png 2x, https://wott.io/assets/27fc55-98b5621c3c68d99da418c098b216b2b814c8669206355d3c9a33ce04115c1276.png 1x&quot; /&gt;
+&lt;em&gt;in this image, you can consider manned spaceflight as a part of ‘launch’, graph found &lt;a href=&quot;https://www.sia.org/wp-content/uploads/2019/05/2019-SSIR-2-Page-20190507.pdf&quot;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Generally, most experiments related to space are done remotely. Many of the experiments present on the ISS contain data that needs to be broadcasted to Earth. 
+In short, many of these experiments; which also need to be relatively low power, can be considered analagous to IoT problems. The parallels have always been there. As the use of internet as a medium for transferring data in the space domain grows, so too will the need for security. Companies like WoTT can help broach that gap.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-now&quot;&gt;The Now&lt;/h2&gt;
+
+&lt;p&gt;We’ve since moved on from the days of the Space Race and the military era to where we are currently: a more exciting commerical branch of the sector, New Space. It’s here where prospective developers can really shine with many commercial start ups looking to outsource several components (such as security).&lt;/p&gt;
+
+&lt;p&gt;We now have the opportunity to interface with projects in space; and not all of them are scientific. There are currently &lt;a href=&quot;https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Research/ICE_Cubes_space_research_service_open_for_business&quot;&gt;3 projects&lt;/a&gt; onboard the ISS done in collaboration with ESA and the International Space University (ISU); one of which is an art project (a potential area of commerical growth). Users on Earth can interface and interact with this in near real-time. These projects are set up by the onboard astronauts and essentially left to their own devices. Their data gets broadcast to Earth via the internet much like an IoT device. It’s natural to assume more projects like the ICE cubes will become more prominent in the future. As this sector increases, so does its vulnerability; and as we know IoT on Earth is already a poorly secured domain. Remember the &lt;a href=&quot;https://www.pentestpartners.com/security-blog/hacking-ruining-the-samsung-smart-fridge/&quot;&gt;Samsung fridges&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;We often take cybersecurity for granted in the developer world, but it’s often not even considered by the everyday person; even in scientfic roles. How many of these experiments for example contain &lt;a href=&quot;https://wott.ioblog/tutorials/2019/11/04/cve&quot;&gt;common vulnerabilities&lt;/a&gt; (which we here at WoTT can help you detect) in their hardware? The demand for workers with a technical background in the space sector is increasing along with these risks.&lt;/p&gt;
+
+&lt;p&gt;Additionally, IoT itself on Earth is expanding at an exponential rate and we simply don’t have the infrastructure to support it. There are growing talks in implementing LEO (Low Earth Orbit) satellite constellations as a means of supplying low-latency internet everywhere. This is particularly relevant with the increase of prioritisation of smart cities globally. Satellites can reach corners of the globe that conventional internet supplying methods just can’t. &lt;a href=&quot;https://cordis.europa.eu/project/rcn/207924/brief/en&quot;&gt;IoTEE&lt;/a&gt; is an EU funded project concerned with providing such services to IoT devices specifically, and it is going to be tested on the ISS.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-future&quot;&gt;The Future&lt;/h2&gt;
+
+&lt;p&gt;It may still seem as though IoT is a reach for space and that thinking about investing your energy as a developer in the space sector would be detrimental. But consider that &lt;a href=&quot;https://internetofbusiness.com/nasa-iot-space-wireless/&quot;&gt;NASA itself&lt;/a&gt; is investing in wireless technologies in space through in collaboration with US M2M companies. ESA has invested nearly &lt;em&gt;half&lt;/em&gt; of its 2019 budget on technological and satellite based development.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;ESA's budget for 2019&quot; src=&quot;https://wott.io/assets/blog/esa-budget-2019-e280b5d2857f019143a1ead94557dbdd51e7b8d6b2dedf690cdeafb04e29eb57.jpg&quot; integrity=&quot;sha256-4oC10oV/AZFDoerZRVfb3VHnuNay3t9pDN6vsE4p61c=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/44deb9-4c3b2da03f745d013d64a0db6aeed4db836bdae6d4ab09112e3ae1eeead6496d.jpg 2x, https://wott.io/assets/edfc95-dd3ca277b4f023e8fcf535600fb7c34e6c5efed07386debaec1410c276e81363.jpg 1x&quot; /&gt;
+&lt;em&gt;ESA’s budget split up by domain. Earth Observation is a domain that is strongly influenced by the technical domain with AI specialists dominating the field. Taken from &lt;a href=&quot;http://www.esa.int/About_Us/Corporate_news/Funding&quot;&gt;ESA&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In September of this year, SemTech announced a non-GPS based &lt;a href=&quot;https://www.semtech.com/company/press/semtech-and-alibaba-cloud-prevent-asset-loss-and-theft-with-lora-based-tracker&quot;&gt;location tracking service&lt;/a&gt; enabled by IoT, a huge step forward in integrating modern IoT with the satellite industry. Alibaba Cloud itself is the third largest cloud service provider globally, and the largest in China.&lt;/p&gt;
+
+&lt;p&gt;So not only are we in a position where IoT is relevant, we are in an era where it is becoming an &lt;em&gt;increasing&lt;/em&gt; sector of demand both on Earth &lt;em&gt;and&lt;/em&gt; in space. AWS are currently working in collaboration with Iridium (a company specialising in worldwide data communication via its 66 satellite constellation) to develop &lt;a href=&quot;http://investor.iridium.com/2018-09-27-Iridium-to-Simplify-Adoption-of-IoT-Solutions-Beyond-Cellular-Coverage-with-Amazon-Web-Services&quot;&gt;Iridium CloudConnect&lt;/a&gt;. When it launches (planned for this year), it will be the first of its kind, offering truly global coverage for IoT applications and expanding AWS services across the 80% of the world it cannot currently reach.&lt;/p&gt;
+
+&lt;p&gt;IoT started at a ‘mere’ 15.4 billion devices in 2015 and is &lt;a href=&quot;https://news.ihsmarkit.com/press-release/technology/tech-companies-creating-strategic-platforms-support-internet-things-ihs-say&quot;&gt;expected to grow&lt;/a&gt; to 75.4 billion by 2025.&lt;/p&gt;
+
+&lt;p&gt;Space IoT is still somewhat a blue ocean market, so the time to capitalise is now. Even since the annoucnement of Iridium CloudConnect, &lt;a href=&quot;https://www.networkworld.com/article/3343059/iot-roundup-outer-space-the-building-is-getting-smart-and-trucking.html&quot;&gt;similar startups&lt;/a&gt; have already formed. As this sector expands, so does its risks; and it’s prudent for the savvy developer to forsee problems before they happen. The ease of access to IoT will only increase, and security should be on the forefront of every developer’s mind entering this industry. So far we’ve seen several proposed networks for services to connect to and not much in the way of security. A lightweight agent such as WoTT’s (which is ideal for small hardware such as Pis) is an ideal place to start closing the gap.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="[&quot;news&quot;, &quot;thoughts&quot;]" /><category term="Open Source" /><summary type="html">Introduction</summary></entry><entry><title type="html">How to Do a CVE Scan of Your Linux System</title><link href="https://wott.io/blog/tutorials/2019/11/04/cve" rel="alternate" type="text/html" title="How to Do a CVE Scan of Your Linux System" /><published>2019-11-04T14:00:00+00:00</published><updated>2019-11-04T14:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/04/cve</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/04/cve">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Common Vulnerabilities and Exposures (&lt;a href=&quot;https://cve.mitre.org/cve/&quot;&gt;CVE&lt;/a&gt;) is a list of publicly known cybersecurity vulnerabilities. Each vulnerability is given a unique CVE number by which it can be identified and referenced. The list can be easily accessed for free online, but wouldn’t it be nice to be automatically notified when you are affected by a newly reported vulnerability without having to check the list every day?&lt;/p&gt;
 
@@ -27,12 +67,12 @@
 
 &lt;p&gt;Now click on the ‘Device Name’ to see device details. It should look something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-d904e78273576ddd5bc24402998d5a1ff2a9c94c05bbda7bee66ff992c59e4cb.png 2x, https://wott.io/assets/cb07c6-98201e0ccb377b9f43a067c2866d41364388eeb6ae033801a82e79e1f800c770.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-8ea6b37f4c0565505c5eaef346c5eac8e0cc8cfba3614e1b735d70e8f38bb550.png 2x, https://wott.io/assets/cb07c6-6295b153af817ea48c994e8132e94b4b118e4b08072f8cbf958607c0b90ac929.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To see your vulnerabilities, navigate to the security tab at the top of the page where a scan of your device will be performed.
 Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-a18055521ecfd73d4702c5b8ab4eb8bd961c2af44e0fa8c71daca1a355d9328b.png 2x, https://wott.io/assets/e84a38-680bff384adf8ba302f4f505e70b1788a499a350ef965fdbf32a36fbc224c3c0.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-1584ef7ffd1f2ab4e246eb85e505a051070a1b3be52b876ca5ac4dbf45fe4b81.png 2x, https://wott.io/assets/e84a38-6e27e2a753f846a0579b6d4799af09e3de818e85bb6e02e0923472b0462b636c.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this particular example, you can see that the scan has detected default login credentials (such as those on a raspberry pi). The results will of course vary depending on your device, but this should give you a better understanding on the common vulnerabilities present on your device that can be easily exploited.&lt;/p&gt;
 
@@ -201,7 +241,7 @@ PasswordAuthentication no
 
 &lt;h2 id=&quot;setting-up-on-ubuntudebian&quot;&gt;Setting Up on Ubuntu/Debian&lt;/h2&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-48926024ed09e093ba8caed8713f04dc8bbaacb4128bc60bcda71e5355682a43.png 2x, https://wott.io/assets/be60c1-6bcbaf2a657e18aac643aaf218447dc44a2d69486a206340632214b2ed79333c.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-d4958bb5ad511afd92cc423bb03291940ef24ac6463215d1106d97530ea6ceea.png 2x, https://wott.io/assets/be60c1-5b570046953ef9101885116dcfbb46edd423744638b1f53e5f08be6d37ed0efe.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On Ubuntu or Debian, you need to install the required packages by running:&lt;/p&gt;
 
@@ -553,121 +593,4 @@ Subscribed: (1,0)
 
 &lt;p&gt;The example we provided contains a simple subscriber. Please experiment with a Paho publisher yourself and other clients. We want you to feel free to break our code! It’s the best way to develop.&lt;/p&gt;
 
-&lt;p&gt;Hopefully you’ve now grasped the basic concepts of setting up at least two different types of MQTT server/client with the cryptographic identity that WoTT provides so you don’t actually need to worry about the details of the security itself.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included)</summary></entry><entry><title type="html">Connecting Edge IoT devices with Kubernetes</title><link href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes" rel="alternate" type="text/html" title="Connecting Edge IoT devices with Kubernetes" /><published>2019-07-18T08:00:00+00:00</published><updated>2019-07-18T08:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">&lt;h1 id=&quot;bridging-edge-iot-devices-with-kubernetes&quot;&gt;Bridging Edge IoT devices with Kubernetes&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Medium to Expert&lt;/p&gt;
-
-&lt;p&gt;In my &lt;a href=&quot;https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx&quot;&gt;last blog post&lt;/a&gt;, we covered how to configure Nginx to use Mutual TLS (mTLS). This illustrated how mTLS can both simplify the back-end, while also make it more secure. In this article, we will take this one step further and integrate this with &lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt;. If you haven’t read the last blog post, that would be a good place to start.&lt;/p&gt;
-
-&lt;p&gt;Please note that this article assumes that you are familiar with Kubernetes and understands the fundamentals.&lt;/p&gt;
-
-&lt;h2 id=&quot;pre-requisites&quot;&gt;Pre-requisites&lt;/h2&gt;
-
-&lt;p&gt;Before we dive into the actual configuration, we will assume that you have the following already configured:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A Kubernetes cluster (d’oh!)&lt;/li&gt;
-  &lt;li&gt;A valid SSL certificate for your domain
-    &lt;ul&gt;
-      &lt;li&gt;You can use &lt;a href=&quot;https://github.com/jetstack/cert-manager/&quot;&gt;cert-manager&lt;/a&gt; from our friends at &lt;a href=&quot;https://www.jetstack.io/&quot;&gt;Jetstack&lt;/a&gt; if you want to use Let’s Encrypt&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;An &lt;a href=&quot;https://github.com/kubernetes/ingress-nginx&quot;&gt;Nginx Ingress Controller&lt;/a&gt; configured with the SSL certificate(s)
-    &lt;ul&gt;
-      &lt;li&gt;It is recommended that you use the &lt;a href=&quot;https://github.com/helm/charts/tree/master/stable/nginx-ingress&quot;&gt;Nginx Helm Chart&lt;/a&gt; for this&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Familiarity with &lt;a href=&quot;https://helm.sh/&quot;&gt;Helm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
-
-&lt;p&gt;With the cluster and ingress controller up and running, you should be able to route traffic to your services. If you’re not familiar with this part, we recommend that you take a look at this Katacoda’s &lt;a href=&quot;https://www.katacoda.com/courses/kubernetes/create-kubernetes-ingress-routes&quot;&gt;Kubernetes Ingress training scenario&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Before proceeding further, we will assume that you now have an Nginx Ingress controller deployed, with some kind of service behind it that you can route traffic to in the ‘foobar’ namespace. In the example below, we will call this service ‘foobar,’ and it listens on port 80.&lt;/p&gt;
-
-&lt;h2 id=&quot;configuring-mtls-for-the-ingress-controller&quot;&gt;Configuring mTLS for the Ingress Controller&lt;/h2&gt;
-
-&lt;p&gt;Because the Nginx Ingress controller is already configured to support mTLS and subsequently does all the heavy-lifting, all we really need to do is to tell our Ingress object to use the built-in functionalities.&lt;/p&gt;
-
-&lt;p&gt;Before we do this however, we first need to download the WoTT CA and upload this to the cluster. Otherwise Nginx will not be able to verify the certificate.&lt;/p&gt;
-
-&lt;p&gt;To do this, let’s assume that our application will run in the ‘foobar’ namespace within the cluster.&lt;/p&gt;
-
-&lt;p&gt;Create the namespace if it doesn’t already exist:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl create namespace foobar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Download the WoTT CA certificate bundle:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl -s https://api.wott.io/v0.2/ca-bundle | \
-  jq -r .ca_bundle &amp;gt; wott-ca.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Upload the CA certificate to the cluster:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl create secret generic wott-ca \
-  -n foobar \
-  --from-file=ca.crt=wott-ca.crt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can verify that we the secret was properly created by running:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl get secrets -n foobar
-NAME                  TYPE                                  DATA      AGE
-[...]
-wott-ca               Opaque                                1         4s
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With CA in place, we can move on to configuring the &lt;a href=&quot;https://kubernetes.io/docs/concepts/services-networking/ingress/&quot;&gt;Ingress object&lt;/a&gt;. The Ingress object is responsible for informing the Ingress Controller that it should route traffic addressed to a given hostname to a particular service.&lt;/p&gt;
-
-&lt;p&gt;Here’s an example of the YAML file for such configuration (here we are using cert-manager for the SSL configuration):&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  annotations:
-    certmanager.k8s.io/acme-challenge-type: http01
-    certmanager.k8s.io/issuer: letsencrypt-prod
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: &quot;true&quot;
-    nginx.ingress.kubernetes.io/auth-tls-secret: foobar/wott-ca
-    nginx.ingress.kubernetes.io/auth-tls-verify-client: &quot;on&quot;
-    nginx.ingress.kubernetes.io/auth-tls-verify-depth: &quot;2&quot;
-  name: mtls-test
-  namespace: api
-spec:
-  rules:
-  - host: mtls-test.example.com
-    http:
-      paths:
-      - backend:
-          serviceName: foobar
-          servicePort: 80
-        path: /?(.*)
-  tls:
-  - hosts:
-    - mtls-test.example.com
-    secretName: le-secret-mtls-test
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The secret for mTLS lies in the various ‘auth-tls’ annotations that we have above. These annotations tell Nginx to configure auth-tls (i.e. mTLS) for this endpoint.&lt;/p&gt;
-
-&lt;p&gt;We can now leverage the HTTP headers that Nginx is passing on to the appserver(s) just like we did in our &lt;a href=&quot;https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx&quot;&gt;Nginx mTLS blog post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The two headers that you likely want to use are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTTP_SSL_CLIENT_VERIFY&lt;/li&gt;
-  &lt;li&gt;HTTP_SSL_CLIENT_SUBJECT_DN&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once you have this all configured, you can now communicate directly from your IoT devices to your Kubernetes cluster using mTLS and the WoTT certificate as your identity:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo curl \
-  --key /opt/wott/certs/client.key \
-  --cert /opt/wott/certs/client.crt \
-  https://mtls-test.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Hopefully this all made sense. If not, feel free to reach out to use on Twitter at &lt;a href=&quot;https://twitter.com/wottsecurity&quot;&gt;@WoTTSecurity&lt;/a&gt;.&lt;/p&gt;</content><author><name>Viktor Petersson</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Bridging Edge IoT devices with Kubernetes</summary></entry></feed>
+&lt;p&gt;Hopefully you’ve now grasped the basic concepts of setting up at least two different types of MQTT server/client with the cryptographic identity that WoTT provides so you don’t actually need to worry about the details of the security itself.&lt;/p&gt;</content><author><name>Fiona McAllister</name></author><category term="tutorials" /><category term="Open Source" /><summary type="html">Using WoTT to Secure a Connection from a Paho MQTT Client to an MQTT Server (Mosquitto MQTT Example included)</summary></entry></feed>
