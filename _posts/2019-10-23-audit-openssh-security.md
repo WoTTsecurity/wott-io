@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: openssh_article_cover 
+cover: openssh_article_cover.jpg 
 title: How to Audit OpenSSH Configuration and Secure It
 date: 2019-10-25 17:00:00
 category: tutorials
