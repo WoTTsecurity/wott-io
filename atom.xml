@@ -8,6 +8,141 @@
     
       
       <item>
+        <title>How to Securely Configure MongoDB</title>
+        
+          <description>&lt;h1 id=&quot;how-to-securely-configure-mongodb&quot;&gt;How to Securely Configure MongoDB&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Intermediate&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reading Time&lt;/strong&gt;: 15-20 Minutes&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mongodb.com/what-is-mongodb&quot;&gt;MongoDB&lt;/a&gt; is a NoSQL, document database that is widely used by companies and individuals. Its popularity and support makes it a contender for one of the best options for database needs. Unfortunately, its popularity makes it a target for experienced and mediocre attackers alike. This article will go over the most common security risks to MongoDB and how to mitigate them. Hopefully by the end of this article, your MongoDB deployment will be impervious to most attacks.&lt;/p&gt;
+
+&lt;p&gt;We also assume that you have quite a bit of knowledge when using MongoDB as you have probably created a database and have come here looking to secure it. If you have little knowledge in MongoDB, you can continue to read this post and learn the theory behind securing your database, however we strongly recommend taking a course and learning the syntax and how MongoDB works to gain a better understanding. With that being said, let’s get into it!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Side note: WoTT is a service that checks and audits your node network including MongoDB deployments.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;common-risks-and-how-to-mitigate-them&quot;&gt;Common Risks and How to Mitigate Them&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-authentication-and-authorization&quot;&gt;1. Authentication and Authorization&lt;/h3&gt;
+
+&lt;p&gt;By default, when MongoDB is installed, it does without needing password credentials when accessing the database. It is highly recommended that you add users with login credentials, and an admin user with elevated privelages.&lt;/p&gt;
+
+&lt;p&gt;Before doing so, you need to enable Access Control. By enabling access control, you enforce user authentication, requiring users to identify themselves before accessing your MongoDB deployment. Assuming you have the mongodb server running, connect to the server using a terminal as the client by executing the command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mongo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;NB: You probably need to add a &lt;code class=&quot;highlighter-rouge&quot;&gt;port--&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;host--&lt;/code&gt; after the mongo command depending on how you set up your deployment&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now that you are in the database as a client, you must switch to the admin database to add a new user. Simply execute the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ use admin
+switched to db admin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we need to create an admin user, to do so, run the following commands:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.createUser(
+   {
+       user: &quot;admin&quot;,
+       pwd: &quot;placeholder&quot;,
+       roles [{role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot;}, &quot;readWriteANyDatabase&quot;]
+   }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Make sure to replace placeholder with a strong password, you could alternatively use the command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;passwordPrompt()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This creates an admin user that has access to every aspect of any database in your deployment, so be cautious as to who you share that information with. Since MongoDB doesn’t enable authorization/authentication by default, even with the creation of an admin user, users will still have access to all aspects of every database in your deployment without the need to authenticate.&lt;/p&gt;
+
+&lt;p&gt;To enable authorization, first disconnect from the mongoshell and stop the mongo server (usually using ^C in the terminal will do the trick). Then access the MongoD configuration file using your favourite editor. We will use $EDITOR for the purpose of this tutorial.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo $EDITOR mongod.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It might be worth mentioning that your configuration file will be by default in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/etc/&lt;/code&gt; directory. If you specified the location yourself please refer to that directory when running the command.&lt;/p&gt;
+
+&lt;p&gt;Once in the file, navigate to the section that reads&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;security:
+   authorization: &quot;disabled&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Change it to &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;endabled&quot;&lt;/code&gt;. Save the file and start up your mongodb server. Go back to your terminal and access the mongo client, this time adding the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mongo --authenticationDatabase -u &quot;admin&quot; -p &quot;placeholder&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also authenticate after accessing the mongo client:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mongo
+&amp;gt; db.auth(&quot;admin&quot;, &quot;placeholder&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now that you have connected to the deployment as an admin and enabled authorization, you can now create users for whichever database they need to access. For the purposes of this article, we will assume you have a database named &lt;code class=&quot;highlighter-rouge&quot;&gt;testDB&lt;/code&gt; and would like to add the user &lt;code class=&quot;highlighter-rouge&quot;&gt;tester&lt;/code&gt;. In the client just use the following syntax:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; use testDB
+ 
+&amp;gt; db.createUser{
+   user: &quot;tester&quot;
+   pwd: &quot;default&quot;
+   roles: [ { role: &quot;read&quot;, db: &quot;testDB&quot; } ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This leads us to our next point.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-authorise-users-by-role&quot;&gt;2. Authorise Users By Role&lt;/h3&gt;
+
+&lt;p&gt;It’s not enough to turn on authentication and create an admin user. You need to create users and give them roles that are specific to their user requirements. There are 2 ways you can do this, you can either utilize &lt;a href=&quot;https://docs.mongodb.com/manual/reference/built-in-roles/&quot;&gt;MongoDB’s built-in roles&lt;/a&gt;, or you can create &lt;a href=&quot;https://docs.mongodb.com/manual/core/security-user-defined-roles/&quot;&gt;user-defined roles&lt;/a&gt; if you need users to do something specific.&lt;/p&gt;
+
+&lt;p&gt;Don’t worry if you created a user with the wrong role, you can always update the role of the user using the method &lt;code class=&quot;highlighter-rouge&quot;&gt;db.updateUser()&lt;/code&gt;. The following is the syntax for the method (bear in mind it can also be used to update other fields for the user and not just the role so be careful):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.updateUser(
+  &quot;&amp;lt;username&amp;gt;&quot;,
+  {
+    customData : { &amp;lt;any information&amp;gt; },
+    roles : [
+              { role: &quot;&amp;lt;role&amp;gt;&quot;, db: &quot;&amp;lt;database&amp;gt;&quot; } | &quot;&amp;lt;role&amp;gt;&quot;,
+              ...
+            ],
+    pwd: &quot;&amp;lt;cleartext password&amp;gt;&quot;
+   },
+   writeConcern: { &amp;lt;write concern&amp;gt; }
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-85e20938651b73712fc9a999263b4c213d9ac27b4d2f16f91c98409c6042671b.png 2x, https://wott.io/assets/887014-bf465cc0f191b324710c4c8175003d1a9cff0e1c6edeedab1a7e6dab1f607369.png 1x&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An example would be:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; db.updateUser(&quot;tester&quot;,
+{
+   roles: [
+       {role: &quot;readWrite&quot;, db: &quot;testDB}
+   ]
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-encrypt-communication&quot;&gt;3. Encrypt Communication&lt;/h3&gt;
+
+&lt;p&gt;By default, information sent between the mongo client and server is sent in plaintext. The implications of using such a basic method of communication can be devastating when handling sensitive data, especially if an attacker is setting up camp in your lines of communication. We recommend configuring your MongoDB deployment to support TLS/SSL. The Process to enabling TLS/SSL communication is a long one and has a lot to cover, so we recommend going through &lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/configure-ssl/&quot;&gt;this page&lt;/a&gt; in the MongoDB documentaion. It does assume prior knowledge of TLS/SSL and public key infrastructure, so make sure you are brushed up on that before going through it.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 24 Nov 2019 09:00:00 +0000</pubDate>
+        <link>
+        https://wott.io/blog/tutorials/2019/11/24/mongodb</link>
+        <guid isPermaLink="true">https://wott.io/blog/tutorials/2019/11/24/mongodb</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>New Space and the Future (as well as the past) of IoT</title>
         
           <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
