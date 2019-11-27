@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-26T08:16:05+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Securely Configure MongoDB</title><link href="https://wott.io/blog/tutorials/2019/11/24/mongodb" rel="alternate" type="text/html" title="How to Securely Configure MongoDB" /><published>2019-11-24T09:00:00+00:00</published><updated>2019-11-24T09:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/24/mongodb</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/24/mongodb">&lt;h1 id=&quot;how-to-securely-configure-mongodb&quot;&gt;How to Securely Configure MongoDB&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://wott.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wott.io/" rel="alternate" type="text/html" /><updated>2019-11-27T09:40:10+00:00</updated><id>https://wott.io/feed.xml</id><title type="html">Web of Trusted Things</title><subtitle>Seamless security audit of Linux systems for DevOps teams.</subtitle><entry><title type="html">How to Securely Configure MongoDB</title><link href="https://wott.io/blog/tutorials/2019/11/24/mongodb" rel="alternate" type="text/html" title="How to Securely Configure MongoDB" /><published>2019-11-24T09:00:00+00:00</published><updated>2019-11-24T09:00:00+00:00</updated><id>https://wott.io/blog/tutorials/2019/11/24/mongodb</id><content type="html" xml:base="https://wott.io/blog/tutorials/2019/11/24/mongodb">&lt;h1 id=&quot;how-to-securely-configure-mongodb&quot;&gt;How to Securely Configure MongoDB&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Required Skill Level&lt;/strong&gt;: Intermediate&lt;/p&gt;
 
@@ -104,7 +104,7 @@ switched to db admin
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-85e20938651b73712fc9a999263b4c213d9ac27b4d2f16f91c98409c6042671b.png 2x, https://wott.io/assets/887014-bf465cc0f191b324710c4c8175003d1a9cff0e1c6edeedab1a7e6dab1f607369.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-c00fbc6a1d8f1c460c0ba3bdb018bb85ab263a2718d9e8b077b9182e42d26f29.png 2x, https://wott.io/assets/887014-519b2a1a742dbe935c58913cb5558dd1f291f357e6c53bfaceb24d7941f8b3a0.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;An example would be:&lt;/p&gt;
 
@@ -166,7 +166,7 @@ In simple terms, because developers are needed in all aspects of commerce; but m
 
 &lt;p&gt;Manned spaceflight accounts for a very small portion of the space sector as a whole and has typically been motivated by military pursuit. The most ‘popular’ space endeavour, the ISS, has only been manned by crew since 2000 (assembly beginning in 1998).&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Global Space Sector&quot; src=&quot;https://wott.io/assets/blog/space-economy-d427c5e1c42ef919ce60e875aaae6a2cfa92e058ccaa625cf3b9e021c99bf526.png&quot; integrity=&quot;sha256-1CfF4cQu+RnOYOh1qq5qLPqS4FjMqmJc87ngIcmb9SY=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/765996-28b950445b012161076cea99fdd6563e954b5664a6180f54c8a939c6820c7c8f.png 2x, https://wott.io/assets/27fc55-231e709d830c19f5716ab93530a085b255c3dea4d39de13a2110e12b932b4e9f.png 1x&quot; /&gt;
+&lt;p&gt;&lt;img alt=&quot;Global Space Sector&quot; src=&quot;https://wott.io/assets/blog/space-economy-d427c5e1c42ef919ce60e875aaae6a2cfa92e058ccaa625cf3b9e021c99bf526.png&quot; integrity=&quot;sha256-1CfF4cQu+RnOYOh1qq5qLPqS4FjMqmJc87ngIcmb9SY=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/765996-4a2e6efd4d6eba644c82104196a7d9810cf1cbcc8308defe9c7844a85e2efd28.png 2x, https://wott.io/assets/27fc55-c2f830f2d7e6bb5bf69921e47e57efbadd758a919ff140de13265c8305a09224.png 1x&quot; /&gt;
 &lt;em&gt;in this image, you can consider manned spaceflight as a part of ‘launch’, graph found &lt;a href=&quot;https://www.sia.org/wp-content/uploads/2019/05/2019-SSIR-2-Page-20190507.pdf&quot;&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Generally, most experiments related to space are done remotely. Many of the experiments present on the ISS contain data that needs to be broadcasted to Earth. 
@@ -224,12 +224,12 @@ In short, many of these experiments; which also need to be relatively low power,
 
 &lt;p&gt;Now click on the ‘Device Name’ to see device details. It should look something like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-d1d5ce2c7d852d80753b28a5bdadf17e39c581280d47c7c1e2e2bf6311db7b91.png 2x, https://wott.io/assets/cb07c6-3c38694512ac99a7aa0dc6809b07476724d8fc23e2d1dd41589456099b2b017d.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample dashboard&quot; src=&quot;https://wott.io/assets/blog/al-dash-977c4403c36d5606d3f46c66890c09343962906def456281e30ac838810761ed.png&quot; integrity=&quot;sha256-l3xEA8NtVgbT9GxmiQwJNDlikG3vRWKB4wrIOIEHYe0=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/546b19-c7eacdd636ca972347536ced18985e51a3a0c8f015c958ff0c418cb10ebcd933.png 2x, https://wott.io/assets/cb07c6-04365be8b1df868f6cb9b1cd3dbb9d7ddfb9dff4bb94571d2c250fdfed3dcd0e.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To see your vulnerabilities, navigate to the security tab at the top of the page where a scan of your device will be performed.
 Here you will see a list of all CVEs that affect your endpoint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-4edb8c5be6ab8bc66118632ddde408061e195c60db5b42a5f75c991c210d3d4b.png 2x, https://wott.io/assets/e84a38-c530aa09e68a06024c6a745f8ca73dae29f0aa4c16ebd95ac7c89fb35335a80b.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;sample CVE &quot; src=&quot;https://wott.io/assets/blog/al-device-b5c9d079c5c54a98b1184384be1d3e33638df525edc15a019717fd93bdf939f8.png&quot; integrity=&quot;sha256-tcnQecXFSpixGEOEvh0+M2ON9SXtwVoBlxf9k735Ofg=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/b3ea79-93f2e6a9fc0700be85f87661280f267e7fcd737295ce4a7def0af2736a632e3c.png 2x, https://wott.io/assets/e84a38-0c4802722e0f59b17665f2d7b71e56f44fdd0787ebd89989cfebd47cade408e1.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this particular example, you can see that the scan has detected default login credentials (such as those on a raspberry pi). The results will of course vary depending on your device, but this should give you a better understanding on the common vulnerabilities present on your device that can be easily exploited.&lt;/p&gt;
 
@@ -398,7 +398,7 @@ PasswordAuthentication no
 
 &lt;h2 id=&quot;setting-up-on-ubuntudebian&quot;&gt;Setting Up on Ubuntu/Debian&lt;/h2&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-a155ee738462a353be222ab1b9bcf74ca135c9b68e569bfc6bd57070b43616b5.png 2x, https://wott.io/assets/be60c1-cc376b21d725633403faa43fe7ec846225409dce0becf5a897333891a558a8ff.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Install SELinux&quot; src=&quot;https://wott.io/assets/blog/selinux-install-72f65214b02923c21821d6911cbdf60173e581ee34cb73c2e928f6c96928b149.png&quot; integrity=&quot;sha256-cvZSFLApI8IYIdaRHL32AXPlge40y3PC6Sj2yWkosUk=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/a5153f-44dce8ce98e1cd5cd1c7aa04cb95751f5b86fbcb4d2e074db4da72d35500b829.png 2x, https://wott.io/assets/be60c1-46feeaa5f236f930d273292a20ef07e53d8a53a84ad0b4a4646b4ac89f35e24d.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;On Ubuntu or Debian, you need to install the required packages by running:&lt;/p&gt;
 
