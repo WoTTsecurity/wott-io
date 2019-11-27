@@ -21,7 +21,7 @@ The main thing that makes mTLS different (and arguably more secure) is that it r
 
 This might still seem a bit overcomplicated. At WoTT we have our own dedicated Certificate Authority and examples of securing mTLS connections. We encourage you to try it out to familiarise yourself with the concept. Additionally, our agent is lightweight and can be used flexibly on servers and other edge devices. 
 
-## <a name = "tutorials"> </a> How to Implement mTLS: Some Tutorials by WoTT
+## <a name = "tutorials"> </a> How to implement mTLS: some tutorials by WoTT
 
 There are actually several different ways to implement an mTLS style security layer for security. We have several examples for you to try and implement yourself of varying difficulties.
 
@@ -41,7 +41,10 @@ The important thing to take away is that you need a Certificate Authority from w
 
 ## How it works
 
-After all that you may still be interested in how mTLS actually works. 
+After all that you may still be interested in how mTLS actually works.
+
+ * discuss certificates more (x509)
+ * other certificates?
 
  * popular uses of mTLS (SSH, IKE); encryption tool for major companies such as Skype
  * browsers don't use mTLS 
