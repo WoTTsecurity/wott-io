@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>Introducing the WoTT's GitHub integration</title>
+        <title>Introducing WoTT's GitHub Integration</title>
         
           <description>&lt;p&gt;There’s no doubt that GitHub has become one of the most popular platforms for developer collaboration and communication. Increasingly, GitHub is also used for project management across developer and Dev(Sec)Ops teams. Because of this, it is increasingly where the security fixes are being tracked too.&lt;/p&gt;
 
@@ -131,7 +131,7 @@ switched to db admin
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-ec09f4a4900c13fcc589de8eb9e3c35b6d3666eaa83ca5f1ccd2728f4ab0846e.png 2x, https://wott.io/assets/887014-a78dd45854e1ba9bce4b6777257dcc613ee01f4cfdfd574bd01dbb068a771086.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-d1ad1b105e7377793859e774a55f1c8e5da96e362e6186cc372ec95ccafddb02.png 2x, https://wott.io/assets/887014-22bdaa02438990c10b05891d82959ddff6e10be364169c888278004cace31e3d.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;An example would be:&lt;/p&gt;
 
