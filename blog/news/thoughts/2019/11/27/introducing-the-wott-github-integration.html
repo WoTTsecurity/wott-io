@@ -135,25 +135,27 @@
 
 <p>For instance, GitHub recently announced their <a href="https://help.github.com/en/github/managing-security-vulnerabilities/about-security-alerts-for-vulnerable-dependencies">Security Alerts</a>, which helps you audit vulnerabilities in dependencies. There’s also <a href="https://snyk.io/docs/github/">Snyk’s GitHub integration</a>, that does similar audits. Hence, GitHub is becoming the hub for tracking security issues.</p>
 
-<p>While GitHub’s Security Alert (and Snyk) are great ways to secure your application dependencies, they only track part of the security posture. They neglect VM (or bare metal) security audits.</p>
+<p>While GitHub’s Security Alerts (and Snyk) are great ways to secure your application dependencies, they only track part of the security posture. They neglect VM (or bare metal) security audits.</p>
 
 <p><strong>This is why we are super excited to announce WoTT’s GitHub integration.</strong></p>
 
-<p>With WoTT’s GitHub integration, the <code class="highlighter-rouge">wott-bot</code> will automatically our Recommended Actions directly to your GitHub repository such that you assign ownership and schedule the work as part of your regular sprints.</p>
+<p>With WoTT’s GitHub integration, the <code class="highlighter-rouge">wott-bot</code> will automatically generate GitHub Issues based on our Recommended Actions. You can then easily assign ownership and schedule the work as part of your sprints.</p>
 
-<p><img alt="Example of an event in GitHub" src="https://wott.io/assets/blog/wott-github-integration-45260a48ef9207f144d7890dd79832ffa570f89c32e186286dc1f1ae44dc6f8e.png" integrity="sha256-RSYKSO+SB/FE14kN15gy/6Vw+Jwy4YYobcHxrkTcb44=" crossorigin="anonymous" srcset="https://wott.io/assets/077f30-f2dcb6eede6821e01490c2e528079922f46a7faf8d0b2897042e5a09a0d2d057.png 2x, https://wott.io/assets/9055a0-9562d96aeca73ac810ebbd7a8e8271bccc41655ba953f5fc2aedc94422fd0c54.png 1x" /></p>
+<p><img alt="Example of an event in GitHub" src="https://wott.io/assets/blog/wott-github-integration-45260a48ef9207f144d7890dd79832ffa570f89c32e186286dc1f1ae44dc6f8e.png" integrity="sha256-RSYKSO+SB/FE14kN15gy/6Vw+Jwy4YYobcHxrkTcb44=" crossorigin="anonymous" srcset="https://wott.io/assets/077f30-8dc3e2db0e05d66fb87a148f7ced3c6ca2f9e8b65d29f7beb0764a20f92ef2fe.png 2x, https://wott.io/assets/9055a0-c36110d50fc2f38d22fa6a9229af077b8b213409c0a0a067998cc84124748f50.png 1x" /></p>
 
-<p>The integration is currently in beta and is available to all users. To get started, login to your <a href="https://dash.wott.io">WoTT Dashboard</a> and navigate to your profile (upper right-hand corner) and select GitHub Integration.</p>
+<p>The integration is currently in beta and is available to all users.</p>
 
-<p><img alt="GitHub configuration in Dashboard" src="https://wott.io/assets/blog/wott-profile-github-953febd93ee097d23151bac5e9f3802522ff495c1668e435b7ffd66ef3cb941f.png" integrity="sha256-lT/r2T7gl9IxUbrF6fOAJSL/SVwWaOQ1t//WbvPLlB8=" crossorigin="anonymous" srcset="https://wott.io/assets/c2bd9c-e5c1f1b3fc0adf16c9432895244cb3afbca6bcba07c10fa2a0cd0754758c09d2.png 2x, https://wott.io/assets/f9ef83-bb3f144f96c98addc7693e916cc1c332781235ff5f5287fca32d9dfed6f9352d.png 1x" /></p>
+<p>To get started, login to your <a href="https://dash.wott.io">WoTT Dashboard</a> and navigate to your profile (upper right-hand corner) and select GitHub Integration.</p>
 
-<p>Click the ‘Authorize GitHub’ and follow the wizard to authorize the <code class="highlighter-rouge">wott-bot</code> to create issues. The repository can be either public or private. Since these are security issues, you probably want to use a private repository. Also, please do note that WoTT <strong>cannot</strong> read your code base. It can only create GitHub issues.</p>
+<p><img alt="GitHub configuration in Dashboard" src="https://wott.io/assets/blog/wott-profile-github-953febd93ee097d23151bac5e9f3802522ff495c1668e435b7ffd66ef3cb941f.png" integrity="sha256-lT/r2T7gl9IxUbrF6fOAJSL/SVwWaOQ1t//WbvPLlB8=" crossorigin="anonymous" srcset="https://wott.io/assets/c2bd9c-55cde8d0ee3b4242dcc1e909eecaf9a724e9a7511e52a04ce35c4692f548ed36.png 2x, https://wott.io/assets/f9ef83-3c0326cce9df52d18f8cb686a01900b11c8a6de7cd1a5ae3d53092e252af2eec.png 1x" /></p>
+
+<p>Click the ‘Authorize GitHub’ and follow the wizard to authorize the <code class="highlighter-rouge">wott-bot</code> to create issues. The repository can be either public or private. Since these are security issues, it is recommended that you use a private repository. Also, please do note that WoTT <strong>cannot</strong> read your code base. It can only create GitHub issues.</p>
 
 <p>Once you’re finished the wizard, you should be able to select the repository that you’ve granted access from the drop down list.</p>
 
-<p><img alt="GitHub configuration in Dashboard" src="https://wott.io/assets/blog/wott-github-finished-d3d23b862b2a5f88dca131ff81e538f6c1656370a039adefe0b5e496fd69d3ba.png" integrity="sha256-09I7hisqX4jcoTH/geU49sFlY3CgOa3v4LXklv1p07o=" crossorigin="anonymous" srcset="https://wott.io/assets/153264-425f502c2eb98b92ae860b1d07b6f74f7c4c8ccf5777a43ac91a3a596babe37b.png 2x, https://wott.io/assets/88d86d-a379da0efa48be19328c09810c7c59294dbbe70e1ab9014cee7480c1ee4ce91a.png 1x" /></p>
+<p><img alt="GitHub configuration in Dashboard" src="https://wott.io/assets/blog/wott-github-finished-d3d23b862b2a5f88dca131ff81e538f6c1656370a039adefe0b5e496fd69d3ba.png" integrity="sha256-09I7hisqX4jcoTH/geU49sFlY3CgOa3v4LXklv1p07o=" crossorigin="anonymous" srcset="https://wott.io/assets/153264-ac25316041a2ce41a0597ed8c1d4bae1527517b02035b69c9b7609e48ee02c8e.png 2x, https://wott.io/assets/88d86d-66c715b5e73f2c9dec36ac801a0708acaf176b33b6f41cac7d86a5c9225ec523.png 1x" /></p>
 
-<p>Lastly, you know need to select “Install App” for the bot to be able to create issues. Once that’s done, you should start seeing GitHub Issues created as they are discovered by WoTT (and updated when something changes).</p>
+<p>Lastly, you now need to select “Install App” for the bot to be able to create Issues. Once that’s done, you should start seeing GitHub Issues created as they are discovered by WoTT (and updated when something changes).</p>
 
 <p>If you got any questions or issues, please drop us a line at hey@wott.io or reach out to us at <a href="https://twitter.com/wottsecurity">@WoTTSecurity</a> on Twitter.</p>
 
