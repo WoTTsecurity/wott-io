@@ -6,7 +6,7 @@ title: Using WoTT credentials to manage access to Adafruit IO feeds
 date: "2019-06-27 17:00:00"
 category: tutorials
 author: Fiona McAllister
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 
@@ -18,20 +18,20 @@ class: post-template
 
 We're interested in Adafruit IO as it provides a means for us to communicate with our IoT devices via messages through either an MQTT or HTTP service. WWe can therefore interact with Adafruit's services and use our WoTT provided credentials to secure it.
 
-For this example you will need a device with the WoTT agent installed and a browser. You will also need an Adafruit IO account as well as a WoTT dash account. We will show you to set these up later in the guide if you haven't done so already. 
+For this example you will need a device with the WoTT agent installed and a browser. You will also need an Adafruit IO account as well as a WoTT dash account. We will show you to set these up later in the guide if you haven't done so already.
 
 This example contains code snippets. To access these, clone our [examples](https://github.com/WoTTsecurity/examples) repository by doing the following:
 
 ```
 $ git clone https://github.com/WoTTsecurity/examples.git
 ```
-Alternatively, you can use `curl` and download the relevant files. Instructions included for both. 
+Alternatively, you can use `curl` and download the relevant files. Instructions included for both.
 
 ## Installing and setting up to use Adafruit IO
 
-The first thing you will need to do, is to [sign up](https://accounts.adafruit.com/users/sign_up) for Adafruit IO so you can access their [dashboard](https://io.adafruit.com/). Familiarise yourself with their [basic guides](https://learn.adafruit.com/series/adafruit-io-basics). For this example, we will be creating a 'Feed.' First however, you will need to have the Adafruit IO client downloaded on your system. We will be using their Python client. 
+The first thing you will need to do, is to [sign up](https://accounts.adafruit.com/users/sign_up) for Adafruit IO so you can access their [dashboard](https://io.adafruit.com/). Familiarise yourself with their [basic guides](https://learn.adafruit.com/series/adafruit-io-basics). For this example, we will be creating a 'Feed.' First however, you will need to have the Adafruit IO client downloaded on your system. We will be using their Python client.
 
-To install: 
+To install:
 
 ```
 $ apt update && apt install -y python3 python3-pip curl
@@ -46,7 +46,7 @@ Login to the Adafruit IO dashboard. Navigate to the 'Feeds' page on the left-han
 
 {% asset blog/adafruit-add.png srcset:width="1300 2x" srcset:width="650 1x" alt="create feed" %}
 
-The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed 'data feed.' The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic. 
+The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed 'data feed.' The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.
 
 {% asset blog/feed-details.png srcset:width="1300 2x" srcset:width="650 1x" alt="name feed" %}
 
@@ -64,7 +64,7 @@ These are your unique Adafruit details. We can add these to WoTT's dashboard as 
 
 If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:
 
-``` 
+```
 $ sudo wott-agent whoami
 $ sudo wott-aget claim-token
 ```
@@ -90,7 +90,7 @@ To download the credential, restart the WoTT Agent by running:
 ```
 $ sudo service wott-agent restart
 ```
-There will now be a JSON file on your system containing your credentials. 
+There will now be a JSON file on your system containing your credentials.
 
 ## Setting up Adafruit feed sharing with an MQTT Client
 
@@ -130,7 +130,7 @@ On your Adafruit IO dash, you should see the data being received on your feed:
 
 ## Common errors
 
-Adafruit IO Python uses Python 3. If you have both a version of Python 2 and Python 3 on your machine, you will need to use the appropriate commands (for example pip vs pip3). 
+Adafruit IO Python uses Python 3. If you have both a version of Python 2 and Python 3 on your machine, you will need to use the appropriate commands (for example pip vs pip3).
 
 **No module named Adafruit_IO**
 
@@ -145,9 +145,6 @@ This happens when Adafruit IO is not installed correctly. The reccommended fix i
 
 We have successfully used WoTT credentials to secure access to your Adafruit IO feed through an MQTT client!
 
-The Python application contained in this example is a modified version of Adafruit IO's own MQTT feed sharing example. Feel free to edit, play with, and modify the app as you choose. Note that if you make changes to feed names, feed owners, etc; you will have to change this within the app (or within WoTT credentials to be more secure). 
+The Python application contained in this example is a modified version of Adafruit IO's own MQTT feed sharing example. Feel free to edit, play with, and modify the app as you choose. Note that if you make changes to feed names, feed owners, etc; you will have to change this within the app (or within WoTT credentials to be more secure).
 
 Ensure that if you do add additional credentials to WoTT dashboard that you restart the WoTT agent to download the credentials immediately- otherwise WoTT will fetch the information every 15 minutes.
-
-
-

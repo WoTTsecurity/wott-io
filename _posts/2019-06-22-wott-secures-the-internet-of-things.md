@@ -6,7 +6,7 @@ title: WoTT secures the Internet of Things
 date: 2019-06-22 10:00:00
 category: thoughts
 author: Al Esmail
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 

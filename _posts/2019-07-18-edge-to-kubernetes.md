@@ -6,7 +6,7 @@ title: Connecting Edge IoT devices with Kubernetes
 date: 2019-07-18 08:00:00
 category: tutorials
 author: Viktor Petersson
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 
