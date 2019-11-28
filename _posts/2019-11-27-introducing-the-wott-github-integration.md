@@ -2,7 +2,7 @@
 layout: post
 current: post
 cover: hacker.jpg
-title: Introducing the WoTT's GitHub integration
+title: Introducing WoTT's GitHub Integration
 date: 2019-11-27 08:00:00
 category: [news, thoughts]
 author: Viktor Petersson
