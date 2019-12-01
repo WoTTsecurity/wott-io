@@ -52,7 +52,9 @@ If you're building your own images, you should follow security best practices fo
 
 Last, but no less important, we have the perhaps most neglected layer in recent time: the operating system. As the focus of developers have moved higher up in the abstraction layers, many companies have forgotten to patch their servers. Yes, it might not be as sexy as the latest JavaScript framework, but it is still very important to monitor your operating system's security posture.
 
-Remember [Heartleed](http://heartbleed.com/), [Spectre](https://spectreattack.com/) and [Meltdown](https://spectreattack.com/)? All of these affect the actual operating system. While containers could help mitigate some of these (to some degree), the actual operating system still needed to be patched.  
+Remember [Heartleed](http://heartbleed.com/), [Spectre](https://spectreattack.com/) and [Meltdown](https://spectreattack.com/)? All of these affect the actual operating system. While containers could help mitigate some of these (to some degree), the actual operating system still needed to be patched. What we found surprising however when talking to a number of companies was that they assumed these things were taken care of by their cloud provider (e.g. AWS).
+
+While you can partially mitigate the problem by using ephemeral servers (i.e. the 'Cattle' in the [Pet vs Cattle](https://news.ycombinator.com/item?id=7311704)), and thus never have servers that live longer than 24 or 48 hours. This however assume that you always use the latest upstream image and provision the instances using something like CloudFormation, Terraform, CloudInit or a configuration management software (e.g. Puppet, Chef, Ansible). If however, you have long-lived servers (i.e. 'Pets'), you need to monitor the ongoing security posture of your servers.
 
 While operating security doesn't fully fit into the CI/CD pipeline, it is important to continuously monitor the server state. This includes, but is not limited to:
 
