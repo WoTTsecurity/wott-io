@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - The DevSecOps Iceberg" />
     <meta property="og:description" content="Seamless security audit of Linux systems for DevOps teams." />
     <meta property="og:url" content="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg" />
-	<meta property="og:image" content="https://wott.io/assets/5d826a-583d8031e067d6cc306f21af4944ac3cfe332d9a13bd000bce9e43ec6c5f4a35.png">
+	<meta property="og:image" content="https://wott.io/assets/5d826a-76fc79203fa0f4eb891a1ec75424c8bafbb6416da1bbec89f26f89d24fe8b7c5.png">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="open-source" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - The DevSecOps Iceberg">
 	<meta name="twitter:description" content="Seamless security audit of Linux systems for DevOps teams.">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/5d826a-583d8031e067d6cc306f21af4944ac3cfe332d9a13bd000bce9e43ec6c5f4a35.png">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/5d826a-76fc79203fa0f4eb891a1ec75424c8bafbb6416da1bbec89f26f89d24fe8b7c5.png">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -113,7 +113,7 @@
 <span class="t_i1">The DevSecOps Iceberg</span>
 <span class="t_m2">By <a href="https://wott.io/search?s=viktor+petersson">Viktor Petersson</a> on November 29, 2019 | 0 Comments</span>
 </div>
-<img class="blog_image" src="https://wott.io/assets/f43501-a6cfcc56c9eb5312047a0d33bfb36acd951b03154e34809cf677a2fa8f86dc8e.png" alt="Main image for post - The DevSecOps Iceberg"></img><div class="blog_image_bg"></div>
+<img class="blog_image" src="https://wott.io/assets/f43501-50089eaeec7ed85874524832dfd2f3a271ae9adcab6ad2a051a436bb8b85729f.png" alt="Main image for post - The DevSecOps Iceberg"></img><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/open-source">open-source</a></div>
 
 <div class="social_network">
@@ -176,7 +176,9 @@
 
 <p>Last, but no less important, we have the perhaps most neglected layer in recent time: the operating system. As the focus of developers have moved higher up in the abstraction layers, many companies have forgotten to patch their servers. Yes, it might not be as sexy as the latest JavaScript framework, but it is still very important to monitor your operating system’s security posture.</p>
 
-<p>Remember <a href="http://heartbleed.com/">Heartleed</a>, <a href="https://spectreattack.com/">Spectre</a> and <a href="https://spectreattack.com/">Meltdown</a>? All of these affect the actual operating system. While containers could help mitigate some of these (to some degree), the actual operating system still needed to be patched.</p>
+<p>Remember <a href="http://heartbleed.com/">Heartleed</a>, <a href="https://spectreattack.com/">Spectre</a> and <a href="https://spectreattack.com/">Meltdown</a>? All of these affect the actual operating system. While containers could help mitigate some of these (to some degree), the actual operating system still needed to be patched. What we found surprising however when talking to a number of companies was that they assumed these things were taken care of by their cloud provider (e.g. AWS).</p>
+
+<p>While you can partially mitigate the problem by using ephemeral servers (i.e. the ‘Cattle’ in the <a href="https://news.ycombinator.com/item?id=7311704">Pet vs Cattle</a>), and thus never have servers that live longer than 24 or 48 hours. This however assume that you always use the latest upstream image and provision the instances using something like CloudFormation, Terraform, CloudInit or a configuration management software (e.g. Puppet, Chef, Ansible). If however, you have long-lived servers (i.e. ‘Pets’), you need to monitor the ongoing security posture of your servers.</p>
 
 <p>While operating security doesn’t fully fit into the CI/CD pipeline, it is important to continuously monitor the server state. This includes, but is not limited to:</p>
 
