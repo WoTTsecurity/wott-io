@@ -15,7 +15,8 @@ class: post-template
 
 Cybersecurity is an ever-growing, ever-complicating field. As a new developer, it can be daunting to think of where to start. Here we're going to talk a little about mTLS and why you as a developer should care about it (and implement it!). 
 
-mTLS is just a type of TLS (Transport Layer Security). This is commonly found in verifying endpoints and for encrypting communications (think of WhatsApp messages) and also browsers (https is a sign of a TLS controlled website). The https part of the url verifies the identity of the server, the webiste you're accessing, to you, the client. Unlike a password which is manually entered by a single user, TLS is typically managed by cryptographic certificates. Most TLS protocols usually verify this with an x509 certificate; and it's typically the client requesting a valid certificate from the server (DNS name on server must match that of the certificate). Secure Sockets Layer (SSL) security is based off this principle (and https is its successor).
+mTLS is just a type of TLS (Transport Layer Security). This is commonly found in verifying endpoints and for encrypting communications (think of WhatsApp messages) and also browsers. The 'https' in a url is a sign of a TLS controlled website. This part of the url verifies the identity of the server, the website you're accessing, to you, the client. 
+Unlike a password which is manually entered by a single user, TLS is typically managed by cryptographic certificates. Most TLS protocols usually verify this with an x509 certificate; and it's typically the client requesting a valid certificate from the server (DNS name on server must match that of the certificate). Secure Sockets Layer (SSL) security is based off this principle and https is its successor.
 
 The main thing that makes mTLS different (and arguably more secure) is that it requires *both* the server and client to verify each other: a handshake. This is particularly useful in instances where you want two servers to communicate with each other; or in a scenario where *you* are the server, not the client. Ultimately it's flexible and lightweight being perfect for edge devices.
 
@@ -31,11 +32,11 @@ We have a very simple to implement tutorial showing how you can use mTLS to secu
 
 ### Medium
 
-If you're familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See [here]({{site.url}}blog/tutorials/2019/07/15/mtls-with-nginx)
+If you're familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See [here]({{site.url}}blog/tutorials/2019/07/15/mtls-with-nginx).
 
 ### Hard
 
-(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go [here](}}site.url}}blog/tutorials/2019/07/18/edge-to-kubernetes)
+(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go [here](}}site.url}}blog/tutorials/2019/07/18/edge-to-kubernetes).
 
 The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don't feel a particular need to know how mTLS actually works, feel free to just skip to the [end](#conclusions) or explore the rest of WoTT. We have several [other articles]({{site.url}}blog/tutorials) on how to use our agent with your system.
 
