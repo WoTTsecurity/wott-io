@@ -6,7 +6,7 @@ title: Why shift-left security is relevant for IoT
 date: 2019-06-23 10:00:00
 category: thoughts
 author: Al Esmail
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 
@@ -35,6 +35,6 @@ To hammer home the point, let’s use simile (not metaphor): network monitoring 
 
 To conclude, cyber is sexy and the only obvious thing to do is to bring in the A-team and involve developers in security decision-making. We know you’re packing heat in those brains of yours, girls and boys. Get off the bench, get in the game, do your part, be part of the solution, be a whitehat, etcetera, etcetera, etcetera.
 
-I claim that open networks are an important use case to cover. Will cover that in a future blog - Check back in to the [blog]({{site.url}}/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://twitter.com/wottsecurity). 
+I claim that open networks are an important use case to cover. Will cover that in a future blog - Check back in to the [blog]({{site.url}}/blog), join the [newsletter](http://eepurl.com/ge0niv) or follow on [twitter](https://twitter.com/wottsecurity).
 
 Want to troll me? Comments below or [twitter](https://www.twitter.com/wottsecurity)

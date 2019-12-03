@@ -6,7 +6,7 @@ title: IoT Security Issues and Challenges
 date: 2019-08-12 13:00:00
 category: [news,thoughts]
 author: Nikoletta Triantafyllopoulou
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 ## IoT Security Issues and Challenges
@@ -37,7 +37,7 @@ Some digitised appliances and some gadgets too, have the same computer power as 
 One of the ways IoT devices can be used by hackers is to cause DDoS attacks. Hackers hijack computers and add them to a network of malicious botnets conducting DDoS attacks. DDoS attacks result when multiple compromised systems flood the resources of a targeted system with traffic. Thus, as it is easy for computers to be hijacked and participate in a DDoS attack without the owner knowing, so are smart devices, appliances and gadgets too. They can be compromised and used by a hacker.
 
 ### So what can go wrong with IoT Security issues?
-Assuming that there is a compromise of some sort in an IoT device or gadget many things can go wrong. First, you may no longer have control of it - or _lose availability_. This has a financial impact, of course. Yet, there are many other parameters and ways in which a hijacked device can affect you, your life and everything around it. Hackers may turn your IoT device into a spam machine sending spam emails to everyone - _damaging your reputation_.  They can transmit false signals, such as a false battery charging report - _disrupting your operation_.  Worse yet, hackers can compromise entire networks to interfere with entire manufacturing plants, energy grids or fleets of vehicles. What is truly scary is the potential for loss of life when thinking of medical devices or heavy machinery. 
+Assuming that there is a compromise of some sort in an IoT device or gadget many things can go wrong. First, you may no longer have control of it - or _lose availability_. This has a financial impact, of course. Yet, there are many other parameters and ways in which a hijacked device can affect you, your life and everything around it. Hackers may turn your IoT device into a spam machine sending spam emails to everyone - _damaging your reputation_.  They can transmit false signals, such as a false battery charging report - _disrupting your operation_.  Worse yet, hackers can compromise entire networks to interfere with entire manufacturing plants, energy grids or fleets of vehicles. What is truly scary is the potential for loss of life when thinking of medical devices or heavy machinery.
 
 ### A solution to the IoT security issues
 We at WoTT aim at making the IoT industry a web of trusted devices, applications and gadgets. A place where security is of primary importance. WoTT is the go-to place as the network of connected devices grows.  Security, knowledge and collaboration between devices, manufacturers and developers is our philosophy. So, we bring to you a developer first [Solution](https://wott.io/) to manage certificates and credentials, and find vulnerabilities in your build.

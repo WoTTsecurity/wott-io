@@ -2,19 +2,19 @@
 layout: post
 current: post
 cover: fancy-board.jpeg
-title: Using WoTT to Secure Access to a Mosquitto MQTT Server 
+title: Using WoTT to Secure Access to a Mosquitto MQTT Server
 date: 2019-07-15 17:00:00
 category: tutorials
 author: Fiona McAllister
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 
 # Using WoTT to Cryptographically Secure Access Between a Mosquitto Brokered MQTT Client and Server
 
-## Introduction 
+## Introduction
 
-Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices. 
+Mosquitto is a lightweight message broker for MQTT. MQTT itself is a pub-sub messaging protocol that is particularly popular amongst IoT applications due to its optimisation for high-latency networks. Together, they are effective for IoT usage being low-power to run and adding a layer of security to IoT devices.
 
 By default, the connection between a Mosquitto run client and server is unencrypted. Mosquitto does have provisions for securing messages between client and server that are very easy to configure, although most of these options involve a password file. There is a second option you can use (and the one we will be using in this example) through an ACL file - or Access Control List. The ACL is essentially a list of permissions that are granted to particular users or processes. Keeping passwords in a system like this can be dangerous particularly when used without TLS as anyone with access to the network can potentially find the password. As you can imagine, this is a huge breach of security. We circumvent this by using WoTT's unique device ID to secure the connection instead through the ACL file.
 
@@ -38,7 +38,7 @@ $ git clone https://github.com/WoTTsecurity/examples.git
 ```
 If you navigate inside this folder, you will find a few folders. For this example we are interested in 'mosquitto-client' and 'mosquitto-server.'
 
-Alternatively, you can download the files needed using `curl` followed by the raw output of the files if you prefer. In this case download the client files on the client device and server files on the server device. 
+Alternatively, you can download the files needed using `curl` followed by the raw output of the files if you prefer. In this case download the client files on the client device and server files on the server device.
 
 If you are using a Debian machine and a Rasberry Pi, we reccommend setting up your server on the Debian machine with the Pi acting as the client as this will be the most common form of setup.
 
@@ -48,7 +48,7 @@ We will now break down the tutorial into client and server.
 
 First, we need to set up and establish our server with Mosquitto. For this we will need a Mosquitto configuration file. Information regarding set up of the [configuaration files](https://mosquitto.org/man/mosquitto-conf-5.html) is readily available if you wish to peruse through this yourself. Assuming you have the repository cloned, navigate to the directory on your server device (if you have a Debian machine and a Pi, the Debian machine):
 
-``` 
+```
 $ cd examples
 $ cd mosquitto-server
 ```
@@ -58,17 +58,17 @@ running `ls` you will notice there are 3 files including a `mosquitto.conf` file
 acl_file /mosquitto/config/permission.acl
 ```
 
-This means that *all* messages to the server are now accepted. This may be useful to you for testing when establishing connection between your devices although we reccommend keeping the file as is. 
+This means that *all* messages to the server are now accepted. This may be useful to you for testing when establishing connection between your devices although we reccommend keeping the file as is.
 
 In this example, we provide the ACL file for you to configure with WoTT Device details to secure this. This file is in the same directory as `permissions.acl.`
-Open this in your favourite text editor. You will notice it is filled with comments. Each block refers to a type of permissions you can associate with a device followed by the topic that you are giving permissions for. For this example, our messaging topic is `wott/temperature` and can receive messages of temperature. 
+Open this in your favourite text editor. You will notice it is filled with comments. Each block refers to a type of permissions you can associate with a device followed by the topic that you are giving permissions for. For this example, our messaging topic is `wott/temperature` and can receive messages of temperature.
 
 Replace the relevant fields with the details of your specific WoTT device. If you do not know the Device ID of your devices, simply run the following command:
 
 ```
 $ sudo wott-agent whoami
 ```
-This will print the unique ID of your device. Remember to use the correct subscribing/publishing device for your purposes. For this example, feel free to use the first block to give read and write permissions to your publishing device (the device *sending* messages); or assign it write only permissions (this is technically the most secure option). Give permissions to the subscribing device as well. With the ACL set up, you can now start up your server with the third file in the directory, a simple bash script `run.sh`. In the same directory: 
+This will print the unique ID of your device. Remember to use the correct subscribing/publishing device for your purposes. For this example, feel free to use the first block to give read and write permissions to your publishing device (the device *sending* messages); or assign it write only permissions (this is technically the most secure option). Give permissions to the subscribing device as well. With the ACL set up, you can now start up your server with the third file in the directory, a simple bash script `run.sh`. In the same directory:
 
 ```
 $ ./run.sh
@@ -89,15 +89,15 @@ The server is now up and running. We can now move onto the client.
 
 On your client device, assuming you have our examples repository downloaded, navigate to the following:
 
-``` 
+```
 $ cd examples
 $ cd mosquitto-client
 ```
-There are 3 files of note in this directory, `pub.sh`, `sub.sh`, and, `Dockerfile`. You do not need to alter any of these files for this example. There is an additional `README.md` file containing client set up instructions although these are also contained in this document. If you choose to use these files in the future, you can refer to the `README` instead of this tutorial for quick reference. 
+There are 3 files of note in this directory, `pub.sh`, `sub.sh`, and, `Dockerfile`. You do not need to alter any of these files for this example. There is an additional `README.md` file containing client set up instructions although these are also contained in this document. If you choose to use these files in the future, you can refer to the `README` instead of this tutorial for quick reference.
 
 We will familiarise you with the files in the meantime.
 
-### Subscribing 
+### Subscribing
 
 First, we need to set up the Docker container with the Dockerfile. The file contains installation instructions for the Mosquitto client so you do not have to install it manually. Ensure you are in the correct directory `mosquitto-client`.
 
@@ -158,7 +158,7 @@ wott/temperature 3
 ```
 
 You can also check the terminal running the server on the server device to see the connections from the client.
-And that's it. You have successfully set up a Mosquitto brokered MQTT server and client. 
+And that's it. You have successfully set up a Mosquitto brokered MQTT server and client.
 
 To stop the publisher, you will need to stop the Docker container itself, `CTRL + C` will not work. To do so:
 
@@ -170,17 +170,17 @@ CONTAINER ID        IMAGE               COMMAND                  [...]
 
 [...]
 ```
-You're looking for the Docker container that has the same `IMAGE` and `COMMAND` details as the above as it corresponds to the process containing the publisher. There may also be other containers running such as the subscriber. 
+You're looking for the Docker container that has the same `IMAGE` and `COMMAND` details as the above as it corresponds to the process containing the publisher. There may also be other containers running such as the subscriber.
 
 Copy the Container ID of the publisher and run:
 
 ```
 $ sudo docker stop Container_ID_of_publisher
-``` 
-This should stop the process. To confirm, just check the terminal with the publisher and it will no longer be publishing data. It may take up to a few seconds. 
+```
+This should stop the process. To confirm, just check the terminal with the publisher and it will no longer be publishing data. It may take up to a few seconds.
 
 ## Finishing Notes
 
 Mosquitto is a very convenient way of managing MQTT messages with inbuilt features that promote security. Hopefully we've shown how easy it is to use WoTT to secure a Mosquitto server and client based off our unique ID that we assign to each WoTT device. Ultimately security through identity is the way forward as passwords can still be all too easily intercepted- especially on non TLS connections. ACL files are one of many ways we can use identity over passwords.
 
-Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There's much more to Mosquitto than we have included in this example, so check out the [Mosquitto website](https://mosquitto.org) for more information. 
+Of course, our example code snippets are just that: an example; so feel free to experiment and augment the code as you see fit. We encourage you to go through our examples and change configurations and files for your needs. There's much more to Mosquitto than we have included in this example, so check out the [Mosquitto website](https://mosquitto.org) for more information.

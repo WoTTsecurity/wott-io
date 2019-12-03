@@ -6,7 +6,7 @@ title: The Future of IoT
 date: 2019-08-16 13:00:00
 category: [news,thoughts]
 author: Nikoletta Triantafyllopoulou
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 # The Future of IoT

@@ -6,7 +6,7 @@ title: IoT Encryption Failures and how to avoid them
 date: 2019-08-28 12:00:00
 category: [news,thoughts]
 author: Nikoletta Triantafyllopoulou
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 # IoT encryption failures and how to avoid them

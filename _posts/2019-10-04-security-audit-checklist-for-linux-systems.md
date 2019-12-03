@@ -6,7 +6,7 @@ title: Security audit checklist for linux systems
 date: 2019-10-04 10:00:00
 category: thoughts
 author: Al Esmail
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 

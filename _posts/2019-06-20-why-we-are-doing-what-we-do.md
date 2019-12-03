@@ -6,7 +6,7 @@ title: Why we are doing what we do
 date: 2019-06-20 10:00:00
 category: news
 author: Al Esmail
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 

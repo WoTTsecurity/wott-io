@@ -6,7 +6,7 @@ title: Using WoTT to secure a simple Python 3 WebApp
 date: 2019-06-16 17:00:00
 category: tutorials
 author: Fiona McAllister
-tags: [Open Source]
+tags: [open-source]
 class: post-template
 ---
 
@@ -105,7 +105,7 @@ $ ghostunnel client \
     --cacert "/opt/wott/certs/ca.crt"
 ```
 
-Inserting your the IP Address of the server which you can get by running`ip addr show` or `ip route get 8.4.4.3`. 
+Inserting your the IP Address of the server which you can get by running`ip addr show` or `ip route get 8.4.4.3`.
 Use the server WoTT device ID in place of `ServerDeviceID`.
 
 Assuming you don't get any errors, there should now be an established secure tunnel between the client and server. The client is now proxying any request coming in on 127.0.0.1:8080 securely to the remote server (using mTLS).

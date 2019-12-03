@@ -4,9 +4,15 @@ current: post
 cover: chain.jpg
 title: The significance of mTLS and why you should care about it
 date: 2019-09-09 08:00:00
+<<<<<<< HEAD
 category: [thoughts, news, tutorials]
 author: Fiona McAllister
 tags: [open source]
+=======
+category: thoughts
+author: Nikoletta Triantafyllopoulou
+tags: [open-source]
+>>>>>>> b8228852e45238ce00dead5d7821c18d155d4474
 class: post-template
 ---
 ## Introduction
