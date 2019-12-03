@@ -11,7 +11,7 @@ class: post-template
 ---
 ## Introduction
 
-**Note** there are some [tutorials](#tutorials) within this article. These vary in difficulty. All require a linux distribution to be compatible with our agent.1
+**Note** there are some [tutorials](#tutorials) within this article. These vary in difficulty. All require a linux distribution to be compatible with our agent.
 
 Cybersecurity is an ever-growing, ever-complicating field. As a new developer, it can be daunting to think of where to start. Here we're going to talk a little about mTLS and why you as a developer should care about it (and implement it!). 
 
