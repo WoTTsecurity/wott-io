@@ -15,7 +15,7 @@ class: post-template
 
 Cybersecurity is an ever-growing, ever-complicating field. As a new developer, it can be daunting to think of where to start. Here we're going to talk a little about mTLS and why you as a developer should care about it (and implement it!). 
 
-mTLS is just a type of TLS (Transport Layer Security). This is commonly found in verifying endpoints and for encrypting communications (think of WhatsApp messages) and also browsers. The 'https' in a url is a sign of a TLS controlled website. This part of the url verifies the identity of the server, the website you're accessing, to you, the client. 
+mTLS is just a type of TLS (Transport Layer Security). This is commonly found in verifying endpoints and for encrypting communications and also browsers. The 'https' in a url is a sign of a TLS controlled website. This part of the url verifies the identity of the server, the website you're accessing, to you, the client. 
 Unlike a password which is manually entered by a single user, TLS is typically managed by cryptographic certificates. Most TLS protocols usually verify this with an x509 certificate; and it's typically the client requesting a valid certificate from the server (DNS name on server must match that of the certificate). Secure Sockets Layer (SSL) security is based off this principle and https is its successor.
 
 The main thing that makes mTLS different (and arguably more secure) is that it requires *both* the server and client to verify each other: a handshake. This is particularly useful in instances where you want two servers to communicate with each other; or in a scenario where *you* are the server, not the client. Ultimately it's flexible and lightweight being perfect for edge devices.
