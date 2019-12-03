@@ -37,7 +37,7 @@ If you're familiar with Nginx servers, we have a useful tutorial to help guide y
 
 (Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go [here](}}site.url}}blog/tutorials/2019/07/18/edge-to-kubernetes)
 
-The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will.
+The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don't feel a particular need to know how mTLS actually works, feel free to just skip to the [end](#conclusions) or explore the rest of WoTT. We have several [other articles]({{site.url}}blog/tutorials) on how to use our agent with your system.
 
 ## How it works
 
@@ -56,4 +56,10 @@ For a start, it's probably the most common thing used since SSL became outdated.
 
 It's also a good way for you to secure yourself if you intend on being a server provider. Much of how internet security is done currently is verifying a server from a given client, it's a lot harder to protect yourself as the server. Usernames and passwords are an option, but they are exploitable and unreliable. More and more there is a need to move away from such technologies and start using cryptographic signage to identify trustworthy devices. Of course, no technology is perfect. TLS is updated frequently to counter this and it is the developer's responsibility to choose trusted CAs. For now, mTLS is a strong, lightweight method of securing your server and client endpoints.
 
-## Conclusions
+## <a name = "conclusions"> </a> Conclusions
+
+To summarise, mTLS is just a modified version of TLS (Transport Layer Security). It uses the same protocols and technologies, it's just a two-way verification instead of one (for example accessing a https link is simple TLS security). 
+
+mTLS is the best option we have currently to protect servers from fraudulent devices and is an absolute must when dealing with certain tech domains like IoT. Many IoT breaches to date have been due to unencrypted traffic that doesn't protect the server (and leads to entire networks being brought down). There's also no real excuse *not* to implement it. All you need is a CA and here at WoTT we provide that for you as well as other features to help you manage and keep track of your devices. For example, you can control through our agent which device certificates you want to trust on individual endpoints giving you the freedom to make your server as flexible or secure as you need. Our agent gives you a high level view and capabilities to manage your devices in a user-friendly and visual way. 
+
+If you're not quite ready to move to mTLS fully, let's at least make sure you've secured your devices to the best of your ability. Why not do a [CVE scan]({{site.url}}/blog/tutorials/2019/11/04/cve) while you're here to get a feel for how secure your endpoints actually are. WoTT is lightweight and can be installed on a variety of linux based devices from servers to raspberry pis.
