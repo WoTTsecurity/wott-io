@@ -11,7 +11,7 @@ class: post-template
 ---
 ## Introduction
 
-**Note** there are some [tutorials](#tutorials) within this article. These vary in difficulty. All require a linux distribution to be compatible with our agent.
+**Note** there are some [tutorials](#how-to-implement-mtls-some-tutorials-by-wott) within this article. These vary in difficulty. All require a linux distribution to be compatible with our agent.
 
 Cybersecurity is an ever-growing, ever-complicating field. As a new developer, it can be daunting to think of where to start. Here we're going to talk a little about mTLS and why you as a developer should care about it (and implement it!). 
 
@@ -22,7 +22,7 @@ The main thing that makes mTLS different (and arguably more secure) is that it r
 
 This might still seem a bit overcomplicated. At WoTT we have our own dedicated Certificate Authority and examples of using the CA to secure mTLS connections. We encourage you to try it out to familiarise yourself with the concept. Additionally, our agent is lightweight and can be used flexibly on servers and other edge devices.  
 
-## <a name = "tutorials"> </a> How to implement mTLS: some tutorials by WoTT
+## How to implement mTLS: some tutorials by WoTT
 
 There are actually several different ways to implement an mTLS style security layer for security. We have several examples for you to try and implement yourself of varying difficulties.
 
@@ -49,7 +49,7 @@ But how does it actually work? We've mentioned already the 'handshake' as a conc
 
 {% asset blog/tls-structure.png srcset:width="1300 2x" srcset:width="650 1x" alt="Breakdown of the TLS structure" %}
 
-The protocol/handshake layer is where the cryptographic 'magic' takes place. It manages the encryption algorithm used (also known as cipher) and key exchange, usually known as PKI (public key infrastructure). The PKI is signed for by the Certificate Authority and is what gives an endpoint its cryptographic identity. Basically, the server being accessed has an associated x509 certificate from a CA which is exchanged in this handshake protocol. This certificate contains information regarding the server's name, its public key (PKI), and a 'signiature.' This is why we often refer to this as 'digtal signage.' 
+The protocol/handshake layer is where the cryptographic 'magic' takes place. It manages the encryption algorithm used (also known as cipher) and public key exchange which is contained within a certificate. This certificate is signed for by a Certificate Authority and is what gives an endpoint its cryptographic identity. Basically, the server being accessed has an associated x509 certificate from a CA which is exchanged in this handshake protocol. This certificate contains information regarding the server's name, its public key, and a 'signiature.' This is why we often refer to this as 'digtal signage.'  
 
 The certificate is then verified by each endpoint according to its signiature which is the provider of the certificate, the CA. With mTLS, it's the exact same except both the server and client verify each other so each endpoint has an x509 certificate. You can think of the CA as vouching for a device's identity.
 
@@ -59,7 +59,7 @@ For a start, it's probably the most common thing used since SSL became outdated.
 
 It's also a good way for you to secure yourself if you intend on being a server provider. Much of how internet security is done currently is verifying a server from a given client, it's a lot harder to protect yourself as the server. Usernames and passwords are an option, but they are exploitable and unreliable. More and more there is a need to move away from such technologies and start using cryptographic signage to identify trustworthy devices. Of course, no technology is perfect. TLS is updated frequently to counter this and it is the developer's responsibility to choose trusted CAs. For now, mTLS is a strong, lightweight method of securing your server and client endpoints.
 
-## <a name = "conclusions"> </a> Conclusions
+## Conclusions
 
 To summarise, mTLS is just a modified version of TLS (Transport Layer Security). It uses the same protocols and technologies, it's just a two-way verification instead of one (for example accessing a https link is simple TLS security). 
 
