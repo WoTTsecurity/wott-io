@@ -46,7 +46,7 @@
     <meta property="og:title" content="Web of Trusted Things - WoTT secures the Internet of Things" />
     <meta property="og:description" content="Seamless security audit of Linux systems for DevOps teams." />
     <meta property="og:url" content="https://wott.io/blog/thoughts/2019/06/22/wott-secures-the-internet-of-things" />
-	<meta property="og:image" content="https://wott.io/assets/e4c32d-cc60efefa9c635e935652dfa1b95aea987ffdde207ec593cccf7ca567c33a85f.png">
+	<meta property="og:image" content="https://wott.io/assets/e4c32d-692a155d2ddefc995dcce86055facb6dce9a32056f2b86b2f9f088c7e69c2d37.png">
     <meta property="article:publisher" content="https://www.facebook.com/wott" />
     <meta property="article:tag" content="open-source" />
  
@@ -55,7 +55,7 @@
 	<meta name="twitter:creator" content="@wottsecurity" />
 	<meta name="twitter:title"   content="Web of Trusted Things - WoTT secures the Internet of Things">
 	<meta name="twitter:description" content="Seamless security audit of Linux systems for DevOps teams.">
-	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/e4c32d-cc60efefa9c635e935652dfa1b95aea987ffdde207ec593cccf7ca567c33a85f.png">
+	<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://wott.io/assets/e4c32d-692a155d2ddefc995dcce86055facb6dce9a32056f2b86b2f9f088c7e69c2d37.png">
 	<!-- end of Twitter cards -->
 	
     <script type="application/ld+json">
@@ -106,14 +106,35 @@
 <a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
 </div>
 
-</div></header>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '605130316291227');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=605130316291227&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</div>
+</header>
   <div class="b_content post-template ">
     <div class="blog_page">
 <div class="blog_info">
 <span class="t_i1">WoTT secures the Internet of Things</span>
 <span class="t_m2">By <a href="https://wott.io/search?s=al+esmail">Al Esmail</a> on June 22, 2019 | 0 Comments</span>
 </div>
-<img class="blog_image" src="https://wott.io/assets/1ccf7c-67bafd92575fa317d7bc5110b985375541e04054455f2160f4b56fd048929819.png" alt="Main image for post - WoTT secures the Internet of Things"></img><div class="blog_image_bg"></div>
+<img class="blog_image" src="https://wott.io/assets/1ccf7c-1bdb02ba6379bd0ac458ebcbfdcb4e64e8ea84d5c8bde01170d820695ee6895d.png" alt="Main image for post - WoTT secures the Internet of Things"></img><div class="blog_image_bg"></div>
 <div class="blog_tags"><a href="https://wott.io//tag/open-source">open-source</a></div>
 
 <div class="social_network">
@@ -133,7 +154,7 @@
 
 <p>TL;DR It’s Let’s Encrypt for IoT - you know you want it.</p>
 
-<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-7b05f2945bc64785c86fbc07c2acd097d5d53c454c22dea6e5ec3b84a0d107ea.png 2x, https://wott.io/assets/1d2430-aaf476eb923688ed2574a9bcddea33489a8809dfcd836be895cd0147d7f12c11.png 1x" /></p>
+<p><img alt="If the web can have it, why can’t IoT?" src="https://wott.io/assets/blog/green-padlock-21122fca801347c4f7e07ed5295e40b953d80f7e3d57b152db2bca3cac9f0ee3.png" integrity="sha256-IRIvyoATR8T34H7VKV5AuVPYD349V7FS2yvKPKyfDuM=" crossorigin="anonymous" srcset="https://wott.io/assets/e44a36-8ff17c896cc26b6cec0f2a21f56398a4911320cad1833d1ad30aadc7644f6695.png 2x, https://wott.io/assets/1d2430-71ba23857a42bb40b3113fd275473e8797e92adfe23c062876da71a990bda797.png 1x" /></p>
 
 <p>Figure 1 - If the web can have it, why can’t IoT?</p>
 
@@ -168,7 +189,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>We strongly recommend securely storing device keys in a secure environment like a trusted platform module (<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">TPM</a>).  Often the system on chip (SoC) includes a TPM but unfortunately the Raspberry Pi does not.  We worked with <a href="https://uk.pi-supply.com/">Pi Supply</a> to offer the Security Hat for the Pi with easy documentation, but really you can use any TPM available on the market.  (Just try to avoid storing keys on your SD card.)</p>
 
-<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-c32b769c8921f18f8278891ff405d5e077a4df1cfe628274a8dd8e8d48517ebd.png 2x, https://wott.io/assets/1fded8-463113c1538e294a518a774b48e2f782c9dea008df60bf48c856fb7db48b0585.png 1x" /></p>
+<p><img alt="Use a TPM, seriously" src="https://wott.io/assets/blog/key-1c6619a8ccd02023a250d77f3de9b1573979ee1b72404f63dc40d6b02bdc1ba5.png" integrity="sha256-HGYZqMzQICOiUNd/PemxVzl57htyQE9j3EDWsCvcG6U=" crossorigin="anonymous" srcset="https://wott.io/assets/ca4ce4-025841c87e0d7ea4aded30dfd0114de978c39a90ae5c14f519a9286366b7b5fd.png 2x, https://wott.io/assets/1fded8-ac6a698765dbff61c72161a3a4a125f94d1dbfae9fbb6d528224fc0e78b32cf7.png 1x" /></p>
 
 <p>Figure 3 - Use a TPM, seriously.
 (Another plug for the Security Hat here - you’ll love it.)</p>
@@ -179,7 +200,7 @@ The fundamental building block that we use to encrypt communication between two 
 
 <p>Finally, let me introduce the plat de resistance - <em>the Trust Score</em>.  The Trust Score is a numerical representation of the security or risk profile of your device.  Think of it like a credit score but instead of reflecting your probability of defaulting on debt, it reflects your probability of being hacked. (Low numbers are bad; high numbers are good.)  We consider variables of state and behavior from the device itself and peer devices, plug this into our magic machine and voila - out comes a number.  The specifics of the variables and algorithms are the part we keep under lock and key (see what I did there?) to prevent adversaries from gaming the metrics (though, ‘gaming the metrics’ could be an interesting daytime game show).</p>
 
-<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-fec75fd012031890cd5344003de6bbfadb9464328137d18c6a0b18cba96c6912.png 2x, https://wott.io/assets/3b95f7-01889a7f4e17e82a64f9298150eeee70263a1322c64f93804f1dd15e89396de7.png 1x" /></p>
+<p><img alt="trust score" src="https://wott.io/assets/blog/trust-score-73a5da7a5e3ef3d702c168d26b1f75e9106888d152e1f7d6895f94e3b965d9b5.png" integrity="sha256-c6Xael4+89cCwWjSax916RBoiNFS4ffWiV+U47ll2bU=" crossorigin="anonymous" srcset="https://wott.io/assets/296f05-fcc29e17bbf811ab083c55b468d9f7bf0a77128cc6292b84a1b24e061934fd5a.png 2x, https://wott.io/assets/3b95f7-2fdb26d7ed86763a89534d66b404081199d85a2406b11cd2af49201b9a050dac.png 1x" /></p>
 
 <p>Figure 4 - This visual is a little basic. I probably should have shown you a clip of Alex Trebek</p>
 
@@ -196,7 +217,7 @@ The fundamental building block that we use to encrypt communication between two 
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-2ffd8dfd8b0ec1ea1392f815072c0f89c38fb0490d6fa090d6ef8cdf2a4c3b6d.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-29dccfa5fec1d032e059b569a281b3820f58d6aa91f203b71f644bdc77f54d2a.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg">The DevSecOps Iceberg</a>

@@ -106,7 +106,28 @@
 <a class="sign_up" href="https://dash.wott.io/accounts/register/" ga-clv="1" ga-track-name="Sign Up">sign up</a>
 </div>
 
-</div></header>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '605130316291227');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=605130316291227&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</div>
+</header>
   <div class="b_content post-template ">
     <div class="blog_page">
 <div class="blog_info">
@@ -169,7 +190,7 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>But how does it actually work? We’ve mentioned already the ‘handshake’ as a concept, but this is actually the name given to the technology TLS uses. The TLS handshake protocol can be found <a href="https://www.ietf.org/rfc/rfc5246.txt">here</a> but it’s long and wordy. What’s important to know is that the TLS protocol is part of a layered structure and is sat between the transport (also known as TCP) and application layers.</p>
 
-<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-b73b6fe0d15e9f85dcadd6c3c0cfd8936415331f420c4cdab9e6b484d3c70e56.png 2x, https://wott.io/assets/33e2ec-acd6cd3ca85ff40014f4175925a5c968f575f62881aeb517ae6485f1bbe68354.png 1x" /></p>
+<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-8fee6b37421e7f5f333557360272414434727ca269acf1182c54c79e19b60f2a.png 2x, https://wott.io/assets/33e2ec-d523d602485f4759d7a8c35155a6e044c0edb1986766df42a5ea10a29e530440.png 1x" /></p>
 
 <p>The protocol/handshake layer is where the cryptographic ‘magic’ takes place. It manages the encryption algorithm used (also known as cipher) and public key exchange which is contained within a certificate. This certificate is signed for by a Certificate Authority and is what gives an endpoint its cryptographic identity. Basically, the server being accessed has an associated x509 certificate from a CA which is exchanged in this handshake protocol. This certificate contains information regarding the server’s name, its public key, and a ‘signature.’ This is why we often refer to this as ‘digital signage.’</p>
 
@@ -179,12 +200,12 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publically available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command <code class="highlighter-rouge">wott-agent whoami</code>. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).</p>
 
-<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-90c73df02f7756a74f9f109f89c719c370e6ee52bf7a961f5f564fe5d41984d9.png 2x, https://wott.io/assets/7e65ae-6cf699d8a7487e9efa1686a8aa81c066495f404323af1df1c66446cd63e1d19f.png 1x" />
-<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-f0d34ceb872146da32de54e8e56063a4b58a13e1d9a4ef4115999cc303d16f72.png 2x, https://wott.io/assets/a8a481-b3b1c784f47e20bbbcd6dcd86ae59e6ef66ac6110378bce595cb9a9c101078a9.png 1x" /></p>
+<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-3a492c01dfe42eba11ac25d593bfa8487ee227bb8b6ffe6581a9ecfb25815637.png 2x, https://wott.io/assets/7e65ae-de58d246eb456ba9bbe1c5fb6162a78f4a0811d3d4a6808085a64def2f52f703.png 1x" />
+<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-1a567969039fbfca5d58d529226c1e7da174698b022a3d61420752d8493554d0.png 2x, https://wott.io/assets/a8a481-77eca6abaf071ba764ebe968052d6a96fd3ce195634a3bd88255c0f790f8abcd.png 1x" /></p>
 
 <p>scroll down the security tab to see.</p>
 
-<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-f7e11a88ff22b66a7dd4e266fd82141a791d855af6477e5c49cc80d0b09118e6.png 2x, https://wott.io/assets/bf058c-adea6b33266311855500990a05d536f1f9f162f3400a0454cf9c057ddf8ae74a.png 1x" /></p>
+<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-1608a5afdde157957405360020f8ac006969f47a8b459168235091e106bce5b0.png 2x, https://wott.io/assets/bf058c-1a6a963dad4bb1570b093134d534aa21a10743870072e10361053068787e5a7f.png 1x" /></p>
 
 <p>On your node itself, WoTT will have downloaded 4 files.</p>
 
@@ -214,7 +235,7 @@ combined.pem
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-2ffd8dfd8b0ec1ea1392f815072c0f89c38fb0490d6fa090d6ef8cdf2a4c3b6d.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-29dccfa5fec1d032e059b569a281b3820f58d6aa91f203b71f644bdc77f54d2a.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg">The DevSecOps Iceberg</a>
