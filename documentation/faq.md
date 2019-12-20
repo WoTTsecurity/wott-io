@@ -22,7 +22,7 @@ A. Immediately change your device access credentials to something private. Examp
  * Password: password/pass123/password123/admin/guest
 and as you may know, all Raspberry Pis by default have the username `pi` and password `raspberry`.
 
-However, you may not even know that your device has default or common credentials. WoTT's agent automatically scans your devices against data from Mirai and against other common cases so that you can better protect your devices. If one of your devices is displayed on the WoTT Dashboard with a Default Credential warning, *we strongly recommend that you quickly resolve this issue.*
+However, you may not even know that your device has default or common credentials. WoTT's agent automatically scans your devices against data from Mirai and against other common cases so that you can better protect your devices. If one of your devices is displayed on the WoTT Dashboard with a Default Credential warning, **we strongly recommend that you quickly resolve this issue.**
 
 Default credentials will lower your device's Trust Score.
 
