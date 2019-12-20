@@ -8,21 +8,14 @@ title_content: 'FAQ'
 
 # Dashboard FAQ
 
-## Default Credential Vulnerability
+## What are default credentials?
+Default credentials are credentials (usually username/password combinations), such as admin/admin that device producers put in during manufacturing. These are intended to be temporary and changed by the user as soon as possible. In reality however, many users fail to change this, leaving the device(s) vulnerable to attackers.
 
-Q. What are 'Default Credentials?' 
-A. These are typically inbuilt credentials that manufacturers use for the initial startup of a device. They are meant to be temporary and changed once a user has set up. The most common devices that use default credentials are typically, but not limited to, IoT devices; such as internet modems, cameras, and PCB based technologies such as Raspberry Pis. 
+Default credentials are usually attributed to one of the biggest problems in IoT, and enabled malware like [Mirai](https://en.wikipedia.org/wiki/Mirai_(malware)) to spread like wildfire.
 
-Q. So what is Default Credential Vulnerability? 
-A. The vulnerability here is that these default credentials are typically in the form of a known username and password. This makes them easy to set up, but also vulnerable to external attack if the user does not then change these. This is the basis of how the [Mirai](https://en.wikipedia.org/wiki/Mirai_(malware)) malware was able to infiltrate many devices and launch a wide-scale DDoS attack.
+WoTT will automatically scan your devices for default credentials. We have built a database that includes not only the data set that Mirai used (to ensure you won't get compromised), but also additional credentials we've found to be common.
 
-Q. What can I do? How do I even know if I have Default Credentials on my device? 
-A. Immediately change your device access credentials to something private. Examples of typical Default Credentials are:
- * Username: admin/administrator/root/system/guest/operator/super
- * Password: password/pass123/password123/admin/guest
-and as you may know, all Raspberry Pis by default have the username `pi` and password `raspberry`. 
-
-However, you may not even know that your device has default or common credentials. WoTT's agent automatically scans your devices against data from Mirai and against other common cases so that you can better protect your devices. If one of your devices is displayed on the WoTT Dashboard with a Default Credential warning, **we strongly recommend that you quickly resolve this issue.**
+If the WoTT Dashboard displays a warning that default credentials were found, we strongly recommend that you quickly resolve this issue.
 
 Default credentials will lower your device's Trust Score.
 
