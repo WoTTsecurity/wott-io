@@ -10,7 +10,7 @@
       <item>
         <title>The DevSecOps Iceberg</title>
         
-          <description>&lt;p&gt;Security is a complicated topic. There are countless of attack vectors and threat models to take into consideration when designing a security strategy.&lt;/p&gt;
+          <description>&lt;p&gt;Security is a complicated topic. There are countless attack vectors and threat models to take into consideration when designing a security strategy.&lt;/p&gt;
 
 </description>
         
@@ -146,7 +146,7 @@ switched to db admin
 )
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-88a1172a35c80993a9fa22c0bfadfae23f06d3225d46291a04672d020b654a08.png 2x, https://wott.io/assets/887014-58d78a67aa6ed0df3068eb714a3e67209140d507fa821a617a08d5ff7982fc2e.png 1x&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Description Table&quot; src=&quot;https://wott.io/assets/blog/mongodb-table-45124f8e5a65f7cbd80cdf48ec859fa5d462ee25f297819cb6b25e48de2c2a21.png&quot; integrity=&quot;sha256-RRJPjlpl98vYDN9I7IWfpdRi7iXyl4GctrJeSN4sKiE=&quot; crossorigin=&quot;anonymous&quot; srcset=&quot;https://wott.io/assets/92987f-46931a77715b8e5a90021d24e76d78d990942c6bf3d4b361ae76f3dd58577f8a.png 2x, https://wott.io/assets/887014-d7d9932d642867d0650aa62b61bbfff41eb8171b71d872ea4c907da2a18dc679.png 1x&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;An example would be:&lt;/p&gt;
 
