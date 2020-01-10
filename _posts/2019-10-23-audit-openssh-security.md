@@ -23,12 +23,12 @@ We will look at the basics of auditing and securing your OpenSSH configuration f
 
 **Requirements:**
 * A Linux distribution (this guide should be good for most distro's)
-* The config file (usually located at /etc/ssh/ssh_config)
+* The config file (usually located at /etc/ssh/sshd_config)
 
 you can open this file from the terminal using the command:
 
 ```
-$ sudo $EDITOR /etc/ssh/ssh_config
+$ sudo $EDITOR /etc/ssh/sshd_config
 ```
 
 *We also want to quickly mention that our service [WoTT](https://wott.io/) audits the security of your linux machine/s including your OpenSSH configuration. It is free for up to 5 nodes and contains many guides and documentation to make sure setting up is simple and painless whilst easing your mind on the strenuous work that is securing your system.*
