@@ -12,7 +12,7 @@ class: post-template
 
 Security is a complicated topic. There are countless attack vectors and threat models to take into consideration when designing a security strategy.
 
-Over the last year, we've spoken to companies of different sizes about their security strategies and practices. Based on these discussions, we've come up with something we call the DevSecOps Iceberg. The idea behind this is that too many organizations tend to only focus on the application layer or the network layer and turn a blind eye to everything else. This is a dangerous approach. Neglecting the other layers means that you may end up putting your entire infrastructure and data at risk.
+Over the last year, we've spoken to companies of different sizes about their security strategies and practices. Based on these discussions, we've come up with something we call the DevSecOps Iceberg. The idea behind this is that too many organizations tend to only focus on the application layer and turn a blind eye to everything else. This is a dangerous approach. Neglecting the other layers means that you may end up putting your entire infrastructure and data at risk.
 
 To begin, let's define the three layers of the DevSecOps Iceberg and then explore what you can do to protect them:
 
@@ -53,7 +53,7 @@ Also, be careful when pulling Docker images from Docker Hub. In 2018 Docker [pul
 #### Suitable tools
 
 * Aqua [MicroScanner](https://blog.aquasec.com/microscanner-free-image-vulnerability-scanner-for-developers)
-* Sysdig [Secure](https://docs.sysdig.com/en/image-scanning.html)
+* [Anchore](https://anchore.com/)
 * CoreOS (Now Red Hat) [Clair](https://coreos.com/quay-enterprise/docs/latest/clair.html)
 
 ## The Operating System Layer
