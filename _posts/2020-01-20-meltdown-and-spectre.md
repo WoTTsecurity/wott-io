@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 2019-08-16-the-future-of-iot.png
+cover: processors.jpg
 title: Meltdown and Spectre
 date: 2020-01-20 12:00:00
 category: tutorials
