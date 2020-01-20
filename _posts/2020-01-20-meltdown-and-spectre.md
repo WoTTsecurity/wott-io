@@ -75,23 +75,23 @@ Older systems have reported being slower, especially in read/write speeds since 
 
 There are 5 steps you can do to effectively reduce these risks:
 
-**Update your operating system(s)**
+### 1) Update your operating system(s)
 
 Although Meltdown and Spectre operate at a hardware level, the most common operating systems roll out software updates that can also address and mitigate these risks. Keep up to date with operating systems and consider enabling automatic updates. Make sure you update your distribution’s kernel through `sudo apt-get dist-upgrade`.
 
-**Update your firmware**
+### 2) Update your firmware
 
 Companies like Intel frequently release updates for the microcode in their firmware in response to new variants in Meltdown or Spectre vulnerabilities being found. However, Intel typically prioritise updates to chips developed in the last 5 years so consider older chips to still be at risk. Before updating, ensure your data is backed up as bugs in the updates have been[ prevalent in the past](https://www.pcworld.com/article/3248975/spectre-cpu-patches-reboots-intel.html).
 
-**Update your browser**
+### 3) Update your browser
 
 Spectre attacks can happen through your browser with an attacker being able to read sensitive information from a browser instance, say online banking. Proof of concepts show that JavaScript code can be used to [exploit CPU weaknesses](https://ieeexplore.ieee.org/abstract/document/8835233). For Chromium based browser users, you need to manually enable `strict Site Isolation`.
 
-**Update any of your other software**
+### 4) Update any of your other software
 
 Any software that interacts with your CPU architecture or operates inside your operating system’s kernel is open particularly to Spectre attacks. Systems with gaming software or additional graphics cards may be susceptible. Nvidia have released driver updates for their cards. Note that IoT devices are also at high risk. Things that operate on your network and access your system like printers should also be updated routinely. There is no blanket way to update these systems other than running normal upgrade commands such as `sudo apt-get update && sudo apt-get upgrade`.
 
-**Update your firewall settings**
+### 5) Update your firewall settings
 
 The easiest way to exploit any system is over the internet. Secure your ingress traffic in particular to only IPs that you trust and avoid interacting with unknown advertisements, hyperlinks, etc.
 
