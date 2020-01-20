@@ -8,7 +8,7 @@ disqus: false
 <div class="blog_page">
 <div class="blog_info">
 <span class="t_i1">{{ page.title }}</span>
-<span class="t_m2">By <a href="{{ site.url }}{{ site.baseurl }}search?s={{ page.author | replace: " ", "+" | downcase }}">{{ page.author }}</a> on {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} | 0 Comments</span>
+<span class="t_m2">By {{ page.author }} on {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} | 0 Comments</span>
 </div>
 <img class="blog_image" src="{% asset blogcover/'{{ page.cover }}' magick:resize='1000' @path %}" alt="Main image for post - {{ page.title }}"></img><div class="blog_image_bg"></div>
 {% if page.tags %}<div class="blog_tags">{% for tag in page.tags%}<a href="{{ site.url }}{{ site.baseurl }}/tag/{{ tag  | downcase }}">{{ tag }}</a>{% endfor %}</div>{% endif %}
@@ -27,9 +27,12 @@ disqus: false
 </div>
 
 <div class="blog_content content_info_block">
-
 {{ content }}
+
+<h3>And while you're here...</h3>
+<p>Did you know that WoTT gives you free security audits, including CVE scanning, for your first node? <a href="http://dash.wott.io/accounts/register?utm_source=blog&utm_medium=banner&utm_campaign=internal">Sign up today</a>.</p>
 </div>
+
 <div class="related_articles">
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">

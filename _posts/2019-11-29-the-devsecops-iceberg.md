@@ -10,9 +10,9 @@ tags: [open-source]
 class: post-template
 ---
 
-Security is a complicated topic. There are countless of attack vectors and threat models to take into consideration when designing a security strategy.
+Security is a complicated topic. There are countless attack vectors and threat models to take into consideration when designing a security strategy.
 
-Over the last year, we've spoken to companies of different sizes about their security strategies and practices. Based on these discussions, we've come up with something we call the DevSecOps Iceberg. The idea behind this is that too many organizations tend to only focus on the application layer or the network layer and turn a blind eye to everything else. This is a dangerous approach. Neglecting the other layers means that you may end up putting your entire infrastructure and data at risk.
+Over the last year, we've spoken to companies of different sizes about their security strategies and practices. Based on these discussions, we've come up with something we call the DevSecOps Iceberg. The idea behind this is that too many organizations tend to only focus on the application layer and turn a blind eye to everything else. This is a dangerous approach. Neglecting the other layers means that you may end up putting your entire infrastructure and data at risk.
 
 To begin, let's define the three layers of the DevSecOps Iceberg and then explore what you can do to protect them:
 
@@ -53,7 +53,7 @@ Also, be careful when pulling Docker images from Docker Hub. In 2018 Docker [pul
 #### Suitable tools
 
 * Aqua [MicroScanner](https://blog.aquasec.com/microscanner-free-image-vulnerability-scanner-for-developers)
-* Sysdig [Secure](https://docs.sysdig.com/en/image-scanning.html)
+* [Anchore](https://anchore.com/)
 * CoreOS (Now Red Hat) [Clair](https://coreos.com/quay-enterprise/docs/latest/clair.html)
 
 ## The Operating System Layer
@@ -83,4 +83,4 @@ To solve the pipeline problem, we at WoTT have solved with things like our [GitH
 
 We hope that this article has provided a good overview of the different layers of security. As stated in the introduction, this is by no means a comprehensive security guide, but merely an overview. The takeaway is that you really should be using one tool in each category to improve your security posture, not just for the tip of the iceberg.
 
-**Update 1:** Added more information to improve clarity on concept.
+**Update 1:** Reworked wording to improve readability.
