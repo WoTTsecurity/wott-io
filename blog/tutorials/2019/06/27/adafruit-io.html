@@ -182,11 +182,11 @@ $ pip3 install adafruit-io
 
 <p>Login to the Adafruit IO dashboard. Navigate to the ‘Feeds’ page on the left-hand side menu. Hover over actions and select ‘Create a New Feed.’ The feed acts as a channel or datastream through which your device connects to Adafruit IO. We are going to create a feed that is called via MQTT. In other words, the feed becomes the topic from which messages are published/subscribed to.</p>
 
-<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-fd4daafcde8c1c6ca1777df56276edd98e299a80e9536a034035cbb9b33d6d4b.png 2x, https://wott.io/assets/cd12eb-8752e15790881dd14580412f9523c1af05587a589b609d613aab4250a73a5afd.png 1x" /></p>
+<p><img alt="create feed" src="https://wott.io/assets/blog/adafruit-add-21106ff597b5fe9bca13995f8e116602c02e5371f9d81dc073ab764ee70a132b.png" integrity="sha256-IRBv9Ze1/pvKE5lfjhFmAsAuU3H52B3Ac6t2TucKEys=" crossorigin="anonymous" srcset="https://wott.io/assets/25fd86-7dd4936b98343d0b0f358076c624ea845c0fe3a6d3fe30631e4ec2fd059c3ea7.png 2x, https://wott.io/assets/cd12eb-381eab3de0d17089ec63785d9a4dcbeb61fa327b9a8d8eff97a3a6020d0a4b6f.png 1x" /></p>
 
 <p>The feed name refers to the type of data you are observing- for example temperature or humidity. To keep things simple, we are just going to observe data and name the feed ‘data feed.’ The description is supposed to provide some more in-depth information about the feed. When using sensor data, this is going to be something like temperature or humidity, however for this exmaple we are just dealing with very basic pub/sub messages, so our data type is generic.</p>
 
-<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-ed6bc68d70fe53c7e40d3bccdc61789968eb17f4ffd2ef226a9dea06106bd3cf.png 2x, https://wott.io/assets/60856b-f190d44bf151e7ca93a079c26dc1dd74b63c0e608591239ca156449154de860e.png 1x" /></p>
+<p><img alt="name feed" src="https://wott.io/assets/blog/feed-details-ea085f388451196a3884b7a0524e4c940bbf75874e5bdcee2de1327703adccc7.png" integrity="sha256-6ghfOIRRGWo4hLegUk5MlAu/dYdOW9zuLeEydwOtzMc=" crossorigin="anonymous" srcset="https://wott.io/assets/de0189-ee3a47c6fcc981fd58b054fd65e6c14135a01395bda0410f51328f651df62e2f.png 2x, https://wott.io/assets/60856b-6dd9d17f71e80b98f1ca468b8dbaf7d38d30105683f9cd2b76bd7c56e16bcf6c.png 1x" /></p>
 
 <p><strong>Note:</strong> it is possible to create the feeds using a simple python application. If you prefer a more codified style of set up, you can follow <a href="https://adafruit-io-python-client.readthedocs.io/en/latest/feeds.html">this</a> guide.</p>
 
@@ -194,11 +194,11 @@ $ pip3 install adafruit-io
 
 <p>In order to call the Adafruit API via HTTP access, it requires a key. You can find this key on the left-hand side of your Adafruit dasboard as you did with ‘Feeds’ under <code class="highlighter-rouge">AIO key</code>. You will be brought to a page akin to this:</p>
 
-<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-d8c398046ba29b1ebe7ca6217eae3c881ea490c5fa77871cea7df714c08c4668.png 2x, https://wott.io/assets/953c52-e9ae559849075b0d9d68e757612a10953ce6ad9b4929ab8490a2df083f3e6b0e.png 1x" /></p>
+<p><img alt="AIO key" src="https://wott.io/assets/blog/aio-key-modal-f866f82bdffa097d3781bfcf79bf1f305b9d7854d84fcbd0c9321d6d29f0ef65.png" integrity="sha256-+Gb4K9/6CX03gb/Peb8fMFudeFTYT8vQyTIdbSnw72U=" crossorigin="anonymous" srcset="https://wott.io/assets/9d26f5-973b9023a19cc62dd58817ae68aa9ec5c73ba239542ebdd24c789eed870ea709.png 2x, https://wott.io/assets/953c52-1cb2712540f466b4f184ff58f24dd0a0c6ee398ccc01ce4097b8845d816e015f.png 1x" /></p>
 
 <p>These are your unique Adafruit details. We can add these to WoTT’s dashboard as a new credential where the value is your personal username followed by the <code class="highlighter-rouge">Active Key</code> value. To do so, you will need to login or create an account for the <a href="https://dash.wott.io">WoTT dash</a>.</p>
 
-<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-7670b4ea14c64f8603d2eb3332f604ad5786aede5af7d478d2b20a39d0449111.png 2x, https://wott.io/assets/deedd0-ffdbe96aaaba2cb81c2077b7e5d241b80bf95ab411021d3d6a83c2613fd12972.png 1x" /></p>
+<p><img alt="WoTT login" src="https://wott.io/assets/blog/wott-dash-212c3643e41361a1a771dc7435ae6b12c4f1afde0f8b56a437175997adf118e2.png" integrity="sha256-ISw2Q+QTYaGncdx0Na5rEsTxr94Pi1akNxdZl63xGOI=" crossorigin="anonymous" srcset="https://wott.io/assets/03bed4-7e67cafbc5348a70a049688893812d6bd18176f0727511b9cd8d7c8951cf84bf.png 2x, https://wott.io/assets/deedd0-d4049ff6a34db097b7e0441ccf20aa0216089e9569d9e12d82c0312077a6a8bf.png 1x" /></p>
 
 <p>If you already have the WoTT dash and have registered your devices, you can skip ahead to inputting the credentials of the device. Otherwise, register your WoTT agent device to the dash by obtaining the Device ID and Claim Token by doing the following commands on said device:</p>
 
@@ -208,7 +208,7 @@ $ sudo wott-aget claim-token
 
 <p>and pasting the output into the ‘Claim Device’ segment of the WoTT dash. This device is now claimed and registered to the WoTT dash. You can view the list of your claimed devices on the main dashboard. Navigate to your newly registered device and add a new tag, <code class="highlighter-rouge">adafruit</code> to it. Through these tags, WoTT identifies which devices specific credentials are intended for.</p>
 
-<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-beb8194e04bfbfe3e788e5eeff5a4bfe89caf424bb0a67b3b218cc13acf5151e.png 2x, https://wott.io/assets/7d7aaa-1a9fc73659fc264ec20bdb9b4feddcda6c99cfc19dd6a6c023bc19b1b2891896.png 1x" /></p>
+<p><img alt="Adafruit tags" src="https://wott.io/assets/blog/adafruit-tags-4c74ebb36ad6e163a778f7a8db3049666a631c012c7736a7bdeed264a3ce850b.png" integrity="sha256-THTrs2rW4WOnePeo2zBJZmpjHAEsdzanve7SZKPOhQs=" crossorigin="anonymous" srcset="https://wott.io/assets/378d39-120c7cba310da09d1c698534f8b23279b32d64dda5429a3e4d538dfe78708124.png 2x, https://wott.io/assets/7d7aaa-ea8c10c6b2798f303e25c84229e184721330bbb902e461e16973afbc1f257a6d.png 1x" /></p>
 
 <p>Now that we are all set up, we need to create the credentials with the Adafruit information. Navigate to the ‘Credentials’ page of the WoTT dash and a new credential. Input the following into the fields:</p>
 
@@ -256,7 +256,7 @@ Feed data feed received new value: 52
 </code></pre></div></div>
 <p>On your Adafruit IO dash, you should see the data being received on your feed:</p>
 
-<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-8d27fe4bc521bff4f848bc99ce9583c3072a2bd71ae81dda9942530054ae091e.png 2x, https://wott.io/assets/861588-23fd845645ded7ed1fe576671649c976b8ad75a8aa20a1604221fe2ccda8988c.png 1x" /></p>
+<p><img alt="feed data" src="https://wott.io/assets/blog/adafruit-feed-88cdb8ceb9f8c0820123a6ad3b8bad5e382b73d05d35034e0ca678a2f273033e.png" integrity="sha256-iM24zrn4wIIBI6atO4utXjgrc9BdNQNODKZ4ovJzAz4=" crossorigin="anonymous" srcset="https://wott.io/assets/13d874-dd63b140464db0edb59d4faf687cdec3436e94e2363d6d220cb067dd87223063.png 2x, https://wott.io/assets/861588-cdea5c96851729ef7d95057759f71baeccf4fd07142666f6ef8bd6c309d7c179.png 1x" /></p>
 
 <p><strong>Note:</strong> your values will be different to this example as they are randomly generated, use the above as a reference point only.</p>
 
@@ -289,7 +289,19 @@ ImportError: No module named Adafruit_IO
 <span class="t_i1">Related articles</span>
 <div class="blog_posts"><div class="post_mini-blocks">
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-9f957eb7472784862032d6003851973fedda7ddf1482fc32e3958481d2f95602.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/354b26-726d4a1e7dff248d4ed1163ecb31a5a698258a3ea1c648176daf9062d902f129.jpg);'></div>
+  <div class="post_prewinfo">
+  <span class="category_name">tutorials</span>
+  <a class="title" href="https://wott.io/blog/tutorials/2020/01/20/meltdown-and-spectre">Meltdown and Spectre</a>
+  <span class="author_time">By <a>Fiona McAllister</a> on January 20, 2020</span>
+  <span class="description">
+   # Hardware Vulnerabilities: Meltdown and Spectre and how to protect yourself ## Introduction Meltdown and Spectre refer to 3 variants of hardware vulnerability found by the [Google Project Zero Team](https://googleprojectzero.blogspot.com) and various other academic institutions and field experts. Unfortunately, these vulnerabilities exist on practically every piece of commercial hardware made since 1995.... </span>
+  <a class="read_full" href="https://wott.io/blog/tutorials/2020/01/20/meltdown-and-spectre">Continue reading </a>
+  </div>
+  </div>
+
+       <div class="post">
+  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-eaece9be289925c7df1abe763225644a85ec9cb4ffef2b58d8fdc5df20e4275a.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg">The DevSecOps Iceberg</a>
@@ -309,18 +321,6 @@ ImportError: No module named Adafruit_IO
   <span class="description">
    There's no doubt that GitHub has become one of the most popular platforms for developer collaboration and communication. Increasingly, GitHub is also used for project management across developer and Dev(Sec)Ops teams. Because of this, it is increasingly where the security fixes are being tracked too. For instance, GitHub recently announced their [Security... </span>
   <a class="read_full" href="https://wott.io/blog/news/thoughts/2019/11/27/introducing-the-wott-github-integration">Continue reading </a>
-  </div>
-  </div>
-
-       <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/5c9612-2334dcb31cb2b826c95fcb049c275f0910f302b9eafc0b38bda1bfb5a7a2240e.jpg);'></div>
-  <div class="post_prewinfo">
-  <span class="category_name">tutorials</span>
-  <a class="title" href="https://wott.io/blog/tutorials/2019/11/24/mongodb">How to Securely Configure MongoDB</a>
-  <span class="author_time">By <a>Mahmoud Fahmy</a> on November 24, 2019</span>
-  <span class="description">
-   # How to Securely Configure MongoDB **Required Skill Level**: Intermediate **Reading Time**: 15-20 Minutes ## Introduction [MongoDB](https://www.mongodb.com/what-is-mongodb) is a NoSQL, document database that is widely used by companies and individuals. Its popularity and support makes it a contender for one of the best options for database needs. Unfortunately, its popularity makes it... </span>
-  <a class="read_full" href="https://wott.io/blog/tutorials/2019/11/24/mongodb">Continue reading </a>
   </div>
   </div>
 
@@ -353,7 +353,7 @@ ImportError: No module named Adafruit_IO
 </ul></div>
 <div class="menu news"><ul>
 <li><a href="https://wott.io/blog" title="">latest news</a></li>
-<li><a href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg" title="The DevSecOps Iceberg">The DevSecOps Iceberg</a></li><li><a href="https://wott.io/blog/news/thoughts/2019/11/27/introducing-the-wott-github-integration" title="Introducing WoTT's GitHub Integration">Introducing WoTT's GitHub Integration</a></li><li><a href="https://wott.io/blog/tutorials/2019/11/24/mongodb" title="How to Securely Configure MongoDB">How to Securely Configure MongoDB</a></li>
+<li><a href="https://wott.io/blog/tutorials/2020/01/20/meltdown-and-spectre" title="Meltdown and Spectre">Meltdown and Spectre</a></li><li><a href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg" title="The DevSecOps Iceberg">The DevSecOps Iceberg</a></li><li><a href="https://wott.io/blog/news/thoughts/2019/11/27/introducing-the-wott-github-integration" title="Introducing WoTT's GitHub Integration">Introducing WoTT's GitHub Integration</a></li>
 </ul></div>
 </div>
 
