@@ -170,17 +170,17 @@ Unlike a password which is manually entered by a single user, TLS is typically m
 
 <h3 id="easy">Easy</h3>
 
-<p>We have a very simple to implement tutorial showing how you can use mTLS to secure a basic Web Application using WoTT’s agent as a manager. See <a href="https://wott.ioblog/tutorials/2019/06/16/simple-webapp">here</a> for more details.</p>
+<p>We have a very simple to implement tutorial showing how you can use mTLS to secure a basic Web Application using WoTT’s agent as a manager. See <a href="https://wott.io/blog/tutorials/2019/06/16/simple-webapp">here</a> for more details.</p>
 
 <h3 id="medium">Medium</h3>
 
-<p>If you’re familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See <a href="https://wott.ioblog/tutorials/2019/07/15/mtls-with-nginx">here</a>.</p>
+<p>If you’re familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See <a href="https://wott.io/blog/tutorials/2019/07/15/mtls-with-nginx">here</a>.</p>
 
 <h3 id="hard">Hard</h3>
 
-<p>(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go <a href="}}site.url}}blog/tutorials/2019/07/18/edge-to-kubernetes">here</a>.</p>
+<p>(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go <a href="https://wott.io/blog/tutorials/2019/07/18/edge-to-kubernetes">here</a>.</p>
 
-<p>The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don’t feel a particular need to know how mTLS actually works, feel free to just skip to the <a href="#conclusions">end</a> or explore the rest of WoTT. We have several <a href="https://wott.ioblog/tutorials">other articles</a> on how to use our agent with your system.</p>
+<p>The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don’t feel a particular need to know how mTLS actually works, feel free to just skip to the <a href="#conclusions">end</a> or explore the rest of WoTT. We have several <a href="https://wott.io/blog/tutorials">other articles</a> on how to use our agent with your system.</p>
 
 <h2 id="how-it-works">How it works</h2>
 
@@ -189,7 +189,7 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>But how does it actually work? We’ve mentioned already the ‘handshake’ as a concept, but this is actually the name given to the technology TLS uses. The TLS handshake protocol can be found <a href="https://www.ietf.org/rfc/rfc5246.txt">here</a> but it’s long and wordy. What’s important to know is that the TLS protocol is part of a layered structure and is sat between the transport (also known as TCP) and application layers.</p>
 
-<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-52fafe4db516d3552d7379ecd81e5c43085ba87858938b80a0d9e42a3f3d42e5.png 2x, https://wott.io/assets/33e2ec-b64b8dc03ba30ac4d6e1ef8f9472e85b9ec2d05e91d737730ab8387fe5149d8f.png 1x" /></p>
+<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-a0dd17f93a074d3d8450eb10444191e7af981a918c8ceca07f9a8842d90a4e72.png 2x, https://wott.io/assets/33e2ec-2ecb60e138df01f9e9b75a3c87094661289034015539a4044214370da13df4bc.png 1x" /></p>
 
 <p>The protocol/handshake layer is where the cryptographic ‘magic’ takes place. It manages the encryption algorithm used (also known as cipher) and public key exchange which is contained within a certificate. This certificate is signed for by a Certificate Authority and is what gives an endpoint its cryptographic identity. Basically, the server being accessed has an associated x509 certificate from a CA which is exchanged in this handshake protocol. This certificate contains information regarding the server’s name, its public key, and a ‘signature.’ This is why we often refer to this as ‘digital signage.’</p>
 
@@ -197,14 +197,14 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>The actual components of a certificate are determined by a greater structure called PKI (public key infrastructure). PKI is a set of tools that allows for you to encrypt or digitally sign data as with certificates. Within the PKI architecture includes the Certificate Authority which is a trusted third party that signs off on a digital certificate. General services are often signed for by a public CA which will verify any user. As we’ve said before, WoTT has its own CA but WoTT’s CA is private ensuring that only recognised users are signed for.</p>
 
-<p>Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publically available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command <code class="highlighter-rouge">wott-agent whoami</code>. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).</p>
+<p>Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publicly available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command <code class="highlighter-rouge">wott-agent whoami</code>. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).</p>
 
-<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-79f3ae1c0c527161894835d312b6fd8f9941afe2677272be302b448547e5f18c.png 2x, https://wott.io/assets/7e65ae-8cfb07b71e0ef4d9dc83083f5decee8e31d811475cb92c42b28faf730ea61373.png 1x" />
-<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-e954db1c26928be8fc099ba1d81923efc5746ecd137392533a1f613037f0f080.png 2x, https://wott.io/assets/a8a481-0e2d9a72d5e9976a24b2fb94bbda1b6f04a0c464c6e974003d2c215c964348a3.png 1x" /></p>
+<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-0d3b8d74a792aafc70dc4dd9bc788983dbba6ff0ddff1edeba62dc3993c0787b.png 2x, https://wott.io/assets/7e65ae-0213f7ec94eaf52d43130726f679d9dcdbdbfbdbc390ab4ce1523f636d95c840.png 1x" />
+<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-1a067f47da332602cdf7015f0efc91aeb854ed660966e3d36ac1b7d7ee35826a.png 2x, https://wott.io/assets/a8a481-c9df900159436246c0953419e8c0e46d53c8f8fa15faaf21449dbbae6051f0af.png 1x" /></p>
 
 <p>scroll down the security tab to see.</p>
 
-<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-4871e310f00b93340442c0f5228ac57e9029fcf55d2e465d8a09793504e464f1.png 2x, https://wott.io/assets/bf058c-b27a132296c280491c0a89a158988a772f8848f0fdb75d3a9290c22fd84e6da3.png 1x" /></p>
+<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-480dc2b1a50edd15ea4aafd406b64412ece42a66ddb7384f02c9959e7302d101.png 2x, https://wott.io/assets/bf058c-905d6c5492f83735329ce9a600a93f645921c3e524615f54dbc96048c2714992.png 1x" /></p>
 
 <p>On your node itself, WoTT will have downloaded 4 files.</p>
 
@@ -250,7 +250,7 @@ combined.pem
   </div>
 
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-eaece9be289925c7df1abe763225644a85ec9cb4ffef2b58d8fdc5df20e4275a.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-22d989b5b27dfa62eaec6585bd8c5f0e60cc20d7452acd6d66a49cd18e5b3a85.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg">The DevSecOps Iceberg</a>
