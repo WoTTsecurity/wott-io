@@ -30,17 +30,17 @@ There are actually several different ways to implement an mTLS style security la
 
 ### Easy
 
-We have a very simple to implement tutorial showing how you can use mTLS to secure a basic Web Application using WoTT's agent as a manager. See [here]({{site.url}}blog/tutorials/2019/06/16/simple-webapp) for more details.
+We have a very simple to implement tutorial showing how you can use mTLS to secure a basic Web Application using WoTT's agent as a manager. See [here]({{site.url}}/blog/tutorials/2019/06/16/simple-webapp) for more details.
 
 ### Medium
 
-If you're familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See [here]({{site.url}}blog/tutorials/2019/07/15/mtls-with-nginx).
+If you're familiar with Nginx servers, we have a useful tutorial to help guide you through setting up mTLS on it using our CA. See [here]({{site.url}}/blog/tutorials/2019/07/15/mtls-with-nginx).
 
 ### Hard
 
-(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go [here](}}site.url}}blog/tutorials/2019/07/18/edge-to-kubernetes).
+(Recommended after following Nginx tutorial) you may want to up the ante if you have a Kubernetes cluster you want to secure. If you want to dive into securing Kubernetes with mTLS using WoTT, go [here]({{site.url}}/blog/tutorials/2019/07/18/edge-to-kubernetes).
 
-The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don't feel a particular need to know how mTLS actually works, feel free to just skip to the [end](#conclusions) or explore the rest of WoTT. We have several [other articles]({{site.url}}blog/tutorials) on how to use our agent with your system.
+The important thing to take away is that you need a Certificate Authority from which to configure your system to. WoTT provides one for you. All these examples are designed to be adaptable so feel free to modify them at your will. If you don't feel a particular need to know how mTLS actually works, feel free to just skip to the [end](#conclusions) or explore the rest of WoTT. We have several [other articles]({{site.url}}/blog/tutorials) on how to use our agent with your system.
 
 ## How it works
 
@@ -57,7 +57,7 @@ The certificate is then verified by each endpoint according to its signature whi
 
 The actual components of a certificate are determined by a greater structure called PKI (public key infrastructure). PKI is a set of tools that allows for you to encrypt or digitally sign data as with certificates. Within the PKI architecture includes the Certificate Authority which is a trusted third party that signs off on a digital certificate. General services are often signed for by a public CA which will verify any user. As we've said before, WoTT has its own CA but WoTT's CA is private ensuring that only recognised users are signed for.
 
-Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publically available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command `wott-agent whoami`. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).
+Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publicly available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command `wott-agent whoami`. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).
 
 {% asset blog/select-device.png srcset:width="1300 2x" srcset:width="650 1x" alt="WoTT device" %}
 {% asset blog/device-security.png srcset:width="1300 2x" srcset:width="650 1x" alt="security tab" %}
