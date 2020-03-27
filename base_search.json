@@ -1,6 +1,17 @@
 [
   
     {
+	  "cover":"https://wott.io/assets/25bfd0-d36a5b102a0bcc8945015a9ad9639239a61d83873ad4773d1af125ba7bf30553.jpg",
+      "title"    : "Create audit trails with sudoreplay",
+      "category" : "tutorials",
+      "tags"     : "tutorials",
+      "href"      : "https://wott.io/blog/tutorials/2020/03/27/sudo-replay",
+      "date"     : "March 27, 2020",
+	  "description":"sudo is a tool used by most Linux/UNIX users on a daily basis to escalate permission. If you’re like me, you likely though that the features in sudo were “done” and final, just like you don’t monitor the the changelog for new features in tar (or at least I’m not). This is...",
+	  "author":"Viktor Petersson"
+    } ,
+  
+    {
 	  "cover":"https://wott.io/assets/354b26-726d4a1e7dff248d4ed1163ecb31a5a698258a3ea1c648176daf9062d902f129.jpg",
       "title"    : "Meltdown and Spectre",
       "category" : "tutorials",
@@ -12,7 +23,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/78a948-ea7be8b78e7ab5a37e6a7acc2d69294bfdf1d5f94b8db00b648132c46d00ded9.png",
+	  "cover":"https://wott.io/assets/78a948-1c9faafce906477f68ee63cd82853f5db5782b5658b1740755f23f6c6ebe2118.png",
       "title"    : "The DevSecOps Iceberg",
       "category" : "thoughts",
       "tags"     : "open-source",
@@ -111,7 +122,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/e7ee84-fe272a9f06213fa9b9da598cee27127c06556cecbb0d66f3e6656bfb6f85611c.png",
+	  "cover":"https://wott.io/assets/e7ee84-0727c70009238c15e8375ac276f99169d352b31f8bcb5a1bd98192a5f860c4e8.png",
       "title"    : "IoT Encryption Failures and how to avoid them",
       "category" : "newsthoughts",
       "tags"     : "open-source",
@@ -122,7 +133,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/16af4e-33f51ec269061eca4dd8f174d97198fb9ed94b255ccf94aed86475b20bf957df.png",
+	  "cover":"https://wott.io/assets/16af4e-e3e994c9dd6ef37904a3896d525e07b24502de8923f950da78b0976f12e79b2d.png",
       "title"    : "The Future of IoT",
       "category" : "newsthoughts",
       "tags"     : "open-source",
@@ -133,7 +144,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/88cc26-0f16cbdaf401f90636a1708cb4f8bcfae183ee3c9030c7f8ea14e45ce6070522.png",
+	  "cover":"https://wott.io/assets/88cc26-dec133a6aa03a25df15f1576a7dfb0752f17c6c0acc4d992574e9e356caf0101.png",
       "title"    : "IoT Security Issues and Challenges",
       "category" : "newsthoughts",
       "tags"     : "open-source",
@@ -210,7 +221,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/ac256e-d4d27065dabfdfa46b9316a49b88d4920c8f62050719240154c88eac4979135e.png",
+	  "cover":"https://wott.io/assets/ac256e-22b773c7ff7a3aa354ae8d320a146231c960d44c670d946e3cf4d5b2a4ba3763.png",
       "title"    : "Why open source solutions are critical for IoT",
       "category" : "thoughts",
       "tags"     : "open-source",
@@ -221,7 +232,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/49cd83-0989f108d445de6abc332eb73035fc7b3da24dda7731b4a08354a6b92ab60792.png",
+	  "cover":"https://wott.io/assets/49cd83-c4a74011938462f49ffeae9d5fb7b57fcffad903db39fe583a7c1af7e3e7827b.png",
       "title"    : "Why open source is critical for InfoSec",
       "category" : "thoughts",
       "tags"     : "open-source",
@@ -232,7 +243,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/763a3a-9c881dd201cfb5276c26973570bf3469d569a92ab79f8441d5ffbfcfbf797a99.png",
+	  "cover":"https://wott.io/assets/763a3a-a13fd5016beb09dccdedeab6b0aa479fafbbdc43155eb2d9226380cff56bce37.png",
       "title"    : "Why shift-left security is relevant for IoT",
       "category" : "thoughts",
       "tags"     : "open-source",
@@ -243,7 +254,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/8e810f-8586d3b716d3d93055d8bd77238bf55928a855c7003c827641018a0ca8a33e10.png",
+	  "cover":"https://wott.io/assets/8e810f-63206f5c5d5586445ee246084a75ee7078ee372a2d9887eb1a8ade4545fb8eb1.png",
       "title"    : "WoTT secures the Internet of Things",
       "category" : "thoughts",
       "tags"     : "open-source",
@@ -254,7 +265,7 @@
     } ,
   
     {
-	  "cover":"https://wott.io/assets/130908-4d7c0a5919aa517b8c3681c01b3d430ad5a5b3565387c484acccbf7eb0a419ac.png",
+	  "cover":"https://wott.io/assets/130908-cfe4ac2cf8e6018a6e4b3ab4db16765de0d7abdacdd49cfefc395d8f9a0c4070.png",
       "title"    : "Why we are doing what we do",
       "category" : "news",
       "tags"     : "open-source",
