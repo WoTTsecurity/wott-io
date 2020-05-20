@@ -189,7 +189,7 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>But how does it actually work? We’ve mentioned already the ‘handshake’ as a concept, but this is actually the name given to the technology TLS uses. The TLS handshake protocol can be found <a href="https://www.ietf.org/rfc/rfc5246.txt">here</a> but it’s long and wordy. What’s important to know is that the TLS protocol is part of a layered structure and is sat between the transport (also known as TCP) and application layers.</p>
 
-<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-42dbd5841dc74439f595a075503a70ec595bfb92a70b152ca0249695d6a7f8ea.png 2x, https://wott.io/assets/33e2ec-2315170967dad6f3794d2499776a67090007fd7820eec728bde4172669ca0a02.png 1x" /></p>
+<p><img alt="Breakdown of the TLS structure" src="https://wott.io/assets/blog/tls-structure-2e96558fd725e62a46616610d89c794d541b3260e95e7b7fd77d5b80e896e004.png" integrity="sha256-LpZVj9cl5ipGYWYQ2Jx5TVQbMmDpXnt/131bgOiW4AQ=" crossorigin="anonymous" srcset="https://wott.io/assets/7c278c-4e17d84a20bad7946320f3489c424e61b14cd5c26e7081c91bc5564a00d6cc03.png 2x, https://wott.io/assets/33e2ec-2b89e5275a2c7a473e003ed35f0903059d93c5adc5cf8145bd872846c45f4d4b.png 1x" /></p>
 
 <p>The protocol/handshake layer is where the cryptographic ‘magic’ takes place. It manages the encryption algorithm used (also known as cipher) and public key exchange which is contained within a certificate. This certificate is signed for by a Certificate Authority and is what gives an endpoint its cryptographic identity. Basically, the server being accessed has an associated x509 certificate from a CA which is exchanged in this handshake protocol. This certificate contains information regarding the server’s name, its public key, and a ‘signature.’ This is why we often refer to this as ‘digital signage.’</p>
 
@@ -199,12 +199,12 @@ First of all, mTLS is configurable. It is up to the server and client to decide 
 
 <p>Therefore, WoTT uses a PKI structure in order to generate key components of our certificates. At WoTT, we assign each device a unique WoTT ID. This is publicly available in your WoTT certificate that is downloaded to your device. If you have the agent installed, you can check this ID with the simple command <code class="highlighter-rouge">wott-agent whoami</code>. When you have the agent, WoTT will fetch certificates to your device (and these are updated every 7 days. You can check the status of this on your dashboard).</p>
 
-<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-9e535ecb3a92c0d544ff5d1dd7ec4891e891b1602c65dcfc6b8aa5a08d893fb6.png 2x, https://wott.io/assets/7e65ae-59c0f6101f1240c776cb02b0a14bf3dba6eb24919a27cbcdab4c114cf3311b26.png 1x" />
-<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-d15f428744e65d9e4428e0a4bbf25b25583e6d59f4fa644deff4e71895e6de75.png 2x, https://wott.io/assets/a8a481-77491493c376d795c9a4331b53bff51e2d5be3549c6b6a0df6f8be36c3fec625.png 1x" /></p>
+<p><img alt="WoTT device" src="https://wott.io/assets/blog/select-device-09b05af09e62255d190bd53a30313b0c8a0ab88d0bcb474e878e04480a8389c9.png" integrity="sha256-CbBa8J5iJV0ZC9U6MDE7DIoKuI0Ly0dOh44ESAqDick=" crossorigin="anonymous" srcset="https://wott.io/assets/f88e13-bdb2ae2c040397d578bdc9e5b528b0af840f7edf606e9c29c2a3682dd5bb0fbf.png 2x, https://wott.io/assets/7e65ae-0aa7999a707f37e91f6ac46aff1759d94cdee3bf2f464f4853276d26a4993041.png 1x" />
+<img alt="security tab" src="https://wott.io/assets/blog/device-security-9e17c773b44f4df5ea7301c3d9950adfa0a80e83ee7144263766254afc96398a.png" integrity="sha256-nhfHc7RPTfXqcwHD2ZUK36CoDoPucUQmN2YlSvyWOYo=" crossorigin="anonymous" srcset="https://wott.io/assets/8f62d7-2b2d1037dbee8fd30f9a0d801da80e3b28e28eac28663fc6451a3004b3cfd582.png 2x, https://wott.io/assets/a8a481-0c2b6f54a7cecc2cbc3f7605a6051adca56dc69a300c503f4ec047c3371d121d.png 1x" /></p>
 
 <p>scroll down the security tab to see.</p>
 
-<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-09aaecf616fff794296799bb51a51229264c71c7db3067afaa975522ca90d102.png 2x, https://wott.io/assets/bf058c-b9cf2fb50c04c0123cff30b471983380817c4021e3329091d4e1b183062f935b.png 1x" /></p>
+<p><img alt="certificate expiry and renewal date" src="https://wott.io/assets/blog/certificate-expiry-5e4eca8496c6472ae178be1032fe637e4423ff940bff03096d9d40ad2e5caf37.png" integrity="sha256-Xk7KhJbGRyrheL4QMv5jfkQj/5QL/wMJbZ1ArS5crzc=" crossorigin="anonymous" srcset="https://wott.io/assets/3f18b6-b7fe09a69dfd32b2063c702b4f0bd2c5b99217e6fe6f5cd5b81183ab43f59b17.png 2x, https://wott.io/assets/bf058c-d6cbc0ac231a35ba3ece87c16b6ccb7a8cd743f8c4f2352619271386fd9facbc.png 1x" /></p>
 
 <p>On your node itself, WoTT will have downloaded 4 files.</p>
 
@@ -262,7 +262,7 @@ combined.pem
   </div>
 
        <div class="post">
-  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-1c9faafce906477f68ee63cd82853f5db5782b5658b1740755f23f6c6ebe2118.png);'></div>
+  <div class="post_img" style='background-image:url(https://wott.io/assets/78a948-363d8dcb9f1a2acf9d24c65b1f3dacbbf1ce187dd9c0ee05ca9d0b5d7e9f8898.png);'></div>
   <div class="post_prewinfo">
   <span class="category_name">thoughts</span>
   <a class="title" href="https://wott.io/blog/thoughts/2019/11/29/the-devsecops-iceberg">The DevSecOps Iceberg</a>
